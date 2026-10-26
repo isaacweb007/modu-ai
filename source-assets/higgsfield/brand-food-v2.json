@@ -1,0 +1,85 @@
+{
+  "jobs": [
+    {
+      "index": 1,
+      "job_id": "ec55cfa6-d441-4e4b-8725-5b09cee4e054",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_122249_ec55cfa6-d441-4e4b-8725-5b09cee4e054.png",
+      "file": "brand-original.png"
+    },
+    {
+      "index": 2,
+      "job_id": "f145fa74-7790-405d-b71e-54e01172b707",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_122247_f145fa74-7790-405d-b71e-54e01172b707.png",
+      "file": "kimchi-original.png"
+    },
+    {
+      "index": 3,
+      "job_id": "5afc5086-4dc3-4c16-bb30-293bee938a6a",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_122247_5afc5086-4dc3-4c16-bb30-293bee938a6a.png",
+      "file": "samhap-original.png"
+    }
+  ],
+  "generation": [
+    {
+      "index": 1,
+      "params": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "2k",
+        "aspect_ratio": "1:1",
+        "medias": [
+          {
+            "role": "image",
+            "value": "https://isaacweb007.github.io/jumo-joseon-hiphop-book/assets/02-brand-symbol.jpg"
+          },
+          {
+            "role": "image",
+            "value": "https://isaacweb007.github.io/jumo-joseon-hiphop-book/assets/01-brand-wordmark.jpg"
+          }
+        ],
+        "prompt": "Create a premium refined square app brand insignia for JUMO Korean Joseon hiphop tavern. Preserve exact conceptual DNA from references: a Korean curved tiled eave floating above a makgeolli bowl whose opening is a vinyl record with concentric grooves. Reinterpret as a beautifully precise warm copper-orange emblem on deep charcoal, a restrained tiny oxblood center. Centered symbol fills 65% canvas, large bold readable brush lettering 주모 below, tiny elegant JUMO secondary. Polished contemporary identity suitable for dark frosted glass mobile food ordering app. Flat graphic artwork, precise crisp edges with subtle hand-cut warmth, no gradients, no photorealistic mockup, no additional text, no border. Only 주모 and JUMO. Background solid #191718."
+      }
+    },
+    {
+      "index": 2,
+      "params": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "2k",
+        "aspect_ratio": "4:3",
+        "medias": [
+          {
+            "role": "image",
+            "value": "https://isaacweb007.github.io/jumo-joseon-hiphop-book/assets/09-jeon-assortment.jpg"
+          }
+        ],
+        "prompt": "Photorealistic premium restaurant menu food photograph for JUMO, a modern Joseon hiphop Korean tavern in Saigon. One large thin extremely crispy kimchi pancake, cut into six wedges arranged slightly overlapping on a dark charcoal ceramic round plate, vivid kimchi red-orange crispy lacy edges, visible scallions, small black dipping soy dish at back right. Close-up at 35 degree overhead angle. Moody dark aged walnut table, soft warm amber side light, slight atmospheric steam, shallow depth of field but all main food sharp. A restrained Korean brass chopstick to one side. Food entirely centered within 85% canvas with generous safe crop. Real appetizing food, rich warm brown background. NO text, NO logo, NO graphics, NO hands, NO collage. Use reference's premium dark Korean ceramics and food realism."
+      }
+    },
+    {
+      "index": 3,
+      "params": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "2k",
+        "aspect_ratio": "4:3",
+        "medias": [
+          {
+            "role": "image",
+            "value": "https://isaacweb007.github.io/jumo-joseon-hiphop-book/assets/09-jeon-assortment.jpg"
+          }
+        ],
+        "prompt": "Photorealistic premium restaurant menu photograph of JUMO samhap platter, the dish contains exactly three clearly separate components: sliced boiled pork belly with alternating lean and fat layers, lightly poached SQUID cut into neat pale rings and pale body slices with only a few narrow squid tentacles (NOT OCTOPUS, NO LARGE SUCTION CUPS), and glossy aged napa cabbage kimchi. Three elegant rows on a rectangular charcoal handmade ceramic plate, a few perilla leaves underneath, small black dipping dish beside. Moody dark aged walnut table, warm amber side light, subtle steam on pork, crisp realistic textures. Shot at 35-degree overhead, premium contemporary Korean tavern dinner atmosphere. Wide horizontal food composition with safe crop all around. No text, no logo, no graphics, no collage, no hands. Use the reference for food realism and black ceramic presentation only."
+      }
+    }
+  ]
+}

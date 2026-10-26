@@ -1,0 +1,236 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "modu ai POS adapter draft",
+    "version": "0.1.0",
+    "description": "Design contract only. This static demo does not implement these endpoints. Future server must verify tenant ownership, server-side menu prices, idempotency, signed provider webhooks, replay protection and payment reconciliation. No credentials are embedded."
+  },
+  "paths": {
+    "/v1/orders": {
+      "post": {
+        "summary": "Create an order through a selected POS adapter",
+        "security": [
+          {
+            "storeToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Event"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Persisted and queued"
+          },
+          "409": {
+            "description": "Idempotency conflict or menu price changed"
+          },
+          "422": {
+            "description": "Invalid or unavailable menu item"
+          }
+        }
+      }
+    },
+    "/v1/webhooks/pos": {
+      "post": {
+        "summary": "Receive provider status or confirmed payment event",
+        "description": "Provider-specific signature verification must precede processing. Client payment flags are not proof of payment.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Event"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Verified event accepted"
+          },
+          "401": {
+            "description": "Invalid signature"
+          },
+          "409": {
+            "description": "Duplicate or stale event"
+          }
+        }
+      }
+    },
+    "/v1/orders/{orderId}": {
+      "get": {
+        "summary": "Read authorized order status",
+        "security": [
+          {
+            "storeToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Order status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found for the authenticated store"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "storeToken": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Future server-side tenant-scoped authorization; not implemented in this demo."
+      }
+    },
+    "schemas": {
+      "Order": {
+        "type": "object",
+        "required": [
+          "orderId",
+          "table",
+          "currency",
+          "items",
+          "amount",
+          "orderStatus",
+          "paymentStatus"
+        ],
+        "properties": {
+          "orderId": {
+            "type": "string"
+          },
+          "table": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 999
+          },
+          "currency": {
+            "const": "VND"
+          },
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "itemId",
+                "quantity",
+                "unitPrice"
+              ],
+              "properties": {
+                "itemId": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 20
+                },
+                "unitPrice": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          },
+          "amount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "orderStatus": {
+            "enum": [
+              "pending",
+              "accepted",
+              "preparing",
+              "ready",
+              "completed"
+            ]
+          },
+          "paymentStatus": {
+            "enum": [
+              "unpaid",
+              "paid"
+            ]
+          }
+        }
+      },
+      "Event": {
+        "type": "object",
+        "required": [
+          "schemaVersion",
+          "event",
+          "eventId",
+          "storeId",
+          "occurredAt",
+          "data"
+        ],
+        "properties": {
+          "schemaVersion": {
+            "const": "1.0"
+          },
+          "mode": {
+            "const": "demo"
+          },
+          "event": {
+            "enum": [
+              "order.created",
+              "order.updated",
+              "payment.updated"
+            ]
+          },
+          "eventId": {
+            "type": "string"
+          },
+          "idempotencyKey": {
+            "type": "string"
+          },
+          "storeId": {
+            "type": "string"
+          },
+          "occurredAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Order"
+          }
+        }
+      }
+    }
+  }
+}

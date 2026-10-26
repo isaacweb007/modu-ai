@@ -1,0 +1,464 @@
+[
+  {
+    "index": 1,
+    "job_id": "964059b2-0618-4e9c-9adc-46c381fb4631",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_134847_964059b2-0618-4e9c-9adc-46c381fb4631.png",
+    "file": "category-atlas.png",
+    "params": [
+      {
+        "index": 1,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "3:2",
+          "background": "transparent",
+          "prompt": "Professional mobile restaurant category icon atlas: EXACTLY six individual miniature Korean food object icons arranged in a perfectly aligned 3 columns by 2 rows grid. Each equal square cell has ONE centered isolated icon, large empty transparent margins. Top-left: dark ceramic round tray of assorted Korean jeon pancakes; top-center: golden kimchi pancake with chopsticks; top-right: dark bowl with pork and squid Korean appetizer; bottom-left: three crisp seaweed rice crackers; bottom-center: ripe orange persimmon dessert with vanilla ice cream; bottom-right: elegant small cup of yuja citrus tea. Each icon occupies 65% of its cell width. No text, letters, numerals, cell boundaries or tile backgrounds. Realistic richly detailed appetizing food miniatures, charcoal pottery, warm amber restaurant studio light, subtle highlights, same three-quarter camera angle for all six. NOT emojis, not flat clipart. Actual transparent background with no checkerboard."
+        }
+      },
+      {
+        "index": 2,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single closed fist, fingers curled into the palm, thumb naturally across fingers, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 3,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single open palm with all five fingers clearly visible and naturally spread, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 4,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single hand forming a clear scissors gesture, exactly index and middle fingers extended in a V, ring and pinky fingers folded under the thumb, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 5,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI element: a single elegant reward roulette disc. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Exact straight-on circular wheel, no perspective distortion. Precisely FOUR equal 90-degree quarter wedges. Boundaries aligned to top, right, bottom, left (12,3,6,9 o'clock). Starting top-right and clockwise: warm amber-copper wedge, warm ivory pearl wedge, oxblood red wedge, deep jade teal wedge. Fine brass spokes at boundaries, polished copper outer ring with precisely arranged small pearl inlays, refined dark engraved geometric Korean eave motif on the outer rim. Plain low-detail wedge faces for overlay icons in code. Small round copper hub at exact center. No text, no numbers, no symbols, NO pointer, NO stand, no crop. Circle fills 85% of square. Transparent background, actual alpha, no checkerboard."
+        }
+      },
+      {
+        "index": 6,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI sprite atlas of EXACTLY FOUR miniature reward objects on a regular TWO BY TWO square grid, one object per equal cell. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Top-left: tiny ceramic cup with translucent golden yuja citrus tea. Top-right: two small glossy chestnut red-bean jelly cubes on an ivory plate. Bottom-left: three crisp green-black seaweed rice crackers on a tiny dark plate. Bottom-right: a tasteful copper five-petal blossom token with a jade center, representing thanks. Objects centered at (25%,25%), (75%,25%), (25%,75%), (75%,75%). Every object fills 60% of its cell and fits completely within its own square. No text, no cell lines, no labels, no emojis. Transparent background, actual alpha, no checkerboard."
+        }
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "job_id": "4326d310-e9eb-411e-a065-651d640f79df",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_134846_4326d310-e9eb-411e-a065-651d640f79df.png",
+    "file": "hand-rock.png",
+    "params": [
+      {
+        "index": 1,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "3:2",
+          "background": "transparent",
+          "prompt": "Professional mobile restaurant category icon atlas: EXACTLY six individual miniature Korean food object icons arranged in a perfectly aligned 3 columns by 2 rows grid. Each equal square cell has ONE centered isolated icon, large empty transparent margins. Top-left: dark ceramic round tray of assorted Korean jeon pancakes; top-center: golden kimchi pancake with chopsticks; top-right: dark bowl with pork and squid Korean appetizer; bottom-left: three crisp seaweed rice crackers; bottom-center: ripe orange persimmon dessert with vanilla ice cream; bottom-right: elegant small cup of yuja citrus tea. Each icon occupies 65% of its cell width. No text, letters, numerals, cell boundaries or tile backgrounds. Realistic richly detailed appetizing food miniatures, charcoal pottery, warm amber restaurant studio light, subtle highlights, same three-quarter camera angle for all six. NOT emojis, not flat clipart. Actual transparent background with no checkerboard."
+        }
+      },
+      {
+        "index": 2,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single closed fist, fingers curled into the palm, thumb naturally across fingers, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 3,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single open palm with all five fingers clearly visible and naturally spread, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 4,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single hand forming a clear scissors gesture, exactly index and middle fingers extended in a V, ring and pinky fingers folded under the thumb, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 5,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI element: a single elegant reward roulette disc. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Exact straight-on circular wheel, no perspective distortion. Precisely FOUR equal 90-degree quarter wedges. Boundaries aligned to top, right, bottom, left (12,3,6,9 o'clock). Starting top-right and clockwise: warm amber-copper wedge, warm ivory pearl wedge, oxblood red wedge, deep jade teal wedge. Fine brass spokes at boundaries, polished copper outer ring with precisely arranged small pearl inlays, refined dark engraved geometric Korean eave motif on the outer rim. Plain low-detail wedge faces for overlay icons in code. Small round copper hub at exact center. No text, no numbers, no symbols, NO pointer, NO stand, no crop. Circle fills 85% of square. Transparent background, actual alpha, no checkerboard."
+        }
+      },
+      {
+        "index": 6,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI sprite atlas of EXACTLY FOUR miniature reward objects on a regular TWO BY TWO square grid, one object per equal cell. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Top-left: tiny ceramic cup with translucent golden yuja citrus tea. Top-right: two small glossy chestnut red-bean jelly cubes on an ivory plate. Bottom-left: three crisp green-black seaweed rice crackers on a tiny dark plate. Bottom-right: a tasteful copper five-petal blossom token with a jade center, representing thanks. Objects centered at (25%,25%), (75%,25%), (25%,75%), (75%,75%). Every object fills 60% of its cell and fits completely within its own square. No text, no cell lines, no labels, no emojis. Transparent background, actual alpha, no checkerboard."
+        }
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "job_id": "50be517f-a763-4948-812b-d93a642e15ef",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_134846_50be517f-a763-4948-812b-d93a642e15ef.png",
+    "file": "hand-paper.png",
+    "params": [
+      {
+        "index": 1,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "3:2",
+          "background": "transparent",
+          "prompt": "Professional mobile restaurant category icon atlas: EXACTLY six individual miniature Korean food object icons arranged in a perfectly aligned 3 columns by 2 rows grid. Each equal square cell has ONE centered isolated icon, large empty transparent margins. Top-left: dark ceramic round tray of assorted Korean jeon pancakes; top-center: golden kimchi pancake with chopsticks; top-right: dark bowl with pork and squid Korean appetizer; bottom-left: three crisp seaweed rice crackers; bottom-center: ripe orange persimmon dessert with vanilla ice cream; bottom-right: elegant small cup of yuja citrus tea. Each icon occupies 65% of its cell width. No text, letters, numerals, cell boundaries or tile backgrounds. Realistic richly detailed appetizing food miniatures, charcoal pottery, warm amber restaurant studio light, subtle highlights, same three-quarter camera angle for all six. NOT emojis, not flat clipart. Actual transparent background with no checkerboard."
+        }
+      },
+      {
+        "index": 2,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single closed fist, fingers curled into the palm, thumb naturally across fingers, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 3,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single open palm with all five fingers clearly visible and naturally spread, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 4,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single hand forming a clear scissors gesture, exactly index and middle fingers extended in a V, ring and pinky fingers folded under the thumb, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 5,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI element: a single elegant reward roulette disc. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Exact straight-on circular wheel, no perspective distortion. Precisely FOUR equal 90-degree quarter wedges. Boundaries aligned to top, right, bottom, left (12,3,6,9 o'clock). Starting top-right and clockwise: warm amber-copper wedge, warm ivory pearl wedge, oxblood red wedge, deep jade teal wedge. Fine brass spokes at boundaries, polished copper outer ring with precisely arranged small pearl inlays, refined dark engraved geometric Korean eave motif on the outer rim. Plain low-detail wedge faces for overlay icons in code. Small round copper hub at exact center. No text, no numbers, no symbols, NO pointer, NO stand, no crop. Circle fills 85% of square. Transparent background, actual alpha, no checkerboard."
+        }
+      },
+      {
+        "index": 6,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI sprite atlas of EXACTLY FOUR miniature reward objects on a regular TWO BY TWO square grid, one object per equal cell. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Top-left: tiny ceramic cup with translucent golden yuja citrus tea. Top-right: two small glossy chestnut red-bean jelly cubes on an ivory plate. Bottom-left: three crisp green-black seaweed rice crackers on a tiny dark plate. Bottom-right: a tasteful copper five-petal blossom token with a jade center, representing thanks. Objects centered at (25%,25%), (75%,25%), (25%,75%), (75%,75%). Every object fills 60% of its cell and fits completely within its own square. No text, no cell lines, no labels, no emojis. Transparent background, actual alpha, no checkerboard."
+        }
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "job_id": "7b44ee8e-fd8d-4d6e-a3ad-2920e976edf1",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_134845_7b44ee8e-fd8d-4d6e-a3ad-2920e976edf1.png",
+    "file": "hand-scissors.png",
+    "params": [
+      {
+        "index": 1,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "3:2",
+          "background": "transparent",
+          "prompt": "Professional mobile restaurant category icon atlas: EXACTLY six individual miniature Korean food object icons arranged in a perfectly aligned 3 columns by 2 rows grid. Each equal square cell has ONE centered isolated icon, large empty transparent margins. Top-left: dark ceramic round tray of assorted Korean jeon pancakes; top-center: golden kimchi pancake with chopsticks; top-right: dark bowl with pork and squid Korean appetizer; bottom-left: three crisp seaweed rice crackers; bottom-center: ripe orange persimmon dessert with vanilla ice cream; bottom-right: elegant small cup of yuja citrus tea. Each icon occupies 65% of its cell width. No text, letters, numerals, cell boundaries or tile backgrounds. Realistic richly detailed appetizing food miniatures, charcoal pottery, warm amber restaurant studio light, subtle highlights, same three-quarter camera angle for all six. NOT emojis, not flat clipart. Actual transparent background with no checkerboard."
+        }
+      },
+      {
+        "index": 2,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single closed fist, fingers curled into the palm, thumb naturally across fingers, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 3,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single open palm with all five fingers clearly visible and naturally spread, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 4,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single hand forming a clear scissors gesture, exactly index and middle fingers extended in a V, ring and pinky fingers folded under the thumb, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 5,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI element: a single elegant reward roulette disc. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Exact straight-on circular wheel, no perspective distortion. Precisely FOUR equal 90-degree quarter wedges. Boundaries aligned to top, right, bottom, left (12,3,6,9 o'clock). Starting top-right and clockwise: warm amber-copper wedge, warm ivory pearl wedge, oxblood red wedge, deep jade teal wedge. Fine brass spokes at boundaries, polished copper outer ring with precisely arranged small pearl inlays, refined dark engraved geometric Korean eave motif on the outer rim. Plain low-detail wedge faces for overlay icons in code. Small round copper hub at exact center. No text, no numbers, no symbols, NO pointer, NO stand, no crop. Circle fills 85% of square. Transparent background, actual alpha, no checkerboard."
+        }
+      },
+      {
+        "index": 6,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI sprite atlas of EXACTLY FOUR miniature reward objects on a regular TWO BY TWO square grid, one object per equal cell. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Top-left: tiny ceramic cup with translucent golden yuja citrus tea. Top-right: two small glossy chestnut red-bean jelly cubes on an ivory plate. Bottom-left: three crisp green-black seaweed rice crackers on a tiny dark plate. Bottom-right: a tasteful copper five-petal blossom token with a jade center, representing thanks. Objects centered at (25%,25%), (75%,25%), (25%,75%), (75%,75%). Every object fills 60% of its cell and fits completely within its own square. No text, no cell lines, no labels, no emojis. Transparent background, actual alpha, no checkerboard."
+        }
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "job_id": "ffc7c6ad-1df4-4299-b20b-3692c40c8b16",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_134847_ffc7c6ad-1df4-4299-b20b-3692c40c8b16.png",
+    "file": "reward-wheel.png",
+    "params": [
+      {
+        "index": 1,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "3:2",
+          "background": "transparent",
+          "prompt": "Professional mobile restaurant category icon atlas: EXACTLY six individual miniature Korean food object icons arranged in a perfectly aligned 3 columns by 2 rows grid. Each equal square cell has ONE centered isolated icon, large empty transparent margins. Top-left: dark ceramic round tray of assorted Korean jeon pancakes; top-center: golden kimchi pancake with chopsticks; top-right: dark bowl with pork and squid Korean appetizer; bottom-left: three crisp seaweed rice crackers; bottom-center: ripe orange persimmon dessert with vanilla ice cream; bottom-right: elegant small cup of yuja citrus tea. Each icon occupies 65% of its cell width. No text, letters, numerals, cell boundaries or tile backgrounds. Realistic richly detailed appetizing food miniatures, charcoal pottery, warm amber restaurant studio light, subtle highlights, same three-quarter camera angle for all six. NOT emojis, not flat clipart. Actual transparent background with no checkerboard."
+        }
+      },
+      {
+        "index": 2,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single closed fist, fingers curled into the palm, thumb naturally across fingers, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 3,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single open palm with all five fingers clearly visible and naturally spread, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 4,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single hand forming a clear scissors gesture, exactly index and middle fingers extended in a V, ring and pinky fingers folded under the thumb, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 5,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI element: a single elegant reward roulette disc. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Exact straight-on circular wheel, no perspective distortion. Precisely FOUR equal 90-degree quarter wedges. Boundaries aligned to top, right, bottom, left (12,3,6,9 o'clock). Starting top-right and clockwise: warm amber-copper wedge, warm ivory pearl wedge, oxblood red wedge, deep jade teal wedge. Fine brass spokes at boundaries, polished copper outer ring with precisely arranged small pearl inlays, refined dark engraved geometric Korean eave motif on the outer rim. Plain low-detail wedge faces for overlay icons in code. Small round copper hub at exact center. No text, no numbers, no symbols, NO pointer, NO stand, no crop. Circle fills 85% of square. Transparent background, actual alpha, no checkerboard."
+        }
+      },
+      {
+        "index": 6,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI sprite atlas of EXACTLY FOUR miniature reward objects on a regular TWO BY TWO square grid, one object per equal cell. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Top-left: tiny ceramic cup with translucent golden yuja citrus tea. Top-right: two small glossy chestnut red-bean jelly cubes on an ivory plate. Bottom-left: three crisp green-black seaweed rice crackers on a tiny dark plate. Bottom-right: a tasteful copper five-petal blossom token with a jade center, representing thanks. Objects centered at (25%,25%), (75%,25%), (25%,75%), (75%,75%). Every object fills 60% of its cell and fits completely within its own square. No text, no cell lines, no labels, no emojis. Transparent background, actual alpha, no checkerboard."
+        }
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "job_id": "1a76025f-ef6f-4057-995f-22bff1e82ffb",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35bfyuNMsgmuVO4nmmkcYrY2OQ3/hf_20261026_134847_1a76025f-ef6f-4057-995f-22bff1e82ffb.png",
+    "file": "reward-atlas.png",
+    "params": [
+      {
+        "index": 1,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "3:2",
+          "background": "transparent",
+          "prompt": "Professional mobile restaurant category icon atlas: EXACTLY six individual miniature Korean food object icons arranged in a perfectly aligned 3 columns by 2 rows grid. Each equal square cell has ONE centered isolated icon, large empty transparent margins. Top-left: dark ceramic round tray of assorted Korean jeon pancakes; top-center: golden kimchi pancake with chopsticks; top-right: dark bowl with pork and squid Korean appetizer; bottom-left: three crisp seaweed rice crackers; bottom-center: ripe orange persimmon dessert with vanilla ice cream; bottom-right: elegant small cup of yuja citrus tea. Each icon occupies 65% of its cell width. No text, letters, numerals, cell boundaries or tile backgrounds. Realistic richly detailed appetizing food miniatures, charcoal pottery, warm amber restaurant studio light, subtle highlights, same three-quarter camera angle for all six. NOT emojis, not flat clipart. Actual transparent background with no checkerboard."
+        }
+      },
+      {
+        "index": 2,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single closed fist, fingers curled into the palm, thumb naturally across fingers, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 3,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single open palm with all five fingers clearly visible and naturally spread, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 4,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game sprite of a single hand forming a clear scissors gesture, exactly index and middle fingers extended in a V, ring and pinky fingers folded under the thumb, an elegantly sculpted warm ivory ceramic hand with a small copper cuff, wrist at bottom. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Single hand only, full silhouette centered and large, 18% transparent margin, identical front-facing pose and lighting to a three-piece rock-paper-scissors set. No text, no symbols, no human arm, no background plane, actual transparent alpha background, no checkerboard. Anatomically clear five-finger hand, professional game asset, not emoji."
+        }
+      },
+      {
+        "index": 5,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "2k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI element: a single elegant reward roulette disc. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Exact straight-on circular wheel, no perspective distortion. Precisely FOUR equal 90-degree quarter wedges. Boundaries aligned to top, right, bottom, left (12,3,6,9 o'clock). Starting top-right and clockwise: warm amber-copper wedge, warm ivory pearl wedge, oxblood red wedge, deep jade teal wedge. Fine brass spokes at boundaries, polished copper outer ring with precisely arranged small pearl inlays, refined dark engraved geometric Korean eave motif on the outer rim. Plain low-detail wedge faces for overlay icons in code. Small round copper hub at exact center. No text, no numbers, no symbols, NO pointer, NO stand, no crop. Circle fills 85% of square. Transparent background, actual alpha, no checkerboard."
+        }
+      },
+      {
+        "index": 6,
+        "params": {
+          "model": "gpt_image_2_5",
+          "quality": "high",
+          "resolution": "1k",
+          "aspect_ratio": "1:1",
+          "background": "transparent",
+          "prompt": "Game UI sprite atlas of EXACTLY FOUR miniature reward objects on a regular TWO BY TWO square grid, one object per equal cell. Premium tactile game objects for a contemporary Korean tavern app, softly rounded but precisely sculpted silhouettes with restrained bevels and no cartoon outlines. Deep charcoal environment, warm ivory objects, brushed amber copper trims, small oxblood and jade accents distinguish rewards. Soft warm studio key light and cool edge reflections create an elegant frosted-glass product mood. Clean readable forms, generous negative space, consistent flat frontal perspective, physically plausible polished ceramic and metal materials. Top-left: tiny ceramic cup with translucent golden yuja citrus tea. Top-right: two small glossy chestnut red-bean jelly cubes on an ivory plate. Bottom-left: three crisp green-black seaweed rice crackers on a tiny dark plate. Bottom-right: a tasteful copper five-petal blossom token with a jade center, representing thanks. Objects centered at (25%,25%), (75%,25%), (25%,75%), (75%,75%). Every object fills 60% of its cell and fits completely within its own square. No text, no cell lines, no labels, no emojis. Transparent background, actual alpha, no checkerboard."
+        }
+      }
+    ]
+  }
+]

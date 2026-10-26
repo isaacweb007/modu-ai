@@ -1,0 +1,10 @@
+id,role,type,description,size/ratio,style line ref,source
+category-atlas,menu category sprites,image,six Korean food objects in a three by two grid,3:2,glass-food-v1,generate
+hand-rock,rock choice and duel result,image,closed fist sculpture,1:1,glass-game-v1,generate
+hand-paper,paper choice and duel result,image,open palm sculpture,1:1,glass-game-v1,generate
+hand-scissors,scissors choice and duel result,image,two finger V sculpture,1:1,glass-game-v1,generate
+reward-wheel,rotating wheel game,image,four equal quarter reward wheel without labels or pointer,1:1,glass-game-v1,generate
+reward-atlas,coupon and wheel reward icons,image,four miniature service treats,1:1,glass-game-v1,generate
+jumo-brand,brand identity,image,eave bowl vinyl Jumo lockup,1:1,jumo-brand-v1,reference_media[0]
+menu-photos,menu and product detail,image,approved concept food photographs,4:3,jumo-food-v1,reference_media[1]
+ui-icons,system navigation,svg,consistent 24px line icon family,1:1,system-line-v1,reference_media[2]
