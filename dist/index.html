@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17264a">
+  <title>모두의 AI 프로젝트 북 — 모든 가게에, 자신만의 AI</title>
+  <meta name="description" content="아이작스튜디오와 원컴퍼니 재단이 함께 구상하는 소상공인 AI 플랫폼. 가게의 비전부터 QR 주문 체험과 개발 설계까지 담은 프로젝트 북.">
+  <meta property="og:title" content="모두의 AI — 모든 가게에, 자신만의 AI">
+  <meta property="og:description" content="사장님은 장사에 집중하세요. AI를 쉽게 만드는 일은 우리가 하겠습니다.">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/qrcode.min.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 바로가기</a>
+<header class="masthead">
+  <button class="icon-button menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="목차 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="#cover"><img src="assets/mark.svg" alt="" width="34" height="34"><span>모두의 ai</span></a>
+  <span class="book-label">프로젝트 북 <b>1.0</b></span>
+  <div class="header-actions"><a href="#experience" class="text-button">직접 체험하기 <span aria-hidden="true">↗</span></a><button class="icon-button" id="print-book" aria-label="프로젝트 북 인쇄 또는 PDF 저장"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7zM16 11h1"/></svg></button></div>
+</header>
+<div class="reading-progress" aria-hidden="true"><span id="progress"></span></div>
+<button class="nav-overlay" id="nav-overlay" aria-label="목차 닫기" hidden></button>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-top"><span>함께 만드는 한 권의 기준서</span><button class="icon-button mobile-close" id="close-menu" aria-label="목차 닫기">×</button></div>
+  <label class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="chapter-search" type="search" placeholder="목차 찾기" aria-label="목차 검색"></label>
+  <nav id="chapter-nav" aria-label="프로젝트 북 목차"></nav><p id="no-chapters" hidden>일치하는 장이 없습니다.</p>
+  <div class="sidebar-bottom"><span class="status-dot"></span> 함께 설계하는 중 <small>2026.10.26 · 초안</small></div>
+</aside>
+<main id="main">
+<section id="cover" class="cover chapter" data-title="표지" data-group="시작하며">
+  <div class="cover-meta"><span>아이작스튜디오 × 원컴퍼니 재단</span><span>공동 플랫폼 구상</span></div>
+  <h1>모든 가게에,<br>자신만의 AI.</h1>
+  <p class="cover-lead">사장님은 장사에 집중하세요.<br>AI를 쉽게 만드는 일은 우리가 하겠습니다.</p>
+  <p class="cover-copy">메뉴판 한 장에서 시작해, 손님을 맞이하고 가게의 일을 돕는 AI 팀까지.<br class="desktop-only"> 작은 가게의 가능성을 넓히는 플랫폼, <strong>모두의 AI</strong>를 함께 만듭니다.</p>
+  <div class="cover-actions"><a class="button primary" href="#glance">프로젝트 읽기 <span aria-hidden="true">↓</span></a><a class="button secondary" href="#experience">우리 가게의 내일, 체험하기</a></div>
+  <figure class="cover-art"><img src="assets/neighborhood.png" id="cover-image" width="1774" height="887" alt="레스토랑과 카페, 베이커리의 사장님과 손님들이 어울리는 작은 거리 일러스트"><figcaption><span>기술은 뒤에서. 사람은 가게의 중심에.</span><span>우리가 만들고 싶은 동네</span></figcaption></figure>
+  <div class="cover-facts"><div><span>첫 번째 업종</span><b>레스토랑 · 식당 · 카페</b></div><div><span>시작하는 방법</span><b>가게 정보 + 메뉴판 사진</b></div><div><span>손님을 만나는 곳</span><b>테이블 QR + 가게 AI 링크</b></div></div>
+</section>
+<section id="glance" class="chapter" data-title="한눈에 보는 모두의 AI" data-group="왜 만드는가">
+ <div class="chapter-head"><span class="chapter-no">01</span><div><p class="eyebrow">한눈에 보기</p><h2>가게를 가장 잘 아는<br>AI 직원이 생깁니다.</h2></div></div>
+ <p class="intro">상호, 가게 정보, 메뉴판을 넣으면 가게 전용 AI와 링크가 만들어집니다. 사장님은 QR을 붙이고, 손님은 자기 언어로 가게와 대화합니다.</p>
+ <div class="summary-grid"><article><span class="small-icon">↗</span><h3>손님에게는 <br>친절한 가게 안내자</h3><p>메뉴를 직접 고르거나, 취향을 말하고 추천받습니다. 재료와 영업시간을 물어보고 주문까지 이어집니다.</p></article><article><span class="small-icon">◎</span><h3>사장님에게는 <br>믿고 맡기는 업무 동료</h3><p>반복 질문, 메뉴 설명, 홍보 초안, 매출 정리를 돕습니다. 큰 결정과 가게의 개성은 사장님에게 남습니다.</p></article></div>
+ <blockquote>“AI를 잘 쓰는 사장님”을 요구하지 않습니다.<br>사장님을 잘 돕는 AI를 만듭니다.</blockquote>
+ <div class="note"><b>이 책의 현재 위치</b><p>실제 서비스 개발을 위한 제품·사업 설계 초안입니다. 아래 체험은 예시 데이터로 작동하며, 실제 AI 호출·주문 전송·결제는 아직 연결되어 있지 않습니다.</p></div>
+</section>
+<section id="why" class="chapter" data-title="사장님의 시간에서 출발" data-group="왜 만드는가">
+ <div class="chapter-head"><span class="chapter-no">02</span><div><p class="eyebrow">출발점</p><h2>좋은 장사에는,<br>해야 할 일이 너무 많습니다.</h2></div></div>
+ <p class="intro">커피를 내리는 동안 전화가 울립니다. 외국인 손님은 재료를 묻고, 오늘의 품절 메뉴는 아직 바꾸지 못했습니다. 마감 뒤에는 SNS와 장부가 기다립니다.</p>
+ <div class="story-band"><p>“AI가 좋다는 건 알아요.<br>그런데, 언제 배우죠?”</p><span>우리가 해결하려는 사장님의 상황 · 가상 시나리오</span></div>
+ <div class="comparison"><div><h3>지금의 하루</h3><ul><li>같은 메뉴 설명을 여러 번 반복합니다.</li><li>번역 앱과 메뉴판을 오가며 주문받습니다.</li><li>새 도구마다 계정과 사용법을 배웁니다.</li><li>가게 문을 닫아야 홍보와 정산을 시작합니다.</li></ul></div><div><h3>우리가 만드는 하루</h3><ul><li>가게 AI가 먼저 답하고 필요한 때 직원을 부릅니다.</li><li>손님은 편한 언어로 보고, 주방은 익숙한 언어로 받습니다.</li><li>“오늘 이 메뉴 품절이야”처럼 말하면 됩니다.</li><li>마감 때는 확인할 내용과 다음 행동이 정리됩니다.</li></ul></div></div>
+ <p class="closing-line">우리의 경쟁력은 더 많은 설정이 아니라, 사장님이 돌려받는 시간입니다.</p>
+</section>
+<section id="people" class="chapter" data-title="처음 만날 사장님과 손님" data-group="왜 만드는가">
+ <div class="chapter-head"><span class="chapter-no">03</span><div><p class="eyebrow">첫 번째 고객</p><h2>가게는 작아도,<br>손님에게 주는 경험은 크게.</h2></div></div>
+ <div class="persona-list"><article><span>카페</span><div><h3>혼자 바를 지키는 사장님</h3><p>원두, 우유 변경, 디카페인 질문에 답하면서 주문을 놓치지 않도록. 사진으로 등록한 메뉴와 실제 판매 옵션을 바탕으로 돕습니다.</p></div></article><article><span>식당</span><div><h3>점심시간이 가장 바쁜 사장님</h3><p>테이블별 주문을 한곳에서 확인하고, 품절을 즉시 반영하도록. 주문 접수와 주방 전달을 명확히 구분합니다.</p></div></article><article><span>레스토랑</span><div><h3>다양한 나라의 손님을 맞는 사장님</h3><p>메뉴의 이야기와 재료를 손님의 언어로 소개하도록. 확인되지 않은 재료나 알레르기 정보는 직원에게 연결합니다.</p></div></article></div>
+ <div class="note blue"><b>첫 검증 대상 제안</b><p>독립 매장 10곳 내외에서 시작합니다. 업종·언어·POS 환경이 서로 다른 매장을 골라 설치 과정과 주문 흐름을 관찰합니다. 이 숫자는 고객 실적이 아닌 파일럿 설계안입니다.</p></div>
+</section>
+<section id="principles" class="chapter" data-title="우리가 지킬 제품 원칙" data-group="무엇을 만드는가">
+ <div class="chapter-head"><span class="chapter-no">04</span><div><p class="eyebrow">제품의 약속</p><h2>어려운 일은,<br>화면 뒤에서 끝냅니다.</h2></div></div>
+ <div class="principles"><article><b>배우지 않아도 시작</b><p>모델, 프롬프트, 토큰을 묻지 않습니다. 상호와 메뉴판부터 받습니다.</p></article><article><b>대화는 선택, 주문은 간단</b><p>챗봇과 이야기하지 않아도 메뉴판에서 바로 주문할 수 있습니다.</p></article><article><b>가게마다 다른 목소리</b><p>같은 플랫폼 위에서도 각 매장의 말투, 메뉴와 이야기가 살아 있습니다.</p></article><article><b>실제 가게 정보가 기준</b><p>가격·옵션·품절은 승인된 데이터에서 가져옵니다. 모르면 확인합니다.</p></article><article><b>사람에게 언제든 연결</b><p>AI가 막히면 직원 호출과 직접 주문으로 자연스럽게 이어집니다.</p></article></div>
+</section>
+<section id="journey" class="chapter" data-title="QR에서 한 끼까지" data-group="무엇을 만드는가">
+ <div class="chapter-head"><span class="chapter-no">05</span><div><p class="eyebrow">손님의 여정</p><h2>앱 설치 없이.<br>익숙한 언어로, 편하게.</h2></div></div>
+ <ol class="journey"><li><span>01</span><h3>QR을 찍습니다</h3><p>매장과 테이블이 연결된 화면이 열립니다.</p></li><li><span>02</span><h3>언어를 고릅니다</h3><p>메뉴와 대화가 선택한 언어로 바뀝니다.</p></li><li><span>03</span><h3>고르거나 묻습니다</h3><p>“덜 매운 메뉴요.” “여기 주차되나요?”</p></li><li><span>04</span><h3>확인하고 주문합니다</h3><p>메뉴·옵션·수량·총액을 확인합니다.</p></li></ol>
+ <div class="two-col"><div><h3>가게 안에서</h3><p>테이블 QR에는 테이블 정보가 연결됩니다. 직원의 주문 확인과 진행 상태를 손님에게 보여줍니다.</p></div><div><h3>가게 밖에서</h3><p>SNS 프로필과 웹사이트의 같은 가게 AI 링크로 메뉴·위치·영업시간을 안내합니다. 외부 접속은 테이블 주문과 분리합니다.</p></div></div>
+</section>
+<section id="experience" class="chapter" data-title="직접 눌러보는 손님 화면" data-group="무엇을 만드는가">
+ <div class="chapter-head"><span class="chapter-no">06</span><div><p class="eyebrow">작동하는 화면</p><h2>우리 가게의 AI를<br>지금 만나보세요.</h2></div></div>
+ <p class="intro">가상의 카페 ‘모두의 테이블’입니다. 언어를 바꾸고 메뉴를 담거나, AI에게 추천과 재료를 물어보세요.</p>
+ <div class="demo-layout"><div class="demo-guide"><span class="pill">화면 체험</span><h3>메뉴판과 대화가<br>한 화면 안에.</h3><p>손님에게는 새로운 도구가 아닌, 조금 더 친절한 가게처럼 느껴져야 합니다.</p><ol><li>언어를 선택해 보세요.</li><li>추천을 받거나 메뉴를 바로 담아보세요.</li><li>장바구니에서 수량과 금액을 확인하세요.</li></ol><div class="demo-note">응답은 준비된 예시입니다.<br>주문과 결제는 실제로 실행되지 않습니다.</div><button class="text-button" id="reset-demo">체험 처음부터 다시</button></div><div class="phone" id="guest-app"><div class="phone-top"><span>9:41</span><span aria-hidden="true">● ▰</span></div><div class="guest-store"><span class="store-avatar">m</span><div><b id="guest-store-name">모두의 테이블</b><small id="guest-table">테이블 03 · 체험 매장</small></div><button class="icon-button" id="call-staff" aria-label="직원 호출 체험"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17h14M4 20h16M7 17v-5a5 5 0 0 1 10 0v5M12 4v3"/></svg></button></div><label class="language-label"><span id="language-text">언어</span><select id="guest-language" aria-label="손님 화면 언어"><option value="ko">한국어</option><option value="en">English</option><option value="vi">Tiếng Việt</option></select></label><div class="guest-tabs" role="tablist" aria-label="매장 화면"><button role="tab" id="tab-menu" aria-selected="true" aria-controls="panel-menu" data-guest-tab="menu">메뉴</button><button role="tab" id="tab-chat" aria-selected="false" aria-controls="panel-chat" data-guest-tab="chat" tabindex="-1">AI에게 물어보기</button></div><div id="panel-menu" role="tabpanel" aria-labelledby="tab-menu"><div class="menu-greeting"><small id="menu-kicker">오늘도 반가워요</small><h3 id="menu-heading">어떤 맛이 당기세요?</h3><button id="recommend" class="recommend-button">취향에 맞는 메뉴 추천받기 <span>↗</span></button></div><div id="menu-items"></div></div><div id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" hidden><div id="chat-messages" class="chat-messages" aria-live="polite"></div><div class="quick-questions" id="quick-questions"></div><form id="chat-form" class="chat-input"><input id="chat-input" aria-label="가게에 물어볼 내용" placeholder="메뉴나 가게에 대해 물어보세요" maxlength="300" autocomplete="off"><button aria-label="질문 보내기" type="submit">↑</button></form></div><button class="cart-bar" id="open-cart"><span id="cart-count">0</span><span id="cart-label">장바구니 보기</span><b id="cart-total">₩0</b></button><p class="guest-disclaimer" id="guest-disclaimer">제품 체험 · 실제 주문은 전송되지 않습니다</p></div></div>
+</section>
+<section id="onboarding" class="chapter" data-title="사장님의 AI 만들기" data-group="무엇을 만드는가">
+ <div class="chapter-head"><span class="chapter-no">07</span><div><p class="eyebrow">사장님의 첫 시작</p><h2>우리 가게 이야기만<br>들려주시면 됩니다.</h2></div></div>
+ <p class="intro">가게 정보를 적고 메뉴판을 올립니다. AI가 읽은 내용을 사장님이 확인하면 가게의 첫 AI가 준비됩니다. 복잡한 설정은 나중에 필요할 때만 보여줍니다.</p>
+ <div class="owner-builder"><div class="builder-progress" aria-label="만들기 단계"><span class="active" data-step-label="1">1 가게 정보</span><span data-step-label="2">2 메뉴 확인</span><span data-step-label="3">3 링크와 QR</span></div><form id="owner-form"><div id="owner-step-1"><div class="form-heading"><h3>어떤 가게를 운영하시나요?</h3><span>체험 입력은 이 화면에서만 사용됩니다</span></div><div class="form-grid"><label>상호 <span class="required">필수</span><input name="storeName" id="store-name" value="모두의 테이블" required maxlength="50" autocomplete="organization"></label><label>국가 <select name="country" id="store-country"><option value="KR">대한민국</option><option value="VN">베트남</option><option value="OTHER">다른 국가</option></select></label><label class="span-2">주소 <span class="required">필수</span><input name="address" id="store-address" placeholder="가게 주소를 입력해 주세요" required maxlength="200" autocomplete="street-address"></label><label>전화번호 <input name="phone" type="tel" placeholder="가게 연락처" maxlength="30" autocomplete="tel"></label><label>이메일 <input name="email" type="email" placeholder="운영 알림을 받을 이메일" maxlength="150" autocomplete="email"></label><label class="span-2">웹사이트 또는 SNS 주소 <input name="website" type="url" placeholder="https://…" maxlength="300"></label></div><label class="upload-zone" for="menu-upload"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 15v5h16v-5"/></svg><b>메뉴판 사진을 골라주세요</b><span>JPG·PNG·WebP · 최대 5장, 장당 10MB</span><input id="menu-upload" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><div id="upload-previews"></div><p id="upload-status" class="field-help" aria-live="polite">사진은 서버로 전송되지 않습니다. 이 체험에서는 예시 메뉴를 확인합니다.</p><div class="builder-actions"><button class="text-button" id="fill-example" type="button">예시 가게 정보 채우기</button><button class="button primary" type="submit">다음: 예시 메뉴 확인</button></div></div><div id="owner-step-2" hidden><h3>메뉴와 가격, 마지막으로 확인해 주세요.</h3><p>실제 제품에서는 사진에서 추출한 내용이 나타납니다. 지금은 체험용 메뉴입니다.</p><div id="review-menu"></div><label class="check-row"><input type="checkbox" id="menu-confirm"> 예시 메뉴와 가격을 확인했습니다.</label><div class="builder-actions"><button class="button secondary" id="owner-back" type="button">이전</button><button class="button primary" id="generate-store" type="button">체험 링크 만들기</button></div><p id="builder-error" role="alert"></p></div><div id="owner-step-3" hidden><span class="completion-mark">✓</span><h3 id="created-title">가게 체험 화면이 준비됐어요.</h3><p>이 링크는 프로젝트 북의 예시 매장 화면을 엽니다. 실제 매장 개설과 구독은 다음 개발 단계에서 연결합니다.</p><div class="generated-link"><input id="generated-link" readonly aria-label="생성된 체험 링크"><button class="button secondary" id="copy-link" type="button">복사</button></div><div class="builder-actions"><button class="text-button" id="owner-edit" type="button">가게 정보 수정</button><a class="button primary" href="#qr">QR 인쇄물 준비하기</a></div></div></form></div>
+</section>
+<section id="qr" class="chapter" data-title="링크 하나, 가게의 모든 곳에" data-group="무엇을 만드는가">
+ <div class="chapter-head"><span class="chapter-no">08</span><div><p class="eyebrow">가게의 새로운 입구</p><h2>테이블에서도.<br>SNS 프로필에서도.</h2></div></div>
+ <p class="intro">가게 링크는 하나, 들어오는 길은 다양하게. 테이블 번호를 담은 QR, 카운터 안내문, SNS 공유 링크를 사장님이 직접 준비합니다.</p>
+ <div class="qr-layout"><div><label class="field">인쇄물에 표시할 가게 이름<input id="qr-store" value="모두의 테이블" maxlength="50"></label><label class="field">테이블 번호<input id="qr-table" type="number" value="3" min="1" max="999"></label><div class="stack-actions"><button class="button primary" id="print-qr">테이블 안내문 인쇄</button><button class="button secondary" id="download-qr">QR 이미지 저장 (SVG)</button><button class="text-button" id="copy-qr-link">체험 링크 복사</button></div><p class="caption">실제로 읽을 수 있는 체험 QR입니다. 현재는 프로젝트 북으로 연결되며, 비공개 게시 상태에서는 소유자 로그인이 필요합니다. 실서비스에서는 공개 매장 주소를 사용합니다.</p></div><div class="qr-paper" id="qr-paper"><div class="paper-brand"><img src="assets/mark.svg" width="24" height="24" alt=""> 모두의 ai</div><span class="paper-table" id="paper-table">Table 03</span><h3 id="paper-name">모두의 테이블</h3><p>우리 가게에,<br>궁금한 게 있으세요?</p><div id="qr-code" aria-label="체험 매장으로 연결되는 QR 코드"></div><b>메뉴 · 추천 · 가게 이야기</b><span>QR을 찍고 편한 언어로 만나보세요.</span><small>프로젝트 체험용 · 실제 주문 불가</small></div></div>
+</section>
+<section id="team" class="chapter" data-title="사장님 곁의 AI 팀" data-group="무엇을 만드는가">
+ <div class="chapter-head"><span class="chapter-no">09</span><div><p class="eyebrow">플랫폼의 확장</p><h2>한 명의 안내자에서,<br>가게를 돕는 하나의 팀으로.</h2></div></div>
+ <p class="intro">손님을 맞는 AI에서 시작해, 가게 운영을 돕는 역할을 하나씩 더합니다. 사장님은 담당자를 고용하듯 필요한 업무만 켭니다.</p>
+ <div class="role-tabs" id="role-tabs" role="tablist" aria-label="AI 담당 업무"></div><div class="role-detail" id="role-detail" role="tabpanel"></div>
+ <div class="note"><b>첫 출시와 확장을 구분합니다</b><p>첫 제품은 안내·추천·주문 접수에 집중합니다. SNS 자동 게시, 회계 연동, 발주와 결제 자동화는 연결 서비스의 권한과 운영 검증을 거친 뒤 추가합니다.</p></div>
+</section>
+<section id="operations" class="chapter" data-title="주문이 실제 일이 되는 과정" data-group="어떻게 운영하는가">
+ <div class="chapter-head"><span class="chapter-no">10</span><div><p class="eyebrow">매장 운영</p><h2>“주문했어요”와<br>“접수됐어요”는 다릅니다.</h2></div></div>
+ <p class="intro">좋은 대화가 정확한 운영으로 이어져야 합니다. 실제 가격·품절·주문 상태를 서버가 확인하고, 사장님과 손님이 같은 상황을 보게 합니다.</p>
+ <div class="order-flow"><span>장바구니</span><i>→</i><span>손님 최종 확인</span><i>→</i><span>매장 접수</span><i>→</i><span>조리 중</span><i>→</i><span>제공 완료</span></div>
+ <div class="two-col"><div><h3>결제는 별도의 상태로</h3><p>현장 결제와 온라인 결제를 구분합니다. 온라인 결제 성공은 결제사의 검증된 알림으로 확정하고, 같은 요청이 반복돼도 중복 주문·청구가 생기지 않게 만듭니다.</p></div><div><h3>기존 POS가 없어도 시작</h3><p>초기에는 사장님용 주문함으로 접수합니다. 매장에 맞는 POS 연동은 이후 추가합니다. 연결 실패와 미접수 주문은 화면과 알림에서 분명히 드러나야 합니다.</p></div></div>
+ <details><summary>주문 직전에 품절되면 어떻게 하나요?</summary><p>서버가 최종 재고와 가격을 다시 확인합니다. 판매할 수 없는 메뉴는 주문을 확정하지 않고 대안을 안내합니다. 가격이 달라지면 바뀐 총액에 대해 손님의 확인을 다시 받습니다.</p></details><details><summary>SNS 링크로 들어온 사람이 테이블 주문을 보낼 수 있나요?</summary><p>일반 가게 링크는 정보 안내를 기본으로 합니다. 테이블 주문에는 매장별 주문 허용 설정과 현장 확인 방식을 둡니다. QR 사진만 보고 외부에서 반복 주문하는 상황도 파일럿에서 검증합니다.</p></details>
+</section>
+<section id="business" class="chapter" data-title="구독 모델과 사업 계산기" data-group="어떻게 성장하는가">
+ <div class="chapter-head"><span class="chapter-no">11</span><div><p class="eyebrow">지속 가능한 사업</p><h2>가게가 얻는 가치가,<br>매달 구독의 이유가 됩니다.</h2></div></div>
+ <p class="intro">매장 단위 구독을 기본으로, 이용량과 운영 기능에 따라 확장합니다. 아래 요금은 가격 실험을 위한 제안이며 확정 판매가가 아닙니다.</p>
+ <div class="pricing-grid"><article><span>시작</span><h3>가게 안내</h3><strong>₩29,000<small>/월 · 가설</small></strong><p>가게 AI · 다국어 메뉴<br>가게 링크 · QR 인쇄<br>기본 질문 통계</p></article><article class="featured"><span>첫 핵심 상품 제안</span><h3>가게 운영</h3><strong>₩59,000<small>/월 · 가설</small></strong><p>가게 안내의 모든 기능<br>주문함 · 테이블 관리<br>일일 운영 보고</p></article><article><span>확장</span><h3>가게 팀</h3><strong>별도 설계</strong><p>여러 지점 · 직원 권한<br>SNS·회계·POS 연결<br>업무별 AI 담당자</p></article></div>
+ <p class="caption">AI 이용량, 포함 한도, 부가세 및 초과 요금은 파일럿 비용을 측정한 뒤 결정합니다. 결제 수수료와 초기 설치 지원비는 별도 검토 항목입니다.</p>
+ <div class="calculator"><div><h3>가정을 바꾸며 보는 사업 규모</h3><p>시장 예측이나 실제 실적이 아닌, 단순 월간 시나리오입니다.</p><label>유료 매장 수 <output id="stores-output">100곳</output><input id="calc-stores" type="range" min="10" max="1000" value="100" step="10"></label><label>매장당 월 구독료 (원)<input id="calc-price" type="number" min="0" max="1000000" step="1000" value="59000"></label><label>매장당 월 변동비 (원)<input id="calc-cost" type="number" min="0" max="1000000" step="1000" value="15000"></label></div><div class="calc-results" aria-live="polite"><span>월 반복 매출</span><strong id="calc-revenue">590만 원</strong><span>변동비 차감 후 월 공헌이익</span><b id="calc-margin">440만 원</b><small>구독 매출 − 매장별 변동비<br>인건비·마케팅·고정비·세금·환불은 미포함</small></div></div>
+</section>
+<section id="growth" class="chapter" data-title="첫 10개 가게에서 시작" data-group="어떻게 성장하는가">
+ <div class="chapter-head"><span class="chapter-no">12</span><div><p class="eyebrow">시장에 들어가는 방법</p><h2>먼저 한 가게의 하루를<br>확실하게 바꿉니다.</h2></div></div>
+ <div class="growth-steps"><article><span>먼저</span><h3>함께 만들 10개 매장</h3><p>사장님을 직접 만나 메뉴판을 받고 설치를 돕습니다. 바쁜 시간에 옆에서 지켜보며 실패한 순간을 기록합니다.</p></article><article><span>그다음</span><h3>스스로 시작하는 100개 매장</h3><p>직접 도와주지 않아도 개설되는지 검증합니다. 업종별 기본 설정과 쉬운 안내로 설치 지원 부담을 줄입니다.</p></article><article><span>검증 후</span><h3>동네에서 다른 동네로</h3><p>매장 추천, 상인 커뮤니티, 현지 파트너를 통해 확장합니다. 국가별 언어·결제·운영 차이를 먼저 맞춥니다.</p></article></div>
+ <div class="table-wrap"><table><thead><tr><th>관찰할 질문</th><th>확인할 지표</th><th>검증 방법</th></tr></thead><tbody><tr><td>혼자 시작할 수 있는가?</td><td>개설 완료율·소요 시간</td><td>설명 없이 가게 등록 관찰</td></tr><tr><td>주문을 믿고 받을 수 있는가?</td><td>누락·중복·옵션 오류</td><td>매장 주문 원장과 대조</td></tr><tr><td>사장님 시간이 줄어드는가?</td><td>반복 응대·마감 업무 시간</td><td>도입 전후 같은 시간대 비교</td></tr><tr><td>돈을 내고 계속 쓰는가?</td><td>유료 전환·월 유지율</td><td>무료 만족도와 분리해 측정</td></tr></tbody></table></div>
+</section>
+<section id="partnership" class="chapter" data-title="아이작스튜디오 × 원컴퍼니 재단" data-group="어떻게 성장하는가">
+ <div class="chapter-head"><span class="chapter-no">13</span><div><p class="eyebrow">공동 플랫폼의 비전</p><h2>기술의 기회가,<br>가게의 크기를 가리지 않도록.</h2></div></div>
+ <p class="intro">아이작스튜디오와 원컴퍼니 재단이 함께 만드는 ‘모두의 AI’. 좋은 기술을 누구나 시작할 수 있는 일상의 도구로 바꾸는 공동 플랫폼 사업을 지향합니다.</p>
+ <div class="partner-panel"><div><span>아이작스튜디오</span><h3>경험을 제품으로</h3><p>브랜드·서비스 설계, 제품 개발, 기술 운영, 고객 경험을 잇는 역할을 제안합니다.</p></div><span class="partner-x">×</span><div><span>원컴퍼니 재단</span><h3>가능성을 더 넓게</h3><p>현장 네트워크, 디지털 접근성, 소상공인 참여와 지원 프로그램을 잇는 역할을 제안합니다.</p></div></div>
+ <p class="caption">공동 사업 방향은 사용자 구상에 기반합니다. 위 역할 분담과 지원 프로그램은 논의안이며, 계약·출자·지분·수익 배분·법적 책임은 아직 확정하지 않았습니다.</p>
+ <div class="vision-banner"><span>우리의 장기 비전</span><p>골목의 작은 가게부터.<br>자신의 일을 가진 모두에게.</p><small>첫 출발은 외식업. 다음 업종은 같은 문제와 반복 가능한 해결책이 확인될 때 확장합니다.</small></div>
+</section>
+<section id="architecture" class="chapter" data-title="GPT를 담는 우리 플랫폼" data-group="어떻게 개발하는가">
+ <div class="chapter-head"><span class="chapter-no">14</span><div><p class="eyebrow">개발 설계</p><h2>AI의 지능 위에,<br>가게를 위한 시스템을 만듭니다.</h2></div></div>
+ <p class="intro">Codex로 개발하고 GPT 계열 모델을 연결합니다. 모델은 이해와 설명을 맡고, 모두의 AI는 가게 정보·주문·권한·기록을 책임집니다.</p>
+ <div class="architecture"><div class="arch-row"><span>손님 화면</span><span>사장님 화면</span><span>매장 주문함</span></div><div class="arch-core"><b>모두의 AI 서비스</b><p>가게별 데이터 · 권한 · 주문 검증 · 구독 · 실행 기록</p></div><div class="arch-row bottom"><span>GPT 대화·이미지 이해</span><span>매장 데이터 저장소</span><span>결제·POS·SNS 연결</span></div></div>
+ <div class="two-col"><div><h3>모델은 성능을 보고 선택</h3><p>메뉴판 읽기, 한국어·영어·현지어 대화, 도구 호출의 정확도와 지연·비용을 같은 평가셋으로 비교합니다. 모델 이름을 상품 설정으로 노출하지 않습니다.</p></div><div><h3>사진은 초안, 승인은 사장님</h3><p>이미지에서 메뉴·가격·옵션을 구조화하고 불확실한 항목을 표시합니다. 사장님이 확인한 버전만 손님에게 공개합니다.</p></div></div>
+ <details><summary>개발자를 위한 첫 구현 범위</summary><p>매장·메뉴·테이블·대화·주문을 구분하는 서비스 구조, 서버에서만 사용하는 API 키, 이미지 업로드 처리, 구조화된 메뉴 추출, 매장 데이터 조회 도구, 주문 생성 도구, 별도의 사장님 인증과 권한을 구현합니다. 웹사이트·SNS는 공개 링크를 우선 등록하고, 내용 수집과 계정 연결은 권한 범위를 확인한 뒤 추가합니다.</p></details>
+</section>
+<section id="trust" class="chapter" data-title="가게가 믿고 맡기는 기준" data-group="어떻게 개발하는가">
+ <div class="chapter-head"><span class="chapter-no">15</span><div><p class="eyebrow">데이터와 책임</p><h2>친절한 답변보다 먼저,<br>정확한 가게 정보.</h2></div></div>
+ <div class="table-wrap"><table><thead><tr><th>정보·행동</th><th>기준 데이터</th><th>실행 조건</th></tr></thead><tbody><tr><td>가격·옵션·품절</td><td>사장님이 승인한 최신 메뉴</td><td>주문 직전 서버 재검증</td></tr><tr><td>재료·알레르기</td><td>매장 확인 정보</td><td>누락·교차 접촉 가능성은 직원 확인</td></tr><tr><td>주문 생성</td><td>유효한 메뉴 ID·테이블·수량</td><td>손님 최종 확인, 중복 실행 방지</td></tr><tr><td>결제·환불</td><td>결제사 거래 기록</td><td>인증된 처리 결과, 환불 권한 분리</td></tr><tr><td>SNS 게시·가격 변경</td><td>검토할 초안과 변경 내역</td><td>초기에는 사장님 승인 후 실행</td></tr><tr><td>매장 데이터</td><td>매장별 소유 범위</td><td>다른 매장의 데이터 접근 차단</td></tr></tbody></table></div>
+ <div class="note blue"><b>고객에게 하지 않을 약속</b><p>모든 질문에 답한다는 이유로 없는 정보를 만들지 않습니다. 알레르기 안전을 단정하지 않고, 실제 결제 확인 없이 결제 완료라고 말하지 않습니다. 직원 연결은 실패가 아니라 제품의 기본 기능입니다.</p></div>
+ <details><summary>최소 데이터 구조</summary><p>사업자 계정 → 매장 → 메뉴 버전·메뉴·옵션·재료 → 테이블·접속 세션 → 대화 → 주문·주문 항목 → 결제 상태. 직원 권한, 구독, 작업 승인, 변경 기록을 별도로 둡니다. 원본 사진과 추출 결과를 연결해 잘못 읽은 내용을 고칠 수 있게 합니다.</p></details>
+</section>
+<section id="roadmap" class="chapter" data-title="아이디어에서 첫 매장까지" data-group="어떻게 개발하는가">
+ <div class="chapter-head"><span class="chapter-no">16</span><div><p class="eyebrow">개발 로드맵</p><h2>큰 비전은,<br>작동하는 한 걸음에서.</h2></div></div>
+ <p class="intro">일정은 인력과 연동 범위를 정한 뒤 확정합니다. 달력보다 먼저, 다음 단계로 넘어갈 수 있는 완료 기준을 정합니다.</p>
+ <ol class="roadmap"><li class="current"><span class="road-dot"></span><div><small>지금 · 프로젝트 북</small><h3>같은 제품을 상상합니다</h3><p>비전, 고객, 핵심 흐름과 눌러보는 화면을 하나의 기준서로 정리합니다.</p><b>완료 기준: 첫 출시 범위에 대한 공동 합의</b></div></li><li><span class="road-dot"></span><div><small>첫 개발 · 매장 AI</small><h3>등록에서 첫 답변까지 연결합니다</h3><p>사장님 로그인, 매장 등록, 사진 업로드·메뉴 승인, GPT 대화, 가게 링크와 QR을 구현합니다.</p><b>완료 기준: 한 매장이 직접 개설하고 실제 메뉴로 응대</b></div></li><li><span class="road-dot"></span><div><small>현장 파일럿 · 주문</small><h3>바쁜 시간에도 믿을 수 있게 만듭니다</h3><p>장바구니, 주문함, 품절 반영, 테이블 구분, 직원 호출, 장애 대응을 검증합니다.</p><b>완료 기준: 누락·중복 없는 주문과 현장 운영 확인</b></div></li><li><span class="road-dot"></span><div><small>유료 출시 · 구독</small><h3>계속 쓰고 싶은 서비스로 다듬습니다</h3><p>구독 결제, 이용량 관리, 고객 지원, 운영 모니터링을 갖춥니다. 온라인 식사 결제는 별도 범위로 검증합니다.</p><b>완료 기준: 실제 지불 의사와 매장별 원가 확인</b></div></li><li><span class="road-dot"></span><div><small>이후 · 가게의 AI 팀</small><h3>업무와 지역을 넓힙니다</h3><p>홍보·SNS·메뉴개발·경리 역할을 추가하고, 검증된 지역과 업종부터 확장합니다.</p><b>완료 기준: 역할별 효과와 승인·복구 흐름 검증</b></div></li></ol>
+</section>
+<section id="workshop" class="chapter" data-title="우리의 다음 결정" data-group="함께 완성하기">
+ <div class="chapter-head"><span class="chapter-no">17</span><div><p class="eyebrow">함께 만드는 작업실</p><h2>이제, 첫 가게를<br>함께 정할 차례입니다.</h2></div></div>
+ <p class="intro">아래 항목을 정하면 실제 제품 개발의 범위가 선명해집니다. 체크와 메모는 이 브라우저에만 저장되며 공동 편집이나 서버 동기화는 하지 않습니다.</p>
+ <div class="decision-list"><label><input type="checkbox" data-decision="market"><span><b>첫 출시 국가와 언어</b><small>한국, 베트남 또는 다른 지역. 결제·주소·통화 기준을 정합니다.</small></span></label><label><input type="checkbox" data-decision="pilot"><span><b>함께 검증할 첫 매장</b><small>실제 메뉴판과 운영 방식을 제공할 파일럿 매장을 정합니다.</small></span></label><label><input type="checkbox" data-decision="order"><span><b>첫 주문 처리 방식</b><small>사장님 주문함 + 현장 결제를 기본안으로 검토합니다.</small></span></label><label><input type="checkbox" data-decision="partnership"><span><b>공동 사업 운영 구조</b><small>역할, 계약 주체, 고객 지원과 비용 부담을 합의합니다.</small></span></label><label><input type="checkbox" data-decision="pricing"><span><b>가격 실험과 포함 이용량</b><small>파일럿 사용량을 측정한 뒤 유료 제안을 확정합니다.</small></span></label></div>
+ <label class="field workshop-label">이 프로젝트에 더하고 싶은 생각<textarea id="project-notes" rows="5" placeholder="첫 매장, 꼭 필요한 기능, 함께 논의할 내용을 적어두세요."></textarea></label><div class="builder-actions"><span id="notes-status" class="caption" role="status">이 브라우저에 자동 저장</span><button class="button secondary" id="export-notes">논의 메모 내려받기</button></div>
+</section>
+<section id="faq" class="chapter" data-title="자주 묻는 질문과 참고 자료" data-group="함께 완성하기">
+ <div class="chapter-head"><span class="chapter-no">18</span><div><p class="eyebrow">마지막 확인</p><h2>쉽게 시작하되,<br>기준은 분명하게.</h2></div></div>
+ <details><summary>사장님이 AI를 공부해야 하나요?</summary><p>그럴 필요 없도록 만드는 것이 제품의 핵심입니다. 사장님은 가게 정보를 등록하고 AI가 정리한 메뉴를 확인합니다. 기술 설정은 플랫폼이 맡습니다.</p></details><details><summary>손님이 꼭 AI와 대화해야 하나요?</summary><p>아닙니다. 일반 메뉴판처럼 보고 바로 담을 수 있습니다. 추천이나 설명이 필요할 때만 AI에게 묻습니다.</p></details><details><summary>메뉴판만 있으면 재료와 알레르기도 알 수 있나요?</summary><p>메뉴명이나 사진만으로 단정할 수 없습니다. 사장님이 별도로 확인한 정보를 등록해야 합니다. 정보가 없으면 직원에게 확인하도록 안내합니다.</p></details><details><summary>사이트와 SNS 주소를 넣으면 모든 정보를 자동으로 가져오나요?</summary><p>처음에는 링크 등록과 사장님이 제공한 정보를 기준으로 합니다. 접근 가능한 공개 자료를 가져오는 기능과 계정 권한이 필요한 기능은 별도로 설계하며, 가져온 정보도 공개 전에 확인합니다.</p></details><details><summary>이미 운영 중인 서비스인가요?</summary><p>현재는 프로젝트 북과 브라우저 안에서 작동하는 체험 프로토타입입니다. 실제 GPT 응답, 매장 계정, 구독, 주문 전송, 결제, SNS 연결은 아직 개발 전입니다.</p></details>
+ <div class="references"><h3>설계에 참고한 자료</h3><a href="https://familywallet-book.vercel.app/#cover" target="_blank" rel="noopener">FamilyWallet 프로젝트 북 <span>문서와 체험을 함께 담는 구성 참고 ↗</span></a><a href="https://developers.openai.com/api/reference/responses/overview" target="_blank" rel="noopener">OpenAI Responses API <span>텍스트·이미지 입력과 응답 인터페이스 ↗</span></a><a href="https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses" target="_blank" rel="noopener">OpenAI Structured Outputs <span>메뉴 추출 결과를 정해진 구조로 다루기 ↗</span></a><a href="https://developers.openai.com/api/docs/guides/images-vision?api-mode=responses" target="_blank" rel="noopener">OpenAI Images and vision <span>이미지 이해 기능과 한계 ↗</span></a><p class="caption">기술 문서는 2026.10.26 확인. 사업 수치와 요금은 이 책의 검증 가설이며 외부 시장 통계가 아닙니다.</p></div>
+</section>
+<footer class="book-footer"><img src="assets/mark.svg" width="48" height="48" alt=""><h2>사장님의 가능성이,<br>가게의 내일이 되도록.</h2><p>아이작스튜디오 × 원컴퍼니 재단</p><span>모두의 AI 프로젝트 북 1.0 · 2026.10.26</span><a href="#cover">처음으로 ↑</a></footer>
+</main>
+<dialog id="cart-dialog" class="cart-dialog"><div class="dialog-head"><h2 id="cart-title">장바구니</h2><button class="icon-button" id="close-cart" aria-label="장바구니 닫기">×</button></div><div id="cart-items"></div><div class="cart-summary"><span id="cart-total-label">합계</span><b id="cart-dialog-total">₩0</b></div><p id="checkout-note">메뉴와 수량을 확인해 주세요. 체험 주문은 매장으로 전송되지 않습니다.</p><button id="checkout" class="button primary">체험 주문 확인</button><div id="order-confirmation" role="status" hidden></div></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+</body></html>
