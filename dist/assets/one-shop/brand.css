@@ -41,3 +41,22 @@
 }
 @media(max-width:380px){.entry-header .one-shop-lockup{gap:7px}.entry-header .one-shop-lockup>.one-shop-mark{width:38px;height:38px}.entry-header .one-shop-wordmark small{font-size:9px}.chat-topbar>.one-shop-mark{width:28px;height:28px}.chat-title b{font-size:14px}.demo-label{max-width:64px;text-align:center}}
 @media print{.cover-picture.one-shop-cover>.cover-mascot{width:190px;height:190px}.cover-wordmark b{font-size:54px}.one-shop-cover{background:#e6eef8!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+/* Three approved character actions. Animation never implies a completed operation. */
+.one-shop-mark[data-mood]:not([data-mood=idle]){padding:1px}
+.one-shop-mark img{transform-origin:50% 78%}
+.mascot-animated[data-mood=greeting] img{animation:mascot-greet 1.8s ease-in-out 2}
+.mascot-animated[data-mood=thinking] img{animation:mascot-think 2.4s ease-in-out 2}
+.mascot-animated[data-mood=order] img{animation:mascot-order 1.25s ease-in-out 2}
+@keyframes mascot-greet{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg) translateY(-3px)}50%{transform:rotate(6deg)}75%{transform:rotate(-4deg)}}
+@keyframes mascot-think{0%,100%{transform:rotate(0)}45%,65%{transform:rotate(-7deg) translateY(-2px)}}
+@keyframes mascot-order{0%,100%{transform:translateY(0) rotate(0)}45%{transform:translateY(-5px) rotate(4deg)}70%{transform:translateY(1px) rotate(-2deg)}}
+.chat-message>.one-shop-mark[data-mood]{width:42px;height:42px;margin-top:0}
+.pending-reply .message-content{display:flex;align-items:center;flex-wrap:wrap;gap:12px;color:#b2bccd;font-size:13px;padding:10px 0}
+.thinking-dots{display:inline-flex;gap:4px}
+.thinking-dots i{width:4px;height:4px;background:#aeccee;border-radius:50%;animation:thinking-dot .9s ease-in-out infinite}
+.thinking-dots i:nth-child(2){animation-delay:.15s}.thinking-dots i:nth-child(3){animation-delay:.3s}
+@keyframes thinking-dot{50%{transform:translateY(-4px);opacity:.35}}
+@media(max-width:760px){.chat-message>.one-shop-mark[data-mood]{width:34px;height:34px}.pending-reply .message-content{font-size:12px}.chat-welcome>.one-shop-mark[data-mood]{width:108px;height:108px}.entry-panel>.one-shop-mark[data-mood]{width:128px;height:128px}}
+@media(prefers-reduced-motion:reduce){.mascot-animated img,.thinking-dots i{animation:none!important}}
+[data-motion=off] .mascot-animated img,[data-motion=off] .thinking-dots i{animation:none!important}

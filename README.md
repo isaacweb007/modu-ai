@@ -1,10 +1,10 @@
 # 원샵 · one ai
 
-아이작스튜디오 × 원컴퍼니 재단. 9개 언어의 프로덕션북과 샵 에이전트 앱 5.1.
+아이작스튜디오 × 원컴퍼니 재단. 9개 언어의 프로덕션북과 샵 에이전트 앱 5.2.
 
 - [프로덕션북](https://isaacweb007.github.io/modu-ai/)
-- [사장님 앱](https://isaacweb007.github.io/modu-ai/jumo/owner.html?lang=ko&v=5.1)
-- [주모 손님 앱](https://isaacweb007.github.io/modu-ai/jumo/?lang=ko&v=5.1)
+- [사장님 앱](https://isaacweb007.github.io/modu-ai/jumo/owner.html?lang=ko&v=5.2)
+- [주모 손님 앱](https://isaacweb007.github.io/modu-ai/jumo/?lang=ko&v=5.2)
 
 ## 원샵 주문 확인
 
@@ -59,3 +59,12 @@ GitHub `main` 푸시 → Actions의 의존성 설치·번들·검사 → GitHub 
 공개 설정은 `dist/shared/cloud-config.js`에 있습니다. 공개 가능한 프로젝트 URL과 publishable key만 포함합니다. 서버 관리 키는 Supabase Edge 런타임의 `SUPABASE_SERVICE_ROLE_KEY`를 사용하며 저장소·브라우저에 포함하지 않습니다.
 
 언어: 한국어·영어·베트남어·중국어·일본어·크메르어·인도네시아어·라오스어·힌디어. 직접 작성한 메뉴 설명은 자동 번역하지 않으며, 변경하지 않은 주모 샘플은 9개 언어로 제공됩니다. 가격은 현재 VND 기준입니다. 음식 이미지는 AI로 만든 메뉴 시안입니다.
+
+
+## 5.2 — character expressions and illustrated production book
+
+- Higgsfield GPT Image 2.5 assets: greeting, thinking and order-taking poses; six editorial shop illustrations. Optimized outputs live in `dist/assets/one-shop/poses/` and `stories/`. Masters, prompts and completed job records are in the local `design/one-shop-brand/motion-v1/` folder. These drawings are brand concept illustrations. The illustrated table card is not a scannable QR code.
+- The owner and guest apps show a greeting at entry, a short thinking transition for scenario replies, and contextual message avatars for menu, checkout, reservation and reports. The presentation does not change saved order state or imply that a payment completed. Real AI and payment integration remain disabled.
+- All 18 book chapters have contextual art. The sidebar supports chapter search, collapsible groups, current chapter and reading progress; bottom controls move between chapters. Phone navigation supports Escape and keyboard focus containment.
+- A three-pose interactive character preview appears in the principles chapter. Motion respects the device reduced-motion preference, and the book has a persistent pause/play control. New labels cover all nine existing languages.
+- Verified: mobile 390px, desktop 1440px, nine-language chapter layouts, menu → table confirmation → sample order receipt, owner scenario reply; 24 automated checks.

@@ -1,4 +1,4 @@
-import {UI} from './copy.js?v=5.1.0';import {MENU} from './menu.js?v=5.1.0';import {money} from './core.js?v=5.1.0';
+import {UI} from './copy.js?v=5.2.0';import {MENU} from './menu.js?v=5.2.0';import {money} from './core.js?v=5.2.0';
 export const QUESTIONS=['qRecommend','qIngredients','qSpicy','qStory','qHours','qComplaint','qPayment'];
 export const REPLIES={qRecommend:'replyRecommend',qIngredients:'replyIngredients',qSpicy:'replySpicy',qStory:'replyStory',qHours:'replyHours',qComplaint:'replyComplaint',qPayment:'replyPayment'};
 const normalize=t=>t.toLowerCase().replace(/[?？.!。!។]/g,'').replace(/\s+/g,' ').trim();
