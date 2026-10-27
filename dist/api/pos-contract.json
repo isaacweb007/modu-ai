@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "one ai POS adapter draft",
+    "title": "one shop ai POS adapter draft",
     "version": "0.1.0",
     "description": "Design contract only. This static demo does not implement these endpoints. Future server must verify tenant ownership, server-side menu prices, idempotency, signed provider webhooks, replay protection and payment reconciliation. No credentials are embedded."
   },

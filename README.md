@@ -1,14 +1,14 @@
-# 원샵 · one ai
+# 원샵 · one shop ai
 
-아이작스튜디오 × 원컴퍼니 재단. 9개 언어의 프로덕션북과 샵 에이전트 앱 5.2.
+아이작스튜디오 × 원컴퍼니 재단. 9개 언어의 프로덕션북과 샵 에이전트 앱 5.3.
 
 - [프로덕션북](https://isaacweb007.github.io/modu-ai/)
-- [사장님 앱](https://isaacweb007.github.io/modu-ai/jumo/owner.html?lang=ko&v=5.2)
-- [주모 손님 앱](https://isaacweb007.github.io/modu-ai/jumo/?lang=ko&v=5.2)
+- [사장님 앱](https://isaacweb007.github.io/modu-ai/jumo/owner.html?lang=ko&v=5.3)
+- [주모 손님 앱](https://isaacweb007.github.io/modu-ai/jumo/?lang=ko&v=5.3)
 
 ## 원샵 주문 확인
 
-원샵은 one ai의 식당·레스토랑·카페용 샵 에이전트 프로젝트입니다. 손님은 주문 직전 매장 식사 또는 온라인 배달을 선택합니다. 매장에서는 테이블 번호를 직접 확인하며, 온라인은 배달 주소와 전화번호를 입력합니다. 최종 확인 카드에서 검토한 정보는 주문과 같은 트랜잭션으로 저장됩니다. 실제 AI·결제·배송 업체는 연결하지 않았습니다.
+원샵은 one shop ai의 식당·레스토랑·카페용 샵 에이전트 프로젝트입니다. 손님은 주문 직전 매장 식사 또는 온라인 배달을 선택합니다. 매장에서는 테이블 번호를 직접 확인하며, 온라인은 배달 주소와 전화번호를 입력합니다. 최종 확인 카드에서 검토한 정보는 주문과 같은 트랜잭션으로 저장됩니다. 실제 AI·결제·배송 업체는 연결하지 않았습니다.
 
 샵 현황은 전체·매장 식사·온라인 배달·접수 대기별로 주문을 표시합니다. 주문 카드에 테이블 번호 또는 배송 주소·연락처가 나타나며, 과거 기록에 확인 정보가 없으면 ‘정보 확인 필요’로 표시합니다. 손님의 주소·연락처는 주문한 방문 세션과 해당 샵 소유자만 조회할 수 있습니다.
 
@@ -61,7 +61,7 @@ GitHub `main` 푸시 → Actions의 의존성 설치·번들·검사 → GitHub 
 언어: 한국어·영어·베트남어·중국어·일본어·크메르어·인도네시아어·라오스어·힌디어. 직접 작성한 메뉴 설명은 자동 번역하지 않으며, 변경하지 않은 주모 샘플은 9개 언어로 제공됩니다. 가격은 현재 VND 기준입니다. 음식 이미지는 AI로 만든 메뉴 시안입니다.
 
 
-## 5.2 — character expressions and illustrated production book
+## 5.3 — character expressions and illustrated production book
 
 - Higgsfield GPT Image 2.5 assets: greeting, thinking and order-taking poses; six editorial shop illustrations. Optimized outputs live in `dist/assets/one-shop/poses/` and `stories/`. Masters, prompts and completed job records are in the local `design/one-shop-brand/motion-v1/` folder. These drawings are brand concept illustrations. The illustrated table card is not a scannable QR code.
 - The owner and guest apps show a greeting at entry, a short thinking transition for scenario replies, and contextual message avatars for menu, checkout, reservation and reports. The presentation does not change saved order state or imply that a payment completed. Real AI and payment integration remain disabled.
