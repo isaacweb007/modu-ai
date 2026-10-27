@@ -1,4 +1,4 @@
-import {MENU} from './menu.js?v=5.5.1';
+import {MENU} from './menu.js?v=5.6.0';
 export const SAMPLE_STORAGE='modu-jumo-owner-sample-v1';
 export const SAMPLE_VERSION=1;
 export const SAMPLE_COPY={

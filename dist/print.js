@@ -1,4 +1,4 @@
-import {getLang} from './shared/locale.js?v=5.5.1';
+import {getLang} from './shared/locale.js?v=5.6.0';
 const url=new URL('jumo/print.html',location.href),params=new URLSearchParams(location.search);
 for(const key of ['table','channel','sample'])if(params.has(key))url.searchParams.set(key,params.get(key));
 url.searchParams.set('lang',getLang());

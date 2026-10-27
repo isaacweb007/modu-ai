@@ -1,5 +1,5 @@
-import {RAMI_COPY,EXPRESSION_IDS,ROLE_IDS,RAMI_CHAPTER_IDS} from './shared/rami-copy.js?v=5.5.1';
-import {esc,icon} from './shared/core.js?v=5.5.1';
+import {RAMI_COPY,EXPRESSION_IDS,ROLE_IDS,RAMI_CHAPTER_IDS} from './shared/rami-copy.js?v=5.6.0';
+import {esc,icon} from './shared/core.js?v=5.6.0';
 const base='assets/one-shop/rami/';
 const c=lang=>RAMI_COPY[lang]||RAMI_COPY.ko;
 export function ramiChapters(lang){const t=c(lang);return RAMI_CHAPTER_IDS.map((id,i)=>({id,title:t[['storyTitle','expressionsTitle','careersTitle','goodsTitle','identityTitle'][i]],rami:true}));}

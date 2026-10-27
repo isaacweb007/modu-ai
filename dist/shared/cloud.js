@@ -1,8 +1,8 @@
-import {ownerSampleMode} from './experience-mode.js?v=5.5.1';
-import {CLOUD} from './cloud-config.js?v=5.5.1';
-import {createClient} from '../assets/supabase.js?v=5.5.1';
-import {MENU} from './menu.js?v=5.5.1';
-import {configureState,readState,replaceState,menuFor,cartQuote} from './state.js?v=5.5.1';
+import {ownerSampleMode} from './experience-mode.js?v=5.6.0';
+import {CLOUD} from './cloud-config.js?v=5.6.0';
+import {createClient} from '../assets/supabase.js?v=5.6.0';
+import {MENU} from './menu.js?v=5.6.0';
+import {configureState,readState,replaceState,menuFor,cartQuote} from './state.js?v=5.6.0';
 const params=new URLSearchParams(location.search),preview=params.get('preview')==='1'||ownerSampleMode(document.body.dataset.role,location.search);
 const json=(key)=>{try{return JSON.parse(localStorage.getItem(key))}catch{return null}};
 const save=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
@@ -52,7 +52,7 @@ export const cloud={enabled:!preview,credential:null,role:'guest',storeId:'',vis
  this.revision=r.revision;this.published=r.published;this.workspaceRevision=r.workspaceRevision||1;this.publicSignature=JSON.stringify(publicData(s));this.workspaceSignature=JSON.stringify(workspace(s));this.applying=true;replaceState(s);this.applying=false;this.onchange(true);
  },
  async mutate(path,method,data){await this.flush();this.mutating=true;try{const result=await request(this.storeId+'/'+path,method,data,this.credential.token);await this.refresh(true);return result;}catch(e){if(['menuConflict','ownerConflict'].includes(e.message)){this.dirty=false;await this.refresh(true);}throw e;}finally{this.mutating=false;this.drainRefresh();}},
- async order(requestId,expectedQuote,fulfillment){if(expectedQuote!==cartQuote(readState(),this.visitId))throw Error('menuConflict');const cart=structuredClone(readState().sessions.find(v=>v.id===this.visitId)?.cart||{});const result=await this.mutate('orders','POST',{cart,requestId,revision:this.revision,fulfillment});this.applying=true;const s=readState();s.sessions.find(v=>v.id===this.visitId).cart={};replaceState(s);this.applying=false;return result;},
+ async order(requestId,expectedQuote,fulfillment,language){if(expectedQuote!==cartQuote(readState(),this.visitId))throw Error('menuConflict');const cart=structuredClone(readState().sessions.find(v=>v.id===this.visitId)?.cart||{});const result=await this.mutate('orders','POST',{cart,requestId,revision:this.revision,fulfillment,lang:language||readState().sessions.find(v=>v.id===this.visitId)?.lang});this.applying=true;const s=readState();s.sessions.find(v=>v.id===this.visitId).cart={};replaceState(s);this.applying=false;return result;},
  async upload(files,kind){if(files.length>3)throw Error('uploadLimit');await this.flush();const records=[];this.mutating=true;try{for(const file of files){if(file.size>(file.type.startsWith('image/')?5242880:26214400))throw Error('uploadLimit');records.push(await request(this.storeId+'/media','POST',file,this.credential.token,{'x-file-name':encodeURIComponent(file.name),'x-file-kind':kind}));}await this.refresh(true);return records;}finally{this.mutating=false;this.drainRefresh();}},
  connect(){if(this.channel)this.client.removeChannel(this.channel);clearInterval(this.poll);this.client??=createClient(CLOUD.url,CLOUD.key,{auth:{persistSession:false,autoRefreshToken:false}});let debounce;this.channel=this.client.channel('modu:'+this.storeId).on('broadcast',{event:'refresh'},()=>{clearTimeout(debounce);debounce=setTimeout(()=>this.refresh().catch(()=>this.setStatus('realtimeRetry')),250);}).subscribe(status=>{if(status==='SUBSCRIBED'){this.setStatus('realtimeOn');this.refresh().catch(()=>{});}else if(['CHANNEL_ERROR','TIMED_OUT','CLOSED'].includes(status))this.setStatus('realtimeRetry');});this.poll=setInterval(()=>this.refresh().catch(()=>this.setStatus('cloudOffline')),20000);if(!this.visibility){this.visibility=true;document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')this.refresh().catch(()=>this.setStatus('cloudOffline'));});window.addEventListener('online',()=>{this.flush().then(()=>this.refresh()).catch(()=>this.setStatus('cloudOffline'));});}}
 };
