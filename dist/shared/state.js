@@ -1,5 +1,7 @@
-import {MENU} from './menu.js?v=3.0.2';
-export const STORAGE_KEY='modu-jumo-demo-v2';
+import {MENU} from './menu.js?v=4.0.0';
+export let STORAGE_KEY='modu-jumo-demo-v2';
+export function configureState(key){STORAGE_KEY=key;}
+export function replaceState(s){return writeState(s);}
 const uid=prefix=>`${prefix}-${globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+Math.random().toString(36).slice(2)}`;
 const previewMode=typeof location!=='undefined'&&new URLSearchParams(location.search).get('preview')==='1';
 let previewState=null;
@@ -8,7 +10,7 @@ export function readState(){if(previewMode){if(!previewState){const init=blank()
 export function writeState(s){s.events=s.events.slice(-400);if(previewMode)previewState=JSON.stringify(s);else localStorage.setItem(STORAGE_KEY,JSON.stringify(s));globalThis.dispatchEvent?.(new Event('modu-state'));return s}
 export function mutate(fn){const s=readState();const result=fn(s);writeState(s);return result}
 export function event(s,type,sessionId,detail={}){s.events.push({id:uid('evt'),type,sessionId,detail,at:new Date().toISOString(),reviewed:false});}
-export const menuFor=s=>MENU.map(x=>({...x,price:Number.isFinite(s.menu?.[x.id]?.price)?s.menu[x.id].price:x.price,available:s.menu?.[x.id]?.available!==false}));
+export const menuFor=s=>(s.items||MENU).map(x=>({...x,price:Number.isFinite(s.menu?.[x.id]?.price)?s.menu[x.id].price:x.price,available:s.menu?.[x.id]?.available!==false}));
 export function ensureSession(table=3,lang='ko',force=false){return mutate(s=>{let v=s.sessions.find(x=>x.id===s.activeSession);if(force||!v||v.table!==table){v={id:uid('visit'),table,lang,nickname:'',consent:false,at:new Date().toISOString(),cart:{},messages:[],games:{},coupons:[],chatCount:0};s.sessions.push(v);s.activeSession=v.id;event(s,'eventVisit',v.id,{table,lang});}else v.lang=lang;return v.id})}
 export const sessionOf=(s,id)=>s.sessions.find(x=>x.id===id);
 export function updateCart(id,itemId,delta){return mutate(s=>{const v=sessionOf(s,id),item=menuFor(s).find(x=>x.id===itemId);if(!v||!item||(delta>0&&!item.available))throw new Error('soldOut');const qty=(v.cart[itemId]||0)+delta;if(qty>20)throw new Error('maxQty');if(qty<=0)delete v.cart[itemId];else v.cart[itemId]=qty;return v.cart})}

@@ -1,4 +1,4 @@
-import {UI} from './copy.js?v=3.0.2';import {MENU} from './menu.js?v=3.0.2';import {money} from './core.js?v=3.0.2';
+import {UI} from './copy.js?v=4.0.0';import {MENU} from './menu.js?v=4.0.0';import {money} from './core.js?v=4.0.0';
 export const QUESTIONS=['qRecommend','qIngredients','qSpicy','qStory','qHours','qComplaint','qPayment'];
 export const REPLIES={qRecommend:'replyRecommend',qIngredients:'replyIngredients',qSpicy:'replySpicy',qStory:'replyStory',qHours:'replyHours',qComplaint:'replyComplaint',qPayment:'replyPayment'};
 const normalize=t=>t.toLowerCase().replace(/[?？.!。!។]/g,'').replace(/\s+/g,' ').trim();
@@ -17,15 +17,17 @@ export function classify(text){const s=normalize(text);if(exact.has(s))return ex
  if(/주모|jumo|\b(menu|restaurant|plate|chocolate)\b|메뉴|가게|주문|quán|店|注文|restoran|ហាង|ຮ້ານ|रेस्तरां|मेन्यू/.test(s))return 'unknown';
  return 'offTopic';}
 const aliases={m01:['김치전','kimchi jeon','kimchi pancake','泡菜饼'],m04:['모둠전','assortment','thập cẩm','盛り合わせ','拼盘'],m05:['삼합','samhap','three-way'],m12:['한치','dried squid','mực khô','鱿鱼干','干しイカ'],m13:['뻥튀기','puffed rice'],m15:['김부각','gim bugak'],m16:['홍시','persimmon'],m17:['양갱','yanggaeng','chestnut']};
-function findItem(text){const s=text.toLowerCase();return MENU.find(x=>[...Object.values(x.name),...(aliases[x.id]||[])].some(n=>s.includes(n.toLowerCase())))}
-export function resolveAnswer(text,question,state,lang){let key=REPLIES[question]||classify(text),data=null;
+function findItem(text,items=MENU){const s=text.toLowerCase();return items.find(x=>[...Object.values(x.name),...(aliases[x.id]||[])].some(n=>s.includes(n.toLowerCase())))}
+export function resolveAnswer(text,question,state,lang){let key=REPLIES[question]||classify(text),data=null;const items=state.items||MENU;
  if(key==='replyContact'){key='storeContact';data={name:state.store.name,phone:state.store.phone,email:state.store.email,website:state.store.website};}
- if(key==='replyIngredients'){const item=question==='qIngredients'||exact.get(normalize(text))==='replyIngredients'?MENU.find(x=>x.id==='m04'):findItem(text);if(item){key='menuItem';data={itemId:item.id,price:state.menu[item.id]?.price??item.price}}else key='allergyNote';}
- if(key==='replyRecommend'){if(state.menu.m04?.available===false||state.menu.m15?.available===false){const item=MENU.find(x=>state.menu[x.id]?.available!==false);if(item){key='menuItem';data={itemId:item.id,price:state.menu[item.id]?.price??item.price}}else key='unknown';}}
+ if(key==='replyIngredients'){const item=question==='qIngredients'||exact.get(normalize(text))==='replyIngredients'?(items.find(x=>x.id==='m04')||items[0]):findItem(text,items);if(item){key='menuItem';data={itemId:item.id,name:item.name,description:item.description,price:state.menu[item.id]?.price??item.price}}else key='allergyNote';}
+ if(key==='replyRecommend'&&state.items){const item=items.find(x=>x.available!==false);if(item){key='menuItem';data={itemId:item.id,name:item.name,description:item.description,price:item.price};}else key='unknown';}
+ if(key==='replyStory'&&state.items){key='storeAddress';data={name:state.store.name,address:state.store.address};}
+ if(key==='replyRecommend'){if(state.menu.m04?.available===false||state.menu.m15?.available===false){const item=MENU.find(x=>state.menu[x.id]?.available!==false);if(item){key='menuItem';data={itemId:item.id,name:item.name,description:item.description,price:state.menu[item.id]?.price??item.price}}else key='unknown';}}
  if(key==='replyHours'&&state.store.address){key='storeAddress';data={address:state.store.address,name:state.store.name};}
  return {key,data};}
 export function answerText(message,lang){const ui=UI[lang],data=message.answerData;
- if(message.key==='menuItem'&&data){const item=MENU.find(x=>x.id===data.itemId);return `${item.name[lang]}\n${item.description[lang]}\n${money(data.price)}\n\n${ui.allergyNote}`;}
+ if(message.key==='menuItem'&&data){const item=data.name?data:MENU.find(x=>x.id===data.itemId);if(!item)return ui.unknown;return `${item.name[lang]}\n${item.description[lang]}\n${money(data.price)}\n\n${ui.allergyNote}`;}
  if(message.key==='storeContact'&&data)return [data.name,...['phone','email','website'].filter(k=>data[k]).map(k=>`${ui[k]}: ${data[k]}`),ui.unknown].join('\n');
  if(message.key==='storeAddress'&&data)return `${data.name}\n${ui.address}: ${data.address}\n\n${ui.unknown}`;
  return ui[message.key]||ui.unknown;}

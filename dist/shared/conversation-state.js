@@ -1,11 +1,11 @@
-import {readState,mutate,event,sessionOf} from './state.js?v=3.0.2';
+import {readState,mutate,event,sessionOf} from './state.js?v=4.0.0';
 const uid=p=>p+'-'+crypto.randomUUID();
 export const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
 const defaults=s=>{s.manager??={profileName:'',stage:'signup',completed:false,messages:[]};s.manager.messages??=[];s.reservations??=[];s.inventory??=[];s.staffTasks??=[];s.store.media??=[];for(const v of s.sessions){v.thread??=[];v.points??=0;v.pointLedger??=[];}return s;};
 export function conversationState(){return defaults(readState())}
 export function change(fn){return mutate(s=>fn(defaults(s)))}
 export function thread(role,id){const s=conversationState();return role==='owner'?s.manager.messages:sessionOf(s,id)?.thread||[]}
-export function addMessage(role,id,message){return change(s=>{const list=role==='owner'?s.manager.messages:sessionOf(s,id).thread;const m={id:uid('chat'),at:new Date().toISOString(),...message};list.push(m);if(list.length>200)list.splice(0,list.length-200);return m;})}
+export function addMessage(role,id,message){return change(s=>{const list=role==='owner'?s.manager.messages:sessionOf(s,id).thread;const m={id:uid('chat'),at:new Date().toISOString(),seq:(list.at(-1)?.seq||list.length)+1,...message};list.push(m);if(list.length>200)list.splice(0,list.length-200);return m;})}
 export function ownerSignup(name){return change(s=>{if(!name.trim())throw new Error('required');s.manager.profileName=name.trim().slice(0,40);s.manager.stage='name';return true;})}
 export function saveSetup(step,value){return change(s=>{const next={name:'menu',menu:'venue',venue:'location',location:'contact',contact:'sns',sns:'review',review:'ready'};if(!next[step])throw new Error('invalid');if(step==='name'){if(!String(value.name||'').trim())throw new Error('required');s.store.name=value.name.trim().slice(0,50);}if(step==='location'){if(!String(value.address||'').trim())throw new Error('required');s.store.address=value.address.trim().slice(0,200);s.store.country=value.country||'VN';}if(step==='contact'){s.store.phone=String(value.phone||'').trim().slice(0,40);s.store.email=String(value.email||'').trim().slice(0,150);}if(step==='sns')s.store.website=String(value.website||'').trim().slice(0,250);s.manager.stage=next[step];if(step==='review'){if(!value.approved)throw new Error('approvalRequired');s.manager.completed=true;event(s,'eventStore',null,{name:s.store.name});}return next[step];})}
 export function editStore(){change(s=>{s.manager.stage='name';s.manager.completed=false;})}

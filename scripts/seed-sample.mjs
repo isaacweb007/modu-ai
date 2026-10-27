@@ -1,0 +1,7 @@
+import fs from 'node:fs/promises';import {MENU} from '../dist/shared/menu.js';import {CLOUD} from '../dist/shared/cloud-config.js';
+const api=async(path,method='GET',body,token)=>{const res=await fetch(CLOUD.url+'/functions/v1/modu-api/'+path,{method,headers:{apikey:CLOUD.key,'content-type':'application/json',...(token?{'x-modu-token':token}:{})},body:body?JSON.stringify(body):undefined});const data=await res.json();if(!res.ok)throw Error(data.error);return data;};
+let credential;try{credential=JSON.parse(await fs.readFile('artifacts/sample-owner.json','utf8'));}catch{}
+const store={name:'주모',address:'호찌민 · 주모 콘셉트 체험 매장',country:'VN',website:'https://isaacweb007.github.io/jumo-joseon-hiphop-book/'};const workspace={manager:{profileName:'modu ai',stage:'ready',completed:true,messages:[]}};
+if(!credential){credential=await api('create','POST',{store,menu:MENU,workspace});await fs.writeFile('artifacts/sample-owner.json',JSON.stringify(credential),{mode:0o600});}
+const snapshot=await api(credential.storeId+'/snapshot','GET',null,credential.token);await api(credential.storeId+'/store','PUT',{store,menu:MENU,workspace,published:true,revision:snapshot.revision,workspaceRevision:snapshot.workspaceRevision},credential.token);
+let source=await fs.readFile('dist/shared/cloud-config.js','utf8');source=source.replace(/sampleStore:'[^']*'/,"sampleStore:'"+credential.storeId+"'");await fs.writeFile('dist/shared/cloud-config.js',source);console.log('Public sample store ready: '+credential.storeId);
