@@ -1,4 +1,4 @@
-import {MENU} from './menu.js?v=4.0.0';
+import {MENU} from './menu.js?v=4.1.0';
 export let STORAGE_KEY='modu-jumo-demo-v2';
 export function configureState(key){STORAGE_KEY=key;}
 export function replaceState(s){return writeState(s);}

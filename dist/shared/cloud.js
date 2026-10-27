@@ -1,7 +1,7 @@
-import {CLOUD} from './cloud-config.js?v=4.0.0';
-import {createClient} from '../assets/supabase.js?v=4.0.0';
-import {MENU} from './menu.js?v=4.0.0';
-import {configureState,readState,replaceState,menuFor,cartQuote} from './state.js?v=4.0.0';
+import {CLOUD} from './cloud-config.js?v=4.1.0';
+import {createClient} from '../assets/supabase.js?v=4.1.0';
+import {MENU} from './menu.js?v=4.1.0';
+import {configureState,readState,replaceState,menuFor,cartQuote} from './state.js?v=4.1.0';
 const params=new URLSearchParams(location.search),preview=params.get('preview')==='1';
 const json=(key)=>{try{return JSON.parse(localStorage.getItem(key))}catch{return null}};
 const save=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
@@ -11,7 +11,7 @@ async function request(path,method='GET',data,token,extra={}){let res;try{res=aw
 const workspace=s=>({manager:s.manager,inventory:s.inventory||[],staffTasks:s.staffTasks||[]});
 const publicData=s=>({store:Object.fromEntries(['name','address','country','phone','email','website'].map(k=>[k,s.store[k]||''])),menu:menuFor(s),published:s.manager?.completed===true});
 export const cloud={enabled:!preview,credential:null,role:'guest',storeId:'',visitId:null,status:'cloudConnecting',published:false,loaded:false,applying:false,queue:Promise.resolve(),dirty:false,revision:0,workspaceRevision:1,sent:new Set(),timer:null,channel:null,onchange:()=>{},onerror:()=>{},
- get active(){return this.enabled&&!!this.credential},
+ get active(){return this.enabled&&!this.suspended&&!!this.credential},
  setStatus(value){this.status=value;this.onchange(false)},
  async init(role,table,lang){if(!this.enabled){this.loaded=true;return;}this.role=role;this.table=table;this.lang=lang;
  if(role==='owner'){const wanted=params.get('store')||json('modu-current-owner');this.credential=wanted?json('modu-owner:'+wanted):null;this.storeId=this.credential?.storeId||'';configureState('modu-cloud-owner:'+(this.storeId||'new'));if(this.active)await this.refresh(true);else this.setStatus('registerOwner');}
@@ -20,8 +20,7 @@ export const cloud={enabled:!preview,credential:null,role:'guest',storeId:'',vis
  },
  async create(name){const state={store:{name:'주모',country:'VN'},menu:MENU,workspace:{manager:{profileName:name,stage:'name',completed:false,messages:[]}}};const credential=await request('create','POST',state);this.useOwner(credential);await this.refresh(true);this.connect();return credential;},
  useOwner(credential){this.credential=credential;this.storeId=credential.storeId;save('modu-owner:'+this.storeId,credential);save('modu-current-owner',this.storeId);configureState('modu-cloud-owner:'+this.storeId);const url=new URL(location.href);url.searchParams.set('store',this.storeId);history.replaceState(null,'',url);},
- async restore(code){const [storeId,token]=code.trim().split('.');if(!uuid(storeId)||!/^[a-f0-9]{64}$/.test(token||''))throw Error('ownerAccess');await request(storeId+'/snapshot','GET',null,token);this.useOwner({storeId,token});this.dirty=false;await this.refresh(true);this.connect();},
- recovery(){return this.credential?this.storeId+'.'+this.credential.token:'';},
+ pause(){this.suspended=true;clearTimeout(this.timer);clearInterval(this.poll);if(this.channel){this.client.removeChannel(this.channel);this.channel=null;}},
  changed(){if(this.applying||!this.active)return;this.dirty=true;clearTimeout(this.timer);this.timer=setTimeout(()=>this.flush().catch(e=>this.onerror(e)),650);},
  async flush(){clearTimeout(this.timer);if(!this.active)return;const run=async()=>{if(!this.dirty)return;this.setStatus('cloudSave');const s=readState();try{
  if(this.role==='owner'){const pub=publicData(s),ws=workspace(s),signature=JSON.stringify(pub);if(signature!==this.publicSignature){const result=await request(this.storeId+'/store','PUT',{...pub,workspace:ws,revision:this.revision,workspaceRevision:this.workspaceRevision},this.credential.token);this.revision=result.revision;this.workspaceRevision=result.workspaceRevision;this.publicSignature=signature;this.published=pub.published;}else if(JSON.stringify(ws)!==this.workspaceSignature){const result=await request(this.storeId+'/workspace','PUT',{workspace:ws,workspaceRevision:this.workspaceRevision},this.credential.token);this.workspaceRevision=result.workspaceRevision;}this.workspaceSignature=JSON.stringify(ws);}

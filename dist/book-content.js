@@ -103,8 +103,8 @@ export const BOOK = {
         "title": "매니저와 이야기하면 가게가 준비됩니다",
         "lead": "사장님은 매니저가 묻는 정보에 차례로 답합니다.",
         "paragraphs": [
-          "기기 인증 → 상호 → 메뉴판 사진 → 매장 사진·영상 → 주소·연락처·SNS → 검토 → QR과 링크 순서로 안내합니다. 마지막 카드에서 가게 정보와 준비된 메뉴를 확인한 뒤 클라우드에 게시합니다.",
-          "오너는 인증된 기기로 시작하며 복구 코드로 다른 기기에서 가게에 접근합니다. 이메일 가입·인증 절차는 아닙니다. 첨부 자료는 클라우드에 저장하지만 자동으로 읽지는 않습니다. OCR 없이 예시 메뉴를 보여주며 사장님이 검토합니다."
+          "이메일로 계속하기 / Google로 계속하기 → 상호 → 메뉴판 사진 → 매장 사진·영상 → 주소·연락처·SNS → 검토 → QR과 링크 순서로 안내합니다. 마지막 카드에서 가게 정보와 준비된 메뉴를 확인한 뒤 클라우드에 게시합니다.",
+          "버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다. 가게 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다."
         ],
         "points": [
           "한 번에 하나씩 묻는 매니저",
@@ -216,7 +216,7 @@ export const BOOK = {
         "lead": "손님을 이해하되 확인되지 않은 신원을 만들지 않습니다.",
         "paragraphs": [
           "익명 세션과 동의한 회원 정보를 구분하고 수집 목적, 열람 권한, 보관·삭제 정책을 안내합니다. 질문만으로 불만이나 개인정보를 임의 추정하지 않습니다.",
-          "매장·메뉴·업로드 자료와 방문·주문·예약은 백엔드에서 기기 간 동기화합니다. 오너는 기기 인증과 복구 코드로 접근합니다. 결제·포인트·보고는 데모이며 세무 요약은 검토·내보내기용 초안입니다. 신고·납부를 하지 않고 법률·세율을 적용했다고 주장하지 않습니다."
+          "가게 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다. 결제·포인트·보너스·보고는 계속 데모이며 실제 결제·POS·외부 알림은 없습니다. 재고·직원 업무는 수동 기록, 세무 내보내기는 검토 초안입니다. 공개 GitHub Pages QR을 사용할 수 있으며 Sites의 소유자 전용 미리보기는 유지합니다."
         ],
         "points": [
           "알레르기 정보는 직원 확인",
@@ -229,13 +229,13 @@ export const BOOK = {
         "title": "시나리오에서 실제 가게로",
         "lead": "각 단계의 완료 기준을 통과한 뒤 다음 기능을 연결합니다.",
         "paragraphs": [
-          "현재 단계는 대화형 개설, 클라우드 매장·메뉴·자료 저장, 다른 휴대폰의 QR 주문·예약, 실시간 오너 대시보드를 연결합니다. 기기 인증과 복구를 검증하면서 AI 응답과 결제·포인트·보고는 데모로 구분합니다.",
+          "메뉴판과 매장 자료를 올려 대화로 가게를 개설합니다. 가게 정보와 메뉴는 클라우드에 저장되고 손님은 다른 휴대폰의 QR로 주문·예약합니다. 사장님은 대시보드에서 실시간으로 확인합니다. AI 에이전트 응답과 결제는 계속 데모입니다. 버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다.",
           "다음 단계에서 승인 가능한 사진 인식과 실제 AI 에이전트, 서버 비용 통제를 검증합니다. 실제 결제·POS·외부 알림은 별도 연동하며 API 계약, 웹훅 검증, 중복 방지, 재시도·대조와 권한을 확인한 뒤 운영합니다."
         ],
         "points": [
           "다른 기기에서 매장·주문·예약 확인",
           "저장된 기록과 실시간 화면 대조",
-          "실제 AI·결제 연결 전 비용·권한·복구 검증"
+          "실제 계정 인증은 서비스 출시 단계에서 연결"
         ]
       },
       {
@@ -244,7 +244,7 @@ export const BOOK = {
         "lead": "첫 국가와 첫 매장의 운영 방식부터 구체화합니다.",
         "paragraphs": [
           "출시 국가, 통화, 실제 메뉴·가격, POS 업체와 결제 방식을 정합니다. 예약 운영 방식, 포인트·보너스 조건, 게임 횟수, 동의 문구와 기록 보관 기간도 합의합니다.",
-          "재고·직원 업무 담당자, 데모 매출 보고 기준과 세무 초안 검토자를 정합니다. 오너 복구 코드를 안전하게 보관하고 다른 기기 복구를 확인합니다. 클라우드 기록을 내보낸 보고 초안은 회계 확정이나 세무 신고를 대신하지 않습니다."
+          "재고·직원 업무 담당자, 데모 매출 보고 기준과 세무 초안 검토자를 정합니다. 클라우드 기록을 내보낸 보고 초안은 회계 확정이나 세무 신고를 대신하지 않습니다. 실제 계정 인증은 서비스 출시 단계에서 연결."
         ],
         "points": [
           "첫 매장과 검토 담당자",
@@ -257,7 +257,7 @@ export const BOOK = {
         "title": "쉽게 시작하되 현재 상태는 분명하게",
         "lead": "오늘의 체험과 앞으로 만들 서비스를 구분합니다.",
         "paragraphs": [
-          "매장·메뉴·업로드 자료와 방문·주문·예약은 클라우드에 저장되어 다른 휴대폰과 오너 화면에 동기화됩니다. 오너는 인증된 기기와 복구 코드로 접근합니다. AI 에이전트는 준비된 시나리오로 답하며 OCR·이메일 가입 인증은 사용하지 않습니다.",
+          "버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다. 메뉴판과 매장 자료를 올려 대화로 가게를 개설합니다. 가게 정보와 메뉴는 클라우드에 저장되고 손님은 다른 휴대폰의 QR로 주문·예약합니다. 사장님은 대시보드에서 실시간으로 확인합니다. AI 에이전트 응답과 결제는 계속 데모입니다. 가게 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다.",
           "결제·포인트·보너스·보고는 계속 데모이며 실제 결제·POS·외부 알림은 없습니다. 재고·직원 업무는 수동 기록, 세무 내보내기는 검토 초안입니다. 공개 GitHub Pages QR을 사용할 수 있으며 Sites의 소유자 전용 미리보기는 유지합니다."
         ],
         "points": [
@@ -372,8 +372,8 @@ export const BOOK = {
         "title": "Talk to the manager to prepare your store",
         "lead": "Owners answer the manager’s questions one step at a time.",
         "paragraphs": [
-          "The manager guides device authentication → store name → menu photo → venue photos or video → address, contacts and social links → review → QR and link. Review the store and prepared menu on the final card before publishing to the cloud.",
-          "Owners start on an authenticated device and use a recovery code to access the store from another device. This is not email signup or email verification. Attachments are stored in the cloud, not automatically read; owners review a sample menu without OCR."
+          "Continue with email / Continue with Google → store name → menu photo → venue photos or video → address, contacts and social links → review → QR and link. Review the store and prepared menu on the final card before publishing to the cloud.",
+          "Select a button to explore. No real signup or account authentication takes place. Store data and orders are saved. Owner account access across devices will come with real sign-in."
         ],
         "points": [
           "One question at a time",
@@ -485,7 +485,7 @@ export const BOOK = {
         "lead": "Understand guests without inventing an identity.",
         "paragraphs": [
           "Separate anonymous sessions from consented profiles and explain purpose, access, retention and deletion. A question alone does not establish a complaint or personal information.",
-          "Stores, menus, uploaded assets, visits, orders and reservations sync across devices through the backend. Owners use device authentication and a recovery code. Payment, points and reports remain demos; the tax summary is a draft for review and export, not filing or payment, and claims no application of laws or tax rates."
+          "Store data and orders are saved. Owner account access across devices will come with real sign-in. Payment, points, bonuses and reports remain demos, with no real payment, POS or external notifications. Inventory and staff tasks are manual; tax export is a draft for review. Public GitHub Pages QR access is supported, while the Sites preview stays owner-private."
         ],
         "points": [
           "Confirm allergy information with staff",
@@ -498,13 +498,13 @@ export const BOOK = {
         "title": "From scenarios to a real store",
         "lead": "Connect each new capability only after meeting its acceptance criteria.",
         "paragraphs": [
-          "This stage connects conversational setup, cloud store, menu and asset storage, QR orders and reservations from other phones, and a real-time owner dashboard. Verify device authentication and recovery while clearly labeling AI replies, payment, points and reports as demos.",
+          "Set up a store in conversation by uploading menu and venue assets. Store data and menus are saved in the cloud. Guests order and book from QR codes on other phones, while owners follow updates in the dashboard. AI agent replies and payment remain demos. Select a button to explore. No real signup or account authentication takes place.",
           "Next, validate reviewable photo recognition, a live AI agent and server-enforced costs. Real payment, POS and external notifications require separate integrations, verified API contracts and webhooks, idempotency, retries, reconciliation and permissions."
         ],
         "points": [
           "Check stores, orders and reservations across devices",
           "Reconcile live screens with saved records",
-          "Verify cost, permission and recovery before live AI or payment"
+          "Connect real account authentication at launch"
         ]
       },
       {
@@ -513,7 +513,7 @@ export const BOOK = {
         "lead": "Define the first country and the first store’s operation.",
         "paragraphs": [
           "Choose the first market, currency, approved menu, prices, POS provider and payment approach. Agree on reservations, points, bonuses, game limits, consent text and retention.",
-          "Assign inventory and staff task owners, define demo sales reporting and choose a tax-draft reviewer. Keep the owner recovery code safe and test access from another device. Reports exported from cloud records do not replace finalized accounts or tax filing."
+          "Assign inventory and staff task owners, define demo sales reporting and choose a tax-draft reviewer. Reports exported from cloud records do not replace finalized accounts or tax filing. Connect real account authentication at launch."
         ],
         "points": [
           "Choose the pilot and reviewers",
@@ -526,7 +526,7 @@ export const BOOK = {
         "title": "Easy to begin, clear about what is real",
         "lead": "Separate today’s experience from the future service.",
         "paragraphs": [
-          "Stores, menus, uploaded assets, visits, orders and reservations are saved in the cloud and sync to other phones and the owner screen. Owners access through an authenticated device and recovery code. The AI agent uses scripted responses; there is no OCR or email signup verification.",
+          "Select a button to explore. No real signup or account authentication takes place. Set up a store in conversation by uploading menu and venue assets. Store data and menus are saved in the cloud. Guests order and book from QR codes on other phones, while owners follow updates in the dashboard. AI agent replies and payment remain demos. Store data and orders are saved. Owner account access across devices will come with real sign-in.",
           "Payment, points, bonuses and reports remain demos, with no real payment, POS or external notifications. Inventory and staff tasks are manual; tax export is a draft for review. Public GitHub Pages QR access is supported, while the Sites preview stays owner-private."
         ],
         "points": [
@@ -641,8 +641,8 @@ export const BOOK = {
         "title": "Trò chuyện với quản lý để chuẩn bị quán",
         "lead": "Chủ quán lần lượt trả lời câu hỏi của quản lý.",
         "paragraphs": [
-          "Quản lý hướng dẫn xác thực thiết bị → tên quán → ảnh thực đơn → ảnh hoặc video không gian → địa chỉ, liên hệ, mạng xã hội → duyệt → QR và liên kết. Xác nhận quán và thực đơn mẫu trước khi đăng lên đám mây.",
-          "Chủ quán bắt đầu trên thiết bị đã xác thực và dùng mã khôi phục để truy cập từ thiết bị khác. Đây không phải đăng ký hay xác minh email. Tệp đính kèm lưu trên đám mây nhưng không được tự đọc; chủ quán duyệt thực đơn mẫu không qua OCR."
+          "Tiếp tục bằng email / Tiếp tục với Google → tên quán → ảnh thực đơn → ảnh hoặc video không gian → địa chỉ, liên hệ, mạng xã hội → duyệt → QR và liên kết. Xác nhận quán và thực đơn mẫu trước khi đăng lên đám mây.",
+          "Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật. Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật."
         ],
         "points": [
           "Mỗi lần hỏi một thông tin",
@@ -754,7 +754,7 @@ export const BOOK = {
         "lead": "Hiểu khách mà không tự suy đoán danh tính.",
         "paragraphs": [
           "Tách phiên ẩn danh và hồ sơ có đồng ý; giải thích mục đích, quyền xem, lưu và xóa. Không suy luận khiếu nại hay thông tin cá nhân chỉ từ một câu hỏi.",
-          "Quán, thực đơn, tệp, lượt ghé, đơn và đặt bàn đồng bộ giữa thiết bị qua backend. Chủ quán dùng xác thực thiết bị và mã khôi phục. Thanh toán, điểm và báo cáo vẫn là demo; tổng hợp thuế chỉ là bản nháp để duyệt và xuất, không khai nộp hay khẳng định áp dụng luật, thuế suất."
+          "Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật. Thanh toán, điểm, quà và báo cáo vẫn là demo; chưa nối thanh toán thật, POS hay thông báo ngoài. Tồn kho và việc nhân viên ghi thủ công, xuất thuế là bản nháp. QR GitHub Pages công khai được hỗ trợ; Sites vẫn là bản xem riêng cho chủ sở hữu."
         ],
         "points": [
           "Hỏi nhân viên về dị ứng",
@@ -767,13 +767,13 @@ export const BOOK = {
         "title": "Từ kịch bản đến cửa hàng thật",
         "lead": "Chỉ nối chức năng tiếp theo khi đạt tiêu chí hoàn thành.",
         "paragraphs": [
-          "Giai đoạn này nối mở quán bằng hội thoại, lưu quán, thực đơn và tệp trên đám mây, nhận đơn hoặc đặt bàn từ điện thoại khác và bảng chủ quán thời gian thực. Kiểm tra xác thực, khôi phục, đồng thời ghi rõ phản hồi AI, thanh toán, điểm và báo cáo là demo.",
+          "Tạo quán qua hội thoại bằng cách tải thực đơn và tư liệu quán lên. Thông tin và thực đơn được lưu trên đám mây. Khách dùng QR trên điện thoại khác để đặt món, đặt bàn; chủ quán theo dõi trực tiếp trên bảng điều khiển. Phản hồi AI và thanh toán vẫn là demo. Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật.",
           "Tiếp theo kiểm chứng nhận dạng ảnh có bước duyệt, trợ lý AI thật và giới hạn chi phí máy chủ. Thanh toán thật, POS, thông báo bên ngoài cần tích hợp riêng, hợp đồng API, webhook xác minh, chống trùng, thử lại, đối soát và phân quyền."
         ],
         "points": [
           "Kiểm tra quán, đơn và đặt bàn trên nhiều thiết bị",
           "Đối chiếu màn hình trực tiếp với dữ liệu lưu",
-          "Kiểm tra chi phí, quyền và khôi phục trước AI hoặc thanh toán thật"
+          "Tích hợp xác thực tài khoản thật khi ra mắt"
         ]
       },
       {
@@ -782,7 +782,7 @@ export const BOOK = {
         "lead": "Xác định quốc gia đầu tiên và cách vận hành cửa hàng đầu tiên.",
         "paragraphs": [
           "Chọn thị trường, tiền tệ, thực đơn và giá duyệt, POS và phương thức thanh toán. Thống nhất đặt bàn, điểm, quà, lượt chơi, nội dung đồng ý và thời gian lưu.",
-          "Chọn người quản lý việc tồn kho, nhân viên, quy tắc doanh thu demo và người duyệt bản nháp thuế. Giữ mã khôi phục an toàn, kiểm tra truy cập từ thiết bị khác. Báo cáo xuất từ đám mây không thay thế sổ sách đã chốt hay kê khai thuế."
+          "Chọn người quản lý việc tồn kho, nhân viên, quy tắc doanh thu demo và người duyệt bản nháp thuế. Báo cáo xuất từ đám mây không thay thế sổ sách đã chốt hay kê khai thuế. Tích hợp xác thực tài khoản thật khi ra mắt."
         ],
         "points": [
           "Chọn quán thử và người duyệt",
@@ -795,7 +795,7 @@ export const BOOK = {
         "title": "Dễ bắt đầu, rõ điều gì là thật",
         "lead": "Phân biệt trải nghiệm hôm nay với dịch vụ tương lai.",
         "paragraphs": [
-          "Quán, thực đơn, tệp tải lên, lượt ghé, đơn và đặt bàn được lưu đám mây, đồng bộ sang điện thoại khác và màn hình chủ quán. Chủ truy cập bằng thiết bị xác thực và mã khôi phục. Trợ lý AI theo kịch bản, chưa có OCR hay xác minh đăng ký email.",
+          "Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật. Tạo quán qua hội thoại bằng cách tải thực đơn và tư liệu quán lên. Thông tin và thực đơn được lưu trên đám mây. Khách dùng QR trên điện thoại khác để đặt món, đặt bàn; chủ quán theo dõi trực tiếp trên bảng điều khiển. Phản hồi AI và thanh toán vẫn là demo. Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật.",
           "Thanh toán, điểm, quà và báo cáo vẫn là demo; chưa nối thanh toán thật, POS hay thông báo ngoài. Tồn kho và việc nhân viên ghi thủ công, xuất thuế là bản nháp. QR GitHub Pages công khai được hỗ trợ; Sites vẫn là bản xem riêng cho chủ sở hữu."
         ],
         "points": [
@@ -910,8 +910,8 @@ export const BOOK = {
         "title": "和经理聊一聊，门店就准备好了",
         "lead": "店主逐步回答经理的问题。",
         "paragraphs": [
-          "经理依次引导设备认证 → 店名 → 菜单照片 → 门店照片或视频 → 地址、联系方式、社交链接 → 审核 → 二维码和链接。最后核对门店与预设菜单，再发布到云端。",
-          "店主从已认证设备开始，用恢复码在其他设备访问门店。这不是邮箱注册或邮件验证。附件保存到云端，但不会自动识别；店主审核的是未经过 OCR 的样例菜单。"
+          "使用邮箱继续 / 使用 Google 继续 → 店名 → 菜单照片 → 门店照片或视频 → 地址、联系方式、社交链接 → 审核 → 二维码和链接。最后核对门店与预设菜单，再发布到云端。",
+          "点击按钮即可体验，不会进行真实注册或账户认证。 店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。"
         ],
         "points": [
           "每次只问一项信息",
@@ -1023,7 +1023,7 @@ export const BOOK = {
         "lead": "理解顾客，而不是猜测顾客身份。",
         "paragraphs": [
           "区分匿名会话与同意提供的资料，说明目的、访问权、保留与删除政策。不凭一句问题推断投诉或个人信息。",
-          "门店、菜单、上传资料、访问、订单和预约通过后端跨设备同步。店主使用设备认证与恢复码。付款、积分和报告仍为演示；税务汇总只供审核导出，不申报或缴款，也不声称适用法律或税率。"
+          "店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。 付款、积分、奖励和报告仍为演示，没有真实支付、POS 或外部通知。库存与员工任务为手动记录，税务导出是审核草稿。支持公开 GitHub Pages 二维码，Sites 预览继续仅限所有者。"
         ],
         "points": [
           "过敏信息由员工确认",
@@ -1036,13 +1036,13 @@ export const BOOK = {
         "title": "从预设场景走向真实门店",
         "lead": "达到每阶段验收标准后，再连接下一项能力。",
         "paragraphs": [
-          "本阶段连接对话开店、门店菜单及资料的云存储、其他手机的二维码订单和预约，以及实时店主看板。验证设备认证与恢复，同时明确标示 AI 回复、付款、积分和报告为演示。",
+          "上传菜单和店铺资料，通过对话开设店铺。店铺信息和菜单存储在云端，顾客可用其他手机扫描 QR 下单和预约，店主在看板实时查看。AI 回复和支付仍为演示。 点击按钮即可体验，不会进行真实注册或账户认证。",
           "下一阶段验证可审核的照片识别、真实 AI 智能体和服务器费用控制。真实支付、POS 与外部通知需单独集成，检查 API 契约、webhook 验证、幂等、重试、对账和权限后再运营。"
         ],
         "points": [
           "跨设备检查门店、订单和预约",
           "核对实时界面与保存记录",
-          "真实 AI 或支付上线前验证费用、权限和恢复"
+          "正式上线时接入真实账户认证"
         ]
       },
       {
@@ -1051,7 +1051,7 @@ export const BOOK = {
         "lead": "先确定首个市场与首家门店的运营方式。",
         "paragraphs": [
           "确定首个市场、币种、批准的菜单价格、POS 厂商与支付方式。约定预约、积分、奖励、游戏次数、同意文案和记录期限。",
-          "确定库存与员工任务负责人、模拟销售报告口径和税务草稿审核人。安全保管店主恢复码并测试其他设备访问。云端记录导出的报告草稿不替代正式账务或税务申报。"
+          "确定库存与员工任务负责人、模拟销售报告口径和税务草稿审核人。云端记录导出的报告草稿不替代正式账务或税务申报。 正式上线时接入真实账户认证."
         ],
         "points": [
           "选择试点与审核负责人",
@@ -1064,7 +1064,7 @@ export const BOOK = {
         "title": "开始简单，真实状态清楚",
         "lead": "区分今天的体验和未来的服务。",
         "paragraphs": [
-          "门店、菜单、上传资料、访问、订单和预约保存在云端，同步到其他手机和店主界面。店主通过认证设备与恢复码访问。AI 智能体使用预设场景，未使用 OCR 或邮箱注册验证。",
+          "点击按钮即可体验，不会进行真实注册或账户认证。 上传菜单和店铺资料，通过对话开设店铺。店铺信息和菜单存储在云端，顾客可用其他手机扫描 QR 下单和预约，店主在看板实时查看。AI 回复和支付仍为演示。 店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。",
           "付款、积分、奖励和报告仍为演示，没有真实支付、POS 或外部通知。库存与员工任务为手动记录，税务导出是审核草稿。支持公开 GitHub Pages 二维码，Sites 预览继续仅限所有者。"
         ],
         "points": [
@@ -1179,8 +1179,8 @@ export const BOOK = {
         "title": "マネージャーと話せば、お店の準備が進む",
         "lead": "店主は聞かれた情報に順番に答えます。",
         "paragraphs": [
-          "端末認証 → 店名 → メニュー写真 → 店内写真・動画 → 住所・連絡先・SNS → 確認 → QR とリンクの順に案内します。最後に店舗情報とサンプルメニューを確認し、クラウドへ公開します。",
-          "店主は認証された端末で始め、復旧コードを使って別端末から店舗にアクセスします。メール登録やメール認証ではありません。添付資料はクラウドに保存しますが自動で読み取らず、OCR なしのサンプルを店主が確認します。"
+          "メールで続ける / Google で続ける → 店名 → メニュー写真 → 店内写真・動画 → 住所・連絡先・SNS → 確認 → QR とリンクの順に案内します。最後に店舗情報とサンプルメニューを確認し、クラウドへ公開します。",
+          "ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。 店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。"
         ],
         "points": [
           "一度に一つずつ質問",
@@ -1292,7 +1292,7 @@ export const BOOK = {
         "lead": "確認できない本人情報を作り出さず、お客様を理解します。",
         "paragraphs": [
           "匿名セッションと同意済み情報を分け、目的、閲覧権限、保存・削除方針を説明します。質問だけで不満や個人情報を推定しません。",
-          "店舗・メニュー・アップロード資料と訪問・注文・予約はバックエンド経由で端末間同期します。店主は端末認証と復旧コードでアクセスします。決済・ポイント・レポートはデモ、税務集計は確認・出力用草案で、申告・納付や法令・税率の適用を行うものではありません。"
+          "店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。 決済・ポイント・特典・レポートは引き続きデモで、実決済・POS・外部通知はありません。在庫・スタッフは手動記録、税務出力は確認草案です。公開 GitHub Pages の QR に対応し、Sites のプレビューは所有者限定を保ちます。"
         ],
         "points": [
           "アレルギーはスタッフに確認",
@@ -1305,13 +1305,13 @@ export const BOOK = {
         "title": "シナリオから実際のお店へ",
         "lead": "各段階の完了条件を満たしてから、次の機能につなげます。",
         "paragraphs": [
-          "この段階では会話型開設、店舗・メニュー・資料のクラウド保存、別端末からの QR 注文・予約、リアルタイム店主画面をつなぎます。端末認証と復旧を検証し、AI 応答・決済・ポイント・レポートはデモと明示します。",
+          "メニューや店舗資料をアップロードし、会話でお店を開設します。店舗情報とメニューをクラウドに保存し、お客様は別のスマートフォンから QR で注文・予約できます。オーナーはダッシュボードでリアルタイムに確認します。AI の応答と決済はデモのままです。 ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。",
           "次に承認可能な写真認識、実 AI エージェント、サーバー費用制限を検証します。実決済・POS・外部通知は別接続とし、API 契約、webhook 検証、冪等性、再試行、照合、権限を確認してから運用します。"
         ],
         "points": [
           "別端末で店舗・注文・予約を確認",
           "リアルタイム画面と保存記録を照合",
-          "実 AI・決済の前に費用・権限・復旧を検証"
+          "サービス開始時に本認証を接続"
         ]
       },
       {
@@ -1320,7 +1320,7 @@ export const BOOK = {
         "lead": "最初の国と店舗の運営方法から具体化します。",
         "paragraphs": [
           "最初の市場、通貨、承認済みメニューと価格、POS、決済方法を決めます。予約、ポイント・特典、ゲーム回数、同意文面、保存期間も合意します。",
-          "在庫・スタッフ作業の担当、デモ売上の集計基準、税務案の確認者を決めます。店主の復旧コードを安全に保管し、別端末でのアクセスを試します。クラウド記録から出力した草案は正式な会計や税務申告の代わりにはなりません。"
+          "在庫・スタッフ作業の担当、デモ売上の集計基準、税務案の確認者を決めます。クラウド記録から出力した草案は正式な会計や税務申告の代わりにはなりません。 サービス開始時に本認証を接続."
         ],
         "points": [
           "試験店舗と確認担当者",
@@ -1333,7 +1333,7 @@ export const BOOK = {
         "title": "始めやすく、現在地は明確に",
         "lead": "今日の体験と、これからのサービスを区別します。",
         "paragraphs": [
-          "店舗・メニュー・資料と訪問・注文・予約はクラウド保存され、別端末と店主画面に同期します。店主は認証端末と復旧コードで利用します。AI エージェントの応答はシナリオで、OCR やメール登録認証は使いません。",
+          "ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。 メニューや店舗資料をアップロードし、会話でお店を開設します。店舗情報とメニューをクラウドに保存し、お客様は別のスマートフォンから QR で注文・予約できます。オーナーはダッシュボードでリアルタイムに確認します。AI の応答と決済はデモのままです。 店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。",
           "決済・ポイント・特典・レポートは引き続きデモで、実決済・POS・外部通知はありません。在庫・スタッフは手動記録、税務出力は確認草案です。公開 GitHub Pages の QR に対応し、Sites のプレビューは所有者限定を保ちます。"
         ],
         "points": [
@@ -1448,8 +1448,8 @@ export const BOOK = {
         "title": "Bicara dengan manajer untuk menyiapkan toko",
         "lead": "Pemilik menjawab pertanyaan manajer secara bertahap.",
         "paragraphs": [
-          "Manajer memandu autentikasi perangkat → nama toko → foto menu → foto atau video tempat → alamat, kontak dan media sosial → tinjau → QR dan tautan. Periksa informasi serta menu contoh pada kartu akhir sebelum menerbitkan ke cloud.",
-          "Pemilik mulai dari perangkat terautentikasi dan memakai kode pemulihan untuk mengakses toko dari perangkat lain. Ini bukan pendaftaran atau verifikasi email. Lampiran disimpan di cloud, tetapi tidak dibaca otomatis; pemilik meninjau menu contoh tanpa OCR."
+          "Lanjutkan dengan email / Lanjutkan dengan Google → nama toko → foto menu → foto atau video tempat → alamat, kontak dan media sosial → tinjau → QR dan tautan. Periksa informasi serta menu contoh pada kartu akhir sebelum menerbitkan ke cloud.",
+          "Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan. Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan."
         ],
         "points": [
           "Satu pertanyaan setiap langkah",
@@ -1561,7 +1561,7 @@ export const BOOK = {
         "lead": "Pahami tamu tanpa mengarang identitasnya.",
         "paragraphs": [
           "Pisahkan sesi anonim dan profil berizin serta jelaskan tujuan, akses, penyimpanan dan penghapusan. Jangan menyimpulkan keluhan atau data pribadi hanya dari satu pertanyaan.",
-          "Toko, menu, aset unggahan, kunjungan, pesanan dan reservasi tersinkron antarperangkat melalui backend. Pemilik memakai autentikasi perangkat serta kode pemulihan. Pembayaran, poin dan laporan tetap demo; ringkasan pajak hanya draf tinjauan dan ekspor, bukan pelaporan, pembayaran atau penerapan hukum maupun tarif."
+          "Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan. Pembayaran, poin, bonus dan laporan tetap demo; belum ada pembayaran nyata, POS atau notifikasi eksternal. Stok dan tugas staf dicatat manual, ekspor pajak berupa draf tinjauan. QR GitHub Pages publik didukung, sedangkan pratinjau Sites tetap privat bagi pemilik."
         ],
         "points": [
           "Konfirmasikan alergi kepada staf",
@@ -1574,13 +1574,13 @@ export const BOOK = {
         "title": "Dari skenario menuju toko nyata",
         "lead": "Hubungkan kemampuan baru setelah kriteria penerimaannya terpenuhi.",
         "paragraphs": [
-          "Tahap ini menghubungkan penyiapan percakapan, penyimpanan toko, menu dan aset di cloud, QR pesanan serta reservasi dari ponsel lain, dan dasbor pemilik waktu nyata. Uji autentikasi dan pemulihan sambil memberi label demo pada jawaban AI, pembayaran, poin serta laporan.",
+          "Buat toko melalui percakapan dengan mengunggah menu dan materi toko. Informasi dan menu disimpan di cloud. Tamu memesan dan melakukan reservasi lewat QR di ponsel lain; pemilik melihat pembaruan langsung di dasbor. Balasan AI dan pembayaran tetap demo. Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan.",
           "Selanjutnya uji pengenalan foto yang dapat ditinjau, agen AI nyata dan batas biaya server. Pembayaran nyata, POS dan notifikasi eksternal memerlukan integrasi terpisah, kontrak API, webhook terverifikasi, idempotensi, percobaan ulang, rekonsiliasi dan izin."
         ],
         "points": [
           "Periksa toko, pesanan dan reservasi lintas perangkat",
           "Cocokkan layar langsung dengan catatan",
-          "Uji biaya, izin dan pemulihan sebelum AI atau pembayaran nyata"
+          "Hubungkan autentikasi akun saat peluncuran"
         ]
       },
       {
@@ -1589,7 +1589,7 @@ export const BOOK = {
         "lead": "Tentukan negara pertama dan cara kerja toko pertama.",
         "paragraphs": [
           "Pilih pasar awal, mata uang, menu dan harga yang disetujui, POS serta cara pembayaran. Sepakati reservasi, poin, bonus, batas permainan, teks persetujuan dan masa simpan.",
-          "Tentukan pengelola tugas stok dan staf, dasar penjualan demo serta peninjau draf pajak. Simpan kode pemulihan pemilik dengan aman dan uji akses dari perangkat lain. Draf laporan yang diekspor dari cloud tidak menggantikan pembukuan final atau pelaporan pajak."
+          "Tentukan pengelola tugas stok dan staf, dasar penjualan demo serta peninjau draf pajak. Draf laporan yang diekspor dari cloud tidak menggantikan pembukuan final atau pelaporan pajak. Hubungkan autentikasi akun saat peluncuran."
         ],
         "points": [
           "Pilih toko uji dan peninjau",
@@ -1602,7 +1602,7 @@ export const BOOK = {
         "title": "Mudah dimulai, jelas mana yang nyata",
         "lead": "Bedakan pengalaman hari ini dengan layanan masa depan.",
         "paragraphs": [
-          "Toko, menu, aset unggahan, kunjungan, pesanan dan reservasi tersimpan di cloud serta tersinkron ke ponsel lain dan layar pemilik. Pemilik memakai perangkat terautentikasi dan kode pemulihan. Agen AI tetap berskenario, tanpa OCR atau verifikasi pendaftaran email.",
+          "Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan. Buat toko melalui percakapan dengan mengunggah menu dan materi toko. Informasi dan menu disimpan di cloud. Tamu memesan dan melakukan reservasi lewat QR di ponsel lain; pemilik melihat pembaruan langsung di dasbor. Balasan AI dan pembayaran tetap demo. Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan.",
           "Pembayaran, poin, bonus dan laporan tetap demo; belum ada pembayaran nyata, POS atau notifikasi eksternal. Stok dan tugas staf dicatat manual, ekspor pajak berupa draf tinjauan. QR GitHub Pages publik didukung, sedangkan pratinjau Sites tetap privat bagi pemilik."
         ],
         "points": [
@@ -1717,8 +1717,8 @@ export const BOOK = {
         "title": "ជជែកជាមួយអ្នកគ្រប់គ្រង ដើម្បីរៀបចំហាង",
         "lead": "ម្ចាស់ឆ្លើយសំណួរម្ដងមួយតាមការណែនាំ។",
         "paragraphs": [
-          "អ្នកគ្រប់គ្រងណែនាំ៖ ផ្ទៀងផ្ទាត់ឧបករណ៍ → ឈ្មោះហាង → រូបមុខម្ហូប → រូបឬវីដេអូហាង → អាសយដ្ឋាន ទំនាក់ទំនង បណ្ដាញសង្គម → ពិនិត្យ → QR និងតំណ។ ពិនិត្យព័ត៌មាននិងម្ហូបគំរូមុនផ្សាយលើក្លោដ។",
-          "ម្ចាស់ចាប់ផ្ដើមពីឧបករណ៍បានផ្ទៀងផ្ទាត់ ហើយប្រើលេខកូដស្ដារដើម្បីចូលហាងពីឧបករណ៍ផ្សេង។ មិនមែនចុះឈ្មោះឬផ្ទៀងផ្ទាត់អ៊ីមែលទេ។ ឯកសាររក្សាលើក្លោដតែមិនអានស្វ័យប្រវត្តិ; ម្ចាស់ពិនិត្យមុខម្ហូបគំរូដោយគ្មាន OCR។"
+          "បន្តជាមួយអ៊ីមែល / បន្តជាមួយ Google → ឈ្មោះហាង → រូបមុខម្ហូប → រូបឬវីដេអូហាង → អាសយដ្ឋាន ទំនាក់ទំនង បណ្ដាញសង្គម → ពិនិត្យ → QR និងតំណ។ ពិនិត្យព័ត៌មាននិងម្ហូបគំរូមុនផ្សាយលើក្លោដ។",
+          "ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។ ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។"
         ],
         "points": [
           "សួរម្ដងមួយព័ត៌មាន",
@@ -1830,7 +1830,7 @@ export const BOOK = {
         "lead": "យល់ភ្ញៀវដោយមិនសន្មតអត្តសញ្ញាណ។",
         "paragraphs": [
           "បំបែកវគ្គអនាមិកនិងប្រវត្តិរូបបានយល់ព្រម ព្រមទាំងពន្យល់គោលបំណង សិទ្ធិមើល រក្សានិងលុប។ មិនសន្មតបណ្ដឹងឬព័ត៌មានឯកជនពីសំណួរមួយទេ។",
-          "ហាង ម្ហូប ឯកសារផ្ទុក ការចូលមើល កុម្ម៉ង់ និងកក់សមកាលកម្មឆ្លងឧបករណ៍តាម backend។ ម្ចាស់ចូលតាមឧបករណ៍ផ្ទៀងផ្ទាត់និងលេខកូដស្ដារ។ ការបង់ ពិន្ទុ និងរបាយការណ៍ជាដេមូ; សង្ខេបពន្ធជាព្រាងសម្រាប់ពិនិត្យនិងនាំចេញ មិនប្រកាសឬបង់ពន្ធ ហើយមិនអះអាងអនុវត្តច្បាប់ឬអត្រាពន្ធ។"
+          "ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។ ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍នៅតែដេមូ; គ្មានបង់ពិត POS ឬជូនដំណឹងខាងក្រៅ។ ការងារស្តុកនិងបុគ្គលិកបញ្ចូលដោយដៃ ហើយនាំចេញពន្ធជាព្រាង។ អាចប្រើ QR GitHub Pages សាធារណៈ ខណៈ Sites នៅតែសម្រាប់ម្ចាស់។"
         ],
         "points": [
           "អាលែហ្សីសួរបុគ្គលិក",
@@ -1843,13 +1843,13 @@ export const BOOK = {
         "title": "ពីសេណារីយ៉ូទៅហាងពិត",
         "lead": "ភ្ជាប់មុខងារថ្មីក្រោយឆ្លងលក្ខខណ្ឌទទួលយក។",
         "paragraphs": [
-          "ដំណាក់កាលនេះភ្ជាប់ការបើកហាងតាមជជែក ទិន្នន័យហាង ម្ហូបនិងឯកសារលើក្លោដ កុម្ម៉ង់និងកក់តាម QR ពីទូរសព្ទផ្សេង និងផ្ទាំងម្ចាស់ភ្លាមៗ។ ផ្ទៀងផ្ទាត់ឧបករណ៍និងស្ដារ ខណៈចម្លើយ AI ការបង់ ពិន្ទុ និងរបាយការណ៍សម្គាល់ជាដេមូ។",
+          "បង្កើតហាងតាមការសន្ទនាដោយផ្ទុកម៉ឺនុយ និងឯកសារហាង។ ព័ត៌មាន និងម៉ឺនុយត្រូវបានរក្សាទុកលើពពក។ ភ្ញៀវអាចប្រើ QR លើទូរសព្ទផ្សេងដើម្បីបញ្ជាទិញ និងកក់ ហើយម្ចាស់ហាងមើលការផ្លាស់ប្តូរភ្លាមៗលើផ្ទាំងគ្រប់គ្រង។ ចម្លើយ AI និងការទូទាត់នៅតែជាគំរូ។ ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។",
           "បន្ទាប់សាកល្បងអានរូបដែលអាចពិនិត្យ ភ្នាក់ងារ AI ពិត និងកំណត់ថ្លៃនៅម៉ាស៊ីនមេ។ ការបង់ពិត POS និងជូនដំណឹងខាងក្រៅត្រូវភ្ជាប់ដាច់ដោយឡែក ព្រមទាំងពិនិត្យ API, webhook, ទប់ស្ទួន, ព្យាយាមឡើងវិញ, ផ្ទៀងគណនី និងសិទ្ធិ។"
         ],
         "points": [
           "ពិនិត្យហាង កុម្ម៉ង់ និងកក់លើឧបករណ៍ផ្សេង",
           "ផ្ទៀងផ្ទាំងភ្លាមៗនឹងកំណត់ត្រា",
-          "ពិនិត្យថ្លៃ សិទ្ធិ និងស្ដារមុន AI ឬការបង់ពិត"
+          "ភ្ជាប់ការផ្ទៀងផ្ទាត់គណនីពិតនៅពេលចេញផ្សាយ"
         ]
       },
       {
@@ -1858,7 +1858,7 @@ export const BOOK = {
         "lead": "កំណត់ប្រទេសដំបូងនិងរបៀបដំណើរការហាងដំបូង។",
         "paragraphs": [
           "ជ្រើសទីផ្សារ រូបិយប័ណ្ណ ម្ហូបនិងតម្លៃអនុម័ត POS និងវិធីបង់ប្រាក់។ ព្រមព្រៀងការកក់ ពិន្ទុ អំណោយ ចំនួនលេង ពាក្យយល់ព្រម និងរយៈពេលរក្សា។",
-          "កំណត់អ្នកធ្វើការងារស្តុកនិងបុគ្គលិក មូលដ្ឋានរបាយការណ៍លក់ដេមូ និងអ្នកពិនិត្យព្រាងពន្ធ។ រក្សាលេខកូដស្ដារម្ចាស់ឱ្យសុវត្ថិភាព ហើយសាកចូលពីឧបករណ៍ផ្សេង។ ព្រាងរបាយការណ៍ពីក្លោដមិនជំនួសគណនេយ្យចុងក្រោយឬការប្រកាសពន្ធ។"
+          "កំណត់អ្នកធ្វើការងារស្តុកនិងបុគ្គលិក មូលដ្ឋានរបាយការណ៍លក់ដេមូ និងអ្នកពិនិត្យព្រាងពន្ធ។ ព្រាងរបាយការណ៍ពីក្លោដមិនជំនួសគណនេយ្យចុងក្រោយឬការប្រកាសពន្ធ។ ភ្ជាប់ការផ្ទៀងផ្ទាត់គណនីពិតនៅពេលចេញផ្សាយ."
         ],
         "points": [
           "ជ្រើសហាងសាកល្បងនិងអ្នកពិនិត្យ",
@@ -1871,7 +1871,7 @@ export const BOOK = {
         "title": "ចាប់ផ្ដើមងាយ បញ្ជាក់អ្វីជាការពិត",
         "lead": "បែងចែកបទពិសោធន៍ថ្ងៃនេះពីសេវាអនាគត។",
         "paragraphs": [
-          "ហាង ម្ហូប ឯកសារផ្ទុក ការចូលមើល កុម្ម៉ង់ និងកក់រក្សាលើក្លោដ និងសមកាលកម្មទៅទូរសព្ទផ្សេងនិងផ្ទាំងម្ចាស់។ ម្ចាស់ប្រើឧបករណ៍ផ្ទៀងផ្ទាត់និងលេខកូដស្ដារ។ ភ្នាក់ងារ AI ឆ្លើយតាមសេណារីយ៉ូ ដោយគ្មាន OCR ឬផ្ទៀងផ្ទាត់ចុះឈ្មោះអ៊ីមែល។",
+          "ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។ បង្កើតហាងតាមការសន្ទនាដោយផ្ទុកម៉ឺនុយ និងឯកសារហាង។ ព័ត៌មាន និងម៉ឺនុយត្រូវបានរក្សាទុកលើពពក។ ភ្ញៀវអាចប្រើ QR លើទូរសព្ទផ្សេងដើម្បីបញ្ជាទិញ និងកក់ ហើយម្ចាស់ហាងមើលការផ្លាស់ប្តូរភ្លាមៗលើផ្ទាំងគ្រប់គ្រង។ ចម្លើយ AI និងការទូទាត់នៅតែជាគំរូ។ ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។",
           "ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍នៅតែដេមូ; គ្មានបង់ពិត POS ឬជូនដំណឹងខាងក្រៅ។ ការងារស្តុកនិងបុគ្គលិកបញ្ចូលដោយដៃ ហើយនាំចេញពន្ធជាព្រាង។ អាចប្រើ QR GitHub Pages សាធារណៈ ខណៈ Sites នៅតែសម្រាប់ម្ចាស់។"
         ],
         "points": [
@@ -1986,8 +1986,8 @@ export const BOOK = {
         "title": "ລົມກັບຜູ້ຈັດການເພື່ອກຽມຮ້ານ",
         "lead": "ເຈົ້າຂອງຕອບຄຳຖາມທີລະຂັ້ນ.",
         "paragraphs": [
-          "ຜູ້ຈັດການນຳທາງ: ຢືນຢັນອຸປະກອນ → ຊື່ຮ້ານ → ຮູບເມນູ → ຮູບຫຼືວິດີໂອຮ້ານ → ທີ່ຢູ່ ຕິດຕໍ່ ສື່ສັງຄົມ → ກວດ → QR ແລະລິ້ງ. ກວດຮ້ານແລະເມນູຕົວຢ່າງກ່ອນເຜີຍແຜ່ໃນຄລາວ.",
-          "ເຈົ້າຂອງເລີ່ມຈາກອຸປະກອນທີ່ຢືນຢັນ ແລະໃຊ້ລະຫັດກູ້ຄືນເພື່ອເຂົ້າຮ້ານຈາກອຸປະກອນອື່ນ. ບໍ່ແມ່ນສະໝັກຫຼືຢືນຢັນອີເມວ. ໄຟລ໌ເກັບໃນຄລາວແຕ່ບໍ່ອ່ານອັດຕະໂນມັດ; ເຈົ້າຂອງກວດເມນູຕົວຢ່າງໂດຍບໍ່ມີ OCR."
+          "ສືບຕໍ່ດ້ວຍອີເມວ / ສືບຕໍ່ດ້ວຍ Google → ຊື່ຮ້ານ → ຮູບເມນູ → ຮູບຫຼືວິດີໂອຮ້ານ → ທີ່ຢູ່ ຕິດຕໍ່ ສື່ສັງຄົມ → ກວດ → QR ແລະລິ້ງ. ກວດຮ້ານແລະເມນູຕົວຢ່າງກ່ອນເຜີຍແຜ່ໃນຄລາວ.",
+          "ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ. ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ."
         ],
         "points": [
           "ຖາມທີລະຢ່າງ",
@@ -2099,7 +2099,7 @@ export const BOOK = {
         "lead": "ເຂົ້າໃຈແຂກໂດຍບໍ່ຄາດເດົາຕົວຕົນ.",
         "paragraphs": [
           "ແຍກຮອບນິລະນາມຈາກໂປຣໄຟລ໌ທີ່ຍິນຍອມ ແລະບອກເປົ້າໝາຍ ສິດເບິ່ງ ເກັບແລະລຶບ. ບໍ່ສະຫຼຸບຄຳຮ້ອງຮຽນຫຼືຂໍ້ມູນສ່ວນຕົວຈາກຄຳຖາມດຽວ.",
-          "ຮ້ານ ເມນູ ໄຟລ໌ ເຂົ້າເບິ່ງ ອໍເດີ ແລະຈອງຊິງຂ້າມອຸປະກອນຜ່ານ backend. ເຈົ້າຂອງໃຊ້ຢືນຢັນອຸປະກອນແລະລະຫັດກູ້ຄືນ. ຈ່າຍ ຄະແນນ ແລະລາຍງານເປັນເດໂມ; ພາສີເປັນຮ່າງເພື່ອກວດແລະສົ່ງອອກ ບໍ່ຍື່ນ ຊຳລະ ຫຼືອ້າງໃຊ້ກົດໝາຍແລະອັດຕາພາສີ."
+          "ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ. ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານຍັງເປັນເດໂມ ບໍ່ມີຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ. ວຽກສະຕັອກແລະພະນັກງານປ້ອນເອງ ສົ່ງອອກພາສີເປັນຮ່າງ. ໃຊ້ QR GitHub Pages ສາທາລະນະໄດ້ ແລະ Sites ຍັງສຳລັບເຈົ້າຂອງເທົ່ານັ້ນ."
         ],
         "points": [
           "ອາການແພ້ຖາມພະນັກງານ",
@@ -2112,13 +2112,13 @@ export const BOOK = {
         "title": "ຈາກບົດສາທິດສູ່ຮ້ານຈິງ",
         "lead": "ເຊື່ອມຄວາມສາມາດໃໝ່ຫຼັງຜ່ານເກນຮັບຮອງ.",
         "paragraphs": [
-          "ຂັ້ນນີ້ເຊື່ອມເປີດຮ້ານຜ່ານແຊັດ ເກັບຮ້ານ ເມນູ ແລະໄຟລ໌ໃນຄລາວ ອໍເດີແລະຈອງຈາກ QR ໃນໂທລະສັບອື່ນ ແລະດາຊບອດເຈົ້າຂອງທັນທີ. ກວດຢືນຢັນແລະກູ້ຄືນ ພ້ອມລະບຸຄຳຕອບ AI ຈ່າຍ ຄະແນນ ແລະລາຍງານເປັນເດໂມ.",
+          "ສ້າງຮ້ານຜ່ານການສົນທະນາໂດຍອັບໂຫຼດເມນູ ແລະຂໍ້ມູນຮ້ານ. ຂໍ້ມູນ ແລະເມນູຖືກບັນທຶກໃນຄລາວ. ແຂກໃຊ້ QR ໃນໂທລະສັບອື່ນເພື່ອສັ່ງ ແລະຈອງ ເຈົ້າຂອງເຫັນຜົນທັນທີໃນແດຊບອດ. ຄຳຕອບ AI ແລະການຈ່າຍເງິນຍັງເປັນສາທິດ. ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ.",
           "ຕໍ່ໄປກວດອ່ານຮູບທີ່ອະນຸມັດໄດ້ ຜູ້ຊ່ວຍ AI ຈິງ ແລະຄຸມຄ່າໃນເຊີບເວີ. ຈ່າຍຈິງ POS ແລະແຈ້ງເຕືອນພາຍນອກເຊື່ອມແຍກ ໂດຍກວດ API, webhook, ປ້ອງກັນຊ້ຳ, ລອງໃໝ່, ກວດຍອດ ແລະສິດ."
         ],
         "points": [
           "ກວດຮ້ານ ອໍເດີ ແລະຈອງຂ້າມອຸປະກອນ",
           "ທຽບໜ້າຈໍທັນທີກັບບັນທຶກ",
-          "ກວດຄ່າ ສິດ ແລະກູ້ຄືນກ່ອນ AI ຫຼືຈ່າຍຈິງ"
+          "ເຊື່ອມການຢືນຢັນບັນຊີຈິງເມື່ອເປີດບໍລິການ"
         ]
       },
       {
@@ -2127,7 +2127,7 @@ export const BOOK = {
         "lead": "ກຳນົດປະເທດທຳອິດແລະວິທີເຮັດວຽກຂອງຮ້ານ.",
         "paragraphs": [
           "ເລືອກຕະຫຼາດ ເງິນ ເມນູແລະລາຄາອະນຸມັດ POS ແລະວິທີຈ່າຍ. ຕົກລົງຈອງ ຄະແນນ ໂບນັດ ຄັ້ງຫຼິ້ນ ຂໍ້ຄວາມຍິນຍອມ ແລະໄລຍະເກັບ.",
-          "ກຳນົດຜູ້ຈັດການວຽກສະຕັອກແລະພະນັກງານ ຫຼັກລາຍງານຂາຍເດໂມ ແລະຜູ້ກວດຮ່າງພາສີ. ເກັບລະຫັດກູ້ຄືນໃຫ້ປອດໄພ ແລະລອງເຂົ້າຈາກອຸປະກອນອື່ນ. ຮ່າງລາຍງານຈາກຄລາວບໍ່ແທນບັນຊີສຸດທ້າຍຫຼືການຍື່ນພາສີ."
+          "ກຳນົດຜູ້ຈັດການວຽກສະຕັອກແລະພະນັກງານ ຫຼັກລາຍງານຂາຍເດໂມ ແລະຜູ້ກວດຮ່າງພາສີ. ຮ່າງລາຍງານຈາກຄລາວບໍ່ແທນບັນຊີສຸດທ້າຍຫຼືການຍື່ນພາສີ. ເຊື່ອມການຢືນຢັນບັນຊີຈິງເມື່ອເປີດບໍລິການ."
         ],
         "points": [
           "ເລືອກຮ້ານລອງແລະຜູ້ກວດ",
@@ -2140,7 +2140,7 @@ export const BOOK = {
         "title": "ເລີ່ມງ່າຍ ບອກສະຖານະຈິງຊັດເຈນ",
         "lead": "ແຍກປະສົບການມື້ນີ້ຈາກບໍລິການອະນາຄົດ.",
         "paragraphs": [
-          "ຮ້ານ ເມນູ ໄຟລ໌ ເຂົ້າເບິ່ງ ອໍເດີ ແລະຈອງເກັບໃນຄລາວ ແລະຊິງຫາໂທລະສັບອື່ນກັບໜ້າເຈົ້າຂອງ. ເຈົ້າຂອງໃຊ້ອຸປະກອນຢືນຢັນແລະລະຫັດກູ້ຄືນ. ຜູ້ຊ່ວຍ AI ຕອບຕາມບົດ ບໍ່ມີ OCR ຫຼືຢືນຢັນສະໝັກອີເມວ.",
+          "ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ. ສ້າງຮ້ານຜ່ານການສົນທະນາໂດຍອັບໂຫຼດເມນູ ແລະຂໍ້ມູນຮ້ານ. ຂໍ້ມູນ ແລະເມນູຖືກບັນທຶກໃນຄລາວ. ແຂກໃຊ້ QR ໃນໂທລະສັບອື່ນເພື່ອສັ່ງ ແລະຈອງ ເຈົ້າຂອງເຫັນຜົນທັນທີໃນແດຊບອດ. ຄຳຕອບ AI ແລະການຈ່າຍເງິນຍັງເປັນສາທິດ. ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ.",
           "ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານຍັງເປັນເດໂມ ບໍ່ມີຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ. ວຽກສະຕັອກແລະພະນັກງານປ້ອນເອງ ສົ່ງອອກພາສີເປັນຮ່າງ. ໃຊ້ QR GitHub Pages ສາທາລະນະໄດ້ ແລະ Sites ຍັງສຳລັບເຈົ້າຂອງເທົ່ານັ້ນ."
         ],
         "points": [
@@ -2255,8 +2255,8 @@ export const BOOK = {
         "title": "मैनेजर से बात करें, दुकान तैयार करें",
         "lead": "मालिक मैनेजर के सवालों का क्रम से जवाब दें।",
         "paragraphs": [
-          "मैनेजर क्रम से मार्गदर्शन करता है: उपकरण प्रमाणीकरण → दुकान का नाम → मेन्यू फोटो → जगह की फोटो या वीडियो → पता, संपर्क, सोशल लिंक → समीक्षा → QR और लिंक। अंतिम कार्ड पर दुकान और तैयार मेन्यू जाँचकर क्लाउड में प्रकाशित करें।",
-          "मालिक प्रमाणित उपकरण से शुरू करता है और दूसरे उपकरण पर दुकान खोलने के लिए रिकवरी कोड इस्तेमाल करता है। यह ईमेल पंजीकरण या ईमेल सत्यापन नहीं है। फ़ाइलें क्लाउड में रखी जाती हैं, अपने आप पढ़ी नहीं जातीं; मालिक OCR के बिना नमूना मेन्यू जाँचता है।"
+          "ईमेल से जारी रखें / Google से जारी रखें → दुकान का नाम → मेन्यू फोटो → जगह की फोटो या वीडियो → पता, संपर्क, सोशल लिंक → समीक्षा → QR और लिंक। अंतिम कार्ड पर दुकान और तैयार मेन्यू जाँचकर क्लाउड में प्रकाशित करें।",
+          "तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा। दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा।"
         ],
         "points": [
           "एक समय में एक सवाल",
@@ -2368,7 +2368,7 @@ export const BOOK = {
         "lead": "मेहमान को समझें, उसकी पहचान की कल्पना न करें।",
         "paragraphs": [
           "अनाम सत्र और सहमति वाली प्रोफ़ाइल अलग रखें; उद्देश्य, पहुँच, रखने और हटाने की नीति बताएँ। एक सवाल से शिकायत या निजी जानकारी का अनुमान न लगाएँ।",
-          "दुकान, मेन्यू, अपलोड, विज़िट, ऑर्डर और आरक्षण बैकएंड से उपकरणों में साझा होते हैं। मालिक उपकरण प्रमाणीकरण और रिकवरी कोड से पहुँचता है। भुगतान, अंक और रिपोर्ट डेमो हैं; कर सारांश समीक्षा व निर्यात का मसौदा है, दाखिला या जमा नहीं और कानून या कर दर लागू करने का दावा नहीं करता।"
+          "दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा। भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं; असली भुगतान, POS या बाहरी सूचना नहीं है। स्टॉक व कर्मचारी कार्य हाथ से दर्ज होते हैं, कर निर्यात समीक्षा मसौदा है। सार्वजनिक GitHub Pages QR समर्थित हैं, जबकि Sites पूर्वावलोकन केवल मालिक के लिए है।"
         ],
         "points": [
           "एलर्जी की जानकारी कर्मचारी से लें",
@@ -2381,13 +2381,13 @@ export const BOOK = {
         "title": "तय परिदृश्यों से असली दुकान तक",
         "lead": "हर चरण की स्वीकृति शर्त पूरी होने पर अगली सुविधा जोड़ें।",
         "paragraphs": [
-          "इस चरण में बातचीत से दुकान खोलना, दुकान, मेन्यू व सामग्री का क्लाउड भंडारण, दूसरे फोन से QR ऑर्डर व आरक्षण और तुरंत अपडेट होने वाला मालिक डैशबोर्ड जुड़ते हैं। उपकरण प्रमाणीकरण और रिकवरी जाँचें; AI जवाब, भुगतान, अंक और रिपोर्ट स्पष्ट रूप से डेमो रहें।",
+          "मेन्यू और दुकान की सामग्री अपलोड करके बातचीत में दुकान बनाएँ। जानकारी और मेन्यू क्लाउड में सहेजे जाते हैं। मेहमान दूसरे फोन से QR द्वारा ऑर्डर और बुकिंग कर सकते हैं; मालिक डैशबोर्ड पर तुरंत अपडेट देखते हैं। AI के जवाब और भुगतान अभी भी डेमो हैं। तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा।",
           "आगे समीक्षा योग्य फोटो पहचान, असली AI एजेंट और सर्वर खर्च नियंत्रण जाँचें। असली भुगतान, POS और बाहरी सूचनाएँ अलग जुड़ेंगी; API अनुबंध, सत्यापित webhook, दोहराव रोकना, पुनः प्रयास, मिलान और अनुमति जाँचना ज़रूरी होगा।"
         ],
         "points": [
           "दूसरे उपकरण पर दुकान, ऑर्डर और आरक्षण जाँचें",
           "लाइव स्क्रीन को सहेजे रिकॉर्ड से मिलाएँ",
-          "असली AI या भुगतान से पहले खर्च, अनुमति और रिकवरी जाँचें"
+          "सेवा शुरू होने पर असली खाता सत्यापन जोड़ें"
         ]
       },
       {
@@ -2396,7 +2396,7 @@ export const BOOK = {
         "lead": "पहला देश और पहली दुकान का संचालन तय करें।",
         "paragraphs": [
           "पहला बाज़ार, मुद्रा, मंज़ूर मेन्यू और कीमत, POS तथा भुगतान तरीका चुनें। आरक्षण, अंक, बोनस, खेल सीमा, सहमति के शब्द और रिकॉर्ड अवधि तय करें।",
-          "स्टॉक व कर्मचारी कार्य के ज़िम्मेदार, डेमो बिक्री रिपोर्ट का आधार और कर मसौदा समीक्षक तय करें। मालिक का रिकवरी कोड सुरक्षित रखें और दूसरे उपकरण से पहुँच जाँचें। क्लाउड रिकॉर्ड से निर्यात मसौदा अंतिम लेखा या कर दाखिले की जगह नहीं लेता।"
+          "स्टॉक व कर्मचारी कार्य के ज़िम्मेदार, डेमो बिक्री रिपोर्ट का आधार और कर मसौदा समीक्षक तय करें। क्लाउड रिकॉर्ड से निर्यात मसौदा अंतिम लेखा या कर दाखिले की जगह नहीं लेता। सेवा शुरू होने पर असली खाता सत्यापन जोड़ें."
         ],
         "points": [
           "पायलट दुकान और समीक्षक चुनें",
@@ -2409,7 +2409,7 @@ export const BOOK = {
         "title": "शुरुआत आसान, वास्तविक स्थिति स्पष्ट",
         "lead": "आज के अनुभव और भविष्य की सेवा में अंतर रखें।",
         "paragraphs": [
-          "दुकान, मेन्यू, अपलोड सामग्री, विज़िट, ऑर्डर और आरक्षण क्लाउड में सहेजे जाते हैं और दूसरे फोन व मालिक स्क्रीन पर साझा होते हैं। मालिक प्रमाणित उपकरण और रिकवरी कोड से पहुँचता है। AI एजेंट तय परिदृश्यों से जवाब देता है; OCR या ईमेल पंजीकरण सत्यापन नहीं है।",
+          "तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा। मेन्यू और दुकान की सामग्री अपलोड करके बातचीत में दुकान बनाएँ। जानकारी और मेन्यू क्लाउड में सहेजे जाते हैं। मेहमान दूसरे फोन से QR द्वारा ऑर्डर और बुकिंग कर सकते हैं; मालिक डैशबोर्ड पर तुरंत अपडेट देखते हैं। AI के जवाब और भुगतान अभी भी डेमो हैं। दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा।",
           "भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं; असली भुगतान, POS या बाहरी सूचना नहीं है। स्टॉक व कर्मचारी कार्य हाथ से दर्ज होते हैं, कर निर्यात समीक्षा मसौदा है। सार्वजनिक GitHub Pages QR समर्थित हैं, जबकि Sites पूर्वावलोकन केवल मालिक के लिए है।"
         ],
         "points": [

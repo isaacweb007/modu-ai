@@ -1,6 +1,6 @@
 {
   "name": "modu-ai-project-book",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "private": true,
   "scripts": {
     "dev": "python3 -m http.server 4318 --bind 127.0.0.1 --directory dist",
