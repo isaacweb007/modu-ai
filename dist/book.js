@@ -1,12 +1,12 @@
-import {RAMI_COPY} from './shared/rami-copy.js?v=5.5.0';
-import {ramiChapters,ramiSection,bindRami} from './rami-book.js?v=5.5.0';
-import {ORDER_COPY} from './shared/order-copy.js?v=5.5.0';
-import {brandLogo,brandMark,mascotPoses} from './shared/brand.js?v=5.5.0';
-import {VISUAL_COPY} from './shared/visual-copy.js?v=5.5.0';
-import {BOOK} from './book-content.js?v=5.5.0';
-import {CHAT_COPY} from './shared/conversation-copy.js?v=5.5.0';
-import {UI} from './shared/copy.js?v=5.5.0';
-import {esc,getLang,setLang,languageOptions,icon} from './shared/core.js?v=5.5.0';
+import {RAMI_COPY} from './shared/rami-copy.js?v=5.5.1';
+import {ramiChapters,ramiSection,bindRami} from './rami-book.js?v=5.5.1';
+import {ORDER_COPY} from './shared/order-copy.js?v=5.5.1';
+import {brandLogo,brandMark,mascotPoses} from './shared/brand.js?v=5.5.1';
+import {VISUAL_COPY} from './shared/visual-copy.js?v=5.5.1';
+import {BOOK} from './book-content.js?v=5.5.1';
+import {CHAT_COPY} from './shared/conversation-copy.js?v=5.5.1';
+import {UI} from './shared/copy.js?v=5.5.1';
+import {esc,getLang,setLang,languageOptions,icon} from './shared/core.js?v=5.5.1';
 let lang=getLang(),menuOpen=false,navCollapsed=false,active='cover',pose='greeting';
 const root=document.querySelector('#book'),mobile=matchMedia('(max-width:760px)'),reduceMotion=matchMedia('(prefers-reduced-motion:reduce)');
 let motion=true;try{motion=localStorage.getItem('one-shop-motion')!=='off';}catch{}

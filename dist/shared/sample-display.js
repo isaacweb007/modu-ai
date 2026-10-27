@@ -1,6 +1,6 @@
-import {MENU} from './menu.js?v=5.5.0';
-import {SAMPLE_COPY} from './owner-sample.js?v=5.5.0';
-import {SAMPLE_ORIGINALS} from './sample-originals.js?v=5.5.0';
+import {MENU} from './menu.js?v=5.5.1';
+import {SAMPLE_COPY} from './owner-sample.js?v=5.5.1';
+import {SAMPLE_ORIGINALS} from './sample-originals.js?v=5.5.1';
 const units={ko:'인분',en:'servings',vi:'phần',zh:'份',ja:'人前',km:'ចំណែក',id:'porsi',lo:'ທີ່',hi:'सर्विंग'};
 const teams={ko:['주방','홀'],en:['Kitchen','Dining room'],vi:['Bếp','Phục vụ'],zh:['后厨','前厅'],ja:['キッチン','ホール'],km:['ផ្នែកផ្ទះបាយ','ផ្នែកបម្រើភ្ញៀវ'],id:['Dapur','Ruang makan'],lo:['ຄົວ','ຝ່າຍບໍລິການ'],hi:['रसोई','सर्विस टीम']};
 const media={ko:['주모 외관 시안','주모 실내 시안','주모 메뉴 이미지 시안'],en:['Jumo exterior concept','Jumo interior concept','Jumo menu image concept'],vi:['Ý tưởng mặt tiền Jumo','Ý tưởng không gian Jumo','Ảnh ý tưởng món ăn Jumo'],zh:['Jumo 外观概念图','Jumo 室内概念图','Jumo 菜品概念图'],ja:['ジュモの外観イメージ','ジュモの店内イメージ','ジュモの料理イメージ'],km:['រូបភាពគំនិតផ្នែកខាងក្រៅ Jumo','រូបភាពគំនិតផ្នែកខាងក្នុង Jumo','រូបភាពគំនិតម្ហូប Jumo'],id:['Konsep tampak luar Jumo','Konsep interior Jumo','Konsep foto menu Jumo'],lo:['ພາບແນວຄິດພາຍນອກ Jumo','ພາບແນວຄິດພາຍໃນ Jumo','ພາບແນວຄິດອາຫານ Jumo'],hi:['जुमो के बाहरी हिस्से की अवधारणा','जुमो के अंदरूनी हिस्से की अवधारणा','जुमो के व्यंजनों की अवधारणा']};
@@ -24,12 +24,12 @@ export function sampleMediaName(row,lang){
  return i>=0&&row.name===['Jumo exterior · concept','Jumo interior · concept','Jumo jeon · concept'][i]?media[lang][i]:row.name;
 }
 // Only known fixture text is re-localized. Owner edits and customer records remain verbatim.
-export function sampleStateForDisplay(s,lang){
- if(!s.sampleVersion)return s;
+export function sampleStateForDisplay(s,lang,seededDemo=false){
+ if(!s.sampleVersion&&!seededDemo)return s;
  const translated=(item,field)=>{
   const reference=MENU.find(x=>x.id===item.id);if(!reference||!item[field])return item[field];
   const old=field==='name'?SAMPLE_ORIGINALS.items[item.id]:SAMPLE_ORIGINALS.descriptions[item.id];
   return Object.fromEntries(Object.entries(item[field]).map(([l,value])=>[l,unchanged(value,old,Object.values(reference[field]))?reference[field][l]:value]));
  };
- return {...s,store:{...s.store,address:sampleAddress(s,lang)},items:s.items?.map(x=>({...x,name:translated(x,'name'),description:translated(x,'description')})),orders:s.orders.map(o=>/^sample-order-[1-4]$/.test(o.id)?{...o,lines:o.lines.map(line=>({...line,name:translated({id:line.itemId,name:line.name},'name')}))}:o)};
+ return {...s,store:{...s.store,address:sampleAddress(s,lang)},items:s.items?.map(x=>({...x,name:translated(x,'name'),description:translated(x,'description')})),orders:s.orders.map(o=>(seededDemo||/^sample-order-[1-4]$/.test(o.id))?{...o,lines:o.lines.map(line=>({...line,name:translated({id:line.itemId,name:line.name},'name')}))}:o)};
 }

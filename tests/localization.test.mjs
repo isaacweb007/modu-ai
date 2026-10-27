@@ -52,3 +52,11 @@ test('Rami, sign-in, book and downloadable vouchers cover all nine languages',()
   const svg=readFileSync(`dist/assets/one-shop/rami/bi/rami-gift-voucher-${lang}.svg`,'utf8');assert.ok(svg.includes(`lang="${lang}"`));assert.doesNotMatch(svg,/undefined|\[object Object\]/);
  }
 });
+
+test('explicit public demo localization is opt-in and never changes stored orders or prices',()=>{
+ const s=createOwnerSample('ko');delete s.sampleVersion;s.items[0].name.en=SAMPLE_ORIGINALS.items[s.items[0].id][1];
+ s.orders[0].id='cloud-record';s.orders[0].lines[0].name.en=SAMPLE_ORIGINALS.items[s.orders[0].lines[0].itemId][1];
+ const before=structuredClone(s),view=sampleStateForDisplay(s,'en',true);
+ assert.equal(view.items[0].name.en,MENU[0].name.en);assert.equal(view.orders[0].lines[0].name.en,MENU.find(x=>x.id===view.orders[0].lines[0].itemId).name.en);
+ assert.equal(view.orders[0].total,s.orders[0].total);assert.deepEqual(s,before);assert.equal(sampleStateForDisplay(s,'en'),s);
+});

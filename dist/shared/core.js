@@ -1,4 +1,4 @@
-import {LANGS,getLang,formatMoney} from './locale.js?v=5.5.0';
+import {LANGS,getLang,formatMoney} from './locale.js?v=5.5.1';
 export {LANGS,getLang};
 export const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const money=formatMoney;
