@@ -1,7 +1,7 @@
 export const SHOWCASE_COPY = {
   "ko": {
-    "title": "한 주문을, 두 화면으로.",
-    "lead": "주문·통역·접수·준비 완료까지, 손님과 사장님의 화면이 함께 움직입니다.",
+    "title": "한 요청을, 두 화면으로.",
+    "lead": "매장 주문·예약·배달을 골라, 손님 요청부터 통역·접수·알림까지 함께 체험하세요.",
     "start": "전체 시연 시작",
     "pause": "일시정지",
     "resume": "이어서 재생",
@@ -45,8 +45,8 @@ export const SHOWCASE_COPY = {
     ]
   },
   "en": {
-    "title": "One order. Two screens.",
-    "lead": "From the first request through translation and acceptance until the food is ready, both screens update together.",
+    "title": "One request. Two screens.",
+    "lead": "Choose dine-in, a reservation or delivery, then follow the request, translation, acceptance and guest notification.",
     "start": "Play the full demo",
     "pause": "Pause",
     "resume": "Resume",
@@ -90,8 +90,8 @@ export const SHOWCASE_COPY = {
     ]
   },
   "vi": {
-    "title": "Một đơn hàng, hai màn hình.",
-    "lead": "Từ gọi món, phiên dịch, nhận đơn đến khi món sẵn sàng, màn hình khách và chủ quán cùng cập nhật.",
+    "title": "Một yêu cầu. Hai màn hình.",
+    "lead": "Chọn gọi món tại bàn, đặt bàn hoặc giao hàng để xem yêu cầu, phiên dịch, xác nhận và thông báo cho khách.",
     "start": "Xem toàn bộ demo",
     "pause": "Tạm dừng",
     "resume": "Tiếp tục phát",
@@ -135,8 +135,8 @@ export const SHOWCASE_COPY = {
     ]
   },
   "zh": {
-    "title": "同一笔订单，两个界面。",
-    "lead": "从点餐、翻译、接单到出餐，客人和店主的界面同步更新。",
+    "title": "一个请求，两个画面。",
+    "lead": "选择堂食、预约或外送，体验从客人请求、翻译到商家确认和通知的完整过程。",
     "start": "播放完整演示",
     "pause": "暂停",
     "resume": "继续播放",
@@ -180,8 +180,8 @@ export const SHOWCASE_COPY = {
     ]
   },
   "ja": {
-    "title": "ひとつの注文を、ふたつの画面で。",
-    "lead": "注文の相談から通訳、受付、料理の完成まで。お客様と店主の画面が一緒に更新されます。",
+    "title": "ひとつのリクエストを、ふたつの画面で。",
+    "lead": "店内注文・予約・デリバリーを選び、リクエストから通訳、受付、お客様への通知まで体験できます。",
     "start": "デモを最初から再生",
     "pause": "一時停止",
     "resume": "再生を再開",
@@ -225,8 +225,8 @@ export const SHOWCASE_COPY = {
     ]
   },
   "km": {
-    "title": "ការកុម្ម៉ង់តែមួយ លើផ្ទាំងពីរ។",
-    "lead": "ពីការកុម្ម៉ង់ ការបកប្រែ ការទទួលកុម្ម៉ង់ រហូតដល់ម្ហូបរួចរាល់ ផ្ទាំងភ្ញៀវ និងម្ចាស់ហាងធ្វើបច្ចុប្បន្នភាពជាមួយគ្នា។",
+    "title": "សំណើមួយ អេក្រង់ពីរ។",
+    "lead": "ជ្រើសរើសការកុម្ម៉ង់នៅហាង ការកក់តុ ឬការដឹកជញ្ជូន ហើយមើលដំណើរការពីសំណើ ការបកប្រែ ការទទួលសំណើ រហូតដល់ការជូនដំណឹងដល់ភ្ញៀវ។",
     "start": "ចាប់ផ្ដើមការបង្ហាញទាំងមូល",
     "pause": "ផ្អាក",
     "resume": "បន្តមើល",
@@ -270,8 +270,8 @@ export const SHOWCASE_COPY = {
     ]
   },
   "lo": {
-    "title": "ອໍເດີດຽວ ສອງໜ້າຈໍ.",
-    "lead": "ຕັ້ງແຕ່ສັ່ງອາຫານ, ແປພາສາ, ຮັບອໍເດີ ຈົນອາຫານພ້ອມ ໜ້າຈໍຂອງແຂກ ແລະເຈົ້າຂອງຮ້ານອັບເດດໄປພ້ອມກັນ.",
+    "title": "ໜຶ່ງຄຳຂໍ ສອງໜ້າຈໍ.",
+    "lead": "ເລືອກສັ່ງອາຫານຢູ່ຮ້ານ, ຈອງໂຕະ ຫຼື ສັ່ງຈັດສົ່ງ ແລ້ວເບິ່ງຂັ້ນຕອນການຮ້ອງຂໍ, ແປພາສາ, ຢືນຢັນ ແລະ ແຈ້ງເຕືອນລູກຄ້າ.",
     "start": "ເລີ່ມສາທິດທັງໝົດ",
     "pause": "ຢຸດຊົ່ວຄາວ",
     "resume": "ເບິ່ງຕໍ່",
@@ -315,8 +315,8 @@ export const SHOWCASE_COPY = {
     ]
   },
   "hi": {
-    "title": "एक ऑर्डर, दो स्क्रीन।",
-    "lead": "ऑर्डर और अनुवाद से लेकर ऑर्डर स्वीकार होने और खाना तैयार होने तक, मेहमान और मालिक की स्क्रीन साथ-साथ अपडेट होती हैं।",
+    "title": "एक अनुरोध। दो स्क्रीन।",
+    "lead": "रेस्तराँ में ऑर्डर, टेबल बुकिंग या डिलीवरी चुनें और अनुरोध से अनुवाद, स्वीकृति और ग्राहक को सूचना मिलने तक का अनुभव देखें।",
     "start": "पूरा डेमो शुरू करें",
     "pause": "रोकें",
     "resume": "आगे चलाएँ",
@@ -360,8 +360,8 @@ export const SHOWCASE_COPY = {
     ]
   },
   "id": {
-    "title": "Satu pesanan, dua layar.",
-    "lead": "Dari memesan, menerjemahkan, menerima pesanan, hingga makanan siap, layar tamu dan pemilik diperbarui bersama.",
+    "title": "Satu permintaan. Dua layar.",
+    "lead": "Pilih pesan di tempat, reservasi atau pengantaran, lalu ikuti permintaan, terjemahan, konfirmasi dan notifikasi pelanggan.",
     "start": "Mulai demo lengkap",
     "pause": "Jeda",
     "resume": "Lanjutkan",

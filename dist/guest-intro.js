@@ -1,0 +1,5 @@
+import {brandMark,brandLogo} from './shared/brand.js?v=5.6.0';
+import {LANGS,tableLabel} from './shared/locale.js?v=5.6.0';
+import {esc} from './shared/core.js?v=5.6.0';
+import {expansionCopy} from './shared/expansion-copy.js?v=5.8.0';
+export function guestIntro({lang='ko',table=null,shop='주모',compact=false}={}){const c=expansionCopy(lang);return `<${compact?'div':'main'} class="qr-intro ${compact?'compact':''}">${compact?'':`<header>${brandLogo()}<span>${esc(shop)}</span></header>`}<div class="qr-intro-content">${brandMark('greeting',true)}<span class="qr-shop">${esc(shop)} · ${esc(table?tableLabel(table,lang):c.online)}</span><h1>${esc(c.qrTitle)}</h1><p>${esc(c.qrLead)}</p><div class="qr-language-grid" role="group" aria-label="${esc(c.languageStep)}">${Object.entries(LANGS).map(([l,label])=>`<button type="button" lang="${l}" data-entry-lang="${l}" aria-pressed="${lang===l}">${esc(label)}</button>`).join('')}</div><button type="button" class="qr-enter" data-action="guest-enter">${esc(c.enter)}<span aria-hidden="true">→</span></button></div><small>원샵 · one shop ai</small></${compact?'div':'main'}>`;}
