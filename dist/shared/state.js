@@ -1,6 +1,6 @@
-import {ownerSampleMode} from './experience-mode.js?v=5.4.0';
-import {normalizeFulfillment} from './order-details.js?v=5.4.0';
-import {MENU} from './menu.js?v=5.4.0';
+import {ownerSampleMode} from './experience-mode.js?v=5.5.0';
+import {normalizeFulfillment} from './order-details.js?v=5.5.0';
+import {MENU} from './menu.js?v=5.5.0';
 export let STORAGE_KEY='modu-jumo-demo-v2';
 export function configureState(key){STORAGE_KEY=key;}
 export function replaceState(s){return writeState(s);}

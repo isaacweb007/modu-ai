@@ -1,13 +1,121 @@
-// A presentation state, never an authentication or authorization mechanism.
+// Presentation only; not authentication.
 export const ENTRY_COPY={
- ko:{entryTitle:'사장님, 반가워요',entryIntro:'샵의 모든 일을\n매니저와 함께 시작하세요.',entryEmail:'이메일로 계속하기',entryGoogle:'Google로 계속하기',entryBadge:'샘플 데모',entryNote:'버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다.',entryAccount:'데모 계정',entryLogout:'로그아웃',entrySaved:'샵 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다.',entryBack:'프로덕션북 보기',entryStore:'메뉴 · 주문 · 예약, 한곳에서'},
- en:{entryTitle:'Welcome, owner',entryIntro:'Start running your store\nwith your manager.',entryEmail:'Continue with email',entryGoogle:'Continue with Google',entryBadge:'Sample demo',entryNote:'Select a button to explore. No real signup or account authentication takes place.',entryAccount:'Demo account',entryLogout:'Log out',entrySaved:'Store data and orders are saved. Owner account access across devices will come with real sign-in.',entryBack:'View the project book',entryStore:'Menu, orders and reservations, together'},
- vi:{entryTitle:'Chào chủ quán',entryIntro:'Bắt đầu quản lý quán\ncùng người quản lý của bạn.',entryEmail:'Tiếp tục bằng email',entryGoogle:'Tiếp tục với Google',entryBadge:'Bản demo',entryNote:'Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật.',entryAccount:'Tài khoản demo',entryLogout:'Đăng xuất',entrySaved:'Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật.',entryBack:'Xem sách dự án',entryStore:'Thực đơn, đơn hàng và đặt bàn ở một nơi'},
- zh:{entryTitle:'店主，欢迎回来',entryIntro:'和您的经理一起\n开始打理店铺。',entryEmail:'使用邮箱继续',entryGoogle:'使用 Google 继续',entryBadge:'示例演示',entryNote:'点击按钮即可体验，不会进行真实注册或账户认证。',entryAccount:'演示账户',entryLogout:'退出登录',entrySaved:'店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。',entryBack:'查看项目书',entryStore:'菜单、订单、预约，一站管理'},
- ja:{entryTitle:'オーナーさん、こんにちは',entryIntro:'お店のあらゆることを\nマネージャーと始めましょう。',entryEmail:'メールで続ける',entryGoogle:'Google で続ける',entryBadge:'サンプルデモ',entryNote:'ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。',entryAccount:'デモアカウント',entryLogout:'ログアウト',entrySaved:'店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。',entryBack:'プロジェクトブックを見る',entryStore:'メニュー・注文・予約をひとつに'},
- km:{entryTitle:'ស្វាគមន៍ម្ចាស់ហាង',entryIntro:'ចាប់ផ្តើមគ្រប់គ្រងហាង\nជាមួយអ្នកគ្រប់គ្រងរបស់អ្នក។',entryEmail:'បន្តជាមួយអ៊ីមែល',entryGoogle:'បន្តជាមួយ Google',entryBadge:'គំរូសាកល្បង',entryNote:'ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។',entryAccount:'គណនីសាកល្បង',entryLogout:'ចាកចេញ',entrySaved:'ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។',entryBack:'មើលសៀវភៅគម្រោង',entryStore:'ម៉ឺនុយ ការបញ្ជាទិញ និងការកក់ នៅកន្លែងតែមួយ'},
- id:{entryTitle:'Selamat datang, pemilik',entryIntro:'Mulai mengelola toko\nbersama manajer Anda.',entryEmail:'Lanjutkan dengan email',entryGoogle:'Lanjutkan dengan Google',entryBadge:'Demo contoh',entryNote:'Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan.',entryAccount:'Akun demo',entryLogout:'Keluar',entrySaved:'Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan.',entryBack:'Lihat buku proyek',entryStore:'Menu, pesanan dan reservasi di satu tempat'},
- lo:{entryTitle:'ຍິນດີຕ້ອນຮັບເຈົ້າຂອງຮ້ານ',entryIntro:'ເລີ່ມຈັດການຮ້ານ\nກັບຜູ້ຈັດການຂອງທ່ານ.',entryEmail:'ສືບຕໍ່ດ້ວຍອີເມວ',entryGoogle:'ສືບຕໍ່ດ້ວຍ Google',entryBadge:'ຕົວຢ່າງສາທິດ',entryNote:'ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ.',entryAccount:'ບັນຊີສາທິດ',entryLogout:'ອອກຈາກລະບົບ',entrySaved:'ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ.',entryBack:'ເບິ່ງປຶ້ມໂຄງການ',entryStore:'ເມນູ ຄຳສັ່ງຊື້ ແລະການຈອງ ໃນບ່ອນດຽວ'},
- hi:{entryTitle:'स्वागत है, दुकान के मालिक',entryIntro:'अपने मैनेजर के साथ\nदुकान संभालना शुरू करें।',entryEmail:'ईमेल से जारी रखें',entryGoogle:'Google से जारी रखें',entryBadge:'नमूना डेमो',entryNote:'तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा।',entryAccount:'डेमो खाता',entryLogout:'लॉग आउट',entrySaved:'दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा।',entryBack:'प्रोजेक्ट बुक देखें',entryStore:'मेन्यू, ऑर्डर और बुकिंग, एक जगह'}
+  "ko": {
+    "entryTitle": "사장님, 반가워요",
+    "entryIntro": "샵의 모든 일을\n매니저와 함께 시작하세요.",
+    "entryEmail": "이메일로 계속하기",
+    "entryGoogle": "Google로 계속하기",
+    "entryBadge": "샘플 데모",
+    "entryNote": "버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다.",
+    "entryAccount": "데모 계정",
+    "entryLogout": "로그아웃",
+    "entrySaved": "샵 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다.",
+    "entryBack": "프로덕션북 보기",
+    "entryStore": "메뉴 · 주문 · 예약, 한곳에서"
+  },
+  "en": {
+    "entryTitle": "Welcome to your store",
+    "entryIntro": "Start running your store\nwith your manager.",
+    "entryEmail": "Continue with email",
+    "entryGoogle": "Continue with Google",
+    "entryBadge": "Sample demo",
+    "entryNote": "Select a button to explore. No real signup or account authentication takes place.",
+    "entryAccount": "Demo account",
+    "entryLogout": "Log out",
+    "entrySaved": "Store data and orders are saved. Owner account access across devices will come with real sign-in.",
+    "entryBack": "View the project book",
+    "entryStore": "Menu, orders and reservations, together"
+  },
+  "vi": {
+    "entryTitle": "Chào chủ quán",
+    "entryIntro": "Bắt đầu quản lý quán\ncùng người quản lý của bạn.",
+    "entryEmail": "Tiếp tục bằng email",
+    "entryGoogle": "Tiếp tục với Google",
+    "entryBadge": "Bản demo",
+    "entryNote": "Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật.",
+    "entryAccount": "Tài khoản demo",
+    "entryLogout": "Đăng xuất",
+    "entrySaved": "Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật.",
+    "entryBack": "Xem sách dự án",
+    "entryStore": "Thực đơn, đơn hàng và đặt bàn ở một nơi"
+  },
+  "zh": {
+    "entryTitle": "店主，您好",
+    "entryIntro": "和您的经理一起\n开始打理店铺。",
+    "entryEmail": "使用邮箱继续",
+    "entryGoogle": "使用 Google 继续",
+    "entryBadge": "示例演示",
+    "entryNote": "点击按钮即可体验，不会进行真实注册或账户认证。",
+    "entryAccount": "演示账户",
+    "entryLogout": "退出登录",
+    "entrySaved": "店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。",
+    "entryBack": "查看项目手册",
+    "entryStore": "菜单、订单、订位，一站管理"
+  },
+  "ja": {
+    "entryTitle": "オーナーさん、こんにちは",
+    "entryIntro": "お店の毎日を、\nマネージャーと一緒に。",
+    "entryEmail": "メールで続ける",
+    "entryGoogle": "Google で続ける",
+    "entryBadge": "サンプルデモ",
+    "entryNote": "ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。",
+    "entryAccount": "デモアカウント",
+    "entryLogout": "ログアウト",
+    "entrySaved": "店舗情報と注文は保存されます。オーナーアカウントでの別端末からの利用は、正式なログイン機能を導入した後に対応します。",
+    "entryBack": "プロジェクトブックを見る",
+    "entryStore": "メニュー・注文・予約をひとつに"
+  },
+  "km": {
+    "entryTitle": "ស្វាគមន៍ម្ចាស់ហាង",
+    "entryIntro": "ចាប់ផ្តើមគ្រប់គ្រងហាង\nជាមួយអ្នកគ្រប់គ្រងរបស់អ្នក។",
+    "entryEmail": "បន្តជាមួយអ៊ីមែល",
+    "entryGoogle": "បន្តជាមួយ Google",
+    "entryBadge": "គំរូសាកល្បង",
+    "entryNote": "ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។",
+    "entryAccount": "គណនីសាកល្បង",
+    "entryLogout": "ចាកចេញ",
+    "entrySaved": "ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។",
+    "entryBack": "មើលសៀវភៅគម្រោង",
+    "entryStore": "ម៉ឺនុយ ការបញ្ជាទិញ និងការកក់ នៅកន្លែងតែមួយ"
+  },
+  "id": {
+    "entryTitle": "Selamat datang di kedai Anda",
+    "entryIntro": "Mulai mengelola kedai\nbersama manajer Anda.",
+    "entryEmail": "Lanjutkan dengan email",
+    "entryGoogle": "Lanjutkan dengan Google",
+    "entryBadge": "Demo contoh",
+    "entryNote": "Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan.",
+    "entryAccount": "Akun demo",
+    "entryLogout": "Keluar",
+    "entrySaved": "Data kedai dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan.",
+    "entryBack": "Lihat buku proyek",
+    "entryStore": "Menu, pesanan dan reservasi di satu tempat"
+  },
+  "lo": {
+    "entryTitle": "ຍິນດີຕ້ອນຮັບເຈົ້າຂອງຮ້ານ",
+    "entryIntro": "ເລີ່ມຈັດການຮ້ານ\nກັບຜູ້ຈັດການຂອງທ່ານ.",
+    "entryEmail": "ສືບຕໍ່ດ້ວຍອີເມວ",
+    "entryGoogle": "ສືບຕໍ່ດ້ວຍ Google",
+    "entryBadge": "ຕົວຢ່າງສາທິດ",
+    "entryNote": "ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ.",
+    "entryAccount": "ບັນຊີສາທິດ",
+    "entryLogout": "ອອກຈາກລະບົບ",
+    "entrySaved": "ຂໍ້ມູນຮ້ານ ແລະອໍເດີຖືກບັນທຶກໄວ້. ການເຂົ້າເຖິງບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະຮອງຮັບເມື່ອເພີ່ມລະບົບເຂົ້າໃຊ້ງານຈິງ.",
+    "entryBack": "ເບິ່ງປຶ້ມໂຄງການ",
+    "entryStore": "ເມນູ ອໍເດີ ແລະການຈອງ ໃນບ່ອນດຽວ"
+  },
+  "hi": {
+    "entryTitle": "आपका स्वागत है",
+    "entryIntro": "अपने मैनेजर के साथ\nदुकान संभालना शुरू करें।",
+    "entryEmail": "ईमेल से जारी रखें",
+    "entryGoogle": "Google से जारी रखें",
+    "entryBadge": "डेमो",
+    "entryNote": "तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा।",
+    "entryAccount": "डेमो खाता",
+    "entryLogout": "लॉग आउट करें",
+    "entrySaved": "दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा।",
+    "entryBack": "प्रोजेक्ट बुक देखें",
+    "entryStore": "मेन्यू, ऑर्डर और बुकिंग, एक जगह"
+  }
 };
 export function createDemoEntry(storage,key){let value=null;try{value=JSON.parse(storage.getItem(key));}catch{}if(!['email','google'].includes(value?.provider))value=null;return {get current(){return value;},enter(provider){if(!['email','google'].includes(provider))throw Error('invalid');value={provider};try{storage.setItem(key,JSON.stringify(value));}catch{}return value;},leave(){value=null;try{storage.removeItem(key);}catch{}}};}

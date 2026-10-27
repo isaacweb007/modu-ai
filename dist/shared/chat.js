@@ -1,4 +1,4 @@
-import {UI} from './copy.js?v=5.4.0';import {MENU} from './menu.js?v=5.4.0';import {money} from './core.js?v=5.4.0';
+import {UI} from './copy.js?v=5.5.0';import {MENU} from './menu.js?v=5.5.0';import {money} from './core.js?v=5.5.0';
 export const QUESTIONS=['qRecommend','qIngredients','qSpicy','qStory','qHours','qComplaint','qPayment'];
 export const REPLIES={qRecommend:'replyRecommend',qIngredients:'replyIngredients',qSpicy:'replySpicy',qStory:'replyStory',qHours:'replyHours',qComplaint:'replyComplaint',qPayment:'replyPayment'};
 const normalize=t=>t.toLowerCase().replace(/[?？.!。!។]/g,'').replace(/\s+/g,' ').trim();
@@ -27,7 +27,7 @@ export function resolveAnswer(text,question,state,lang){let key=REPLIES[question
  if(key==='replyHours'&&state.store.address){key='storeAddress';data={address:state.store.address,name:state.store.name};}
  return {key,data};}
 export function answerText(message,lang){const ui=UI[lang],data=message.answerData;
- if(message.key==='menuItem'&&data){const item=data.name?data:MENU.find(x=>x.id===data.itemId);if(!item)return ui.unknown;return `${item.name[lang]}\n${item.description[lang]}\n${money(data.price)}\n\n${ui.allergyNote}`;}
+ if(message.key==='menuItem'&&data){const item=data.name?data:MENU.find(x=>x.id===data.itemId);if(!item)return ui.unknown;return `${item.name[lang]}\n${item.description[lang]}\n${money(data.price,lang)}\n\n${ui.allergyNote}`;}
  if(message.key==='storeContact'&&data)return [data.name,...['phone','email','website'].filter(k=>data[k]).map(k=>`${ui[k]}: ${data[k]}`),ui.unknown].join('\n');
  if(message.key==='storeAddress'&&data)return `${data.name}\n${ui.address}: ${data.address}\n\n${ui.unknown}`;
  return ui[message.key]||ui.unknown;}

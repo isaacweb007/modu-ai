@@ -1,12 +1,6 @@
-'use strict';
-const params=new URLSearchParams(location.search);
-const name=(params.get('store')||'원샵 테이블').slice(0,50);
-const table=Math.min(999,Math.max(1,parseInt(params.get('table'),10)||3));
-document.getElementById('name').textContent=name;
-document.getElementById('table').textContent='Table '+String(table).padStart(2,'0');
-const target=new URL('./',location.href);target.searchParams.set('demo','1');target.searchParams.set('store',name);target.searchParams.set('table',table);target.hash='experience';
-const code=qrcode(0,'M');code.addData(target.href);code.make();document.getElementById('code').innerHTML=code.createSvgTag({cellSize:4,margin:16,scalable:true});
-document.getElementById('link').textContent=target.href;
-const back=new URL(target);back.hash='qr';document.getElementById('back').href=back.href;
-document.getElementById('print').addEventListener('click',()=>window.print());
-document.title=name+' 테이블 '+table+' — 원샵';
+import {getLang} from './shared/locale.js?v=5.5.0';
+const url=new URL('jumo/print.html',location.href),params=new URLSearchParams(location.search);
+for(const key of ['table','channel','sample'])if(params.has(key))url.searchParams.set(key,params.get(key));
+url.searchParams.set('lang',getLang());
+if(/^[0-9a-f]{8}-[0-9a-f-]{27}$/i.test(params.get('store')||''))url.searchParams.set('store',params.get('store'));else url.searchParams.set('preview','1');
+location.replace(url.href);
