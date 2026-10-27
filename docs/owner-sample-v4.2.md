@@ -12,3 +12,4 @@ Verification:
 - 19 tests: linked fixture integrity, calculated totals, nine locales, mode routing, local sample persistence/reset and isolation from existing store records, plus existing app tests.
 - Browser: one-click entry, populated dashboard, order acceptance, booking confirmation after refresh, typed booking request and eight read-only menu cards.
 - Mobile: portrait and landscape layouts checked without horizontal overflow. The explicit live-store route still loads the previously registered store after sample edits and reset.
+- Dashboard navigation returns to the summary at the top, including after a long manager conversation.
