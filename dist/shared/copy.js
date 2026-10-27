@@ -149,7 +149,7 @@ export const UI = {
     "createStore": "샵 저장",
     "storeCreated": "샵이 준비됐어요.",
     "qrTitle": "테이블의 작은 입구",
-    "qrNote": "같은 샵의 메뉴·주문·예약을 기기 간 공유합니다. 미리보기은 기기 내 미리보기입니다.",
+    "qrNote": "같은 샵의 메뉴·주문·예약을 기기 간 공유합니다. 미리보기는 기기 내 미리보기입니다.",
     "copyLink": "링크 복사",
     "printQr": "QR 인쇄",
     "downloadQr": "QR 저장",

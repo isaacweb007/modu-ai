@@ -1,10 +1,10 @@
 # 원샵 · one ai
 
-아이작스튜디오 × 원컴퍼니 재단. 9개 언어의 프로덕션북과 샵 에이전트 앱 5.0.
+아이작스튜디오 × 원컴퍼니 재단. 9개 언어의 프로덕션북과 샵 에이전트 앱 5.1.
 
 - [프로덕션북](https://isaacweb007.github.io/modu-ai/)
-- [사장님 앱](https://isaacweb007.github.io/modu-ai/jumo/owner.html?lang=ko&v=5.0)
-- [주모 손님 앱](https://isaacweb007.github.io/modu-ai/jumo/?lang=ko&v=5.0)
+- [사장님 앱](https://isaacweb007.github.io/modu-ai/jumo/owner.html?lang=ko&v=5.1)
+- [주모 손님 앱](https://isaacweb007.github.io/modu-ai/jumo/?lang=ko&v=5.1)
 
 ## 원샵 주문 확인
 
@@ -14,7 +14,7 @@
 
 기본 주모 샘플에는 매장 2건·온라인 2건이 들어 있습니다. 샘플의 손님 링크는 같은 브라우저의 샘플 주문함에 기록합니다. 실제 등록된 샵의 링크는 기존 서버 저장과 기기 간 동기화를 사용합니다. 기존 저장 키·API 경로·배포 URL은 호환을 위해 유지합니다.
 
-로고 검토 시안은 로컬 `design/one-shop-logo-concepts/`에 보관합니다. 확정 전에는 GitHub와 배포에서 제외하며 앱에 임시 문자 식별자만 표시합니다.
+대표 캐릭터는 사용자가 확정한 파란 낙서 원형 캐릭터입니다. 앱·프로덕션북·QR 인쇄물·사이트 아이콘에 같은 에셋을 사용합니다. 배포 에셋은 `dist/assets/one-shop/`, 승인 원본과 로고 마스터 및 친구 5색은 로컬 `design/one-shop-brand/`에 보관합니다. 친구 5색은 연두·분홍·버터 옐로·코랄·라벤더이며 앱의 대표 색상은 파란색으로 유지합니다.
 
 ## 작동하는 흐름
 

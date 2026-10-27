@@ -1,4 +1,4 @@
-import {MENU} from './menu.js?v=5.0.1';
+import {MENU} from './menu.js?v=5.1.0';
 export const SAMPLE_STORAGE='modu-jumo-owner-sample-v1';
 export const SAMPLE_VERSION=1;
 const keys=['sampleWelcome','sampleNote','sampleInfo','sampleMenu','sampleBookings','sampleDashboard','sampleReset','sampleResetConfirm','sampleResetDone','sampleAddress','sampleAbout','sampleTask1','sampleTask2','sampleLive','sampleHours'];
