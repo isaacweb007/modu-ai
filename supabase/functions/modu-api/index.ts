@@ -1,12 +1,13 @@
 import {createClient} from 'npm:@supabase/supabase-js@2.118.0';
 import {fail,text,uuid,requestId,storeData,menuData,workspaceData,messageData,reservationData,fileType,langs,fulfillmentData} from './validation.js';
+import {staffData} from './staff-validation.js';
 import {createInterpretation,createInterpretedReply} from './interpreter.js';
 const admin=createClient(Deno.env.get('SUPABASE_URL')!,Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,{auth:{persistSession:false,autoRefreshToken:false}});
 const headers={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'apikey, content-type, x-modu-token, x-file-name, x-file-kind','Access-Control-Allow-Methods':'GET, POST, PUT, PATCH, OPTIONS','Cache-Control':'no-store','Content-Type':'application/json'};
 const reply=(data:unknown,status=200)=>new Response(JSON.stringify(data),{status,headers});
 const hash=async(s:string)=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s))),n=>n.toString(16).padStart(2,'0')).join('');
 const token=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),n=>n.toString(16).padStart(2,'0')).join('');
-function checked({data,error}:any){if(error){if(['menuConflict','ownerConflict','emptyCart','soldOut','maxQty','storeNotReady'].includes(error.message))fail(error.message,409);throw new Error('cloudError');}return data;}
+function checked({data,error}:any){if(error){if(['revoked','noAccess'].includes(error.message))fail(error.message,403);if(['permissionConflict','staffLimit'].includes(error.message))fail(error.message,409);if(error.message==='invalid')fail('invalid');if(['menuConflict','ownerConflict','emptyCart','soldOut','maxQty','storeNotReady'].includes(error.message))fail(error.message,409);throw new Error('cloudError');}return data;}
 async function body(req:Request,max=256000){const reader=req.body?.getReader();if(!reader)fail('invalid');let size=0;const parts:Uint8Array[]=[];while(true){const {done,value}=await reader!.read();if(done)break;size+=value.length;if(size>max){await reader!.cancel();fail('uploadLimit',413);}parts.push(value);}const buf=new Uint8Array(size);let offset=0;for(const p of parts){buf.set(p,offset);offset+=p.length;}return buf;}
 async function json(req:Request){try{return JSON.parse(new TextDecoder().decode(await body(req)));}catch(e){if(e.status)throw e;fail('invalid');}}
 async function limit(key:string,count:number,seconds=60){if(!checked(await admin.rpc('modu_rate_limit',{p_key:key,p_limit:count,p_seconds:seconds})))fail('limitReached',429);}
@@ -31,12 +32,33 @@ async function receipt(storeId:string,auth:any,row:any,kind:string,language:stri
 Deno.serve(async(req:Request)=>{if(req.method==='OPTIONS')return new Response(null,{headers});try{
  const path=new URL(req.url).pathname.split('/').filter(Boolean);const root=path.indexOf('modu-api');const parts=path.slice(root+1);const [id,action,item]=parts;
  const ip=req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()||'unknown';const ipKey=await hash(ip);await limit('request:'+ipKey,300);
- if(id==='health'&&req.method==='GET')return reply({ok:true,version:6});
+ if(id==='health'&&req.method==='GET')return reply({ok:true,version:7});
  if(id==='create'&&req.method==='POST'){await limit('create:'+ipKey,5,3600);const b=await json(req),secret=token();const sid=checked(await admin.rpc('modu_create_store',{p_hash:await hash(secret),p_store:storeData(b.store),p_menu:menuData(b.menu),p_workspace:workspaceData(b.workspace)}));return reply({storeId:sid,token:secret},201);}
  if(!uuid(id))fail('storeMissing',404);const st=await store(id);
  if(action==='public'&&req.method==='GET'){if(!st.published)fail('storeNotReady',404);return reply({id,store:{...st.public_data,media:await media(id)},menu:st.menu,revision:st.revision,published:true});}
  if(action==='visits'&&req.method==='POST'){if(!st.published)fail('storeNotReady',404);await limit('visit:'+ipKey,40,3600);const b=await json(req),secret=token();if(b.table!=null&&(!Number.isInteger(b.table)||b.table<1||b.table>999))fail('invalid');const visit=checked(await admin.from('modu_visits').insert({store_id:id,token_hash:await hash(secret),table_no:b.table??null,lang:langs.includes(b.lang)?b.lang:'ko'}).select('id').single());return reply({storeId:id,visitId:visit.id,token:secret},201);}
- const ownActions=['store','workspace','media','review','interpreter-reply'];const auth=await access(req,id,ownActions.includes(action));await limit('access:'+await hash(req.headers.get('x-modu-token')!),180);
+ // Staff has a separate projection and can never enter owner or guest routes.
+ if(action==='staff'&&uuid(item)&&['GET','PATCH'].includes(req.method)){
+  const raw=req.headers.get('x-modu-token')||'';if(!/^[a-f0-9]{64}$/.test(raw))fail('revoked',403);
+  const h=await hash(raw);await limit('staff:'+h,120);
+  if(req.method==='GET')return reply(checked(await admin.rpc('modu_staff_snapshot',{p_store:id,p_member:item,p_hash:h})));
+  const b=await json(req),data=staffData(b,'action');
+  return reply(checked(await admin.rpc('modu_staff_action',{p_store:id,p_member:item,p_hash:h,p_action:data.action,p_data:data.data})));
+ }
+ const ownActions=['store','workspace','media','review','interpreter-reply','team'];const auth=await access(req,id,ownActions.includes(action));await limit('access:'+await hash(req.headers.get('x-modu-token')!),180);
+ if(action==='team'){
+  if(req.method==='GET'){
+   const [members,audit]=await Promise.all([admin.from('modu_staff').select('id,name,role,permissions,revision,expires_at').eq('store_id',id).is('revoked_at',null).order('created_at'),admin.from('modu_staff_audit').select('id,actor,action,target,created_at').eq('store_id',id).order('created_at',{ascending:false}).limit(60)]);
+   return reply({members:checked(members).map(({expires_at,...m}:any)=>({...m,expiresAt:expires_at})),audit:checked(audit).map(({created_at,...a}:any)=>({...a,at:created_at}))});
+  }
+  if(req.method==='POST'||req.method==='PATCH'){
+   await limit('team:'+id,40);const b=staffData(await json(req),req.method==='POST'?'create':'manage');
+   if(req.method==='PATCH'&&!uuid(item))fail('invalid');
+   const operation=req.method==='POST'?'create':b.operation,secret=['create','rotate'].includes(operation)?token():null;
+   const member=checked(await admin.rpc('modu_staff_manage',{p_store:id,p_owner_hash:await hash(req.headers.get('x-modu-token')!),p_action:operation,p_member:req.method==='POST'?null:item,p_data:b,p_hash:secret?await hash(secret):null}));
+   return reply({member,...(secret?{token:secret}:{})},req.method==='POST'?201:200);
+  }
+ }
  if(action==='snapshot'&&req.method==='GET'){if(!auth.owner&&!st.published)fail('storeNotReady',404);return reply(await snapshot(st,auth));}
  if(action==='store'&&req.method==='PUT'){const b=await json(req),data=storeData(b.store),menu=menuData(b.menu),workspace=workspaceData(b.workspace);if(b.published&&(!data.address||!workspace.manager.completed))fail('required');const rev=checked(await admin.rpc('modu_save_store',{p_id:id,p_revision:b.revision,p_store:data,p_menu:menu,p_workspace:{...workspace,expectedRevision:b.workspaceRevision},p_published:b.published===true}));return reply({revision:rev,workspaceRevision:auth.workspace_revision+1});}
  if(action==='workspace'&&req.method==='PUT'){const b=await json(req);const rows=checked(await admin.from('modu_owners').update({workspace:workspaceData(b.workspace),workspace_revision:auth.workspace_revision+1}).eq('store_id',id).eq('workspace_revision',b.workspaceRevision).select('store_id'));if(!rows.length)fail('ownerConflict',409);return reply({workspaceRevision:auth.workspace_revision+1});}

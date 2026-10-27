@@ -1,6 +1,6 @@
 {
   "name": "one-shop-ai",
-  "version": "5.8.0",
+  "version": "5.9.0",
   "private": true,
   "scripts": {
     "dev": "python3 -m http.server 4318 --bind 127.0.0.1 --directory dist",
