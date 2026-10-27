@@ -1,0 +1,51 @@
+import {SHOWCASE_COPY} from './shared/showcase-copy.js?v=5.7.0';
+import {SHOWCASE_KEY,SHOWCASE_LAST,createShowcase,restoreShowcase,advanceShowcase,showcaseSnapshot,createShowcasePlayer} from './shared/showcase-state.js?v=5.7.0';
+import {PHRASES} from './shared/interpreter.js?v=5.6.0';
+import {INTERPRETER_COPY} from './shared/interpreter-copy.js?v=5.6.0';
+import {UI} from './shared/copy.js?v=5.6.0';
+import {LANGS,formatMoney,tableLabel} from './shared/locale.js?v=5.6.0';
+import {brandMark} from './shared/brand.js?v=5.6.0';
+export {SHOWCASE_COPY};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const glyph=name=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${({play:'<path d="m9 5 11 7-11 7Z"/>',pause:'<path d="M8 5v14M16 5v14"/>',next:'<path d="m7 5 8 7-8 7M19 5v14"/>',restart:'<path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/>',arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',check:'<path d="m5 12 4 4L19 6"/>'})[name]}</svg>`;
+const copy=l=>SHOWCASE_COPY[l]||SHOWCASE_COPY.ko;
+const status=(s,l)=>UI[l]?.[s]||UI.ko[s];
+export const showcaseShell=()=>'<section id="live-demo" class="book-showcase" aria-labelledby="showcase-title"></section>';
+
+export function bindShowcase(host,bookLang='ko') {
+ if(!host)return ()=>{};
+ let state;try{state=restoreShowcase(sessionStorage.getItem(SHOWCASE_KEY));}catch{state=createShowcase();}
+ let pane=showcaseSnapshot(state).activePane,disposed=false;
+ const c=copy(bookLang),ko=copy('ko');
+ const persist=()=>{try{sessionStorage.setItem(SHOWCASE_KEY,JSON.stringify(state));}catch{}};
+ const advance=()=>{state=advanceShowcase(state);pane=showcaseSnapshot(state).activePane;persist();return state.phase<SHOWCASE_LAST;};
+ const player=createShowcasePlayer({advance,onChange:render});
+ const button=(action,label,icon,extra='')=>`<button type="button" data-show-action="${action}" ${extra}>${icon?glyph(icon):''}<span>${esc(label)}</span></button>`;
+ const bubble=(text,l,who='rami',label='')=>`<div class="show-bubble ${who}" lang="${l}">${label?`<small>${esc(label)}</small>`:''}<p>${esc(text)}</p></div>`;
+ function menuCard(item,l){return `<div class="show-menu"><img src="jumo/${item.image}" alt="${esc(item.name[l])}" width="64" height="64"><div><strong>${esc(item.name[l])}</strong><span>1 × ${esc(formatMoney(item.price,l))}</span></div></div>`;}
+ function orderCard(s,l){if(!s.order)return '';return `<div class="show-order" data-order-id="${s.order.id}" data-order-status="${s.order.status}"><div class="show-order-line"><strong>#001 · ${esc(tableLabel(7,l))}</strong><span class="show-status ${s.order.status}">${esc(status(s.order.status,l))}</span></div><p>${esc(s.item.name[l])} × 1 <b>${esc(formatMoney(s.order.total,l))}</b></p><small>${esc(status('unpaid',l))}</small></div>`;}
+ function guestContent(s){const l=state.guestLang,g=copy(l),i=INTERPRETER_COPY[l];return `${menuCard(s.item,l)}${bubble(g.emptyGuest,l)}${state.phase>=1?bubble(s.request.text,l,'guest'):''}${state.phase===1?`<div class="show-rami-note">${brandMark('thinking',true)}<span>${esc(i.interpreterTitle)}</span></div>`:''}${state.phase===2?bubble(i.interpreterWaiting,l):''}${state.phase>=3?bubble(s.reply.text,l,'rami',i.interpreterReply):''}${state.phase===3?`<div class="show-confirm"><strong>${esc(tableLabel(7,l))} · ${esc(formatMoney(s.item.price,l))}</strong>${button('advance',g.confirm,'check','data-expected="3"')}</div>`:''}${orderCard(s,l)}${s.ready?`<div class="show-ready">${brandMark('order',true)}<div><strong>${esc(status('ready',l))}</strong><p lang="${l}">${esc(g.readyMessage)}</p></div></div>`:''}`;}
+ function ownerContent(s){const i=INTERPRETER_COPY.ko;return `${state.phase<2?`<div class="show-wait">${brandMark(state.phase?'thinking':'greeting',true)}<p>${esc(ko.emptyOwner)}</p><span>7번 테이블 · ${esc(LANGS[state.guestLang])}</span></div>`:`<div class="show-translation"><div class="show-translation-title">${brandMark('thinking',true)}<strong>${i.interpreterTitle}</strong><span>7번 테이블</span></div><small>${i.interpreterKorean}</small><p lang="ko">${esc(s.request.interpretation.ko)}</p><div class="show-original"><small>${i.interpreterOriginal} · ${esc(LANGS[state.guestLang])}</small><p lang="${state.guestLang}">${esc(s.request.text)}</p></div></div>${bubble(PHRASES.ko.order.reply,'ko','rami',i.interpreterReply)}${state.phase===2?button('advance',ko.sendReply,'arrow','data-expected="2" class="show-actor"'):''}${state.phase>=3?`<div class="show-delivered">${glyph('check')}${i.interpreterSent}</div>`:''}`}${orderCard(s,'ko')}${state.phase>=4&&state.phase<7?button('advance',ko[['accept','prepare','ready'][state.phase-4]],'check',`data-expected="${state.phase}" class="show-actor"`):''}${state.phase>=4?`<div class="show-owner-alert">${brandMark(s.ready?'greeting':'order',true)}<p>${s.ready?'7번 테이블 손님에게 준비 완료를 알려드렸어요.':state.phase===4?'7번 테이블에서 새 주문이 도착했어요.':`${status(s.order.status,'ko')} · 손님 화면에도 반영했어요.`}</p></div>`:''}`;}
+ function appPane(kind,s){const guest=kind==='guest',l=guest?state.guestLang:'ko';return `<article class="show-app ${s.activePane===kind?'is-speaking':''}" data-pane="${kind}" lang="${l}" aria-label="${esc(c[kind])}"><div class="show-app-head"><div>${brandMark('greeting')}<div><strong>주모 <span>Jumo</span></strong><small>${guest?esc(INTERPRETER_COPY[l].interpreterTitle):'라미 매니저'}</small></div></div><span class="show-table">${esc(tableLabel(7,l))}</span></div><div class="show-thread" tabindex="0" aria-label="${esc(c[kind])}">${guest?guestContent(s):ownerContent(s)}</div><div class="show-app-foot"><span>${esc(copy(l)[kind])}</span><b>${guest?esc(LANGS[l]):'한국어'}</b><span class="show-foot-state">${s.order?esc(status(s.order.status,l)):esc(INTERPRETER_COPY[l].interpreterDemo)}</span></div></article>`;}
+ function render(){
+  if(disposed)return;
+  const focused=host.contains(document.activeElement)?document.activeElement.dataset.showAction:null;
+  const s=showcaseSnapshot(state),phase=state.phase,step=Math.max(0,phase-1);
+  host.dataset.phase=phase;host.dataset.activePane=pane;
+  host.innerHTML=`<div class="show-heading"><div><span class="show-eyebrow">one shop ai · Rami</span><h2 id="showcase-title">${esc(c.title)}</h2><p>${esc(c.lead)}</p></div><div class="show-heading-rami">${brandMark(phase===2?'thinking':phase>=4?'order':'greeting',true)}</div></div><div class="show-toolbar"><div class="show-controls">${button('play',player.running?c.pause:phase===0||phase===7?c.start:c.resume,player.running?'pause':'play','class="show-primary"')}${button('next',c.next,'next',phase===7?'disabled':'')}${button('restart',c.restart,'restart')}</div><label class="show-language">${esc(c.guestLanguage)}<select data-show-action="language" aria-describedby="show-language-note">${Object.entries(LANGS).map(([k,v])=>`<option value="${k}" ${k===state.guestLang?'selected':''}>${v}</option>`).join('')}</select></label></div><ol class="show-steps" aria-label="${esc(c.progress)}">${c.stepLabels.map((label,n)=>`<li class="${phase>n?'reached':''} ${phase===n+1?'current':''}" ${phase===n+1?'aria-current="step"':''}><span>${String(n+1).padStart(2,'0')}</span><b>${esc(label)}</b></li>`).join('')}</ol><div class="show-narration" role="status" aria-live="polite" aria-atomic="true"><span class="show-counter">${String(phase).padStart(2,'0')} / 07</span><p>${esc(phase?c.stepNotes[step]:c.lead)}</p><span class="show-play-state">${esc(player.running?c.playing:phase===7?status('ready',bookLang):phase?c.paused:'')}</span></div><div class="show-tabs" role="group" aria-label="${esc(c.progress)}">${['guest','owner'].map(k=>button(k,c[k],null,`aria-pressed="${pane===k}"`)).join('')}</div><div class="show-app-labels"><span>${esc(c.guest)} <small>${esc(LANGS[state.guestLang])}</small></span><span>${esc(c.owner)} <small>한국어</small></span></div><div class="show-pair">${appPane('guest',s)}${appPane('owner',s)}</div>${s.ready?`<p class="show-finished">${glyph('check')}${esc(c.finished)}</p>`:''}<p id="show-language-note" class="show-language-note">${esc(c.languageNote)}</p><p class="show-disclaimer">${esc(c.notice)}</p><div class="show-open-apps"><span>${esc(c.openApps)}</span><a href="jumo/?lang=${state.guestLang}&preview=1&sample=owner&table=7#interpreter" target="_blank" rel="noopener">${esc(c.guest)}${glyph('arrow')}</a><a href="jumo/owner.html?lang=ko#interpreter" target="_blank" rel="noopener">${esc(c.owner)}${glyph('arrow')}</a></div>`;
+  if(focused)host.querySelector(`[data-show-action="${focused}"]`)?.focus({preventScroll:true});
+  host.querySelectorAll('.show-thread').forEach(el=>{el.scrollTop=el.scrollHeight;});
+ }
+ function click(e){const btn=e.target.closest('button[data-show-action]');if(!btn)return;const action=btn.dataset.showAction;
+  if(action==='play'){if(player.running){player.pause();return;}if(state.phase===7){state=createShowcase(state.guestLang);persist();}if(!state.phase)advance();player.play();host.querySelector('.show-narration').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});return;}
+  if(action==='next'||action==='advance'){if(action==='advance'&&Number(btn.dataset.expected)!==state.phase)return;player.pause();advance();render();return;}
+  if(action==='restart'){player.pause();state=createShowcase(state.guestLang);pane='guest';persist();render();return;}
+  if(action==='guest'||action==='owner'){pane=action;render();}
+ }
+ function change(e){if(e.target.dataset.showAction!=='language')return;const selected=e.target.value;player.pause();state=createShowcase(selected);pane='guest';persist();render();}
+ const onVisibility=()=>{if(document.hidden&&player.running)player.pause();};
+ host.addEventListener('click',click);host.addEventListener('change',change);document.addEventListener('visibilitychange',onVisibility);
+ const observer=new IntersectionObserver(entries=>{if(!entries[0].isIntersecting&&player.running)player.pause();});observer.observe(host);
+ render();
+ return ()=>{disposed=true;player.dispose();observer.disconnect();host.removeEventListener('click',click);host.removeEventListener('change',change);document.removeEventListener('visibilitychange',onVisibility);};
+}
