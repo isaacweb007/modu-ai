@@ -1,4 +1,4 @@
-import {readState,mutate,event,sessionOf} from './state.js?v=5.3.0';
+import {readState,mutate,event,sessionOf} from './state.js?v=5.4.0';
 const uid=p=>p+'-'+crypto.randomUUID();
 export const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
 const defaults=s=>{s.manager??={profileName:'',stage:'signup',completed:false,messages:[]};s.manager.messages??=[];s.reservations??=[];s.inventory??=[];s.staffTasks??=[];s.store.media??=[];for(const v of s.sessions){v.thread??=[];v.points??=0;v.pointLedger??=[];}return s;};

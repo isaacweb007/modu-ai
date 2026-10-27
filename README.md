@@ -1,10 +1,10 @@
 # 원샵 · one shop ai
 
-아이작스튜디오 × 원컴퍼니 재단. 9개 언어의 프로덕션북과 샵 에이전트 앱 5.3.
+아이작스튜디오 × 원컴퍼니 재단. 9개 언어의 프로덕션북과 샵 에이전트 앱 5.4.
 
 - [프로덕션북](https://isaacweb007.github.io/modu-ai/)
-- [사장님 앱](https://isaacweb007.github.io/modu-ai/jumo/owner.html?lang=ko&v=5.3)
-- [주모 손님 앱](https://isaacweb007.github.io/modu-ai/jumo/?lang=ko&v=5.3)
+- [사장님 앱](https://isaacweb007.github.io/modu-ai/jumo/owner.html?lang=ko&v=5.4)
+- [주모 손님 앱](https://isaacweb007.github.io/modu-ai/jumo/?lang=ko&v=5.4)
 
 ## 원샵 주문 확인
 
@@ -68,3 +68,12 @@ GitHub `main` 푸시 → Actions의 의존성 설치·번들·검사 → GitHub 
 - All 18 book chapters have contextual art. The sidebar supports chapter search, collapsible groups, current chapter and reading progress; bottom controls move between chapters. Phone navigation supports Escape and keyboard focus containment.
 - A three-pose interactive character preview appears in the principles chapter. Motion respects the device reduced-motion preference, and the book has a persistent pause/play control. New labels cover all nine existing languages.
 - Verified: mobile 390px, desktop 1440px, nine-language chapter layouts, menu → table confirmation → sample order receipt, owner scenario reply; 24 automated checks.
+
+## 5.4 — 라미의 세계
+
+파란 AI 에이전트 이름을 **라미 / Rami**로 확정했습니다. 이름은 **동그라미**에서 따왔습니다. 9개 언어에 5개 캐릭터 섹션(이야기, 24개 표정, 6개 직업군, 굿즈·상품권, BI·아이콘)을 추가했고 밝은 흰색 배경과 굵은 사이드바 제목을 적용했습니다.
+
+- `dist/assets/one-shop/rami/`: 개별 PNG/WebP, BI SVG, 앱 아이콘, 다운로드 ZIP.
+- `design/one-shop-brand/rami-v5.4/`: 로컬 고해상도 원본, 프롬프트, 제작 및 검수 기록. Git에는 최적화한 공개 에셋만 포함합니다.
+- 로고 SVG 안의 캐릭터는 래스터이며 문자는 편집 가능합니다. 상품권은 미발행 디자인 시안입니다.
+- 사장님앱의 매니저·알림, 손님앱의 에이전트 소개, 인사·생각·주문 동작에 라미를 적용했습니다.

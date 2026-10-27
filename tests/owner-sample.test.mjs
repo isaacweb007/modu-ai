@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {createOwnerSample,SAMPLE_COPY,SAMPLE_STORAGE} from '../dist/shared/owner-sample.js';
 import {ownerSampleMode} from '../dist/shared/experience-mode.js';
-import * as S from '../dist/shared/state.js?v=5.3.0';
+import * as S from '../dist/shared/state.js?v=5.4.0';
 import * as C from '../dist/shared/conversation-state.js';
 const memory=new Map();globalThis.localStorage={getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v)};
 test('sample contains usable linked orders, future bookings, private drafts and localized menus',()=>{
