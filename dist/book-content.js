@@ -1,11 +1,11 @@
 export const BOOK = {
   "ko": {
-    "title": "modu ai · 모두의 AI",
-    "subtitle": "모든 사장님에게, 자신만의 가게 에이전트.",
-    "intro": "가게 매니저와 이야기하며 시작하고, 손님은 자기 언어로 가게와 대화합니다. 아이작스튜디오와 원컴퍼니 재단이 함께 구상하는 소상공인 AI 플랫폼의 프로젝트 북입니다.",
+    "title": "one ai · 원샵",
+    "subtitle": "모든 사장님에게, 자신만의 샵 에이전트.",
+    "intro": "원샵은 one ai의 식당·레스토랑·카페용 샵 에이전트 프로젝트입니다. 주문 확정 전 매장 식사는 테이블 번호를 확인하고, 온라인 배달은 주소와 연락처를 확인합니다. 이 정보는 주문과 함께 저장되며 샵 현황에서 주문 경로별로 확인합니다. 실제 AI·결제·배달 실행은 연결하지 않았습니다.",
     "read": "프로젝트 읽기",
     "guest": "주모와 대화하기",
-    "owner": "내 가게 매니저",
+    "owner": "샵 매니저",
     "print": "인쇄 / PDF",
     "contents": "목차",
     "chapterLabel": "장",
@@ -16,16 +16,16 @@ export const BOOK = {
     "sections": [
       {
         "id": "glance",
-        "title": "가게의 가능성을 넓히는 AI",
-        "lead": "세상의 모든 사장님이 자신의 가게 에이전트를 갖게 합니다.",
+        "title": "샵의 가능성을 넓히는 AI",
+        "lead": "세상의 모든 사장님이 자신의 샵 에이전트를 갖게 합니다.",
         "paragraphs": [
-          "modu ai · 모두의 AI는 식당, 레스토랑, 카페의 정보를 손님이 이해하는 언어로 전달합니다. 사장님에게는 가게 매니저와의 대화, 손님에게는 가게와의 대화가 서비스의 중심입니다.",
+          "one ai · 원샵는 식당, 레스토랑, 카페의 정보를 손님이 이해하는 언어로 전달합니다. 사장님에게는 샵 매니저와의 대화, 손님에게는 샵과의 대화가 서비스의 중심입니다.",
           "게시한 매장·메뉴, 업로드 자료, 방문·주문·예약은 백엔드에 저장하고 여러 기기에서 공유합니다. AI 에이전트 응답은 준비된 시나리오이며 결제·포인트·보너스·보고는 데모입니다. OCR·실제 결제·POS·외부 알림은 연결하지 않았습니다."
         ],
         "points": [
-          "내 가게만의 이야기와 메뉴",
+          "샵만의 이야기와 메뉴",
           "설치 없이 QR로 접속",
-          "큰 비전은 작동하는 한 가게부터"
+          "큰 비전은 작동하는 한 샵부터"
         ]
       },
       {
@@ -44,7 +44,7 @@ export const BOOK = {
       },
       {
         "id": "people",
-        "title": "작은 가게에서 세계의 손님까지",
+        "title": "작은 샵에서 세계의 손님까지",
         "lead": "첫 고객은 현장에서 직접 손님을 맞는 사장님입니다.",
         "paragraphs": [
           "혼자 운영하는 카페, 바쁜 식당, 외국인 손님이 많은 주점을 먼저 생각합니다. 첫 샘플은 조선의 정서와 힙합의 에너지를 담은 한국식 주점 ‘주모’입니다.",
@@ -72,8 +72,8 @@ export const BOOK = {
       },
       {
         "id": "journey",
-        "title": "QR에서 가게와의 대화로",
-        "lead": "언어를 고르고, 필요한 일을 가게에 말합니다.",
+        "title": "QR에서 샵과의 대화로",
+        "lead": "언어를 고르고, 필요한 일을 샵에 말합니다.",
         "paragraphs": [
           "QR의 매장·테이블 정보로 대화가 시작됩니다. 메뉴 보기, 추천, 주문, 예약, 데모 결제, 포인트와 보너스 확인을 같은 대화 흐름에서 체험합니다.",
           "메뉴·수량·총액이나 예약 날짜·인원을 확인 카드에서 검토한 뒤 저장합니다. 실제 운영에서는 현장 주문 권한과 예약 가능 여부를 서버에서 검증해야 합니다."
@@ -93,35 +93,35 @@ export const BOOK = {
           "음식 이미지는 AI가 만든 콘셉트 이미지입니다. 확정 가격을 확인할 수 없어 VND 금액은 데모 가정입니다. 포인트와 보너스도 현금 가치나 실제 제공 의무가 없는 가상 기록입니다."
         ],
         "points": [
-          "9개 언어의 가게 전용 대화",
+          "9개 언어의 샵 전용 대화",
           "메뉴·예약·결제를 맥락 안에서",
           "준비된 응답으로 API 비용 없이 체험"
         ]
       },
       {
         "id": "onboarding",
-        "title": "매니저와 이야기하면 가게가 준비됩니다",
+        "title": "매니저와 이야기하면 샵이 준비됩니다",
         "lead": "사장님은 매니저가 묻는 정보에 차례로 답합니다.",
         "paragraphs": [
           "사장님, 주모의 영업 준비를 마쳤어요. 메뉴 8개와 샘플 주문·예약을 준비했습니다. 오늘 상황을 물어보거나 대시보드를 열어보세요.",
           "버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다. 주모 샘플 · 주문·예약·매출은 가상 기록이며 이 브라우저에서만 변경됩니다."
         ],
         "points": [
-          "가게 정보 보기",
+          "샵 정보 보기",
           "메뉴 8개 보기",
           "대시보드 둘러보기"
         ]
       },
       {
         "id": "qr",
-        "title": "테이블과 SNS가 가게의 입구",
+        "title": "테이블과 SNS가 샵의 입구",
         "lead": "링크 하나를 다양한 장소에서 사용합니다.",
         "paragraphs": [
-          "테이블별 QR을 인쇄하거나 가게 링크를 공유합니다. 게시한 매장·메뉴를 백엔드에서 불러오므로 손님의 다른 휴대폰에서도 같은 정보를 보고 주문·예약을 접수할 수 있습니다.",
-          "공개 GitHub Pages의 가게 QR은 소유자 로그인 없이 열 수 있습니다. 기존 Sites 미리보기의 소유자 전용 설정은 유지합니다. 접근 경로가 달라도 주문·예약 결과는 해당 매장 백엔드 기록으로 확인합니다."
+          "테이블별 QR을 인쇄하거나 샵 링크를 공유합니다. 게시한 매장·메뉴를 백엔드에서 불러오므로 손님의 다른 휴대폰에서도 같은 정보를 보고 주문·예약을 접수할 수 있습니다.",
+          "공개 GitHub Pages의 샵 QR은 소유자 로그인 없이 열 수 있습니다. 기존 Sites 미리보기의 소유자 전용 설정은 유지합니다. 접근 경로가 달라도 주문·예약 결과는 해당 매장 백엔드 기록으로 확인합니다."
         ],
         "points": [
-          "가게·테이블을 식별하는 QR",
+          "샵·테이블을 식별하는 QR",
           "다른 휴대폰에서 접수",
           "오너 대시보드에 실시간 반영"
         ]
@@ -131,7 +131,7 @@ export const BOOK = {
         "title": "매니저와 대화하고, 한 대시보드로 확인",
         "lead": "오너 채팅 옆에 운영 기록을 살펴볼 보조 대시보드 하나를 둡니다.",
         "paragraphs": [
-          "오너 대시보드는 백엔드에 저장된 주문·예약·방문 기록을 실시간으로 확인합니다. 고객, 결제 처리한 데모 매출, 재고·직원 업무, 세무 요약 초안도 함께 봅니다. 보고는 저장된 기록으로 만들며 가상 결제를 실제 매출로 주장하지 않습니다.",
+          "원샵은 one ai의 식당·레스토랑·카페용 샵 에이전트 프로젝트입니다. 주문 확정 전 매장 식사는 테이블 번호를 확인하고, 온라인 배달은 주소와 연락처를 확인합니다. 이 정보는 주문과 함께 저장되며 샵 현황에서 주문 경로별로 확인합니다. 실제 AI·결제·배달 실행은 연결하지 않았습니다.",
           "QR로 이름이나 신원을 추정하지 않고 동의한 프로필만 표시합니다. 재고와 직원 업무는 사장님이 입력·수정하는 수동 데모 기록이며 실제 창고나 직원 시스템과 연결되지 않습니다."
         ],
         "points": [
@@ -145,7 +145,7 @@ export const BOOK = {
         "title": "대화 속 실행에도 확인이 필요합니다",
         "lead": "주문·예약·결제·혜택을 서로 다른 기록으로 관리합니다.",
         "paragraphs": [
-          "주문은 수량과 총액, 예약은 날짜와 인원을 확인한 뒤 백엔드에 저장합니다. 다른 휴대폰의 접수 내용도 오너에게 반영되며 최종 예약 확정은 매장의 처리 상태로 확인합니다. 결제·포인트·보너스는 데모 기록으로, 실제 청구나 현금 가치는 없습니다.",
+          "원샵은 one ai의 식당·레스토랑·카페용 샵 에이전트 프로젝트입니다. 주문 확정 전 매장 식사는 테이블 번호를 확인하고, 온라인 배달은 주소와 연락처를 확인합니다. 이 정보는 주문과 함께 저장되며 샵 현황에서 주문 경로별로 확인합니다. 실제 AI·결제·배달 실행은 연결하지 않았습니다.",
           "무료 가위바위보와 룰렛의 서비스 쿠폰은 현금 가치가 없습니다. 게임별 참여 횟수와 방문당 혜택 한도를 적용하고, 직원 확인을 거쳐 사용 처리하는 흐름을 체험합니다."
         ],
         "points": [
@@ -170,7 +170,7 @@ export const BOOK = {
       },
       {
         "id": "growth",
-        "title": "한 가게의 하루부터 검증",
+        "title": "한 샵의 하루부터 검증",
         "lead": "매장 수보다 먼저 실제로 덜 번거로워졌는지 확인합니다.",
         "paragraphs": [
           "파일럿은 개설 과정, 다국어 질문, 메뉴 수정과 주문 확인을 실제 현장에서 살펴보는 단계입니다. 참여 매장 수와 일정은 아직 확정하지 않았습니다.",
@@ -185,20 +185,20 @@ export const BOOK = {
       {
         "id": "partnership",
         "title": "아이작스튜디오 × 원컴퍼니 재단",
-        "lead": "작은 가게도 좋은 기술을 누릴 수 있도록 함께 구상합니다.",
+        "lead": "작은 샵도 좋은 기술을 누릴 수 있도록 함께 구상합니다.",
         "paragraphs": [
           "아이작스튜디오는 브랜드·경험 설계와 제품 개발, 원컴퍼니 재단은 현장 참여와 접근성 지원을 잇는 역할을 제안합니다.",
           "이는 공동 사업의 논의안입니다. 계약 주체, 출자, 지분, 수익 배분, 운영 책임과 지원 프로그램은 별도 합의가 필요하며 확정된 것으로 표시하지 않습니다."
         ],
         "points": [
-          "가게가 이해하기 쉬운 제품",
+          "샵이 이해하기 쉬운 제품",
           "현장과 기술을 연결",
           "역할과 책임을 문서로 합의"
         ]
       },
       {
         "id": "architecture",
-        "title": "가게 밖 질문에는 비용을 쓰지 않도록",
+        "title": "샵 밖 질문에는 비용을 쓰지 않도록",
         "lead": "클라우드 데이터와 시나리오 응답을 구분하고, 실제 AI 연결 전 비용 통제를 갖춥니다.",
         "paragraphs": [
           "현재 백엔드는 매장·메뉴·업로드 자료와 방문·주문·예약의 저장·동기화를 맡습니다. AI 에이전트 대화는 준비된 응답입니다. 실제 모델을 연결할 때는 무관 질문을 모델 호출 없이 거절하고 FAQ·캐시를 우선하며 임의 도구 실행을 막습니다.",
@@ -215,8 +215,8 @@ export const BOOK = {
         "title": "기록은 유용하게, 수집은 필요한 만큼",
         "lead": "손님을 이해하되 확인되지 않은 신원을 만들지 않습니다.",
         "paragraphs": [
-          "익명 세션과 동의한 회원 정보를 구분하고 수집 목적, 열람 권한, 보관·삭제 정책을 안내합니다. 질문만으로 불만이나 개인정보를 임의 추정하지 않습니다.",
-          "주모 샘플 · 주문·예약·매출은 가상 기록이며 이 브라우저에서만 변경됩니다. 가게 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다. 결제·포인트·보너스·보고는 계속 데모이며 실제 결제·POS·외부 알림은 없습니다. 재고·직원 업무는 수동 기록, 세무 내보내기는 검토 초안입니다. 공개 GitHub Pages QR을 사용할 수 있으며 Sites의 소유자 전용 미리보기는 유지합니다."
+          "원샵은 one ai의 식당·레스토랑·카페용 샵 에이전트 프로젝트입니다. 주문 확정 전 매장 식사는 테이블 번호를 확인하고, 온라인 배달은 주소와 연락처를 확인합니다. 이 정보는 주문과 함께 저장되며 샵 현황에서 주문 경로별로 확인합니다. 실제 AI·결제·배달 실행은 연결하지 않았습니다.",
+          "주모 샘플 · 주문·예약·매출은 가상 기록이며 이 브라우저에서만 변경됩니다. 샵 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다. 결제·포인트·보너스·보고는 계속 데모이며 실제 결제·POS·외부 알림은 없습니다. 재고·직원 업무는 수동 기록, 세무 내보내기는 검토 초안입니다. 공개 GitHub Pages QR을 사용할 수 있으며 Sites의 소유자 전용 미리보기는 유지합니다."
         ],
         "points": [
           "알레르기 정보는 직원 확인",
@@ -226,10 +226,10 @@ export const BOOK = {
       },
       {
         "id": "roadmap",
-        "title": "시나리오에서 실제 가게로",
+        "title": "시나리오에서 실제 샵으로",
         "lead": "각 단계의 완료 기준을 통과한 뒤 다음 기능을 연결합니다.",
         "paragraphs": [
-          "메뉴판과 매장 자료를 올려 대화로 가게를 개설합니다. 가게 정보와 메뉴는 클라우드에 저장되고 손님은 다른 휴대폰의 QR로 주문·예약합니다. 사장님은 대시보드에서 실시간으로 확인합니다. AI 에이전트 응답과 결제는 계속 데모입니다. 버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다.",
+          "메뉴판과 매장 자료를 올려 대화로 샵을 개설합니다. 샵 정보와 메뉴는 클라우드에 저장되고 손님은 다른 휴대폰의 QR로 주문·예약합니다. 사장님은 대시보드에서 실시간으로 확인합니다. AI 에이전트 응답과 결제는 계속 데모입니다. 버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다.",
           "다음 단계에서 승인 가능한 사진 인식과 실제 AI 에이전트, 서버 비용 통제를 검증합니다. 실제 결제·POS·외부 알림은 별도 연동하며 API 계약, 웹훅 검증, 중복 방지, 재시도·대조와 권한을 확인한 뒤 운영합니다."
         ],
         "points": [
@@ -263,15 +263,15 @@ export const BOOK = {
         "points": [
           "클라우드 접수와 AI 시나리오를 구분",
           "데모 결제를 실제 정산으로 표시하지 않기",
-          "모든 사장님의 가게 에이전트를 향해"
+          "모든 사장님의 샵 에이전트를 향해"
         ]
       }
     ]
   },
   "en": {
-    "title": "modu ai · 모두의 AI",
+    "title": "one ai · 원샵",
     "subtitle": "A store agent of their own, for every owner.",
-    "intro": "Start by talking with your store manager; guests talk to the store in their own language. This book presents the small-business AI platform envisioned by Isaac Studio and One Company Foundation.",
+    "intro": "one shop by one ai serves restaurants and cafés. Before confirming an order, the agent asks dine-in guests to confirm their table, or online guests for a delivery address and contact number. Details are saved with each order and shown by source in the shop dashboard. Actual AI, payment and delivery services are not connected.",
     "read": "Read the project",
     "guest": "Chat with Jumo",
     "owner": "My store manager",
@@ -288,7 +288,7 @@ export const BOOK = {
         "title": "More possibilities for every store",
         "lead": "Every owner should have an agent that knows their own store.",
         "paragraphs": [
-          "modu ai · 모두의 AI explains restaurants, cafés and their menus in the guest’s language. Owners work through a conversation with their manager, while guests talk directly with the store.",
+          "one ai · 원샵 explains restaurants, cafés and their menus in the guest’s language. Owners work through a conversation with their manager, while guests talk directly with the store.",
           "Published stores and menus, uploaded assets, visits, orders and reservations are stored in a backend and shared across devices. AI agent replies are scripted; payment, points, bonuses and reports remain demos. OCR, real payment, POS and external notifications are not connected."
         ],
         "points": [
@@ -400,7 +400,7 @@ export const BOOK = {
         "title": "Talk to the manager, check one dashboard",
         "lead": "One supporting dashboard sits alongside the owner conversation.",
         "paragraphs": [
-          "The owner dashboard shows backend orders, reservations and visits in real time. It also presents customers, paid demo sales, inventory and staff tasks, and draft tax summaries. Reports use saved records and do not present simulated payments as real revenue.",
+          "one shop by one ai serves restaurants and cafés. Before confirming an order, the agent asks dine-in guests to confirm their table, or online guests for a delivery address and contact number. Details are saved with each order and shown by source in the shop dashboard. Actual AI, payment and delivery services are not connected.",
           "A QR visit does not reveal identity, and only consented profiles are shown. Inventory and staff tasks are manual demo records entered and edited by the owner, not connections to real stock or staffing systems."
         ],
         "points": [
@@ -414,7 +414,7 @@ export const BOOK = {
         "title": "Actions in chat still need confirmation",
         "lead": "Keep orders, reservations, payments and benefits as distinct records.",
         "paragraphs": [
-          "Confirm quantities and totals for orders, and dates and party size for reservations, before saving them to the backend. Submissions from other phones reach the owner; final reservation acceptance is shown by the store’s processing status. Payment, points and bonuses remain demo records, with no charge or cash value.",
+          "one shop by one ai serves restaurants and cafés. Before confirming an order, the agent asks dine-in guests to confirm their table, or online guests for a delivery address and contact number. Details are saved with each order and shown by source in the shop dashboard. Actual AI, payment and delivery services are not connected.",
           "Free rock-paper-scissors and roulette offer service coupons with no cash value. The demo applies game participation and per-visit reward limits and illustrates staff-confirmed redemption."
         ],
         "points": [
@@ -484,7 +484,7 @@ export const BOOK = {
         "title": "Useful records, only the data needed",
         "lead": "Understand guests without inventing an identity.",
         "paragraphs": [
-          "Separate anonymous sessions from consented profiles and explain purpose, access, retention and deletion. A question alone does not establish a complaint or personal information.",
+          "one shop by one ai serves restaurants and cafés. Before confirming an order, the agent asks dine-in guests to confirm their table, or online guests for a delivery address and contact number. Details are saved with each order and shown by source in the shop dashboard. Actual AI, payment and delivery services are not connected.",
           "Jumo sample · Orders, bookings and sales are fictional. Changes stay in this browser. Store data and orders are saved. Owner account access across devices will come with real sign-in. Payment, points, bonuses and reports remain demos, with no real payment, POS or external notifications. Inventory and staff tasks are manual; tax export is a draft for review. Public GitHub Pages QR access is supported, while the Sites preview stays owner-private."
         ],
         "points": [
@@ -538,9 +538,9 @@ export const BOOK = {
     ]
   },
   "vi": {
-    "title": "modu ai · 모두의 AI",
+    "title": "one ai · 원샵",
     "subtitle": "Mỗi chủ quán đều có trợ lý riêng cho cửa hàng.",
-    "intro": "Bắt đầu bằng cuộc trò chuyện với quản lý quán; khách nói chuyện với quán bằng ngôn ngữ của mình. Đây là sách dự án nền tảng AI cho hộ kinh doanh do Isaac Studio và Quỹ One Company đề xuất.",
+    "intro": "one shop của one ai dành cho nhà hàng và quán cà phê. Trước khi xác nhận đơn, khách tại quán xác nhận số bàn; khách trực tuyến nhập địa chỉ và số liên lạc. Thông tin được lưu cùng đơn và hiển thị theo nguồn trên bảng điều khiển. Chưa kết nối AI, thanh toán hay giao hàng thật.",
     "read": "Đọc dự án",
     "guest": "Trò chuyện với Jumo",
     "owner": "Quản lý quán của tôi",
@@ -557,7 +557,7 @@ export const BOOK = {
         "title": "Mở thêm cơ hội cho mỗi cửa hàng",
         "lead": "Mọi chủ quán đều nên có trợ lý hiểu cửa hàng của mình.",
         "paragraphs": [
-          "modu ai · 모두의 AI giới thiệu nhà hàng, quán cà phê và thực đơn bằng ngôn ngữ của khách. Chủ quán làm việc qua cuộc trò chuyện với quản lý, còn khách trò chuyện trực tiếp với quán.",
+          "one ai · 원샵 giới thiệu nhà hàng, quán cà phê và thực đơn bằng ngôn ngữ của khách. Chủ quán làm việc qua cuộc trò chuyện với quản lý, còn khách trò chuyện trực tiếp với quán.",
           "Quán và thực đơn đã đăng, tệp tải lên, lượt ghé, đơn và đặt bàn được lưu ở backend, chia sẻ giữa các thiết bị. Trợ lý AI trả lời theo kịch bản; thanh toán, điểm, quà và báo cáo vẫn là demo. Chưa nối OCR, thanh toán thật, POS hay thông báo bên ngoài."
         ],
         "points": [
@@ -669,7 +669,7 @@ export const BOOK = {
         "title": "Hỏi quản lý, kiểm tra trên một bảng điều khiển",
         "lead": "Một bảng điều khiển hỗ trợ bên cạnh cuộc trò chuyện của chủ quán.",
         "paragraphs": [
-          "Bảng chủ quán hiển thị đơn, đặt bàn và lượt ghé từ backend theo thời gian thực. Có thêm khách hàng, doanh thu thanh toán demo, việc tồn kho, việc nhân viên và bản nháp thuế. Báo cáo dùng dữ liệu đã lưu, không coi thanh toán giả lập là doanh thu thật.",
+          "one shop của one ai dành cho nhà hàng và quán cà phê. Trước khi xác nhận đơn, khách tại quán xác nhận số bàn; khách trực tuyến nhập địa chỉ và số liên lạc. Thông tin được lưu cùng đơn và hiển thị theo nguồn trên bảng điều khiển. Chưa kết nối AI, thanh toán hay giao hàng thật.",
           "QR không tiết lộ danh tính; chỉ hiện hồ sơ có đồng ý. Công việc tồn kho và nhân viên là bản ghi demo do chủ quán nhập, sửa thủ công, không nối kho hay hệ thống nhân sự thật."
         ],
         "points": [
@@ -683,7 +683,7 @@ export const BOOK = {
         "title": "Thao tác trong chat vẫn cần xác nhận",
         "lead": "Tách đơn, đặt bàn, thanh toán và quyền lợi thành các bản ghi riêng.",
         "paragraphs": [
-          "Xác nhận số lượng, tổng tiền hoặc ngày đặt bàn và số khách trước khi lưu vào backend. Đơn từ điện thoại khác hiện cho chủ quán; việc chấp nhận đặt bàn cuối cùng thể hiện qua trạng thái quán xử lý. Thanh toán, điểm và quà vẫn là demo, không thu tiền hay có giá trị tiền mặt.",
+          "one shop của one ai dành cho nhà hàng và quán cà phê. Trước khi xác nhận đơn, khách tại quán xác nhận số bàn; khách trực tuyến nhập địa chỉ và số liên lạc. Thông tin được lưu cùng đơn và hiển thị theo nguồn trên bảng điều khiển. Chưa kết nối AI, thanh toán hay giao hàng thật.",
           "Oẳn tù tì và vòng quay miễn phí cho phiếu dịch vụ không có giá trị tiền mặt. Demo giới hạn lượt theo trò, quà theo lần ghé và mô phỏng nhân viên xác nhận sử dụng."
         ],
         "points": [
@@ -753,7 +753,7 @@ export const BOOK = {
         "title": "Lưu dữ liệu hữu ích, chỉ thu thập điều cần thiết",
         "lead": "Hiểu khách mà không tự suy đoán danh tính.",
         "paragraphs": [
-          "Tách phiên ẩn danh và hồ sơ có đồng ý; giải thích mục đích, quyền xem, lưu và xóa. Không suy luận khiếu nại hay thông tin cá nhân chỉ từ một câu hỏi.",
+          "one shop của one ai dành cho nhà hàng và quán cà phê. Trước khi xác nhận đơn, khách tại quán xác nhận số bàn; khách trực tuyến nhập địa chỉ và số liên lạc. Thông tin được lưu cùng đơn và hiển thị theo nguồn trên bảng điều khiển. Chưa kết nối AI, thanh toán hay giao hàng thật.",
           "Mẫu Jumo · Đơn hàng, đặt bàn và doanh thu là giả định. Thay đổi chỉ lưu trong trình duyệt này. Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật. Thanh toán, điểm, quà và báo cáo vẫn là demo; chưa nối thanh toán thật, POS hay thông báo ngoài. Tồn kho và việc nhân viên ghi thủ công, xuất thuế là bản nháp. QR GitHub Pages công khai được hỗ trợ; Sites vẫn là bản xem riêng cho chủ sở hữu."
         ],
         "points": [
@@ -807,9 +807,9 @@ export const BOOK = {
     ]
   },
   "zh": {
-    "title": "modu ai · 모두의 AI",
+    "title": "one ai · 원샵",
     "subtitle": "让每一位店主，都拥有自己的门店智能体。",
-    "intro": "与门店经理对话，就能开始；顾客用自己的语言与门店交流。这是 Isaac Studio 与 One Company 基金会共同构想的小微商家 AI 平台项目书。",
+    "intro": "one ai 的原샵（one shop）面向餐厅和咖啡馆。确认订单前，堂食客人确认桌号，在线客人填写配送地址和联系电话。信息与订单一起保存，并在店铺看板按来源显示。尚未连接真实 AI、支付或配送服务。",
     "read": "阅读项目",
     "guest": "与 Jumo 对话",
     "owner": "我的门店经理",
@@ -826,7 +826,7 @@ export const BOOK = {
         "title": "为每家店打开更多可能",
         "lead": "每位店主都应拥有了解自己门店的智能体。",
         "paragraphs": [
-          "modu ai · 모두의 AI 用顾客的语言介绍餐厅、咖啡店及其菜单。店主与经理对话，顾客与门店对话，这是服务的核心。",
+          "one ai · 원샵 用顾客的语言介绍餐厅、咖啡店及其菜单。店主与经理对话，顾客与门店对话，这是服务的核心。",
           "已发布门店和菜单、上传资料、访问、订单及预约保存在后端，并在多台设备间共享。AI 智能体使用预设回复；付款、积分、奖励和报告仍为演示。未连接 OCR、真实支付、POS 或外部通知。"
         ],
         "points": [
@@ -938,7 +938,7 @@ export const BOOK = {
         "title": "与经理交流，用一个看板核对",
         "lead": "店主对话旁只设置一个辅助运营看板。",
         "paragraphs": [
-          "店主看板实时显示后端订单、预约和访问记录，也展示客户、模拟付款销售额、库存及员工任务、税务汇总草稿。报告依据保存记录，不将模拟支付声称为真实收入。",
+          "one ai 的原샵（one shop）面向餐厅和咖啡馆。确认订单前，堂食客人确认桌号，在线客人填写配送地址和联系电话。信息与订单一起保存，并在店铺看板按来源显示。尚未连接真实 AI、支付或配送服务。",
           "扫码不会推断身份，只显示获得同意的个人资料。库存和员工任务由店主手动录入与修改，未连接真实仓储或人事系统。"
         ],
         "points": [
@@ -952,7 +952,7 @@ export const BOOK = {
         "title": "对话中的操作也需要确认",
         "lead": "订单、预约、付款和权益分别记录。",
         "paragraphs": [
-          "先确认订单数量和总额，或预约日期和人数，再保存到后端。其他手机的提交也会显示给店主；最终预约是否接受，以门店处理状态为准。付款、积分和奖励仍为演示记录，不扣款且无现金价值。",
+          "one ai 的原샵（one shop）面向餐厅和咖啡馆。确认订单前，堂食客人确认桌号，在线客人填写配送地址和联系电话。信息与订单一起保存，并在店铺看板按来源显示。尚未连接真实 AI、支付或配送服务。",
           "免费石头剪刀布与转盘提供无现金价值的服务券。演示限制每个游戏的参与次数与每次到店奖励数，并展示员工确认核销流程。"
         ],
         "points": [
@@ -1022,7 +1022,7 @@ export const BOOK = {
         "title": "记录有用，只收集必要信息",
         "lead": "理解顾客，而不是猜测顾客身份。",
         "paragraphs": [
-          "区分匿名会话与同意提供的资料，说明目的、访问权、保留与删除政策。不凭一句问题推断投诉或个人信息。",
+          "one ai 的原샵（one shop）面向餐厅和咖啡馆。确认订单前，堂食客人确认桌号，在线客人填写配送地址和联系电话。信息与订单一起保存，并在店铺看板按来源显示。尚未连接真实 AI、支付或配送服务。",
           "Jumo 示例 · 订单、预约和营收均为虚构数据，修改只保存在此浏览器。 店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。 付款、积分、奖励和报告仍为演示，没有真实支付、POS 或外部通知。库存与员工任务为手动记录，税务导出是审核草稿。支持公开 GitHub Pages 二维码，Sites 预览继续仅限所有者。"
         ],
         "points": [
@@ -1076,9 +1076,9 @@ export const BOOK = {
     ]
   },
   "ja": {
-    "title": "modu ai · 모두의 AI",
+    "title": "one ai · 원샵",
     "subtitle": "すべての店主に、自分のお店のエージェントを。",
-    "intro": "お店のマネージャーと話して始め、お客様は自分の言語でお店と会話します。Isaac Studio と One Company 財団が構想する、小規模事業者向け AI プラットフォームのプロジェクトブックです。",
+    "intro": "one ai のワンショップは飲食店・レストラン・カフェ向けです。注文確定前に店内客はテーブル番号を、オンライン客は配達先住所と連絡先を確認します。情報は注文と共に保存され、店舗の状況を経路別に確認できます。実際のAI・決済・配達は未接続です。",
     "read": "プロジェクトを読む",
     "guest": "Jumo と話す",
     "owner": "お店のマネージャー",
@@ -1095,7 +1095,7 @@ export const BOOK = {
         "title": "お店の可能性を広げる AI",
         "lead": "すべての店主が、自分のお店を知るエージェントを持てるように。",
         "paragraphs": [
-          "modu ai · 모두의 AI は、飲食店やカフェの情報をお客様の言語で伝えます。店主はマネージャーと、お客様はお店と会話することがサービスの中心です。",
+          "one ai · 원샵 は、飲食店やカフェの情報をお客様の言語で伝えます。店主はマネージャーと、お客様はお店と会話することがサービスの中心です。",
           "公開した店舗とメニュー、アップロード資料、訪問・注文・予約をバックエンドに保存し、端末間で共有します。AI エージェントの応答はシナリオで、決済・ポイント・特典・レポートはデモです。OCR・実決済・POS・外部通知は未接続です。"
         ],
         "points": [
@@ -1207,7 +1207,7 @@ export const BOOK = {
         "title": "マネージャーと話し、一つの画面で確認",
         "lead": "オーナーの会話に、補助ダッシュボードを一つ添えます。",
         "paragraphs": [
-          "店主ダッシュボードはバックエンドの注文・予約・訪問をリアルタイム表示します。顧客、模擬決済済み売上、在庫・スタッフ作業、税務集計案も確認できます。保存済み記録に基づくレポートで、仮想決済を実売上とは扱いません。",
+          "one ai のワンショップは飲食店・レストラン・カフェ向けです。注文確定前に店内客はテーブル番号を、オンライン客は配達先住所と連絡先を確認します。情報は注文と共に保存され、店舗の状況を経路別に確認できます。実際のAI・決済・配達は未接続です。",
           "QR から本人を推定せず、同意済みのプロフィールだけを表示します。在庫・スタッフ作業は店主が手入力して直すデモ記録で、実際の倉庫や人事システムとは接続しません。"
         ],
         "points": [
@@ -1221,7 +1221,7 @@ export const BOOK = {
         "title": "会話の中の操作にも確認を",
         "lead": "注文・予約・決済・特典は別の記録として扱います。",
         "paragraphs": [
-          "注文の数量・合計、予約の日付・人数を確認してからバックエンドへ保存します。別端末からの受付も店主に届き、予約の最終受け入れは店舗の処理状態で確認します。決済・ポイント・特典はデモ記録で、実請求や現金価値はありません。",
+          "one ai のワンショップは飲食店・レストラン・カフェ向けです。注文確定前に店内客はテーブル番号を、オンライン客は配達先住所と連絡先を確認します。情報は注文と共に保存され、店舗の状況を経路別に確認できます。実際のAI・決済・配達は未接続です。",
           "無料じゃんけんとルーレットのサービス券に現金価値はありません。ゲームごとの回数と来店ごとの特典上限を適用し、スタッフが利用確認する流れを体験します。"
         ],
         "points": [
@@ -1291,7 +1291,7 @@ export const BOOK = {
         "title": "役立つ記録を、必要な分だけ",
         "lead": "確認できない本人情報を作り出さず、お客様を理解します。",
         "paragraphs": [
-          "匿名セッションと同意済み情報を分け、目的、閲覧権限、保存・削除方針を説明します。質問だけで不満や個人情報を推定しません。",
+          "one ai のワンショップは飲食店・レストラン・カフェ向けです。注文確定前に店内客はテーブル番号を、オンライン客は配達先住所と連絡先を確認します。情報は注文と共に保存され、店舗の状況を経路別に確認できます。実際のAI・決済・配達は未接続です。",
           "ジュモのサンプル · 注文・予約・売上は架空の記録です。変更はこのブラウザーだけに保存されます。 店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。 決済・ポイント・特典・レポートは引き続きデモで、実決済・POS・外部通知はありません。在庫・スタッフは手動記録、税務出力は確認草案です。公開 GitHub Pages の QR に対応し、Sites のプレビューは所有者限定を保ちます。"
         ],
         "points": [
@@ -1345,9 +1345,9 @@ export const BOOK = {
     ]
   },
   "id": {
-    "title": "modu ai · 모두의 AI",
+    "title": "one ai · 원샵",
     "subtitle": "Setiap pemilik usaha punya agen tokonya sendiri.",
-    "intro": "Mulai dengan berbicara kepada manajer toko; tamu berbicara dengan toko dalam bahasanya sendiri. Buku ini menjelaskan platform AI usaha kecil yang digagas Isaac Studio dan Yayasan One Company.",
+    "intro": "one shop dari one ai melayani restoran dan kafe. Sebelum konfirmasi, tamu di tempat mengonfirmasi nomor meja; pelanggan online mengisi alamat dan telepon. Data disimpan bersama pesanan dan ditampilkan menurut asalnya di dasbor toko. AI, pembayaran, dan pengantaran nyata belum terhubung.",
     "read": "Baca proyek",
     "guest": "Mengobrol dengan Jumo",
     "owner": "Manajer toko saya",
@@ -1364,7 +1364,7 @@ export const BOOK = {
         "title": "Lebih banyak peluang untuk setiap usaha",
         "lead": "Setiap pemilik berhak memiliki agen yang memahami tokonya.",
         "paragraphs": [
-          "modu ai · 모두의 AI menjelaskan restoran, kafe dan menunya dalam bahasa tamu. Percakapan dengan manajer menjadi pusat pekerjaan pemilik, sementara tamu berbicara langsung dengan toko.",
+          "one ai · 원샵 menjelaskan restoran, kafe dan menunya dalam bahasa tamu. Percakapan dengan manajer menjadi pusat pekerjaan pemilik, sementara tamu berbicara langsung dengan toko.",
           "Toko dan menu yang diterbitkan, aset unggahan, kunjungan, pesanan dan reservasi disimpan di backend dan dibagikan antarperangkat. Jawaban agen AI mengikuti skenario; pembayaran, poin, bonus dan laporan tetap demo. OCR, pembayaran nyata, POS dan notifikasi eksternal belum terhubung."
         ],
         "points": [
@@ -1476,7 +1476,7 @@ export const BOOK = {
         "title": "Bicara dengan manajer, periksa satu dasbor",
         "lead": "Satu dasbor pendukung mendampingi percakapan pemilik.",
         "paragraphs": [
-          "Dasbor pemilik menampilkan pesanan, reservasi dan kunjungan dari backend secara waktu nyata. Tersedia pula pelanggan, penjualan pembayaran demo, tugas stok dan staf, serta draf pajak. Laporan menggunakan catatan tersimpan dan tidak menganggap pembayaran simulasi sebagai pendapatan nyata.",
+          "one shop dari one ai melayani restoran dan kafe. Sebelum konfirmasi, tamu di tempat mengonfirmasi nomor meja; pelanggan online mengisi alamat dan telepon. Data disimpan bersama pesanan dan ditampilkan menurut asalnya di dasbor toko. AI, pembayaran, dan pengantaran nyata belum terhubung.",
           "QR tidak mengungkap identitas; hanya profil dengan persetujuan ditampilkan. Tugas stok dan staf merupakan catatan demo yang dimasukkan serta diperbarui manual, tanpa koneksi gudang atau sistem kepegawaian nyata."
         ],
         "points": [
@@ -1490,7 +1490,7 @@ export const BOOK = {
         "title": "Tindakan dalam chat tetap perlu konfirmasi",
         "lead": "Pisahkan catatan pesanan, reservasi, pembayaran dan manfaat.",
         "paragraphs": [
-          "Konfirmasikan jumlah dan total pesanan, atau tanggal dan jumlah tamu reservasi, sebelum menyimpan ke backend. Kiriman dari ponsel lain terlihat oleh pemilik; penerimaan reservasi akhir mengikuti status pemrosesan toko. Pembayaran, poin dan bonus tetap catatan demo tanpa tagihan atau nilai tunai.",
+          "one shop dari one ai melayani restoran dan kafe. Sebelum konfirmasi, tamu di tempat mengonfirmasi nomor meja; pelanggan online mengisi alamat dan telepon. Data disimpan bersama pesanan dan ditampilkan menurut asalnya di dasbor toko. AI, pembayaran, dan pengantaran nyata belum terhubung.",
           "Suit dan roda putar gratis memberikan kupon layanan tanpa nilai tunai. Demo membatasi partisipasi per permainan dan hadiah per kunjungan serta mencontohkan penukaran dengan konfirmasi staf."
         ],
         "points": [
@@ -1560,7 +1560,7 @@ export const BOOK = {
         "title": "Catatan berguna, data seperlunya",
         "lead": "Pahami tamu tanpa mengarang identitasnya.",
         "paragraphs": [
-          "Pisahkan sesi anonim dan profil berizin serta jelaskan tujuan, akses, penyimpanan dan penghapusan. Jangan menyimpulkan keluhan atau data pribadi hanya dari satu pertanyaan.",
+          "one shop dari one ai melayani restoran dan kafe. Sebelum konfirmasi, tamu di tempat mengonfirmasi nomor meja; pelanggan online mengisi alamat dan telepon. Data disimpan bersama pesanan dan ditampilkan menurut asalnya di dasbor toko. AI, pembayaran, dan pengantaran nyata belum terhubung.",
           "Contoh Jumo · Pesanan, reservasi dan penjualan bersifat fiktif. Perubahan hanya disimpan di browser ini. Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan. Pembayaran, poin, bonus dan laporan tetap demo; belum ada pembayaran nyata, POS atau notifikasi eksternal. Stok dan tugas staf dicatat manual, ekspor pajak berupa draf tinjauan. QR GitHub Pages publik didukung, sedangkan pratinjau Sites tetap privat bagi pemilik."
         ],
         "points": [
@@ -1614,9 +1614,9 @@ export const BOOK = {
     ]
   },
   "km": {
-    "title": "modu ai · 모두의 AI",
+    "title": "one ai · 원샵",
     "subtitle": "ម្ចាស់ហាងគ្រប់រូប មានភ្នាក់ងារ AI ផ្ទាល់ខ្លួន។",
-    "intro": "ចាប់ផ្ដើមដោយជជែកជាមួយអ្នកគ្រប់គ្រងហាង ហើយភ្ញៀវជជែកជាមួយហាងជាភាសាខ្លួន។ នេះជាសៀវភៅគម្រោង AI សម្រាប់អាជីវកម្មតូចរបស់ Isaac Studio និងមូលនិធិ One Company។",
+    "intro": "one shop របស់ one ai សម្រាប់ភោជនីយដ្ឋាន និងហាងកាហ្វេ។ មុនបញ្ជាក់ការបញ្ជាទិញ ភ្ញៀវនៅហាងបញ្ជាក់លេខតុ ហើយភ្ញៀវអនឡាញបញ្ចូលអាសយដ្ឋាន និងលេខទំនាក់ទំនង។ ព័ត៌មានរក្សាទុកជាមួយការបញ្ជាទិញ និងបង្ហាញតាមប្រភព។ មិនទាន់ភ្ជាប់ AI ការបង់ប្រាក់ ឬដឹកជញ្ជូនពិតទេ។",
     "read": "អានគម្រោង",
     "guest": "ជជែកជាមួយ Jumo",
     "owner": "អ្នកគ្រប់គ្រងហាងខ្ញុំ",
@@ -1633,7 +1633,7 @@ export const BOOK = {
         "title": "បើកឱកាសថ្មីសម្រាប់គ្រប់ហាង",
         "lead": "ម្ចាស់ហាងគ្រប់រូបគួរមានភ្នាក់ងារដែលស្គាល់ហាងខ្លួន។",
         "paragraphs": [
-          "modu ai · 모두의 AI ណែនាំភោជនីយដ្ឋាន កាហ្វេ និងមុខម្ហូបជាភាសាភ្ញៀវ។ ម្ចាស់ធ្វើការតាមការជជែកជាមួយអ្នកគ្រប់គ្រង ខណៈភ្ញៀវជជែកផ្ទាល់ជាមួយហាង។",
+          "one ai · 원샵 ណែនាំភោជនីយដ្ឋាន កាហ្វេ និងមុខម្ហូបជាភាសាភ្ញៀវ។ ម្ចាស់ធ្វើការតាមការជជែកជាមួយអ្នកគ្រប់គ្រង ខណៈភ្ញៀវជជែកផ្ទាល់ជាមួយហាង។",
           "ហាងនិងមុខម្ហូបដែលផ្សាយ ឯកសារផ្ទុកឡើង ការចូលមើល កុម្ម៉ង់ និងការកក់រក្សានៅ backend ហើយចែករំលែកឆ្លងឧបករណ៍។ ភ្នាក់ងារ AI ឆ្លើយតាមសេណារីយ៉ូ; ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍ជាដេមូ។ មិនភ្ជាប់ OCR ការបង់ពិត POS ឬការជូនដំណឹងខាងក្រៅ។"
         ],
         "points": [
@@ -1745,7 +1745,7 @@ export const BOOK = {
         "title": "ជជែកជាមួយអ្នកគ្រប់គ្រង ពិនិត្យផ្ទាំងតែមួយ",
         "lead": "មានផ្ទាំងគ្រប់គ្រងជំនួយមួយនៅក្បែរការជជែកម្ចាស់។",
         "paragraphs": [
-          "ផ្ទាំងម្ចាស់បង្ហាញកុម្ម៉ង់ កក់ និងការចូលមើលពី backend ភ្លាមៗ។ មានអតិថិជន ការលក់បង់សាកល្បង ការងារស្តុកនិងបុគ្គលិក និងព្រាងពន្ធផងដែរ។ របាយការណ៍យោងកំណត់ត្រាបានរក្សា មិនចាត់ការបង់សាកល្បងជាចំណូលពិត។",
+          "one shop របស់ one ai សម្រាប់ភោជនីយដ្ឋាន និងហាងកាហ្វេ។ មុនបញ្ជាក់ការបញ្ជាទិញ ភ្ញៀវនៅហាងបញ្ជាក់លេខតុ ហើយភ្ញៀវអនឡាញបញ្ចូលអាសយដ្ឋាន និងលេខទំនាក់ទំនង។ ព័ត៌មានរក្សាទុកជាមួយការបញ្ជាទិញ និងបង្ហាញតាមប្រភព។ មិនទាន់ភ្ជាប់ AI ការបង់ប្រាក់ ឬដឹកជញ្ជូនពិតទេ។",
           "QR មិនសន្មតអត្តសញ្ញាណ ហើយបង្ហាញតែប្រវត្តិរូបបានយល់ព្រម។ ការងារស្តុកនិងបុគ្គលិកជាកំណត់ត្រាដែលម្ចាស់បញ្ចូលនិងកែដោយដៃ មិនភ្ជាប់ឃ្លាំងឬប្រព័ន្ធបុគ្គលិកពិត។"
         ],
         "points": [
@@ -1759,7 +1759,7 @@ export const BOOK = {
         "title": "សកម្មភាពក្នុងការជជែកក៏ត្រូវបញ្ជាក់",
         "lead": "កុម្ម៉ង់ កក់ បង់ប្រាក់ និងអត្ថប្រយោជន៍មានកំណត់ត្រាដាច់គ្នា។",
         "paragraphs": [
-          "បញ្ជាក់ចំនួននិងសរុបកុម្ម៉ង់ ឬថ្ងៃនិងចំនួនភ្ញៀវកក់ មុនរក្សានៅ backend។ សំណើពីទូរសព្ទផ្សេងបង្ហាញដល់ម្ចាស់; ការទទួលកក់ចុងក្រោយតាមស្ថានភាពហាងដំណើរការ។ ការបង់ ពិន្ទុ និងអំណោយនៅតែដេមូ មិនគិតប្រាក់ឬមានតម្លៃសាច់ប្រាក់។",
+          "one shop របស់ one ai សម្រាប់ភោជនីយដ្ឋាន និងហាងកាហ្វេ។ មុនបញ្ជាក់ការបញ្ជាទិញ ភ្ញៀវនៅហាងបញ្ជាក់លេខតុ ហើយភ្ញៀវអនឡាញបញ្ចូលអាសយដ្ឋាន និងលេខទំនាក់ទំនង។ ព័ត៌មានរក្សាទុកជាមួយការបញ្ជាទិញ និងបង្ហាញតាមប្រភព។ មិនទាន់ភ្ជាប់ AI ការបង់ប្រាក់ ឬដឹកជញ្ជូនពិតទេ។",
           "ប៉ាវស៊ីងស៊ុងនិងកង់សំណាងឥតគិតថ្លៃផ្ដល់ប័ណ្ណគ្មានតម្លៃសាច់ប្រាក់។ ដេមូកំណត់ចំនួនលេងនិងអំណោយក្នុងមួយការមក ហើយបង្ហាញការប្រើក្រោយបុគ្គលិកបញ្ជាក់។"
         ],
         "points": [
@@ -1829,7 +1829,7 @@ export const BOOK = {
         "title": "កំណត់ត្រាមានប្រយោជន៍ ទិន្នន័យត្រឹមចាំបាច់",
         "lead": "យល់ភ្ញៀវដោយមិនសន្មតអត្តសញ្ញាណ។",
         "paragraphs": [
-          "បំបែកវគ្គអនាមិកនិងប្រវត្តិរូបបានយល់ព្រម ព្រមទាំងពន្យល់គោលបំណង សិទ្ធិមើល រក្សានិងលុប។ មិនសន្មតបណ្ដឹងឬព័ត៌មានឯកជនពីសំណួរមួយទេ។",
+          "one shop របស់ one ai សម្រាប់ភោជនីយដ្ឋាន និងហាងកាហ្វេ។ មុនបញ្ជាក់ការបញ្ជាទិញ ភ្ញៀវនៅហាងបញ្ជាក់លេខតុ ហើយភ្ញៀវអនឡាញបញ្ចូលអាសយដ្ឋាន និងលេខទំនាក់ទំនង។ ព័ត៌មានរក្សាទុកជាមួយការបញ្ជាទិញ និងបង្ហាញតាមប្រភព។ មិនទាន់ភ្ជាប់ AI ការបង់ប្រាក់ ឬដឹកជញ្ជូនពិតទេ។",
           "គំរូ Jumo · ការបញ្ជាទិញ ការកក់ និងចំណូលជាទិន្នន័យសន្មត់។ ការកែប្រែរក្សាទុកតែក្នុងកម្មវិធីរុករកនេះ។ ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។ ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍នៅតែដេមូ; គ្មានបង់ពិត POS ឬជូនដំណឹងខាងក្រៅ។ ការងារស្តុកនិងបុគ្គលិកបញ្ចូលដោយដៃ ហើយនាំចេញពន្ធជាព្រាង។ អាចប្រើ QR GitHub Pages សាធារណៈ ខណៈ Sites នៅតែសម្រាប់ម្ចាស់។"
         ],
         "points": [
@@ -1883,9 +1883,9 @@ export const BOOK = {
     ]
   },
   "lo": {
-    "title": "modu ai · 모두의 AI",
+    "title": "one ai · 원샵",
     "subtitle": "ເຈົ້າຂອງຮ້ານທຸກຄົນ ມີຜູ້ຊ່ວຍ AI ຂອງຕົນເອງ.",
-    "intro": "ເລີ່ມຈາກລົມກັບຜູ້ຈັດການຮ້ານ ແລະແຂກລົມກັບຮ້ານໃນພາສາຕົນ. ນີ້ແມ່ນປຶ້ມໂຄງການ AI ສຳລັບທຸລະກິດນ້ອຍຂອງ Isaac Studio ແລະມູນນິທິ One Company.",
+    "intro": "one shop ຂອງ one ai ສຳລັບຮ້ານອາຫານ ແລະຄາເຟ. ກ່ອນຢືນຢັນຄຳສັ່ງ ລູກຄ້າໃນຮ້ານຢືນຢັນເບີໂຕະ; ລູກຄ້າອອນລາຍປ້ອນທີ່ຢູ່ ແລະເບີຕິດຕໍ່. ຂໍ້ມູນບັນທຶກກັບຄຳສັ່ງ ແລະສະແດງຕາມທີ່ມາ. ຍັງບໍ່ເຊື່ອມ AI ການຈ່າຍ ຫຼືຈັດສົ່ງຈິງ.",
     "read": "ອ່ານໂຄງການ",
     "guest": "ລົມກັບ Jumo",
     "owner": "ຜູ້ຈັດການຮ້ານຂອງຂ້ອຍ",
@@ -1902,7 +1902,7 @@ export const BOOK = {
         "title": "ເພີ່ມໂອກາດໃຫ້ທຸກຮ້ານ",
         "lead": "ເຈົ້າຂອງທຸກຄົນຄວນມີຜູ້ຊ່ວຍທີ່ຮູ້ຈັກຮ້ານຂອງຕົນ.",
         "paragraphs": [
-          "modu ai · 모두의 AI ແນະນຳຮ້ານອາຫານ ກາເຟ ແລະເມນູໃນພາສາແຂກ. ເຈົ້າຂອງເຮັດວຽກຜ່ານການລົມກັບຜູ້ຈັດການ ແລະແຂກລົມກັບຮ້ານໂດຍກົງ.",
+          "one ai · 원샵 ແນະນຳຮ້ານອາຫານ ກາເຟ ແລະເມນູໃນພາສາແຂກ. ເຈົ້າຂອງເຮັດວຽກຜ່ານການລົມກັບຜູ້ຈັດການ ແລະແຂກລົມກັບຮ້ານໂດຍກົງ.",
           "ຮ້ານແລະເມນູທີ່ເຜີຍແຜ່ ໄຟລ໌ອັບໂຫຼດ ການເຂົ້າເບິ່ງ ອໍເດີ ແລະຈອງເກັບຢູ່ backend ແລະແບ່ງປັນຂ້າມອຸປະກອນ. ຜູ້ຊ່ວຍ AI ຕອບຕາມບົດ; ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານເປັນເດໂມ. ບໍ່ເຊື່ອມ OCR ຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ."
         ],
         "points": [
@@ -2014,7 +2014,7 @@ export const BOOK = {
         "title": "ລົມກັບຜູ້ຈັດການ ກວດໃນດາຊບອດດຽວ",
         "lead": "ມີດາຊບອດຊ່ວຍໜຶ່ງໜ້າຂ້າງແຊັດເຈົ້າຂອງ.",
         "paragraphs": [
-          "ດາຊບອດເຈົ້າຂອງສະແດງອໍເດີ ຈອງ ແລະເຂົ້າເບິ່ງຈາກ backend ທັນທີ. ຍັງມີລູກຄ້າ ຍອດຂາຍຈ່າຍສາທິດ ວຽກສະຕັອກແລະພະນັກງານ ແລະຮ່າງພາສີ. ລາຍງານອີງບັນທຶກ ບໍ່ອ້າງຈ່າຍຈຳລອງເປັນລາຍຮັບຈິງ.",
+          "one shop ຂອງ one ai ສຳລັບຮ້ານອາຫານ ແລະຄາເຟ. ກ່ອນຢືນຢັນຄຳສັ່ງ ລູກຄ້າໃນຮ້ານຢືນຢັນເບີໂຕະ; ລູກຄ້າອອນລາຍປ້ອນທີ່ຢູ່ ແລະເບີຕິດຕໍ່. ຂໍ້ມູນບັນທຶກກັບຄຳສັ່ງ ແລະສະແດງຕາມທີ່ມາ. ຍັງບໍ່ເຊື່ອມ AI ການຈ່າຍ ຫຼືຈັດສົ່ງຈິງ.",
           "QR ບໍ່ຄາດເດົາຕົວຕົນ ແລະສະແດງແຕ່ໂປຣໄຟລ໌ທີ່ຍິນຍອມ. ວຽກສະຕັອກແລະພະນັກງານເຈົ້າຂອງປ້ອນແລະແກ້ເອງ ບໍ່ເຊື່ອມສາງຫຼືລະບົບບຸກຄະລາກອນຈິງ."
         ],
         "points": [
@@ -2028,7 +2028,7 @@ export const BOOK = {
         "title": "ການເຮັດວຽກໃນແຊັດກໍຕ້ອງຢືນຢັນ",
         "lead": "ອໍເດີ ຈອງ ຈ່າຍ ແລະສິດປະໂຫຍດເກັບແຍກກັນ.",
         "paragraphs": [
-          "ຢືນຢັນຈຳນວນແລະຍອດອໍເດີ ຫຼືວັນແລະຈຳນວນແຂກຈອງ ກ່ອນເກັບໃນ backend. ຂໍ້ມູນຈາກໂທລະສັບອື່ນເຖິງເຈົ້າຂອງ; ຮັບຈອງສຸດທ້າຍກວດຕາມສະຖານະຮ້ານ. ຈ່າຍ ຄະແນນ ແລະໂບນັດເປັນເດໂມ ບໍ່ຄິດເງິນຫຼືມີມູນຄ່າເງິນສົດ.",
+          "one shop ຂອງ one ai ສຳລັບຮ້ານອາຫານ ແລະຄາເຟ. ກ່ອນຢືນຢັນຄຳສັ່ງ ລູກຄ້າໃນຮ້ານຢືນຢັນເບີໂຕະ; ລູກຄ້າອອນລາຍປ້ອນທີ່ຢູ່ ແລະເບີຕິດຕໍ່. ຂໍ້ມູນບັນທຶກກັບຄຳສັ່ງ ແລະສະແດງຕາມທີ່ມາ. ຍັງບໍ່ເຊື່ອມ AI ການຈ່າຍ ຫຼືຈັດສົ່ງຈິງ.",
           "ເປົ່າຍິ້ງສຸບແລະວົງລໍ້ຟຣີໃຫ້ຄູປອງບໍ່ມີມູນຄ່າເງິນສົດ. ເດໂມຈຳກັດຄັ້ງຫຼິ້ນແລະລາງວັນຕໍ່ການມາ ແລະສາທິດພະນັກງານຢືນຢັນການໃຊ້."
         ],
         "points": [
@@ -2098,7 +2098,7 @@ export const BOOK = {
         "title": "ບັນທຶກໃຫ້ມີປະໂຫຍດ ເກັບເທົ່າທີ່ຈຳເປັນ",
         "lead": "ເຂົ້າໃຈແຂກໂດຍບໍ່ຄາດເດົາຕົວຕົນ.",
         "paragraphs": [
-          "ແຍກຮອບນິລະນາມຈາກໂປຣໄຟລ໌ທີ່ຍິນຍອມ ແລະບອກເປົ້າໝາຍ ສິດເບິ່ງ ເກັບແລະລຶບ. ບໍ່ສະຫຼຸບຄຳຮ້ອງຮຽນຫຼືຂໍ້ມູນສ່ວນຕົວຈາກຄຳຖາມດຽວ.",
+          "one shop ຂອງ one ai ສຳລັບຮ້ານອາຫານ ແລະຄາເຟ. ກ່ອນຢືນຢັນຄຳສັ່ງ ລູກຄ້າໃນຮ້ານຢືນຢັນເບີໂຕະ; ລູກຄ້າອອນລາຍປ້ອນທີ່ຢູ່ ແລະເບີຕິດຕໍ່. ຂໍ້ມູນບັນທຶກກັບຄຳສັ່ງ ແລະສະແດງຕາມທີ່ມາ. ຍັງບໍ່ເຊື່ອມ AI ການຈ່າຍ ຫຼືຈັດສົ່ງຈິງ.",
           "ຕົວຢ່າງ Jumo · ຄຳສັ່ງຊື້ ການຈອງ ແລະຍອດຂາຍເປັນຂໍ້ມູນສົມມຸດ. ການແກ້ໄຂບັນທຶກໃນບຣາວເຊີນີ້ເທົ່ານັ້ນ. ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ. ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານຍັງເປັນເດໂມ ບໍ່ມີຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ. ວຽກສະຕັອກແລະພະນັກງານປ້ອນເອງ ສົ່ງອອກພາສີເປັນຮ່າງ. ໃຊ້ QR GitHub Pages ສາທາລະນະໄດ້ ແລະ Sites ຍັງສຳລັບເຈົ້າຂອງເທົ່ານັ້ນ."
         ],
         "points": [
@@ -2152,9 +2152,9 @@ export const BOOK = {
     ]
   },
   "hi": {
-    "title": "modu ai · 모두의 AI",
+    "title": "one ai · 원샵",
     "subtitle": "हर मालिक के पास, अपनी दुकान का एजेंट।",
-    "intro": "अपनी दुकान के मैनेजर से बात करके शुरुआत करें; मेहमान अपनी भाषा में दुकान से बात करें। यह Isaac Studio और One Company Foundation के छोटे कारोबारों वाले AI प्लेटफ़ॉर्म की परियोजना पुस्तक है।",
+    "intro": "one ai का one shop रेस्तराँ और कैफ़े के लिए है। ऑर्डर की पुष्टि से पहले दुकान के ग्राहक टेबल नंबर की पुष्टि करते हैं; ऑनलाइन ग्राहक डिलीवरी का पता और फोन देते हैं। विवरण ऑर्डर के साथ दर्ज होकर दुकान के डैशबोर्ड में स्रोत के अनुसार दिखते हैं। वास्तविक AI, भुगतान और डिलीवरी अभी जुड़े नहीं हैं।",
     "read": "परियोजना पढ़ें",
     "guest": "Jumo से बात करें",
     "owner": "मेरी दुकान का मैनेजर",
@@ -2171,7 +2171,7 @@ export const BOOK = {
         "title": "हर दुकान के लिए नई संभावनाएँ",
         "lead": "हर मालिक का अपना एजेंट हो, जो उसकी दुकान को समझे।",
         "paragraphs": [
-          "modu ai · 모두의 AI रेस्तराँ, कैफ़े और मेन्यू की जानकारी मेहमान की भाषा में देता है। मालिक का काम मैनेजर से बातचीत के ज़रिए और मेहमान का काम दुकान से बातचीत के ज़रिए आगे बढ़ता है।",
+          "one ai · 원샵 रेस्तराँ, कैफ़े और मेन्यू की जानकारी मेहमान की भाषा में देता है। मालिक का काम मैनेजर से बातचीत के ज़रिए और मेहमान का काम दुकान से बातचीत के ज़रिए आगे बढ़ता है।",
           "प्रकाशित दुकान व मेन्यू, अपलोड सामग्री, विज़िट, ऑर्डर और आरक्षण बैकएंड पर सहेजे और उपकरणों में साझा किए जाते हैं। AI एजेंट के जवाब तय हैं; भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं। OCR, असली भुगतान, POS या बाहरी सूचनाएँ नहीं जुड़ी हैं।"
         ],
         "points": [
@@ -2283,7 +2283,7 @@ export const BOOK = {
         "title": "मैनेजर से बात करें, एक डैशबोर्ड पर जाँचें",
         "lead": "मालिक की चैट के साथ केवल एक सहायक डैशबोर्ड रखें।",
         "paragraphs": [
-          "मालिक का डैशबोर्ड बैकएंड के ऑर्डर, आरक्षण और विज़िट तुरंत दिखाता है। ग्राहक, डेमो भुगतान वाली बिक्री, स्टॉक व कर्मचारी कार्य और कर मसौदा भी दिखते हैं। रिपोर्ट सहेजे रिकॉर्ड पर बनती है और नकली भुगतान को असली आय नहीं कहती।",
+          "one ai का one shop रेस्तराँ और कैफ़े के लिए है। ऑर्डर की पुष्टि से पहले दुकान के ग्राहक टेबल नंबर की पुष्टि करते हैं; ऑनलाइन ग्राहक डिलीवरी का पता और फोन देते हैं। विवरण ऑर्डर के साथ दर्ज होकर दुकान के डैशबोर्ड में स्रोत के अनुसार दिखते हैं। वास्तविक AI, भुगतान और डिलीवरी अभी जुड़े नहीं हैं।",
           "QR से पहचान नहीं निकाली जाती; केवल सहमति वाली प्रोफ़ाइल दिखाई जाती हैं। स्टॉक और कर्मचारी कार्य मालिक द्वारा हाथ से दर्ज व बदले गए डेमो रिकॉर्ड हैं, असली गोदाम या कर्मचारी प्रणाली से जुड़े नहीं।"
         ],
         "points": [
@@ -2297,7 +2297,7 @@ export const BOOK = {
         "title": "चैट की कार्रवाई में भी पुष्टि ज़रूरी",
         "lead": "ऑर्डर, आरक्षण, भुगतान और लाभ के रिकॉर्ड अलग रखें।",
         "paragraphs": [
-          "ऑर्डर की मात्रा व कुल रकम या आरक्षण की तारीख व लोगों की संख्या की पुष्टि करके बैकएंड पर सहेजें। दूसरे फोन से भेजा अनुरोध भी मालिक को दिखता है; आरक्षण की अंतिम स्वीकृति दुकान की प्रक्रिया स्थिति से पता चलती है। भुगतान, अंक और बोनस डेमो हैं, न पैसे कटते हैं न उनका नकद मूल्य है।",
+          "one ai का one shop रेस्तराँ और कैफ़े के लिए है। ऑर्डर की पुष्टि से पहले दुकान के ग्राहक टेबल नंबर की पुष्टि करते हैं; ऑनलाइन ग्राहक डिलीवरी का पता और फोन देते हैं। विवरण ऑर्डर के साथ दर्ज होकर दुकान के डैशबोर्ड में स्रोत के अनुसार दिखते हैं। वास्तविक AI, भुगतान और डिलीवरी अभी जुड़े नहीं हैं।",
           "मुफ़्त रॉक-पेपर-सिज़र्स और रूलेट के सेवा कूपन का नकद मूल्य नहीं है। डेमो हर खेल और विज़िट की सीमा लागू करता है तथा कर्मचारी की पुष्टि से उपयोग का तरीका दिखाता है।"
         ],
         "points": [
@@ -2367,7 +2367,7 @@ export const BOOK = {
         "title": "उपयोगी रिकॉर्ड, केवल ज़रूरी जानकारी",
         "lead": "मेहमान को समझें, उसकी पहचान की कल्पना न करें।",
         "paragraphs": [
-          "अनाम सत्र और सहमति वाली प्रोफ़ाइल अलग रखें; उद्देश्य, पहुँच, रखने और हटाने की नीति बताएँ। एक सवाल से शिकायत या निजी जानकारी का अनुमान न लगाएँ।",
+          "one ai का one shop रेस्तराँ और कैफ़े के लिए है। ऑर्डर की पुष्टि से पहले दुकान के ग्राहक टेबल नंबर की पुष्टि करते हैं; ऑनलाइन ग्राहक डिलीवरी का पता और फोन देते हैं। विवरण ऑर्डर के साथ दर्ज होकर दुकान के डैशबोर्ड में स्रोत के अनुसार दिखते हैं। वास्तविक AI, भुगतान और डिलीवरी अभी जुड़े नहीं हैं।",
           "जुमो नमूना · ऑर्डर, बुकिंग और बिक्री काल्पनिक हैं। बदलाव केवल इस ब्राउज़र में रहते हैं। दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा। भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं; असली भुगतान, POS या बाहरी सूचना नहीं है। स्टॉक व कर्मचारी कार्य हाथ से दर्ज होते हैं, कर निर्यात समीक्षा मसौदा है। सार्वजनिक GitHub Pages QR समर्थित हैं, जबकि Sites पूर्वावलोकन केवल मालिक के लिए है।"
         ],
         "points": [

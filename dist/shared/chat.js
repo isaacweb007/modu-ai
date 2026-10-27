@@ -1,4 +1,4 @@
-import {UI} from './copy.js?v=4.2.0';import {MENU} from './menu.js?v=4.2.0';import {money} from './core.js?v=4.2.0';
+import {UI} from './copy.js?v=5.0.0';import {MENU} from './menu.js?v=5.0.0';import {money} from './core.js?v=5.0.0';
 export const QUESTIONS=['qRecommend','qIngredients','qSpicy','qStory','qHours','qComplaint','qPayment'];
 export const REPLIES={qRecommend:'replyRecommend',qIngredients:'replyIngredients',qSpicy:'replySpicy',qStory:'replyStory',qHours:'replyHours',qComplaint:'replyComplaint',qPayment:'replyPayment'};
 const normalize=t=>t.toLowerCase().replace(/[?？.!。!។]/g,'').replace(/\s+/g,' ').trim();
@@ -13,8 +13,8 @@ export function classify(text){const s=normalize(text);if(exact.has(s))return ex
  if(/전화|연락처|이메일|sns|website|contact|phone|email|điện thoại|liên hệ|电话|网站|連絡|電話|kontak|telepon|संपर्क|फोन/.test(s))return 'replyContact';
  if(/주소|위치|영업시간|주차|\b(hours|address|parking)\b|where are you|when.*open|địa chỉ|mở cửa|ở đâu|地址|营业|営業時間|場所|lokasi|alamat|buka|ទីតាំង|ເປີດ|पता/.test(s))return 'replyHours';
  if(/메뉴.*추천|추천.*메뉴|둘이|recommend.*(dish|food|meal)|gợi ý.*món|hai người|推荐.*菜|おすすめ|rekomendasi.*(menu|makan)|ណែនាំ|ແນະນຳ|सुझा/.test(s))return 'replyRecommend';
- if(/어떤 가게|가게 소개|jumo.*story|tell me about jumo|câu chuyện|店.*介绍|紹介|cerita.*jumo|រឿង|ເລື່ອງ|कहानी/.test(s))return 'replyStory';
- if(/주모|jumo|\b(menu|restaurant|plate|chocolate)\b|메뉴|가게|주문|quán|店|注文|restoran|ហាង|ຮ້ານ|रेस्तरां|मेन्यू/.test(s))return 'unknown';
+ if(/어떤 샵|샵 소개|jumo.*story|tell me about jumo|câu chuyện|店.*介绍|紹介|cerita.*jumo|រឿង|ເລື່ອງ|कहानी/.test(s))return 'replyStory';
+ if(/주모|jumo|\b(menu|restaurant|plate|chocolate)\b|메뉴|샵|주문|quán|店|注文|restoran|ហាង|ຮ້ານ|रेस्तरां|मेन्यू/.test(s))return 'unknown';
  return 'offTopic';}
 const aliases={m01:['김치전','kimchi jeon','kimchi pancake','泡菜饼'],m04:['모둠전','assortment','thập cẩm','盛り合わせ','拼盘'],m05:['삼합','samhap','three-way'],m12:['한치','dried squid','mực khô','鱿鱼干','干しイカ'],m13:['뻥튀기','puffed rice'],m15:['김부각','gim bugak'],m16:['홍시','persimmon'],m17:['양갱','yanggaeng','chestnut']};
 function findItem(text,items=MENU){const s=text.toLowerCase();return items.find(x=>[...Object.values(x.name),...(aliases[x.id]||[])].some(n=>s.includes(n.toLowerCase())))}

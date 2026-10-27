@@ -5,3 +5,5 @@ node_modules/
 artifacts/
 dist/_qa.html
 supabase/.temp/
+# Local review boards and supplied references stay private until approval.
+design/one-shop-logo-concepts/

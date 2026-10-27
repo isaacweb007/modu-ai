@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "modu ai POS adapter draft",
+    "title": "one ai POS adapter draft",
     "version": "0.1.0",
     "description": "Design contract only. This static demo does not implement these endpoints. Future server must verify tenant ownership, server-side menu prices, idempotency, signed provider webhooks, replay protection and payment reconciliation. No credentials are embedded."
   },
@@ -128,14 +128,18 @@
           "items",
           "amount",
           "orderStatus",
-          "paymentStatus"
+          "paymentStatus",
+          "fulfillment"
         ],
         "properties": {
           "orderId": {
             "type": "string"
           },
           "table": {
-            "type": "integer",
+            "type": [
+              "integer",
+              "null"
+            ],
             "minimum": 1,
             "maximum": 999
           },
@@ -185,6 +189,53 @@
             "enum": [
               "unpaid",
               "paid"
+            ]
+          },
+          "fulfillment": {
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "channel",
+                  "table"
+                ],
+                "properties": {
+                  "channel": {
+                    "const": "dine-in"
+                  },
+                  "table": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 999
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "channel",
+                  "address",
+                  "phone"
+                ],
+                "properties": {
+                  "channel": {
+                    "const": "online"
+                  },
+                  "address": {
+                    "type": "string",
+                    "minLength": 5,
+                    "maxLength": 300
+                  },
+                  "phone": {
+                    "type": "string",
+                    "maxLength": 30
+                  },
+                  "name": {
+                    "type": "string",
+                    "maxLength": 60
+                  }
+                }
+              }
             ]
           }
         }
