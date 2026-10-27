@@ -103,13 +103,13 @@ export const BOOK = {
         "title": "매니저와 이야기하면 가게가 준비됩니다",
         "lead": "사장님은 매니저가 묻는 정보에 차례로 답합니다.",
         "paragraphs": [
-          "이메일로 계속하기 / Google로 계속하기 → 상호 → 메뉴판 사진 → 매장 사진·영상 → 주소·연락처·SNS → 검토 → QR과 링크 순서로 안내합니다. 마지막 카드에서 가게 정보와 준비된 메뉴를 확인한 뒤 클라우드에 게시합니다.",
-          "버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다. 가게 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다."
+          "사장님, 주모의 영업 준비를 마쳤어요. 메뉴 8개와 샘플 주문·예약을 준비했습니다. 오늘 상황을 물어보거나 대시보드를 열어보세요.",
+          "버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다. 주모 샘플 · 주문·예약·매출은 가상 기록이며 이 브라우저에서만 변경됩니다."
         ],
         "points": [
-          "한 번에 하나씩 묻는 매니저",
-          "가게와 메뉴를 확인한 뒤 완료",
-          "대화 끝에 QR과 링크 제공"
+          "가게 정보 보기",
+          "메뉴 8개 보기",
+          "대시보드 둘러보기"
         ]
       },
       {
@@ -216,7 +216,7 @@ export const BOOK = {
         "lead": "손님을 이해하되 확인되지 않은 신원을 만들지 않습니다.",
         "paragraphs": [
           "익명 세션과 동의한 회원 정보를 구분하고 수집 목적, 열람 권한, 보관·삭제 정책을 안내합니다. 질문만으로 불만이나 개인정보를 임의 추정하지 않습니다.",
-          "가게 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다. 결제·포인트·보너스·보고는 계속 데모이며 실제 결제·POS·외부 알림은 없습니다. 재고·직원 업무는 수동 기록, 세무 내보내기는 검토 초안입니다. 공개 GitHub Pages QR을 사용할 수 있으며 Sites의 소유자 전용 미리보기는 유지합니다."
+          "주모 샘플 · 주문·예약·매출은 가상 기록이며 이 브라우저에서만 변경됩니다. 가게 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다. 결제·포인트·보너스·보고는 계속 데모이며 실제 결제·POS·외부 알림은 없습니다. 재고·직원 업무는 수동 기록, 세무 내보내기는 검토 초안입니다. 공개 GitHub Pages QR을 사용할 수 있으며 Sites의 소유자 전용 미리보기는 유지합니다."
         ],
         "points": [
           "알레르기 정보는 직원 확인",
@@ -257,7 +257,7 @@ export const BOOK = {
         "title": "쉽게 시작하되 현재 상태는 분명하게",
         "lead": "오늘의 체험과 앞으로 만들 서비스를 구분합니다.",
         "paragraphs": [
-          "버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다. 메뉴판과 매장 자료를 올려 대화로 가게를 개설합니다. 가게 정보와 메뉴는 클라우드에 저장되고 손님은 다른 휴대폰의 QR로 주문·예약합니다. 사장님은 대시보드에서 실시간으로 확인합니다. AI 에이전트 응답과 결제는 계속 데모입니다. 가게 정보와 주문은 저장됩니다. 다른 기기의 사장님 계정 연결은 실제 로그인 도입 시 제공됩니다.",
+          "사장님, 주모의 영업 준비를 마쳤어요. 메뉴 8개와 샘플 주문·예약을 준비했습니다. 오늘 상황을 물어보거나 대시보드를 열어보세요. 주모 샘플 · 주문·예약·매출은 가상 기록이며 이 브라우저에서만 변경됩니다. 버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다.",
           "결제·포인트·보너스·보고는 계속 데모이며 실제 결제·POS·외부 알림은 없습니다. 재고·직원 업무는 수동 기록, 세무 내보내기는 검토 초안입니다. 공개 GitHub Pages QR을 사용할 수 있으며 Sites의 소유자 전용 미리보기는 유지합니다."
         ],
         "points": [
@@ -372,13 +372,13 @@ export const BOOK = {
         "title": "Talk to the manager to prepare your store",
         "lead": "Owners answer the manager’s questions one step at a time.",
         "paragraphs": [
-          "Continue with email / Continue with Google → store name → menu photo → venue photos or video → address, contacts and social links → review → QR and link. Review the store and prepared menu on the final card before publishing to the cloud.",
-          "Select a button to explore. No real signup or account authentication takes place. Store data and orders are saved. Owner account access across devices will come with real sign-in."
+          "Jumo is ready to explore. I have prepared 8 menu items and sample orders and reservations. Ask about the day or open the dashboard.",
+          "Select a button to explore. No real signup or account authentication takes place. Jumo sample · Orders, bookings and sales are fictional. Changes stay in this browser."
         ],
         "points": [
-          "One question at a time",
-          "Review the store and menu before finishing",
-          "Receive the QR and link in the conversation"
+          "Store information",
+          "View 8 menu items",
+          "Explore the dashboard"
         ]
       },
       {
@@ -485,7 +485,7 @@ export const BOOK = {
         "lead": "Understand guests without inventing an identity.",
         "paragraphs": [
           "Separate anonymous sessions from consented profiles and explain purpose, access, retention and deletion. A question alone does not establish a complaint or personal information.",
-          "Store data and orders are saved. Owner account access across devices will come with real sign-in. Payment, points, bonuses and reports remain demos, with no real payment, POS or external notifications. Inventory and staff tasks are manual; tax export is a draft for review. Public GitHub Pages QR access is supported, while the Sites preview stays owner-private."
+          "Jumo sample · Orders, bookings and sales are fictional. Changes stay in this browser. Store data and orders are saved. Owner account access across devices will come with real sign-in. Payment, points, bonuses and reports remain demos, with no real payment, POS or external notifications. Inventory and staff tasks are manual; tax export is a draft for review. Public GitHub Pages QR access is supported, while the Sites preview stays owner-private."
         ],
         "points": [
           "Confirm allergy information with staff",
@@ -526,7 +526,7 @@ export const BOOK = {
         "title": "Easy to begin, clear about what is real",
         "lead": "Separate today’s experience from the future service.",
         "paragraphs": [
-          "Select a button to explore. No real signup or account authentication takes place. Set up a store in conversation by uploading menu and venue assets. Store data and menus are saved in the cloud. Guests order and book from QR codes on other phones, while owners follow updates in the dashboard. AI agent replies and payment remain demos. Store data and orders are saved. Owner account access across devices will come with real sign-in.",
+          "Jumo is ready to explore. I have prepared 8 menu items and sample orders and reservations. Ask about the day or open the dashboard. Jumo sample · Orders, bookings and sales are fictional. Changes stay in this browser. Select a button to explore. No real signup or account authentication takes place.",
           "Payment, points, bonuses and reports remain demos, with no real payment, POS or external notifications. Inventory and staff tasks are manual; tax export is a draft for review. Public GitHub Pages QR access is supported, while the Sites preview stays owner-private."
         ],
         "points": [
@@ -641,13 +641,13 @@ export const BOOK = {
         "title": "Trò chuyện với quản lý để chuẩn bị quán",
         "lead": "Chủ quán lần lượt trả lời câu hỏi của quản lý.",
         "paragraphs": [
-          "Tiếp tục bằng email / Tiếp tục với Google → tên quán → ảnh thực đơn → ảnh hoặc video không gian → địa chỉ, liên hệ, mạng xã hội → duyệt → QR và liên kết. Xác nhận quán và thực đơn mẫu trước khi đăng lên đám mây.",
-          "Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật. Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật."
+          "Quán Jumo đã sẵn sàng. Tôi đã chuẩn bị 8 món cùng đơn hàng và đặt bàn mẫu. Hãy hỏi về tình hình hôm nay hoặc mở bảng điều khiển.",
+          "Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật. Mẫu Jumo · Đơn hàng, đặt bàn và doanh thu là giả định. Thay đổi chỉ lưu trong trình duyệt này."
         ],
         "points": [
-          "Mỗi lần hỏi một thông tin",
-          "Duyệt quán và thực đơn trước khi hoàn tất",
-          "Nhận QR và liên kết trong hội thoại"
+          "Thông tin quán",
+          "Xem 8 món",
+          "Khám phá bảng điều khiển"
         ]
       },
       {
@@ -754,7 +754,7 @@ export const BOOK = {
         "lead": "Hiểu khách mà không tự suy đoán danh tính.",
         "paragraphs": [
           "Tách phiên ẩn danh và hồ sơ có đồng ý; giải thích mục đích, quyền xem, lưu và xóa. Không suy luận khiếu nại hay thông tin cá nhân chỉ từ một câu hỏi.",
-          "Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật. Thanh toán, điểm, quà và báo cáo vẫn là demo; chưa nối thanh toán thật, POS hay thông báo ngoài. Tồn kho và việc nhân viên ghi thủ công, xuất thuế là bản nháp. QR GitHub Pages công khai được hỗ trợ; Sites vẫn là bản xem riêng cho chủ sở hữu."
+          "Mẫu Jumo · Đơn hàng, đặt bàn và doanh thu là giả định. Thay đổi chỉ lưu trong trình duyệt này. Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật. Thanh toán, điểm, quà và báo cáo vẫn là demo; chưa nối thanh toán thật, POS hay thông báo ngoài. Tồn kho và việc nhân viên ghi thủ công, xuất thuế là bản nháp. QR GitHub Pages công khai được hỗ trợ; Sites vẫn là bản xem riêng cho chủ sở hữu."
         ],
         "points": [
           "Hỏi nhân viên về dị ứng",
@@ -795,7 +795,7 @@ export const BOOK = {
         "title": "Dễ bắt đầu, rõ điều gì là thật",
         "lead": "Phân biệt trải nghiệm hôm nay với dịch vụ tương lai.",
         "paragraphs": [
-          "Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật. Tạo quán qua hội thoại bằng cách tải thực đơn và tư liệu quán lên. Thông tin và thực đơn được lưu trên đám mây. Khách dùng QR trên điện thoại khác để đặt món, đặt bàn; chủ quán theo dõi trực tiếp trên bảng điều khiển. Phản hồi AI và thanh toán vẫn là demo. Thông tin quán và đơn hàng được lưu. Truy cập tài khoản chủ quán trên nhiều thiết bị sẽ có khi tích hợp đăng nhập thật.",
+          "Quán Jumo đã sẵn sàng. Tôi đã chuẩn bị 8 món cùng đơn hàng và đặt bàn mẫu. Hãy hỏi về tình hình hôm nay hoặc mở bảng điều khiển. Mẫu Jumo · Đơn hàng, đặt bàn và doanh thu là giả định. Thay đổi chỉ lưu trong trình duyệt này. Chọn nút để trải nghiệm ngay. Không đăng ký hay xác thực tài khoản thật.",
           "Thanh toán, điểm, quà và báo cáo vẫn là demo; chưa nối thanh toán thật, POS hay thông báo ngoài. Tồn kho và việc nhân viên ghi thủ công, xuất thuế là bản nháp. QR GitHub Pages công khai được hỗ trợ; Sites vẫn là bản xem riêng cho chủ sở hữu."
         ],
         "points": [
@@ -910,13 +910,13 @@ export const BOOK = {
         "title": "和经理聊一聊，门店就准备好了",
         "lead": "店主逐步回答经理的问题。",
         "paragraphs": [
-          "使用邮箱继续 / 使用 Google 继续 → 店名 → 菜单照片 → 门店照片或视频 → 地址、联系方式、社交链接 → 审核 → 二维码和链接。最后核对门店与预设菜单，再发布到云端。",
-          "点击按钮即可体验，不会进行真实注册或账户认证。 店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。"
+          "Jumo 已准备就绪。我已放入 8 道菜单和示例订单、预约。您可以询问今天的情况，或打开看板。",
+          "点击按钮即可体验，不会进行真实注册或账户认证。 Jumo 示例 · 订单、预约和营收均为虚构数据，修改只保存在此浏览器。"
         ],
         "points": [
-          "每次只问一项信息",
-          "完成前确认门店与菜单",
-          "在对话末尾获得二维码和链接"
+          "查看店铺信息",
+          "查看 8 道菜单",
+          "浏览看板"
         ]
       },
       {
@@ -1023,7 +1023,7 @@ export const BOOK = {
         "lead": "理解顾客，而不是猜测顾客身份。",
         "paragraphs": [
           "区分匿名会话与同意提供的资料，说明目的、访问权、保留与删除政策。不凭一句问题推断投诉或个人信息。",
-          "店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。 付款、积分、奖励和报告仍为演示，没有真实支付、POS 或外部通知。库存与员工任务为手动记录，税务导出是审核草稿。支持公开 GitHub Pages 二维码，Sites 预览继续仅限所有者。"
+          "Jumo 示例 · 订单、预约和营收均为虚构数据，修改只保存在此浏览器。 店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。 付款、积分、奖励和报告仍为演示，没有真实支付、POS 或外部通知。库存与员工任务为手动记录，税务导出是审核草稿。支持公开 GitHub Pages 二维码，Sites 预览继续仅限所有者。"
         ],
         "points": [
           "过敏信息由员工确认",
@@ -1064,7 +1064,7 @@ export const BOOK = {
         "title": "开始简单，真实状态清楚",
         "lead": "区分今天的体验和未来的服务。",
         "paragraphs": [
-          "点击按钮即可体验，不会进行真实注册或账户认证。 上传菜单和店铺资料，通过对话开设店铺。店铺信息和菜单存储在云端，顾客可用其他手机扫描 QR 下单和预约，店主在看板实时查看。AI 回复和支付仍为演示。 店铺信息和订单会保存。店主账户跨设备访问将在接入真实登录后提供。",
+          "Jumo 已准备就绪。我已放入 8 道菜单和示例订单、预约。您可以询问今天的情况，或打开看板。 Jumo 示例 · 订单、预约和营收均为虚构数据，修改只保存在此浏览器。 点击按钮即可体验，不会进行真实注册或账户认证。",
           "付款、积分、奖励和报告仍为演示，没有真实支付、POS 或外部通知。库存与员工任务为手动记录，税务导出是审核草稿。支持公开 GitHub Pages 二维码，Sites 预览继续仅限所有者。"
         ],
         "points": [
@@ -1179,13 +1179,13 @@ export const BOOK = {
         "title": "マネージャーと話せば、お店の準備が進む",
         "lead": "店主は聞かれた情報に順番に答えます。",
         "paragraphs": [
-          "メールで続ける / Google で続ける → 店名 → メニュー写真 → 店内写真・動画 → 住所・連絡先・SNS → 確認 → QR とリンクの順に案内します。最後に店舗情報とサンプルメニューを確認し、クラウドへ公開します。",
-          "ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。 店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。"
+          "ジュモの準備ができました。メニュー8品と注文・予約のサンプルを用意しています。今日の状況を聞くか、ダッシュボードをご覧ください。",
+          "ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。 ジュモのサンプル · 注文・予約・売上は架空の記録です。変更はこのブラウザーだけに保存されます。"
         ],
         "points": [
-          "一度に一つずつ質問",
-          "店舗とメニューを確認して完了",
-          "会話の最後に QR とリンク"
+          "店舗情報を見る",
+          "メニュー8品を見る",
+          "ダッシュボードを見る"
         ]
       },
       {
@@ -1292,7 +1292,7 @@ export const BOOK = {
         "lead": "確認できない本人情報を作り出さず、お客様を理解します。",
         "paragraphs": [
           "匿名セッションと同意済み情報を分け、目的、閲覧権限、保存・削除方針を説明します。質問だけで不満や個人情報を推定しません。",
-          "店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。 決済・ポイント・特典・レポートは引き続きデモで、実決済・POS・外部通知はありません。在庫・スタッフは手動記録、税務出力は確認草案です。公開 GitHub Pages の QR に対応し、Sites のプレビューは所有者限定を保ちます。"
+          "ジュモのサンプル · 注文・予約・売上は架空の記録です。変更はこのブラウザーだけに保存されます。 店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。 決済・ポイント・特典・レポートは引き続きデモで、実決済・POS・外部通知はありません。在庫・スタッフは手動記録、税務出力は確認草案です。公開 GitHub Pages の QR に対応し、Sites のプレビューは所有者限定を保ちます。"
         ],
         "points": [
           "アレルギーはスタッフに確認",
@@ -1333,7 +1333,7 @@ export const BOOK = {
         "title": "始めやすく、現在地は明確に",
         "lead": "今日の体験と、これからのサービスを区別します。",
         "paragraphs": [
-          "ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。 メニューや店舗資料をアップロードし、会話でお店を開設します。店舗情報とメニューをクラウドに保存し、お客様は別のスマートフォンから QR で注文・予約できます。オーナーはダッシュボードでリアルタイムに確認します。AI の応答と決済はデモのままです。 店舗情報と注文は保存されます。別の端末からのオーナーアカウント利用は、本認証の導入時に対応します。",
+          "ジュモの準備ができました。メニュー8品と注文・予約のサンプルを用意しています。今日の状況を聞くか、ダッシュボードをご覧ください。 ジュモのサンプル · 注文・予約・売上は架空の記録です。変更はこのブラウザーだけに保存されます。 ボタンを押すとすぐに体験できます。実際の登録やアカウント認証は行いません。",
           "決済・ポイント・特典・レポートは引き続きデモで、実決済・POS・外部通知はありません。在庫・スタッフは手動記録、税務出力は確認草案です。公開 GitHub Pages の QR に対応し、Sites のプレビューは所有者限定を保ちます。"
         ],
         "points": [
@@ -1448,13 +1448,13 @@ export const BOOK = {
         "title": "Bicara dengan manajer untuk menyiapkan toko",
         "lead": "Pemilik menjawab pertanyaan manajer secara bertahap.",
         "paragraphs": [
-          "Lanjutkan dengan email / Lanjutkan dengan Google → nama toko → foto menu → foto atau video tempat → alamat, kontak dan media sosial → tinjau → QR dan tautan. Periksa informasi serta menu contoh pada kartu akhir sebelum menerbitkan ke cloud.",
-          "Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan. Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan."
+          "Jumo siap dijelajahi. Saya menyiapkan 8 menu serta pesanan dan reservasi contoh. Tanyakan kondisi hari ini atau buka dasbor.",
+          "Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan. Contoh Jumo · Pesanan, reservasi dan penjualan bersifat fiktif. Perubahan hanya disimpan di browser ini."
         ],
         "points": [
-          "Satu pertanyaan setiap langkah",
-          "Tinjau toko dan menu sebelum selesai",
-          "Dapatkan QR dan tautan lewat percakapan"
+          "Informasi toko",
+          "Lihat 8 menu",
+          "Jelajahi dasbor"
         ]
       },
       {
@@ -1561,7 +1561,7 @@ export const BOOK = {
         "lead": "Pahami tamu tanpa mengarang identitasnya.",
         "paragraphs": [
           "Pisahkan sesi anonim dan profil berizin serta jelaskan tujuan, akses, penyimpanan dan penghapusan. Jangan menyimpulkan keluhan atau data pribadi hanya dari satu pertanyaan.",
-          "Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan. Pembayaran, poin, bonus dan laporan tetap demo; belum ada pembayaran nyata, POS atau notifikasi eksternal. Stok dan tugas staf dicatat manual, ekspor pajak berupa draf tinjauan. QR GitHub Pages publik didukung, sedangkan pratinjau Sites tetap privat bagi pemilik."
+          "Contoh Jumo · Pesanan, reservasi dan penjualan bersifat fiktif. Perubahan hanya disimpan di browser ini. Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan. Pembayaran, poin, bonus dan laporan tetap demo; belum ada pembayaran nyata, POS atau notifikasi eksternal. Stok dan tugas staf dicatat manual, ekspor pajak berupa draf tinjauan. QR GitHub Pages publik didukung, sedangkan pratinjau Sites tetap privat bagi pemilik."
         ],
         "points": [
           "Konfirmasikan alergi kepada staf",
@@ -1602,7 +1602,7 @@ export const BOOK = {
         "title": "Mudah dimulai, jelas mana yang nyata",
         "lead": "Bedakan pengalaman hari ini dengan layanan masa depan.",
         "paragraphs": [
-          "Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan. Buat toko melalui percakapan dengan mengunggah menu dan materi toko. Informasi dan menu disimpan di cloud. Tamu memesan dan melakukan reservasi lewat QR di ponsel lain; pemilik melihat pembaruan langsung di dasbor. Balasan AI dan pembayaran tetap demo. Data toko dan pesanan disimpan. Akses akun pemilik lintas perangkat tersedia setelah login sungguhan dihubungkan.",
+          "Jumo siap dijelajahi. Saya menyiapkan 8 menu serta pesanan dan reservasi contoh. Tanyakan kondisi hari ini atau buka dasbor. Contoh Jumo · Pesanan, reservasi dan penjualan bersifat fiktif. Perubahan hanya disimpan di browser ini. Tekan tombol untuk langsung mencoba. Tidak ada pendaftaran atau autentikasi akun sungguhan.",
           "Pembayaran, poin, bonus dan laporan tetap demo; belum ada pembayaran nyata, POS atau notifikasi eksternal. Stok dan tugas staf dicatat manual, ekspor pajak berupa draf tinjauan. QR GitHub Pages publik didukung, sedangkan pratinjau Sites tetap privat bagi pemilik."
         ],
         "points": [
@@ -1717,13 +1717,13 @@ export const BOOK = {
         "title": "ជជែកជាមួយអ្នកគ្រប់គ្រង ដើម្បីរៀបចំហាង",
         "lead": "ម្ចាស់ឆ្លើយសំណួរម្ដងមួយតាមការណែនាំ។",
         "paragraphs": [
-          "បន្តជាមួយអ៊ីមែល / បន្តជាមួយ Google → ឈ្មោះហាង → រូបមុខម្ហូប → រូបឬវីដេអូហាង → អាសយដ្ឋាន ទំនាក់ទំនង បណ្ដាញសង្គម → ពិនិត្យ → QR និងតំណ។ ពិនិត្យព័ត៌មាននិងម្ហូបគំរូមុនផ្សាយលើក្លោដ។",
-          "ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។ ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។"
+          "Jumo រួចរាល់ហើយ។ ខ្ញុំបានរៀបចំម្ហូប 8 មុខ និងការបញ្ជាទិញ ការកក់ជាគំរូ។ សួរអំពីថ្ងៃនេះ ឬបើកផ្ទាំងគ្រប់គ្រង។",
+          "ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។ គំរូ Jumo · ការបញ្ជាទិញ ការកក់ និងចំណូលជាទិន្នន័យសន្មត់។ ការកែប្រែរក្សាទុកតែក្នុងកម្មវិធីរុករកនេះ។"
         ],
         "points": [
-          "សួរម្ដងមួយព័ត៌មាន",
-          "ពិនិត្យហាងនិងម្ហូបមុនបញ្ចប់",
-          "ទទួល QR និងតំណក្នុងការជជែក"
+          "ព័ត៌មានហាង",
+          "មើលម្ហូប 8 មុខ",
+          "មើលផ្ទាំងគ្រប់គ្រង"
         ]
       },
       {
@@ -1830,7 +1830,7 @@ export const BOOK = {
         "lead": "យល់ភ្ញៀវដោយមិនសន្មតអត្តសញ្ញាណ។",
         "paragraphs": [
           "បំបែកវគ្គអនាមិកនិងប្រវត្តិរូបបានយល់ព្រម ព្រមទាំងពន្យល់គោលបំណង សិទ្ធិមើល រក្សានិងលុប។ មិនសន្មតបណ្ដឹងឬព័ត៌មានឯកជនពីសំណួរមួយទេ។",
-          "ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។ ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍នៅតែដេមូ; គ្មានបង់ពិត POS ឬជូនដំណឹងខាងក្រៅ។ ការងារស្តុកនិងបុគ្គលិកបញ្ចូលដោយដៃ ហើយនាំចេញពន្ធជាព្រាង។ អាចប្រើ QR GitHub Pages សាធារណៈ ខណៈ Sites នៅតែសម្រាប់ម្ចាស់។"
+          "គំរូ Jumo · ការបញ្ជាទិញ ការកក់ និងចំណូលជាទិន្នន័យសន្មត់។ ការកែប្រែរក្សាទុកតែក្នុងកម្មវិធីរុករកនេះ។ ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។ ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍នៅតែដេមូ; គ្មានបង់ពិត POS ឬជូនដំណឹងខាងក្រៅ។ ការងារស្តុកនិងបុគ្គលិកបញ្ចូលដោយដៃ ហើយនាំចេញពន្ធជាព្រាង។ អាចប្រើ QR GitHub Pages សាធារណៈ ខណៈ Sites នៅតែសម្រាប់ម្ចាស់។"
         ],
         "points": [
           "អាលែហ្សីសួរបុគ្គលិក",
@@ -1871,7 +1871,7 @@ export const BOOK = {
         "title": "ចាប់ផ្ដើមងាយ បញ្ជាក់អ្វីជាការពិត",
         "lead": "បែងចែកបទពិសោធន៍ថ្ងៃនេះពីសេវាអនាគត។",
         "paragraphs": [
-          "ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។ បង្កើតហាងតាមការសន្ទនាដោយផ្ទុកម៉ឺនុយ និងឯកសារហាង។ ព័ត៌មាន និងម៉ឺនុយត្រូវបានរក្សាទុកលើពពក។ ភ្ញៀវអាចប្រើ QR លើទូរសព្ទផ្សេងដើម្បីបញ្ជាទិញ និងកក់ ហើយម្ចាស់ហាងមើលការផ្លាស់ប្តូរភ្លាមៗលើផ្ទាំងគ្រប់គ្រង។ ចម្លើយ AI និងការទូទាត់នៅតែជាគំរូ។ ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។",
+          "Jumo រួចរាល់ហើយ។ ខ្ញុំបានរៀបចំម្ហូប 8 មុខ និងការបញ្ជាទិញ ការកក់ជាគំរូ។ សួរអំពីថ្ងៃនេះ ឬបើកផ្ទាំងគ្រប់គ្រង។ គំរូ Jumo · ការបញ្ជាទិញ ការកក់ និងចំណូលជាទិន្នន័យសន្មត់។ ការកែប្រែរក្សាទុកតែក្នុងកម្មវិធីរុករកនេះ។ ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។",
           "ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍នៅតែដេមូ; គ្មានបង់ពិត POS ឬជូនដំណឹងខាងក្រៅ។ ការងារស្តុកនិងបុគ្គលិកបញ្ចូលដោយដៃ ហើយនាំចេញពន្ធជាព្រាង។ អាចប្រើ QR GitHub Pages សាធារណៈ ខណៈ Sites នៅតែសម្រាប់ម្ចាស់។"
         ],
         "points": [
@@ -1986,13 +1986,13 @@ export const BOOK = {
         "title": "ລົມກັບຜູ້ຈັດການເພື່ອກຽມຮ້ານ",
         "lead": "ເຈົ້າຂອງຕອບຄຳຖາມທີລະຂັ້ນ.",
         "paragraphs": [
-          "ສືບຕໍ່ດ້ວຍອີເມວ / ສືບຕໍ່ດ້ວຍ Google → ຊື່ຮ້ານ → ຮູບເມນູ → ຮູບຫຼືວິດີໂອຮ້ານ → ທີ່ຢູ່ ຕິດຕໍ່ ສື່ສັງຄົມ → ກວດ → QR ແລະລິ້ງ. ກວດຮ້ານແລະເມນູຕົວຢ່າງກ່ອນເຜີຍແຜ່ໃນຄລາວ.",
-          "ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ. ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ."
+          "Jumo ພ້ອມແລ້ວ. ຂ້ອຍກຽມເມນູ 8 ລາຍການ ພ້ອມຄຳສັ່ງຊື້ ແລະການຈອງຕົວຢ່າງ. ຖາມສະຖານະມື້ນີ້ ຫຼືເປີດແດຊບອດ.",
+          "ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ. ຕົວຢ່າງ Jumo · ຄຳສັ່ງຊື້ ການຈອງ ແລະຍອດຂາຍເປັນຂໍ້ມູນສົມມຸດ. ການແກ້ໄຂບັນທຶກໃນບຣາວເຊີນີ້ເທົ່ານັ້ນ."
         ],
         "points": [
-          "ຖາມທີລະຢ່າງ",
-          "ກວດຮ້ານແລະເມນູກ່ອນສຳເລັດ",
-          "ໄດ້ QR ແລະລິ້ງໃນແຊັດ"
+          "ຂໍ້ມູນຮ້ານ",
+          "ເບິ່ງເມນູ 8 ລາຍການ",
+          "ເບິ່ງແດຊບອດ"
         ]
       },
       {
@@ -2099,7 +2099,7 @@ export const BOOK = {
         "lead": "ເຂົ້າໃຈແຂກໂດຍບໍ່ຄາດເດົາຕົວຕົນ.",
         "paragraphs": [
           "ແຍກຮອບນິລະນາມຈາກໂປຣໄຟລ໌ທີ່ຍິນຍອມ ແລະບອກເປົ້າໝາຍ ສິດເບິ່ງ ເກັບແລະລຶບ. ບໍ່ສະຫຼຸບຄຳຮ້ອງຮຽນຫຼືຂໍ້ມູນສ່ວນຕົວຈາກຄຳຖາມດຽວ.",
-          "ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ. ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານຍັງເປັນເດໂມ ບໍ່ມີຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ. ວຽກສະຕັອກແລະພະນັກງານປ້ອນເອງ ສົ່ງອອກພາສີເປັນຮ່າງ. ໃຊ້ QR GitHub Pages ສາທາລະນະໄດ້ ແລະ Sites ຍັງສຳລັບເຈົ້າຂອງເທົ່ານັ້ນ."
+          "ຕົວຢ່າງ Jumo · ຄຳສັ່ງຊື້ ການຈອງ ແລະຍອດຂາຍເປັນຂໍ້ມູນສົມມຸດ. ການແກ້ໄຂບັນທຶກໃນບຣາວເຊີນີ້ເທົ່ານັ້ນ. ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ. ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານຍັງເປັນເດໂມ ບໍ່ມີຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ. ວຽກສະຕັອກແລະພະນັກງານປ້ອນເອງ ສົ່ງອອກພາສີເປັນຮ່າງ. ໃຊ້ QR GitHub Pages ສາທາລະນະໄດ້ ແລະ Sites ຍັງສຳລັບເຈົ້າຂອງເທົ່ານັ້ນ."
         ],
         "points": [
           "ອາການແພ້ຖາມພະນັກງານ",
@@ -2140,7 +2140,7 @@ export const BOOK = {
         "title": "ເລີ່ມງ່າຍ ບອກສະຖານະຈິງຊັດເຈນ",
         "lead": "ແຍກປະສົບການມື້ນີ້ຈາກບໍລິການອະນາຄົດ.",
         "paragraphs": [
-          "ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ. ສ້າງຮ້ານຜ່ານການສົນທະນາໂດຍອັບໂຫຼດເມນູ ແລະຂໍ້ມູນຮ້ານ. ຂໍ້ມູນ ແລະເມນູຖືກບັນທຶກໃນຄລາວ. ແຂກໃຊ້ QR ໃນໂທລະສັບອື່ນເພື່ອສັ່ງ ແລະຈອງ ເຈົ້າຂອງເຫັນຜົນທັນທີໃນແດຊບອດ. ຄຳຕອບ AI ແລະການຈ່າຍເງິນຍັງເປັນສາທິດ. ຂໍ້ມູນຮ້ານ ແລະຄຳສັ່ງຊື້ຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ.",
+          "Jumo ພ້ອມແລ້ວ. ຂ້ອຍກຽມເມນູ 8 ລາຍການ ພ້ອມຄຳສັ່ງຊື້ ແລະການຈອງຕົວຢ່າງ. ຖາມສະຖານະມື້ນີ້ ຫຼືເປີດແດຊບອດ. ຕົວຢ່າງ Jumo · ຄຳສັ່ງຊື້ ການຈອງ ແລະຍອດຂາຍເປັນຂໍ້ມູນສົມມຸດ. ການແກ້ໄຂບັນທຶກໃນບຣາວເຊີນີ້ເທົ່ານັ້ນ. ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ.",
           "ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານຍັງເປັນເດໂມ ບໍ່ມີຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ. ວຽກສະຕັອກແລະພະນັກງານປ້ອນເອງ ສົ່ງອອກພາສີເປັນຮ່າງ. ໃຊ້ QR GitHub Pages ສາທາລະນະໄດ້ ແລະ Sites ຍັງສຳລັບເຈົ້າຂອງເທົ່ານັ້ນ."
         ],
         "points": [
@@ -2255,13 +2255,13 @@ export const BOOK = {
         "title": "मैनेजर से बात करें, दुकान तैयार करें",
         "lead": "मालिक मैनेजर के सवालों का क्रम से जवाब दें।",
         "paragraphs": [
-          "ईमेल से जारी रखें / Google से जारी रखें → दुकान का नाम → मेन्यू फोटो → जगह की फोटो या वीडियो → पता, संपर्क, सोशल लिंक → समीक्षा → QR और लिंक। अंतिम कार्ड पर दुकान और तैयार मेन्यू जाँचकर क्लाउड में प्रकाशित करें।",
-          "तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा। दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा।"
+          "जुमो तैयार है। मैंने 8 व्यंजन और नमूना ऑर्डर व बुकिंग रखी हैं। आज की स्थिति पूछें या डैशबोर्ड खोलें।",
+          "तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा। जुमो नमूना · ऑर्डर, बुकिंग और बिक्री काल्पनिक हैं। बदलाव केवल इस ब्राउज़र में रहते हैं।"
         ],
         "points": [
-          "एक समय में एक सवाल",
-          "समाप्ति से पहले दुकान और मेन्यू जाँचें",
-          "बातचीत में ही QR और लिंक पाएँ"
+          "दुकान की जानकारी",
+          "8 व्यंजन देखें",
+          "डैशबोर्ड देखें"
         ]
       },
       {
@@ -2368,7 +2368,7 @@ export const BOOK = {
         "lead": "मेहमान को समझें, उसकी पहचान की कल्पना न करें।",
         "paragraphs": [
           "अनाम सत्र और सहमति वाली प्रोफ़ाइल अलग रखें; उद्देश्य, पहुँच, रखने और हटाने की नीति बताएँ। एक सवाल से शिकायत या निजी जानकारी का अनुमान न लगाएँ।",
-          "दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा। भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं; असली भुगतान, POS या बाहरी सूचना नहीं है। स्टॉक व कर्मचारी कार्य हाथ से दर्ज होते हैं, कर निर्यात समीक्षा मसौदा है। सार्वजनिक GitHub Pages QR समर्थित हैं, जबकि Sites पूर्वावलोकन केवल मालिक के लिए है।"
+          "जुमो नमूना · ऑर्डर, बुकिंग और बिक्री काल्पनिक हैं। बदलाव केवल इस ब्राउज़र में रहते हैं। दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा। भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं; असली भुगतान, POS या बाहरी सूचना नहीं है। स्टॉक व कर्मचारी कार्य हाथ से दर्ज होते हैं, कर निर्यात समीक्षा मसौदा है। सार्वजनिक GitHub Pages QR समर्थित हैं, जबकि Sites पूर्वावलोकन केवल मालिक के लिए है।"
         ],
         "points": [
           "एलर्जी की जानकारी कर्मचारी से लें",
@@ -2409,7 +2409,7 @@ export const BOOK = {
         "title": "शुरुआत आसान, वास्तविक स्थिति स्पष्ट",
         "lead": "आज के अनुभव और भविष्य की सेवा में अंतर रखें।",
         "paragraphs": [
-          "तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा। मेन्यू और दुकान की सामग्री अपलोड करके बातचीत में दुकान बनाएँ। जानकारी और मेन्यू क्लाउड में सहेजे जाते हैं। मेहमान दूसरे फोन से QR द्वारा ऑर्डर और बुकिंग कर सकते हैं; मालिक डैशबोर्ड पर तुरंत अपडेट देखते हैं। AI के जवाब और भुगतान अभी भी डेमो हैं। दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा।",
+          "जुमो तैयार है। मैंने 8 व्यंजन और नमूना ऑर्डर व बुकिंग रखी हैं। आज की स्थिति पूछें या डैशबोर्ड खोलें। जुमो नमूना · ऑर्डर, बुकिंग और बिक्री काल्पनिक हैं। बदलाव केवल इस ब्राउज़र में रहते हैं। तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा।",
           "भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं; असली भुगतान, POS या बाहरी सूचना नहीं है। स्टॉक व कर्मचारी कार्य हाथ से दर्ज होते हैं, कर निर्यात समीक्षा मसौदा है। सार्वजनिक GitHub Pages QR समर्थित हैं, जबकि Sites पूर्वावलोकन केवल मालिक के लिए है।"
         ],
         "points": [

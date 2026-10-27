@@ -1,8 +1,9 @@
-import {CLOUD} from './cloud-config.js?v=4.1.0';
-import {createClient} from '../assets/supabase.js?v=4.1.0';
-import {MENU} from './menu.js?v=4.1.0';
-import {configureState,readState,replaceState,menuFor,cartQuote} from './state.js?v=4.1.0';
-const params=new URLSearchParams(location.search),preview=params.get('preview')==='1';
+import {ownerSampleMode} from './experience-mode.js?v=4.2.0';
+import {CLOUD} from './cloud-config.js?v=4.2.0';
+import {createClient} from '../assets/supabase.js?v=4.2.0';
+import {MENU} from './menu.js?v=4.2.0';
+import {configureState,readState,replaceState,menuFor,cartQuote} from './state.js?v=4.2.0';
+const params=new URLSearchParams(location.search),preview=params.get('preview')==='1'||ownerSampleMode(document.body.dataset.role,location.search);
 const json=(key)=>{try{return JSON.parse(localStorage.getItem(key))}catch{return null}};
 const save=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
 const uuid=v=>/^[a-f0-9-]{36}$/.test(v||'');

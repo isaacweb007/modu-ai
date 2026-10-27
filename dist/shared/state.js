@@ -1,9 +1,10 @@
-import {MENU} from './menu.js?v=4.1.0';
+import {ownerSampleMode} from './experience-mode.js?v=4.2.0';
+import {MENU} from './menu.js?v=4.2.0';
 export let STORAGE_KEY='modu-jumo-demo-v2';
 export function configureState(key){STORAGE_KEY=key;}
 export function replaceState(s){return writeState(s);}
 const uid=prefix=>`${prefix}-${globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+Math.random().toString(36).slice(2)}`;
-const previewMode=typeof location!=='undefined'&&new URLSearchParams(location.search).get('preview')==='1';
+const previewMode=typeof location!=='undefined'&&new URLSearchParams(location.search).get('preview')==='1'&&!ownerSampleMode(typeof document==='undefined'?'guest':document.body.dataset.role,location.search);
 let previewState=null;
 const blank=()=>({version:2,store:{name:'주모',address:'',country:'VN',phone:'',email:'',website:'',photos:[],perVisit:15,perDay:100},menu:{},sessions:[],orders:[],events:[],activeSession:null});
 export function readState(){if(previewMode){if(!previewState){const init=blank();try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(saved?.version===2){init.store={...init.store,...saved.store};init.menu=saved.menu||{}}}catch{}previewState=JSON.stringify(init);}return JSON.parse(previewState)}try{const s=JSON.parse(localStorage.getItem(STORAGE_KEY));if(s?.version===2&&Array.isArray(s.sessions)&&Array.isArray(s.orders)&&Array.isArray(s.events))return s}catch{}return blank()}
