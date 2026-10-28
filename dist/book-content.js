@@ -1,4 +1,4 @@
-import {applyOwnerBook} from './shared/owner-book.js?v=5.12.0';
+// Canonical production-book copy; each chapter has one editorial purpose.
 export const BOOK={
   "ko": {
     "title": "원샵 · one shop ai",
@@ -20,8 +20,8 @@ export const BOOK={
         "title": "샵의 가능성을 넓히는 AI",
         "lead": "세상의 모든 사장님이 자신의 샵 에이전트를 갖게 합니다.",
         "paragraphs": [
-          "원샵 · one shop ai는 식당, 레스토랑, 카페의 정보를 손님이 이해하는 언어로 전달합니다. 사장님에게는 샵 매니저와의 대화, 손님에게는 샵과의 대화가 서비스의 중심입니다.",
-          "게시한 매장·메뉴, 업로드 자료, 방문·주문·예약은 백엔드에 저장하고 여러 기기에서 공유합니다. AI 에이전트 응답은 준비된 시나리오이며 결제·포인트·보너스·보고는 데모입니다. OCR·실제 결제·POS·외부 알림은 연결하지 않았습니다."
+          "손님이 묻고, 샵이 확인하고, 직원이 이어받습니다. 원샵은 메뉴 안내와 주문·예약을 하나의 대화 흐름으로 연결하는 샵 에이전트입니다.",
+          "식당·레스토랑·카페를 위한 첫 샘플은 주모입니다. 이 책에서는 손님, 홀, 주방, 사장님의 화면이 같은 요청을 어떻게 처리하는지 직접 확인합니다."
         ],
         "points": [
           "샵만의 이야기와 메뉴",
@@ -62,7 +62,7 @@ export const BOOK={
         "title": "대화는 단순하게, 확인은 분명하게",
         "lead": "여백이 넉넉한 한 대화 화면에서 시작합니다.",
         "paragraphs": [
-          "Grok처럼 절제된 대화 중심 구성을 참고합니다. 입력창과 대화가 중심이며 메뉴, 수량, 예약 날짜처럼 확인이 필요한 순간에만 카드를 보여줍니다.",
+          "대화는 짧게, 선택은 분명하게 만듭니다. 메뉴·수량·예약 시간은 확인 카드로 보여주어 손님과 직원이 같은 내용을 보고 결정하게 합니다.",
           "매장마다 다른 이름과 말투를 유지하고, 가격과 품절은 승인된 데이터로 안내합니다. 사진만 보고 재료나 알레르기 안전을 추측하지 않으며 모르면 직원에게 확인합니다."
         ],
         "points": [
@@ -88,15 +88,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "주모와 나누는 한 번의 대화",
-        "lead": "브랜드는 살리고, 손님 화면은 단정하게 만듭니다.",
+        "lead": "하나의 요청이 네 화면을 움직입니다.",
         "paragraphs": [
-          "주모의 로고, 심벌, 메뉴 분위기를 이어받은 최소한의 채팅 화면입니다. 음식 사진과 메뉴 카드는 질문의 맥락 안에서 나타나며 주문·예약·데모 결제는 확인 카드를 거칩니다.",
-          "음식 이미지는 AI가 만든 콘셉트 이미지입니다. 확정 가격을 확인할 수 없어 VND 금액은 데모 가정입니다. 포인트와 보너스도 현금 가치나 실제 제공 의무가 없는 가상 기록입니다."
+          "메뉴판 등록부터 손님 알림까지 직접 이어보세요. 매장 주문·예약·온라인 배달을 고르고, 손님 언어와 요청 내용을 바꿔볼 수 있습니다.",
+          "변경 요청, 거절 사유, 대안 제안과 재요청까지 체험합니다. 최종 합의한 내용은 네 화면에 반영되고 한국어와 원문, 처리자와 시간이 기록됩니다."
         ],
         "points": [
-          "9개 언어의 샵 전용 대화",
-          "메뉴·예약·결제를 맥락 안에서",
-          "준비된 응답으로 API 비용 없이 체험"
+          "매장 주문·예약·온라인 배달",
+          "변경 제안부터 최종 합의까지",
+          "한국어·원문·처리자·시간 기록"
         ]
       },
       {
@@ -104,13 +104,13 @@ export const BOOK={
         "title": "매니저와 이야기하면 샵이 준비됩니다",
         "lead": "사장님은 매니저가 묻는 정보에 차례로 답합니다.",
         "paragraphs": [
-          "로그인 버튼만 누르면 주모의 샵 정보와 메뉴 8개, 샘플 주문·예약이 준비된 화면으로 들어갑니다. 라미에게 오늘의 상황을 묻거나 대시보드를 바로 둘러볼 수 있습니다.",
-          "샘플 체험은 실제 가입 없이 시작하며 변경 사항은 이 브라우저에만 저장됩니다. 대시보드에서 ‘실시간 데모 샵 열기’를 선택하면 다른 휴대폰에서도 QR로 주문·예약을 보낼 수 있습니다."
+          "상호와 연락처, 메뉴판 사진부터 시작합니다. 라미가 정리한 메뉴·가격을 사장님이 확인한 뒤 샵 링크와 QR을 발급하는 흐름입니다.",
+          "책 속 사진 분석은 준비된 샘플 시연입니다. 별도 사장님앱은 비밀번호를 설정하고 샵 정보를 저장해 다른 기기에서도 이어서 사용합니다."
         ],
         "points": [
-          "샵 정보 보기",
-          "메뉴 8개 보기",
-          "대시보드 둘러보기"
+          "메뉴판 사진",
+          "메뉴·가격 확인",
+          "샵 링크·QR"
         ]
       },
       {
@@ -118,8 +118,8 @@ export const BOOK={
         "title": "테이블과 SNS가 샵의 입구",
         "lead": "링크 하나를 다양한 장소에서 사용합니다.",
         "paragraphs": [
-          "테이블별 QR을 인쇄하거나 샵 링크를 공유합니다. 게시한 매장·메뉴를 백엔드에서 불러오므로 손님의 다른 휴대폰에서도 같은 정보를 보고 주문·예약을 접수할 수 있습니다.",
-          "공개 GitHub Pages의 샵 QR은 소유자 로그인 없이 열 수 있습니다. 기존 Sites 미리보기의 소유자 전용 설정은 유지합니다. 접근 경로가 달라도 주문·예약 결과는 해당 매장 백엔드 기록으로 확인합니다."
+          "테이블에는 번호가 담긴 QR을, SNS에는 샵 링크를 게시합니다. 같은 샵으로 들어오더라도 방문 경로가 달라 주문을 구분할 수 있습니다.",
+          "매장 손님은 테이블 번호를 확인합니다. 온라인 배달 손님은 받을 주소와 연락처를 입력하고, 예약 손님은 날짜·시간·인원을 확인합니다."
         ],
         "points": [
           "샵·테이블을 식별하는 QR",
@@ -129,30 +129,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "매니저와 대화하고, 한 대시보드로 확인",
-        "lead": "오너 채팅 옆에 운영 기록을 살펴볼 보조 대시보드 하나를 둡니다.",
+        "title": "홀·주방·사장님, 필요한 화면만",
+        "lead": "같은 샵을 보되, 맡은 일만 처리합니다.",
         "paragraphs": [
-          "손님의 주문과 예약이 도착하면 파란 AI 에이전트 라미가 알려줍니다. 매장 주문은 확인한 테이블 번호를 크게, 온라인 주문은 배송 주소·연락처와 함께 표시합니다. 예약에는 접속한 테이블 QR을 표시하고, 온라인 예약은 테이블 미배정으로 구분합니다.",
-          "QR로 이름이나 신원을 추정하지 않고 동의한 프로필만 표시합니다. 재고와 직원 업무는 사장님이 입력·수정하는 수동 데모 기록이며 실제 창고나 직원 시스템과 연결되지 않습니다."
+          "한 요청을 네 역할이 나눠 처리합니다. 홀은 접수와 서빙, 주방은 조리와 준비 완료, 사장님은 전체 현황과 권한을 맡습니다.",
+          "사장님이 직원을 등록하고 역할별 보기·처리 권한을 정합니다. 주방에는 메뉴와 수량을, 홀에는 응대에 필요한 정보를 보여줍니다. 권한 변경과 삭제는 연결된 기기에 반영됩니다."
         ],
         "points": [
-          "대화로 요청하고 기록으로 확인",
-          "결제 처리한 주문과 미결제 주문 구분",
-          "재고·직원 업무는 수동 관리 예시"
+          "역할별 화면과 처리 권한",
+          "주방에는 메뉴·수량만",
+          "사장님이 직원 등록·변경·삭제"
         ]
       },
       {
         "id": "operations",
-        "title": "대화 속 실행에도 확인이 필요합니다",
-        "lead": "주문·예약·결제·혜택을 서로 다른 기록으로 관리합니다.",
+        "title": "접수부터 완료까지, 같은 주문을 봅니다.",
+        "lead": "홀은 접수하고, 주방은 준비하고, 손님은 알림을 받습니다.",
         "paragraphs": [
-          "주문을 보내기 전 메뉴·수량·총액과 이용 방법을 한 번 더 확인합니다. 매장 식사는 테이블 번호를, 온라인 배달은 받을 주소와 연락처를 확인해 주문 기록에 남깁니다. 예약은 방문 날짜·시간·인원을 저장하고 사장님이 확인해야 확정됩니다.",
-          "사장님이 접수·준비·완료를 누르면 손님앱의 진행표와 알림도 함께 바뀝니다. 새 정보가 도착해도 작성 중인 메시지는 유지됩니다. 주문 상태와 결제 상태는 별도로 관리하며 실제 AI와 결제는 연결하지 않았습니다."
+          "손님이 확인한 요청을 홀이 접수하고, 주방이 조리와 준비 완료를 처리합니다. 사장님은 전체 진행을 보고 손님은 자신의 상태를 확인합니다.",
+          "변경 내용은 합의 후 반영합니다. 직원의 대안을 손님이 다시 수정할 수도 있고, 조리가 시작된 주문의 변경·취소는 사장님이 승인합니다."
         ],
         "points": [
+          "요청·확정·변경 이력 보관",
           "주문 진행과 결제 상태 분리",
-          "예약과 혜택도 확인 후 저장",
-          "유료 베팅·환전·실제 서비스 제공 없음"
+          "조리 시작 후 변경·취소는 사장님 승인"
         ]
       },
       {
@@ -160,8 +160,8 @@ export const BOOK={
         "title": "매장 구독으로 지속 가능한 도움",
         "lead": "사장님이 얻는 가치와 우리가 쓰는 원가를 함께 봅니다.",
         "paragraphs": [
-          "매장별 구독을 기본으로 기능과 포함 이용량을 설계합니다. 현재 책의 요금·매출 계산은 검증용 가정이며 확정 상품이나 실제 매출이 아닙니다.",
-          "무제한 일반 챗봇으로 판매하지 않습니다. 사용량 상한, 비용 알림, 한도 도달 시 메뉴판·직원 안내 전환을 상품에 포함합니다."
+          "샵 단위 월 구독을 기본안으로 검토합니다. 포함 기능과 AI 이용량, 초과 이용 조건은 파일럿에서 실제 사용량을 측정한 뒤 정합니다.",
+          "사장님에게는 반복 응대와 주문 전달의 부담을 줄이는 가치가 있어야 합니다. 운영 측에서는 AI 비용뿐 아니라 결제 수수료, 고객 지원과 유지보수 비용까지 계산합니다."
         ],
         "points": [
           "AI 원가를 매장별로 측정",
@@ -217,7 +217,7 @@ export const BOOK={
         "lead": "손님을 이해하되 확인되지 않은 신원을 만들지 않습니다.",
         "paragraphs": [
           "QR을 찍었다고 손님의 이름이나 연락처를 자동으로 알아내지는 않습니다. 프로필에는 동의한 별명만 표시하고, 배달에 필요한 주소·전화번호는 주문 확인 단계에서 직접 입력받습니다. 연결된 샵의 주문·예약·대화 기록은 사장님이 확인할 수 있도록 저장합니다.",
-          "샘플 미리보기의 기록은 이 브라우저에만 남습니다. 실시간 데모 샵은 클라우드에 저장되지만, 로그인 버튼은 체험용이며 실제 계정 인증이 아닙니다. 실제 운영에 앞서 계정 인증, 관리 권한, 보관 기간과 삭제 절차를 검증해야 합니다."
+          "손님 링크로 사장님 화면에 들어갈 수 없습니다. 직원은 발급받은 자기 링크로 허용된 데이터와 기능만 이용합니다. 로그아웃하면 해당 관리 세션이 폐기되고, 비밀번호를 바꾸면 다른 사장님 세션도 해제됩니다. 사장님 비밀번호는 서버에서 검증합니다. 직원은 링크 기반 접근이며 직원 본인 인증과 이메일 비밀번호 복구는 아직 미연결입니다. 실제 AI와 결제는 연결하지 않았습니다."
         ],
         "points": [
           "알레르기 정보는 직원 확인",
@@ -230,13 +230,13 @@ export const BOOK={
         "title": "시나리오에서 실제 샵으로",
         "lead": "각 단계의 완료 기준을 통과한 뒤 다음 기능을 연결합니다.",
         "paragraphs": [
-          "메뉴판과 매장 자료를 올려 대화로 샵을 개설합니다. 샵 정보와 메뉴는 클라우드에 저장되고 손님은 다른 휴대폰의 QR로 주문·예약합니다. 사장님은 대시보드에서 실시간으로 확인합니다. AI 에이전트 응답과 결제는 계속 데모입니다. 버튼을 누르면 바로 체험합니다. 실제 가입이나 계정 인증은 진행하지 않습니다.",
-          "다음 단계에서 승인 가능한 사진 인식과 실제 AI 에이전트, 서버 비용 통제를 검증합니다. 실제 결제·POS·외부 알림은 별도 연동하며 API 계약, 웹훅 검증, 중복 방지, 재시도·대조와 권한을 확인한 뒤 운영합니다."
+          "지금은 시연에서 손님과 직원의 흐름을 점검합니다. 다음 단계에서는 실제 메뉴와 운영 시간, 품절·예약 조건을 적용한 한 샵의 파일럿을 준비합니다.",
+          "출시 전에는 메뉴 인식의 사장님 검수, 언어별 응답 정확도, AI 비용 상한, 결제·POS 대조, 계정 복구와 장애 대응을 각각 검증합니다. 출시 일정은 이 기준을 통과한 뒤 정합니다."
         ],
         "points": [
-          "다른 기기에서 매장·주문·예약 확인",
-          "저장된 기록과 실시간 화면 대조",
-          "실제 계정 인증은 서비스 출시 단계에서 연결"
+          "흐름 검토",
+          "현장 파일럿",
+          "출시 기준 검증"
         ]
       },
       {
@@ -244,13 +244,13 @@ export const BOOK={
         "title": "함께 정할 다음 결정",
         "lead": "첫 국가와 첫 매장의 운영 방식부터 구체화합니다.",
         "paragraphs": [
-          "출시 국가, 통화, 실제 메뉴·가격, POS 업체와 결제 방식을 정합니다. 예약 운영 방식, 포인트·보너스 조건, 게임 횟수, 동의 문구와 기록 보관 기간도 합의합니다.",
-          "재고·직원 업무 담당자, 데모 매출 보고 기준과 세무 자료 검토자를 정합니다. 저장된 결제 기록을 내보낸 자료는 회계 확정이나 세금 신고를 대신하지 않습니다. 실제 계정 인증은 서비스 출시 전에 연결하고 검증합니다."
+          "먼저 파일럿 국가와 샵, 운영 책임자를 정합니다. 통화·메뉴·가격·예약 규칙을 확정하고, 기존 POS와 결제 업체의 연동 가능 여부를 확인합니다.",
+          "다음으로 구독에 포함할 이용량, 지원 범위, 기록 보관 기간과 삭제 절차를 정합니다. 참여 일정과 성공 기준은 사장님·현장 직원과 함께 합의합니다."
         ],
         "points": [
-          "첫 매장과 검토 담당자",
-          "예약·혜택·재고·직원 업무 기준",
-          "POS 시험 환경과 구독·지원 조건"
+          "첫 국가·샵·책임자",
+          "메뉴·예약·연동 규칙",
+          "구독·지원·데이터 정책"
         ]
       },
       {
@@ -258,8 +258,8 @@ export const BOOK={
         "title": "쉽게 시작하되 현재 상태는 분명하게",
         "lead": "오늘의 체험과 앞으로 만들 서비스를 구분합니다.",
         "paragraphs": [
-          "지금은 가입 없이 로그인 버튼을 눌러 주모 샘플을 체험할 수 있습니다. 메뉴 8개와 가상의 주문·예약이 준비되어 있고, 라미는 미리 정한 예시로 답합니다. 다른 휴대폰으로 주문·예약을 시험하려면 대시보드에서 실시간 데모 샵을 열고 QR을 공유하세요.",
-          "결제·포인트·보너스·보고는 계속 데모이며 실제 결제·POS·외부 알림은 없습니다. 재고·직원 업무는 수동 기록, 세무 내보내기는 검토 초안입니다. 공개 GitHub Pages QR을 사용할 수 있으며 Sites의 소유자 전용 미리보기는 유지합니다."
+          "책 속 통합 시연과 별도의 샵 앱은 데이터가 보관되는 방식이 다릅니다. 아래 표에서 현재 범위를 확인하고 필요한 체험을 선택하세요.",
+          "주모의 음식 사진은 콘셉트 이미지이며 VND 가격은 시연용 가정입니다. 포인트·보너스·굿즈·상품권은 실제 판매나 지급이 확정된 상품이 아닙니다."
         ],
         "points": [
           "클라우드 접수와 AI 시나리오를 구분",
@@ -289,8 +289,8 @@ export const BOOK={
         "title": "More possibilities for every store",
         "lead": "Every owner should have an agent that knows their own store.",
         "paragraphs": [
-          "원샵 · one shop ai explains restaurants, cafés and their menus in the guest’s language. Owners work through a conversation with their manager, while guests talk directly with the store.",
-          "Published stores and menus, uploaded assets, visits, orders and reservations are stored in a backend and shared across devices. AI agent replies are scripted; payment, points, bonuses and reports remain demos. OCR, real payment, POS and external notifications are not connected."
+          "A guest asks, the shop confirms, and the team takes over. One shop connects menu guidance, orders and reservations in one conversation.",
+          "Jumo is our first example for restaurants and cafés. Explore how the guest, floor, kitchen and owner handle the same request."
         ],
         "points": [
           "Your store’s own story",
@@ -331,7 +331,7 @@ export const BOOK={
         "title": "Simple conversation, clear confirmation",
         "lead": "Begin with one spacious, restrained conversation screen.",
         "paragraphs": [
-          "The design takes cues from Grok’s minimal chat layout. The conversation and composer remain central; cards appear when guests need to check items, quantities or reservation dates.",
+          "Keep conversation brief and choices clear. Confirmation cards let guests and staff review the same menu, quantities and reservation time.",
           "Each store keeps its name and voice. Approved data determines prices and availability; photos do not establish ingredients or allergy safety, and uncertain details go to staff."
         ],
         "points": [
@@ -357,15 +357,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "One conversation with Jumo",
-        "lead": "Keep the brand, simplify the guest experience.",
+        "lead": "One request. Four connected screens.",
         "paragraphs": [
-          "A minimal chat screen carries Jumo’s logo, symbol and menu atmosphere. Food images and menu cards appear in context; ordering, reservations and demo payment pass through confirmation cards.",
-          "Food images are AI-generated concepts. Displayed VND prices are demo assumptions because confirmed prices were unavailable. Points and bonuses are simulated records without cash value or a promise of real service."
+          "Follow the journey from a menu photo to a guest notification. Choose a dine-in order, reservation or delivery, then change the guest language and request.",
+          "Try changes, rejection reasons, alternatives and counterrequests. Agreed details update all four screens, with Korean and original-language records, the person handling them and the time."
         ],
         "points": [
-          "Store-only conversation in nine languages",
-          "Menus, reservations and payment in context",
-          "Scripted replies with no API cost"
+          "Dine-in, reservations and delivery",
+          "From a change proposal to a final agreement",
+          "Korean, original text, handler and time"
         ]
       },
       {
@@ -373,13 +373,13 @@ export const BOOK={
         "title": "Talk to the manager to prepare your store",
         "lead": "Owners answer the manager’s questions one step at a time.",
         "paragraphs": [
-          "Explore Jumo with eight sample dishes and fictional orders and reservations. Ask the manager how the day is going, or open the dashboard to review the records.",
-          "The sample opens immediately without real signup or account authentication, and changes stay in this browser. To test orders and booking requests from another phone, connect the Jumo sample store and share its QR code."
+          "Start with the shop name, contact details and a menu photo. The owner reviews the menu and prices Rami prepares before creating the shop link and QR.",
+          "Photo analysis in this book is scripted. In the separate owner app, set a password and save the shop information to continue on another device."
         ],
         "points": [
-          "Store information",
-          "View 8 menu items",
-          "Explore the dashboard"
+          "Menu photo",
+          "Menu and price review",
+          "Shop link and QR"
         ]
       },
       {
@@ -387,8 +387,8 @@ export const BOOK={
         "title": "A doorway on tables and social profiles",
         "lead": "Use one store link in many places.",
         "paragraphs": [
-          "Print table QR codes or share the store link. Published store and menu data load from the backend, so guests on other phones see the same information and can submit orders and reservations.",
-          "Public GitHub Pages store QR links open without owner sign-in. The existing Sites preview remains owner-private. Submitted orders and reservations are verified through the backend records of the relevant store."
+          "Place a numbered QR on each table and share the shop link on social media. Guests reach the same shop, while their entry route keeps requests distinguishable.",
+          "Dine-in guests confirm their table. Delivery guests enter an address and phone number; reservation guests confirm the date, time and party size."
         ],
         "points": [
           "QR identifies the store and table",
@@ -398,30 +398,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "Talk to the manager, check one dashboard",
-        "lead": "One supporting dashboard sits alongside the owner conversation.",
+        "title": "Floor, kitchen and owner: the right view for each role",
+        "lead": "One shop, with each person handling their assigned work.",
         "paragraphs": [
-          "Rami, the blue manager, announces new orders and booking requests. Dine-in orders show the confirmed table; online delivery orders show the address and phone number. Booking requests record which table QR was used, while online bookings have no table assigned.",
-          "Scanning a QR code does not reveal a guest’s identity. Profiles appear only with the guest’s consent. Inventory and staff tasks are manual demo records entered and edited by the owner, with no connection to real stock or staffing systems."
+          "One request is shared across four roles. Floor staff receive and serve, the kitchen prepares, and the owner oversees status and permissions.",
+          "The owner registers staff and sets viewing and action permissions. The kitchen sees items and quantities; floor staff see what they need to serve guests. Permission changes and removal apply to connected devices."
         ],
         "points": [
-          "Ask in chat, verify in records",
-          "Distinguish paid and unpaid orders",
-          "Manual inventory and staff task examples"
+          "Views and actions by role",
+          "Only items and quantities for the kitchen",
+          "The owner adds, updates and removes staff"
         ]
       },
       {
         "id": "operations",
-        "title": "Actions in chat still need confirmation",
-        "lead": "Keep orders, reservations, payments and benefits as distinct records.",
+        "title": "Follow the same order from acceptance to completion",
+        "lead": "The floor accepts, the kitchen prepares, and the guest receives updates.",
         "paragraphs": [
-          "Rami, the blue manager, announces new orders and booking requests. Dine-in orders show the confirmed table; online delivery orders show the address and phone number. Booking requests record which table QR was used, while online bookings have no table assigned.",
-          "When the owner accepts, prepares or completes an order, the guest’s progress and alert update too. Incoming updates preserve message drafts. Order and payment status stay separate; actual AI and payments are not connected."
+          "Floor staff accept a guest’s confirmed request; the kitchen handles preparation and readiness. The owner sees the whole flow, while guests track their own status.",
+          "Changes apply after agreement. Guests can revise staff alternatives, and the owner approves changes or cancellations once cooking has started."
         ],
         "points": [
-          "Separate order progress from payment",
-          "Confirm reservations and rewards before saving",
-          "No paid wagering, cash conversion or real service"
+          "Keep requests, confirmations and changes",
+          "Track payment separately from order progress",
+          "Owner approval for changes or cancellation after cooking starts"
         ]
       },
       {
@@ -429,8 +429,8 @@ export const BOOK={
         "title": "Useful help through store subscriptions",
         "lead": "Measure owner value alongside operating costs.",
         "paragraphs": [
-          "The business starts with a per-store subscription and defined features and usage. Prices and revenue calculations in this book are hypotheses, not final offers or actual sales.",
-          "We will not sell an unlimited general chatbot. Usage caps, cost alerts and a switch to menus or staff when limits are reached belong in the product."
+          "A monthly subscription per shop is the starting proposal. Included features, AI allowance and overage terms will be set after measuring pilot usage.",
+          "Owners need value in handling repeated questions and passing orders to staff. Operating costs must include AI, payment fees, support and maintenance."
         ],
         "points": [
           "Measure AI cost by store",
@@ -486,7 +486,7 @@ export const BOOK={
         "lead": "Understand guests without inventing an identity.",
         "paragraphs": [
           "one shop ai serves restaurants and cafés. Before confirming an order, the agent asks dine-in guests to confirm their table, or online guests for a delivery address and contact number. Details are saved with each order and shown by source in the shop dashboard. Actual AI, payment and delivery services are not connected.",
-          "The Jumo sample uses fictional orders, bookings and sales, with changes saved in this browser. Connected stores save store details and orders in the cloud; cross-device owner accounts still require real sign-in. Payment, points, bonuses and reports are demos, with no real payment, POS or external notifications. Inventory and staff tasks are manual, and tax exports are drafts for review. Public GitHub Pages QR links are supported; the Sites preview remains private to its owner."
+          "Guest links do not grant owner access. Staff use their own issued links and receive only permitted data and actions. Signing out revokes that session; changing the password ends other owner sessions. Owner passwords are verified on the server. Staff access is link-based; verified staff identity and email password recovery are not connected yet. Real AI and payment remain disconnected."
         ],
         "points": [
           "Confirm allergy information with staff",
@@ -499,13 +499,13 @@ export const BOOK={
         "title": "From scenarios to a real store",
         "lead": "Connect each new capability only after meeting its acceptance criteria.",
         "paragraphs": [
-          "Owners prepare their store through chat and upload menu and venue files. Store details and menus are saved in the cloud; guests can order or request a table from another phone, and owners see updates in the dashboard. AI replies and payments remain demos. The sample can be explored without real signup or account authentication.",
-          "Next, validate reviewable photo recognition, a live AI agent and server-enforced costs. Real payment, POS and external notifications require separate integrations, verified API contracts and webhooks, idempotency, retries, reconciliation and permissions."
+          "Today, the demo lets us review the guest and staff journey. Next comes a pilot shop with real menus, hours, availability and reservation rules.",
+          "Before launch, verify owner-reviewed menu recognition, language accuracy, AI spending limits, payment and POS reconciliation, account recovery and failure handling. Set a launch date after those checks pass."
         ],
         "points": [
-          "Check stores, orders and reservations across devices",
-          "Reconcile live screens with saved records",
-          "Connect real account authentication at launch"
+          "Review the journey",
+          "Pilot in a shop",
+          "Verify launch criteria"
         ]
       },
       {
@@ -513,13 +513,13 @@ export const BOOK={
         "title": "The decisions we make together",
         "lead": "Define the first country and the first store’s operation.",
         "paragraphs": [
-          "Choose the first market, currency, approved menu, prices, POS provider and payment approach. Agree on reservations, points, bonuses, game limits, consent text and retention.",
-          "Assign inventory and staff task owners, define demo sales reporting and choose a tax-draft reviewer. Reports exported from cloud records do not replace finalized accounts or tax filing. Connect real account authentication at launch."
+          "Choose the pilot country, shop and operating lead first. Confirm currency, menu, prices and reservation rules, then check the existing POS and payment provider.",
+          "Next agree on included usage, support, data retention and deletion. Set the participation schedule and success criteria with the owner and staff."
         ],
         "points": [
-          "Choose the pilot and reviewers",
-          "Set reservation, benefit and task rules",
-          "Prepare POS testing, subscription and support terms"
+          "Country, shop and lead",
+          "Menu, reservations and integrations",
+          "Subscription, support and data"
         ]
       },
       {
@@ -527,8 +527,8 @@ export const BOOK={
         "title": "Easy to begin, clear about what is real",
         "lead": "Separate today’s experience from the future service.",
         "paragraphs": [
-          "Start with Jumo’s eight sample dishes and fictional orders and reservations. Ask the manager a question or explore the dashboard. No real signup or account authentication takes place, and sample changes stay in this browser. Connect the sample store to test QR orders and booking requests from another phone.",
-          "Payment, points, bonuses and reports remain demos, with no real payment, POS or external notifications. Inventory and staff tasks are manual; tax export is a draft for review. Public GitHub Pages QR access is supported, while the Sites preview stays owner-private."
+          "The book’s integrated demo and the separate shop apps store data differently. Use the table below to choose the experience you need.",
+          "Jumo’s food photos are concept images and its VND prices are demo assumptions. Points, bonuses, goods and vouchers are not confirmed products for sale or redemption."
         ],
         "points": [
           "Distinguish cloud submissions from scripted AI",
@@ -558,8 +558,8 @@ export const BOOK={
         "title": "Mở thêm cơ hội cho mỗi cửa hàng",
         "lead": "Mọi chủ quán đều nên có trợ lý hiểu cửa hàng của mình.",
         "paragraphs": [
-          "원샵 · one shop ai giới thiệu nhà hàng, quán cà phê và thực đơn bằng ngôn ngữ của khách. Chủ quán làm việc qua cuộc trò chuyện với quản lý, còn khách trò chuyện trực tiếp với quán.",
-          "Quán và thực đơn đã đăng, tệp tải lên, lượt ghé, đơn và đặt bàn được lưu ở backend, chia sẻ giữa các thiết bị. Trợ lý AI trả lời theo kịch bản; thanh toán, điểm, quà và báo cáo vẫn là demo. Chưa nối OCR, thanh toán thật, POS hay thông báo bên ngoài."
+          "Khách hỏi, quán xác nhận, nhân viên tiếp nhận. One shop kết nối tư vấn thực đơn, gọi món và đặt bàn trong cùng một cuộc trò chuyện.",
+          "Jumo là mô hình mẫu đầu tiên dành cho nhà hàng và quán cà phê. Bạn có thể xem khách, phục vụ, bếp và chủ quán cùng xử lý một yêu cầu như thế nào."
         ],
         "points": [
           "Câu chuyện riêng của cửa hàng",
@@ -600,7 +600,7 @@ export const BOOK={
         "title": "Trò chuyện đơn giản, xác nhận rõ ràng",
         "lead": "Bắt đầu từ một màn hình chat thoáng và gọn.",
         "paragraphs": [
-          "Thiết kế tham khảo cách bố trí chat tối giản của Grok. Hội thoại và ô nhập là trung tâm; thẻ chỉ xuất hiện khi cần xem món, số lượng hoặc ngày đặt bàn.",
+          "Trò chuyện ngắn gọn, lựa chọn rõ ràng. Thẻ xác nhận giúp khách và nhân viên cùng xem món, số lượng và giờ đặt bàn trước khi quyết định.",
           "Mỗi quán giữ tên và cách nói riêng. Giá, tình trạng món dựa trên dữ liệu đã duyệt; ảnh không xác định được nguyên liệu hay an toàn dị ứng, điều chưa chắc phải hỏi nhân viên."
         ],
         "points": [
@@ -626,15 +626,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "Một cuộc trò chuyện với Jumo",
-        "lead": "Giữ bản sắc, làm trải nghiệm khách gọn hơn.",
+        "lead": "Một yêu cầu, bốn màn hình cùng cập nhật.",
         "paragraphs": [
-          "Màn hình chat tối giản giữ logo, biểu tượng và không khí thực đơn Jumo. Hình món và thẻ thực đơn hiện đúng ngữ cảnh; gọi món, đặt bàn và thanh toán thử đều qua bước xác nhận.",
-          "Ảnh món là hình ý tưởng do AI tạo. Giá VND là giả định vì chưa có giá được xác nhận. Điểm và quà chỉ là bản ghi giả lập, không có giá trị tiền mặt hay cam kết phục vụ thật."
+          "Trải nghiệm từ lúc đăng thực đơn đến khi khách nhận thông báo. Chọn ăn tại quán, đặt bàn hoặc giao hàng, rồi đổi ngôn ngữ và nội dung yêu cầu.",
+          "Thử yêu cầu thay đổi, lý do từ chối, phương án khác và gửi lại yêu cầu. Nội dung đã thống nhất cập nhật trên bốn màn hình, kèm tiếng Hàn, nguyên văn, người xử lý và thời gian."
         ],
         "points": [
-          "Chat về quán bằng chín ngôn ngữ",
-          "Món, đặt bàn và thanh toán đúng ngữ cảnh",
-          "Trả lời soạn sẵn, không tốn phí API"
+          "Tại quán, đặt bàn và giao hàng",
+          "Từ đề xuất thay đổi đến thống nhất cuối cùng",
+          "Lưu tiếng Hàn, nguyên văn, người xử lý và thời gian"
         ]
       },
       {
@@ -642,13 +642,13 @@ export const BOOK={
         "title": "Trò chuyện với quản lý để chuẩn bị quán",
         "lead": "Chủ quán lần lượt trả lời câu hỏi của quản lý.",
         "paragraphs": [
-          "Khám phá quán Jumo với 8 món cùng đơn hàng và yêu cầu đặt bàn mẫu. Hỏi quản lý về tình hình hôm nay hoặc mở trang quản lý để xem từng bản ghi.",
-          "Bạn có thể trải nghiệm ngay mà không cần đăng ký hay xác thực tài khoản thật. Đơn hàng, đặt bàn và doanh thu mẫu đều là giả định; thay đổi chỉ lưu trong trình duyệt này. Kết nối quán mẫu Jumo để thử gọi món hoặc gửi yêu cầu đặt bàn qua QR từ điện thoại khác."
+          "Bắt đầu bằng tên quán, thông tin liên hệ và ảnh thực đơn. Chủ quán kiểm tra món và giá mà Rami sắp xếp trước khi tạo liên kết cùng mã QR.",
+          "Phân tích ảnh trong sách dùng kịch bản mẫu. Ở ứng dụng chủ quán riêng, bạn đặt mật khẩu và lưu thông tin quán để tiếp tục sử dụng trên thiết bị khác."
         ],
         "points": [
-          "Thông tin quán",
-          "Xem 8 món",
-          "Khám phá bảng điều khiển"
+          "Ảnh thực đơn",
+          "Kiểm tra món và giá",
+          "Liên kết quán và QR"
         ]
       },
       {
@@ -656,8 +656,8 @@ export const BOOK={
         "title": "Lối vào trên bàn và mạng xã hội",
         "lead": "Dùng một liên kết cửa hàng ở nhiều nơi.",
         "paragraphs": [
-          "In QR theo bàn hoặc chia sẻ liên kết quán. Thông tin quán và thực đơn tải từ backend nên khách dùng điện thoại khác vẫn thấy cùng dữ liệu và gửi đơn hoặc đặt bàn được.",
-          "Liên kết QR của quán trên GitHub Pages công khai có thể mở mà không cần đăng nhập tài khoản chủ quán. Bản xem trước trên Sites chỉ dành cho chủ sở hữu. Đơn hàng và yêu cầu đặt bàn được đối chiếu với dữ liệu đã lưu của đúng quán trên máy chủ."
+          "Đặt QR có số tại từng bàn và chia sẻ liên kết quán trên mạng xã hội. Khách vào cùng một quán nhưng nguồn truy cập giúp phân biệt yêu cầu.",
+          "Khách tại quán xác nhận số bàn. Khách giao hàng nhập địa chỉ và số điện thoại; khách đặt bàn xác nhận ngày, giờ và số người."
         ],
         "points": [
           "QR xác định quán và bàn",
@@ -667,30 +667,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "Hỏi quản lý, kiểm tra trên một bảng điều khiển",
-        "lead": "Một bảng điều khiển hỗ trợ bên cạnh cuộc trò chuyện của chủ quán.",
+        "title": "Phục vụ, bếp và chủ quán: đúng màn hình cho từng vai trò",
+        "lead": "Cùng một quán, mỗi người xử lý đúng phần việc.",
         "paragraphs": [
-          "Rami, quản lý màu xanh, thông báo đơn hàng và yêu cầu đặt bàn mới. Đơn tại quán hiển thị rõ số bàn đã xác nhận; đơn giao hàng hiển thị địa chỉ và số điện thoại. Yêu cầu đặt bàn ghi nhận mã QR bàn được sử dụng; đặt bàn qua liên kết trực tuyến chưa được xếp bàn.",
-          "Quét QR không tiết lộ danh tính; hồ sơ chỉ hiển thị khi khách đồng ý. Tồn kho và công việc nhân viên là bản ghi demo do chủ quán tự nhập và sửa, chưa kết nối hệ thống kho hay nhân sự thật."
+          "Một yêu cầu được phân công giữa bốn vai trò. Phục vụ tiếp nhận và mang món, bếp chế biến, chủ quán theo dõi tình hình cùng quyền truy cập.",
+          "Chủ quán thêm nhân viên và phân quyền xem, thao tác. Bếp thấy món và số lượng; phục vụ thấy thông tin cần để chăm sóc khách. Thay đổi quyền và xóa nhân viên áp dụng trên các thiết bị đã kết nối."
         ],
         "points": [
-          "Yêu cầu trong chat, kiểm tra bằng bản ghi",
-          "Tách đơn đã trả và chưa trả",
-          "Ví dụ quản lý tồn kho và công việc thủ công"
+          "Màn hình và quyền theo vai trò",
+          "Bếp chỉ thấy món và số lượng",
+          "Chủ quán thêm, sửa và xóa nhân viên"
         ]
       },
       {
         "id": "operations",
-        "title": "Thao tác trong chat vẫn cần xác nhận",
-        "lead": "Tách đơn, đặt bàn, thanh toán và quyền lợi thành các bản ghi riêng.",
+        "title": "Theo dõi cùng một đơn từ tiếp nhận đến hoàn tất",
+        "lead": "Phục vụ tiếp nhận, bếp chuẩn bị, khách nhận thông báo.",
         "paragraphs": [
-          "Rami, quản lý màu xanh, thông báo đơn hàng và yêu cầu đặt bàn mới. Đơn tại quán hiển thị rõ số bàn đã xác nhận; đơn giao hàng hiển thị địa chỉ và số điện thoại. Yêu cầu đặt bàn ghi nhận mã QR bàn được sử dụng; đặt bàn qua liên kết trực tuyến chưa được xếp bàn.",
-          "Khi chủ quán nhận, chuẩn bị hoặc hoàn tất đơn, tiến độ và thông báo của khách cũng cập nhật. Nội dung đang gõ được giữ lại. Trạng thái đơn và thanh toán tách riêng; chưa kết nối AI hay thanh toán thật."
+          "Phục vụ tiếp nhận yêu cầu đã được khách xác nhận; bếp xử lý chế biến và báo sẵn sàng. Chủ quán theo dõi toàn bộ, còn khách xem trạng thái của mình.",
+          "Chỉ cập nhật thay đổi sau khi thống nhất. Khách có thể sửa phương án của quán; khi bếp đã nấu, chủ quán duyệt việc đổi hoặc hủy."
         ],
         "points": [
-          "Tách tiến độ đơn và thanh toán",
-          "Xác nhận đặt bàn, quà rồi mới lưu",
-          "Không cược tiền, đổi tiền mặt hay phục vụ thật"
+          "Lưu yêu cầu, xác nhận và thay đổi",
+          "Tách trạng thái thanh toán khỏi tiến độ đơn",
+          "Chủ quán duyệt thay đổi hoặc hủy khi đã bắt đầu nấu"
         ]
       },
       {
@@ -698,8 +698,8 @@ export const BOOK={
         "title": "Thuê bao cửa hàng để hỗ trợ bền vững",
         "lead": "Đo giá trị cho chủ quán cùng chi phí vận hành.",
         "paragraphs": [
-          "Mô hình bắt đầu bằng thuê bao theo cửa hàng với chức năng và hạn mức xác định. Giá và phép tính doanh thu trong sách là giả thuyết, chưa phải gói bán hay doanh thu thực tế.",
-          "Không bán chatbot đa năng không giới hạn. Sản phẩm cần có mức trần, cảnh báo chi phí và chuyển sang thực đơn hoặc nhân viên khi hết hạn mức."
+          "Phương án ban đầu là thuê bao tháng theo quán. Tính năng, lượng AI đi kèm và điều kiện vượt mức sẽ được quyết định sau khi đo thực tế trong đợt thử nghiệm.",
+          "Giá trị cho chủ quán là giảm việc trả lời lặp lại và chuyển đơn. Chi phí vận hành cần tính cả AI, phí thanh toán, hỗ trợ và bảo trì."
         ],
         "points": [
           "Đo chi phí AI theo cửa hàng",
@@ -755,7 +755,7 @@ export const BOOK={
         "lead": "Hiểu khách mà không tự suy đoán danh tính.",
         "paragraphs": [
           "one shop ai dành cho nhà hàng và quán cà phê. Trước khi xác nhận đơn, khách tại quán xác nhận số bàn; khách đặt giao hàng nhập địa chỉ và số điện thoại. Thông tin được lưu cùng đơn và phân loại theo nguồn trên trang quản lý. Chưa kết nối dịch vụ AI, thanh toán hay giao hàng thật.",
-          "Mẫu Jumo sử dụng đơn hàng, đặt bàn và doanh thu giả định; thay đổi chỉ lưu trong trình duyệt này. Quán đã kết nối lưu thông tin và đơn hàng trên đám mây; tài khoản chủ quán dùng trên nhiều thiết bị vẫn cần tính năng đăng nhập thật. Thanh toán, điểm, quà và báo cáo đều là demo, chưa kết nối thanh toán thật, POS hay thông báo bên ngoài. Tồn kho và việc nhân viên được ghi thủ công; tệp tổng hợp thuế chỉ là bản nháp để rà soát. QR trên GitHub Pages công khai được hỗ trợ; bản xem trước Sites chỉ dành cho chủ sở hữu."
+          "Liên kết khách không cấp quyền chủ quán. Nhân viên dùng liên kết riêng và chỉ xem dữ liệu, thao tác được cho phép. Đăng xuất hủy phiên hiện tại; đổi mật khẩu kết thúc các phiên chủ quán khác. Mật khẩu chủ quán được xác minh trên máy chủ. Nhân viên truy cập bằng liên kết; chưa có xác minh danh tính hay khôi phục mật khẩu qua email. Chưa kết nối AI và thanh toán thật."
         ],
         "points": [
           "Hỏi nhân viên về dị ứng",
@@ -768,13 +768,13 @@ export const BOOK={
         "title": "Từ kịch bản đến cửa hàng thật",
         "lead": "Chỉ nối chức năng tiếp theo khi đạt tiêu chí hoàn thành.",
         "paragraphs": [
-          "Chủ quán thiết lập quán qua trò chuyện và tải ảnh thực đơn, ảnh hoặc video quán lên. Thông tin và thực đơn được lưu trên đám mây. Khách có thể gọi món hoặc gửi yêu cầu đặt bàn qua QR từ điện thoại khác; chủ quán theo dõi cập nhật trên trang quản lý. Câu trả lời AI và thanh toán vẫn là demo. Bản mẫu không yêu cầu đăng ký hay xác thực tài khoản thật.",
-          "Bước tiếp theo là kiểm chứng chức năng đọc ảnh có bước duyệt, trợ lý AI thật và giới hạn chi phí trên máy chủ. Thanh toán thật, POS và thông báo bên ngoài cần tích hợp riêng: đặc tả API, webhook được xác minh, chống xử lý trùng, thử lại, đối soát và phân quyền."
+          "Hiện tại, bản demo giúp kiểm tra hành trình của khách và nhân viên. Bước tiếp theo là chuẩn bị một quán thử nghiệm với thực đơn, giờ mở cửa, tình trạng món và quy tắc đặt bàn thực tế.",
+          "Trước khi ra mắt, cần kiểm tra chủ quán duyệt nhận diện thực đơn, độ chính xác từng ngôn ngữ, trần chi phí AI, đối soát thanh toán và POS, khôi phục tài khoản và xử lý sự cố. Chỉ chốt lịch khi đạt các tiêu chí này."
         ],
         "points": [
-          "Kiểm tra quán, đơn và đặt bàn trên nhiều thiết bị",
-          "Đối chiếu màn hình trực tiếp với dữ liệu lưu",
-          "Tích hợp xác thực tài khoản thật khi ra mắt"
+          "Kiểm tra hành trình",
+          "Thử tại quán",
+          "Kiểm chứng trước ra mắt"
         ]
       },
       {
@@ -782,13 +782,13 @@ export const BOOK={
         "title": "Những quyết định cùng nhau thực hiện",
         "lead": "Xác định quốc gia đầu tiên và cách vận hành cửa hàng đầu tiên.",
         "paragraphs": [
-          "Chọn thị trường, tiền tệ, thực đơn và giá duyệt, POS và phương thức thanh toán. Thống nhất đặt bàn, điểm, quà, lượt chơi, nội dung đồng ý và thời gian lưu.",
-          "Phân công người phụ trách tồn kho và công việc nhân viên, thống nhất cách báo cáo doanh thu demo và chọn người rà soát bản nháp thuế. Báo cáo xuất từ dữ liệu đám mây không thay thế sổ sách đã chốt hay việc kê khai thuế. Tính năng xác thực tài khoản thật cần được tích hợp trước khi ra mắt."
+          "Trước tiên chọn quốc gia, quán thử nghiệm và người phụ trách. Chốt tiền tệ, thực đơn, giá và quy tắc đặt bàn, rồi kiểm tra khả năng kết nối POS cùng nhà cung cấp thanh toán.",
+          "Tiếp theo thống nhất lượng sử dụng đi kèm, phạm vi hỗ trợ, thời hạn lưu dữ liệu và cách xóa. Lịch tham gia và tiêu chí thành công cần được bàn cùng chủ quán và nhân viên."
         ],
         "points": [
-          "Chọn quán thử và người duyệt",
-          "Quy tắc đặt bàn, quyền lợi và công việc",
-          "Môi trường thử POS, thuê bao và hỗ trợ"
+          "Quốc gia, quán, phụ trách",
+          "Thực đơn, đặt bàn, kết nối",
+          "Thuê bao, hỗ trợ, dữ liệu"
         ]
       },
       {
@@ -796,8 +796,8 @@ export const BOOK={
         "title": "Dễ bắt đầu, rõ điều gì là thật",
         "lead": "Phân biệt trải nghiệm hôm nay với dịch vụ tương lai.",
         "paragraphs": [
-          "Bắt đầu với 8 món cùng đơn hàng và yêu cầu đặt bàn mẫu của Jumo. Hỏi quản lý hoặc khám phá trang quản lý. Không có đăng ký hay xác thực tài khoản thật; thay đổi của bản mẫu chỉ lưu trong trình duyệt này. Kết nối quán mẫu để thử gọi món và đặt bàn qua QR từ điện thoại khác.",
-          "Thanh toán, điểm, quà và báo cáo đều là demo; chưa kết nối thanh toán thật, POS hay thông báo bên ngoài. Tồn kho và công việc nhân viên được ghi thủ công; tệp tổng hợp thuế chỉ là bản nháp để rà soát. Liên kết QR trên GitHub Pages công khai được hỗ trợ, còn bản xem trước Sites chỉ dành cho chủ sở hữu."
+          "Bản trình diễn trong sách và ứng dụng quán riêng lưu dữ liệu theo cách khác nhau. Xem bảng bên dưới để chọn trải nghiệm phù hợp.",
+          "Ảnh món Jumo là hình ý tưởng; giá VND chỉ phục vụ demo. Điểm, thưởng, đồ lưu niệm và phiếu quà tặng chưa phải sản phẩm được chốt bán hoặc cấp thật."
         ],
         "points": [
           "Tách tiếp nhận đám mây và phản hồi AI theo kịch bản",
@@ -827,8 +827,8 @@ export const BOOK={
         "title": "为每家店打开更多可能",
         "lead": "每位店主都应拥有了解自己门店的智能体。",
         "paragraphs": [
-          "one shop ai 用顾客熟悉的语言介绍餐厅、咖啡馆和菜单。店主与自己的 AI 经理沟通，顾客与店铺助手交流，日常经营就从这样的对话开始。",
-          "已发布的店铺信息、菜单、上传资料、到店记录、订单和订位信息会保存在后端，并在不同设备间共享。AI 智能体使用预设回复；付款、积分、赠品和报告仍为演示。图片文字识别（OCR）、真实支付、POS 和外部通知尚未接入。"
+          "客人提出需求，店铺确认，员工接手。One shop 将菜单介绍、点单与预约串联在同一段对话中。",
+          "Jumo 是面向餐厅与咖啡店的首个示例。在这里，您可以体验客人、前厅、厨房与店主如何共同处理一个请求。"
         ],
         "points": [
           "保留门店自己的故事",
@@ -869,7 +869,7 @@ export const BOOK={
         "title": "对话简单，确认清楚",
         "lead": "从一个留白充足的简洁对话界面开始。",
         "paragraphs": [
-          "设计参考 Grok 的极简聊天布局。对话和输入框是中心，只有需要核对菜品、数量或订位日期时才显示卡片。",
+          "对话简洁，选择清楚。用确认卡展示菜品、数量与预约时间，让客人与员工基于相同内容作决定。",
           "每家店都保留自己的名称和说话风格。价格与售罄状态以店主核准的数据为准。不凭照片猜测食材或保证过敏安全，不确定的信息交由店员确认。"
         ],
         "points": [
@@ -895,15 +895,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "与 Jumo 的一段对话",
-        "lead": "保留品牌个性，让顾客界面更简洁。",
+        "lead": "一个请求，四个画面联动。",
         "paragraphs": [
-          "极简聊天界面延续 Jumo 的标志、符号与菜单氛围。菜品图片与菜单卡随对话出现，点餐、订位和模拟付款都经过确认卡。",
-          "菜品图由 AI 生成。因未确认正式价格，VND 金额仅为演示假设。积分和奖励也是模拟记录，没有现金价值或实际提供服务的承诺。"
+          "从上传菜单照片到客人收到通知，亲自体验完整流程。选择堂食、预约或配送，并修改客人语言与请求内容。",
+          "体验变更、拒绝原因、替代方案及再次请求。商定内容会同步到四个画面，记录保留韩文、原文、处理人和时间。"
         ],
         "points": [
-          "九种语言的门店专属对话",
-          "按语境展示菜单、订位与支付",
-          "预设回复，不产生 API 费用"
+          "堂食、预约与外送",
+          "从变更提案到最终达成一致",
+          "记录韩文、原文、处理人及时间"
         ]
       },
       {
@@ -911,13 +911,13 @@ export const BOOK={
         "title": "和经理聊一聊，门店就准备好了",
         "lead": "店主逐步回答经理的问题。",
         "paragraphs": [
-          "Jumo 示例店铺已备好 8 道菜品，以及订单和订位的示例记录。您可以直接问经理今天店里的情况，也可以打开经营看板。",
-          "点击按钮即可体验，无需真实注册或账户认证。示例中的订单、订位和营收都是虚构数据，修改仅保存在当前浏览器。打开“实时同步演示店铺”并连接 Jumo 后，也可以用另一部手机扫码下单或订位。"
+          "从店名、联系方式和菜单照片开始。店主确认拉米整理的菜品与价格后，再生成店铺链接和二维码。",
+          "本书中的照片识别采用预设示例。独立店主应用可设置密码、保存店铺信息，并在其他设备继续使用。"
         ],
         "points": [
-          "查看店铺信息",
-          "查看 8 道菜品",
-          "查看经营看板"
+          "菜单照片",
+          "审核菜品与价格",
+          "店铺链接与QR"
         ]
       },
       {
@@ -925,8 +925,8 @@ export const BOOK={
         "title": "餐桌与社交主页都是入口",
         "lead": "同一个门店链接，可以用在许多地方。",
         "paragraphs": [
-          "打印桌码或分享门店链接。已发布的门店和菜单从后端读取，因此顾客在其他手机也能看到相同资料，并提交订单或订位。",
-          "通过 GitHub Pages 公开的店铺二维码，顾客无需使用店主账号即可打开。现有 Sites 预览仍只对所有者开放。订单和订位是否提交成功，以对应店铺的后端记录为准。"
+          "桌面放置带桌号的二维码，社交平台分享店铺链接。客人进入同一家店，入口信息帮助区分请求。",
+          "堂食客人确认桌号，配送客人填写地址与电话，预约客人确认日期、时间与人数。"
         ],
         "points": [
           "二维码识别门店与桌号",
@@ -936,30 +936,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "与经理交流，用一个看板核对",
-        "lead": "店主对话旁只设置一个辅助运营看板。",
+        "title": "服务员、厨房与店主：各看所需",
+        "lead": "同一家店，各自处理分工。",
         "paragraphs": [
-          "蓝色的 AI 经理会提醒您查看新订单和订位。堂食订单突出显示已确认的桌号，外送订单显示配送地址和电话。订位记录会注明扫码时的桌号；从线上进入的订位则显示“尚未分配餐桌”。",
-          "扫码不会推断身份，只显示获得同意的个人资料。库存和员工任务由店主手动录入与修改，未连接真实仓储或人事系统。"
+          "一个请求由四个角色协作处理。前厅接单与服务，厨房制作并标记完成，店主管理整体状态和权限。",
+          "店主登记员工并设置查看和操作权限。厨房查看菜品与数量，服务员查看接待所需信息。权限变更和员工移除会同步至已连接设备。"
         ],
         "points": [
-          "在对话中提出请求，用记录核对",
-          "区分已付款与未付款订单",
-          "库存与员工任务为手动管理示例"
+          "按角色设置查看与操作权限",
+          "厨房仅看菜品与数量",
+          "店主新增、修改及移除员工"
         ]
       },
       {
         "id": "operations",
-        "title": "对话中的操作也需要确认",
-        "lead": "订单、订位、付款和权益分别记录。",
+        "title": "从接单到完成，跟进同一订单",
+        "lead": "前厅接单，厨房备餐，客人收到通知。",
         "paragraphs": [
-          "蓝色的 AI 经理会提醒您查看新订单和订位。堂食订单突出显示已确认的桌号，外送订单显示配送地址和电话。订位记录会注明扫码时的桌号；从线上进入的订位则显示“尚未分配餐桌”。",
-          "店主接单、备餐或完成订单时，顾客端的进度和通知也会更新。更新不会清除正在输入的消息。订单与付款状态分别管理，尚未连接真实 AI 和支付。"
+          "前厅接收客人确认的请求，厨房负责制作并标记完成。店主查看整体进度，客人查看自己的状态。",
+          "变更经双方同意后生效。客人可以修改店员的替代方案；开始烹饪后的变更或取消由店主批准。"
         ],
         "points": [
-          "订单进度与付款分离",
-          "订位和奖励确认后再保存",
-          "无付费下注、提现或实际赠品发放"
+          "保留请求、确认与变更记录",
+          "订单进度与支付状态分别管理",
+          "开始烹饪后的变更或取消由店主批准"
         ]
       },
       {
@@ -967,8 +967,8 @@ export const BOOK={
         "title": "以门店订阅提供持续帮助",
         "lead": "同时衡量店主获得的价值与我们的运营成本。",
         "paragraphs": [
-          "商业模式以按店订阅为基础，明确功能和包含的用量。书中的价格与收入测算仅用于验证假设，不代表正式套餐或真实业绩。",
-          "服务不提供无限制的通用聊天。产品会设置使用上限和费用提醒；达到上限后，顾客仍可查看菜单或寻求店员帮助。"
+          "以每家店按月订阅作为初步方案。包含功能、AI用量及超额条件，将在试点测量实际使用后确定。",
+          "对店主的价值应体现在减少重复答疑和传单负担。运营成本需同时考虑AI、支付手续费、客户支持及维护。"
         ],
         "points": [
           "按店衡量 AI 成本",
@@ -1024,7 +1024,7 @@ export const BOOK={
         "lead": "理解顾客，而不是猜测顾客身份。",
         "paragraphs": [
           "one shop ai 面向餐厅、食堂和咖啡馆。确认订单前，堂食客人核对桌号，外送客人填写配送地址和联系电话。这些信息会随订单保存，并按订单来源显示在经营看板中。目前尚未接入真实 AI、支付或配送服务。",
-          "Jumo 示例中的订单、订位和营收都是虚构记录，修改仅保存在当前浏览器。已连接店铺的信息和订单会被保存；店主账号的跨设备登录将在接入正式认证后提供。付款、积分、赠品和报告仍为演示，真实支付、POS 和外部通知尚未接入。库存与员工任务由店主手动记录，导出的税务资料仅为待核对草稿。GitHub Pages 的店铺二维码可公开访问，Sites 预览仍仅限所有者查看。"
+          "顾客链接不提供店主权限。员工使用各自专属链接，仅访问获准的数据和操作。退出会撤销当前会话，修改密码会结束其他店主会话。 店主密码由服务器验证。员工采用专属链接访问，尚未接入员工实名验证或邮件密码找回。真实AI和支付仍未连接。"
         ],
         "points": [
           "过敏信息由员工确认",
@@ -1037,13 +1037,13 @@ export const BOOK={
         "title": "从预设场景走向真实门店",
         "lead": "达到每阶段验收标准后，再连接下一项能力。",
         "paragraphs": [
-          "上传菜单和店铺资料，通过对话完成店铺设置。店铺信息和菜单保存到云端，顾客可用另一部手机扫码下单或订位，店主在经营看板实时查看。AI 回复和付款仍为演示。点击按钮即可体验，不会进行真实注册或账户认证。",
-          "下一阶段验证可审核的照片识别、真实 AI 智能体和服务器费用控制。真实支付、POS 与外部通知需单独集成，检查 API 契约、webhook 验证、幂等、重试、对账和权限后再运营。"
+          "当前先通过演示检查客人与员工的流程。下一步准备一家试点店，使用真实菜单、营业时间、售罄状态及预约规则。",
+          "上线前分别验证店主审核菜单识别、多语言准确性、AI费用上限、支付与POS对账、账户恢复及故障处理。通过这些条件后再确定上线时间。"
         ],
         "points": [
-          "跨设备检查门店、订单和订位",
-          "核对实时界面与保存记录",
-          "正式上线时接入真实账户认证"
+          "检查流程",
+          "门店试点",
+          "验证上线条件"
         ]
       },
       {
@@ -1051,13 +1051,13 @@ export const BOOK={
         "title": "我们一起决定的下一步",
         "lead": "先确定首个市场与首家门店的运营方式。",
         "paragraphs": [
-          "确定首个市场、币种、店主核准的菜单与价格、POS 供应商及支付方式。同时商定订位、积分、赠品、游戏次数、信息收集同意文案和数据保存期限。",
-          "明确库存和员工任务的负责人、模拟销售报告的统计口径，以及税务草稿的审核人。根据云端记录导出的草稿，不能替代正式账务处理或纳税申报。正式上线时还需接入真实账户认证。"
+          "先确定试点国家、店铺及运营负责人。确认货币、菜单、价格与预约规则，并核查现有POS及支付服务能否对接。",
+          "再商定包含用量、支持范围、记录保留期限及删除流程。与店主、现场员工一起确定参与时间和成功标准。"
         ],
         "points": [
-          "选择试点与审核负责人",
-          "制定订位、权益与任务规则",
-          "准备 POS 测试、订阅与支持条件"
+          "国家、门店与负责人",
+          "菜单、预约与对接规则",
+          "订阅、支持与数据政策"
         ]
       },
       {
@@ -1065,8 +1065,8 @@ export const BOOK={
         "title": "轻松开始，也清楚目前能做什么",
         "lead": "区分今天的体验和未来的服务。",
         "paragraphs": [
-          "Jumo 示例店铺提供 8 道菜品，以及订单和订位的示例记录。您可以向经理询问店况，也可以查看经营看板。订单、订位和营收都是虚构数据，修改仅保存在当前浏览器。点击即可体验，无需真实注册或账户认证。连接实时同步演示店铺后，还能用另一部手机扫码下单或订位。",
-          "付款、积分、赠品和报告仍为演示，真实支付、POS 和外部通知尚未接入。库存和员工任务采用手动记录，税务导出仅供核对，不能直接用于申报。GitHub Pages 的店铺二维码可公开访问，Sites 预览仍仅限所有者查看。"
+          "本书的集成演示与独立店铺应用采用不同的数据保存方式。请根据下表选择需要的体验。",
+          "Jumo菜品照片为概念图，越南盾价格为演示假设。积分、奖励、周边及礼券尚未确定实际销售或发放。"
         ],
         "points": [
           "区分云端接单与 AI 预设回答",
@@ -1096,8 +1096,8 @@ export const BOOK={
         "title": "お店の可能性を広げる AI",
         "lead": "すべてのオーナーが、自分のお店を知るエージェントを持てるように。",
         "paragraphs": [
-          "one shop ai は、飲食店やカフェの情報をお客様の言語で伝えます。オーナーは自分のお店のAIマネージャーに相談し、お客様はお店のアシスタントに話しかける。それがサービスの基本です。",
-          "公開した店舗情報やメニュー、アップロード資料、来店・注文・予約の記録はバックエンドに保存し、端末間で共有します。AIエージェントの回答は事前に用意したもので、決済・ポイント・特典・レポートはデモです。画像の文字読み取り（OCR）、実際の決済、POS、外部通知は未接続です。"
+          "お客様が尋ね、お店が確認し、スタッフが引き継ぐ。One shopはメニュー案内、注文、予約をひとつの会話でつなぎます。",
+          "飲食店やカフェ向けの最初のサンプルはJumoです。同じ依頼をお客様・ホール・厨房・オーナーがどう扱うか体験できます。"
         ],
         "points": [
           "お店ならではの物語",
@@ -1138,7 +1138,7 @@ export const BOOK={
         "title": "会話はシンプルに、確認は明確に",
         "lead": "余白のある一つの会話画面から始めます。",
         "paragraphs": [
-          "Grok の簡潔なチャット構成を参考にします。会話と入力欄を中心に、商品、数量、予約日などを確かめる場面だけカードを表示します。",
+          "会話は短く、選択は明確に。メニュー・数量・予約時間を確認カードで示し、お客様とスタッフが同じ内容を見て判断します。",
           "店名や話し方には、それぞれのお店らしさを残します。価格と品切れ情報は、オーナーが確認したデータを基準にします。写真だけで食材やアレルギーに対する安全性を判断せず、不明点はスタッフに確認します。"
         ],
         "points": [
@@ -1164,15 +1164,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "ジュモとつながる、一つのチャット",
-        "lead": "お店らしさを残しながら、使いやすいお客様画面に。",
+        "lead": "ひとつの依頼が、4つの画面をつなぐ。",
         "paragraphs": [
-          "ジュモのロゴやシンボル、メニューの雰囲気を生かした、シンプルなチャット画面です。会話の流れに沿って料理写真やカードが現れ、注文・予約・決済のシミュレーションは内容を確認してから進めます。",
-          "料理画像はAIで制作したイメージです。正式な価格は未確定のため、ベトナムドン（VND）の金額はデモ用の仮価格です。ポイントや特典も仮の記録で、現金価値はなく、実際の商品やサービスの提供を約束するものではありません。"
+          "メニュー写真の登録からお客様への通知まで体験できます。店内注文・予約・配達を選び、言語や依頼内容を変更してください。",
+          "変更依頼、お断りの理由、代替案、再リクエストまで試せます。合意内容は4画面に反映され、韓国語と原文、担当者、日時が記録されます。"
         ],
         "points": [
-          "9言語のお店専用会話",
-          "会話に合わせてメニュー・予約・決済を案内",
-          "用意した回答で API 費用なし"
+          "店内注文・予約・配達",
+          "変更提案から最終合意まで",
+          "韓国語・原文・担当者・時刻を記録"
         ]
       },
       {
@@ -1180,13 +1180,13 @@ export const BOOK={
         "title": "マネージャーと話せば、お店の準備が進む",
         "lead": "オーナーは聞かれた情報に順番に答えます。",
         "paragraphs": [
-          "ジュモの準備ができました。メニュー8品と注文・予約のサンプルを用意しています。今日の状況を聞くか、ダッシュボードをご覧ください。",
-          "ボタンを押すとすぐに体験でき、実際の登録やアカウント認証は行いません。サンプルの注文・予約・売上は架空の記録で、変更はこのブラウザーにのみ保存されます。「リアルタイム連携のデモ店舗を開く」からジュモに接続すると、別のスマートフォンでQRを読み取り、注文や予約を送信できます。"
+          "店名・連絡先・メニュー写真から始めます。ラミが整理したメニューと価格をオーナーが確認してから、店舗リンクとQRを発行します。",
+          "本書の写真解析は用意されたサンプルです。別のオーナーアプリではパスワードを設定して店舗情報を保存し、別端末でも利用できます。"
         ],
         "points": [
-          "店舗情報を見る",
-          "メニュー8品を見る",
-          "ダッシュボードを見る"
+          "メニュー写真",
+          "メニューと価格の確認",
+          "店舗リンクとQR"
         ]
       },
       {
@@ -1194,8 +1194,8 @@ export const BOOK={
         "title": "テーブルも SNS も、お店の入口に",
         "lead": "一つのお店のリンクを、さまざまな場所で使います。",
         "paragraphs": [
-          "席ごとの QR を印刷したり、店舗リンクを共有したりできます。公開済みの店舗・メニューをバックエンドから読むため、別のスマートフォンでも同じ情報を見て注文・予約を送信できます。",
-          "GitHub Pagesで公開した店舗のQRは、オーナーのログインなしで開けます。既存のSitesプレビューは、引き続き所有者のみが閲覧できます。注文や予約が送信できたかどうかは、該当店舗のバックエンドの記録で確認します。"
+          "各テーブルには番号付きQRを、SNSには店舗リンクを掲示します。同じお店へのアクセスでも、入口をもとに依頼を区別できます。",
+          "店内のお客様はテーブル番号を確認します。配達では住所と電話番号、予約では日付・時間・人数を確認します。"
         ],
         "points": [
           "店舗と席を識別する QR",
@@ -1205,30 +1205,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "マネージャーと話し、一つの画面で確認",
-        "lead": "オーナー向けチャットに、お店の状況を確認するダッシュボードを添えます。",
+        "title": "ホール・厨房・オーナー、それぞれに必要な画面",
+        "lead": "同じ店舗で、担当する仕事を進めます。",
         "paragraphs": [
-          "青いAIマネージャーが、新しい注文や予約をお知らせします。店内の注文では確認済みのテーブル番号を大きく表示し、配達の注文では届け先と電話番号を表示します。予約には読み取ったQRのテーブル番号を表示し、オンライン予約は「テーブル未割り当て」として扱います。",
-          "QRを読み取っただけで個人を特定することはせず、表示に同意したプロフィールのみを使います。在庫やスタッフの業務は、オーナーが手入力で管理するデモ用の記録です。実際の倉庫システムや人事システムには接続しません。"
+          "ひとつの依頼を4つの役割で扱います。ホールは受付と配膳、厨房は調理と準備完了、オーナーは全体の状況と権限を担当します。",
+          "オーナーがスタッフを登録し、閲覧・操作権限を設定します。厨房にはメニューと数量、ホールには接客に必要な情報を表示します。権限変更や削除は接続中の端末にも反映されます。"
         ],
         "points": [
-          "会話で依頼し、記録で確かめる",
-          "支払済みと未払いを区別",
-          "在庫・スタッフ業務は手入力のデモ"
+          "役割別の画面と操作権限",
+          "厨房にはメニューと数量のみ",
+          "登録・変更・削除はオーナーが管理"
         ]
       },
       {
         "id": "operations",
-        "title": "会話の中の操作にも確認を",
-        "lead": "注文・予約・決済・特典は別の記録として扱います。",
+        "title": "受付から完了まで、同じ注文を確認",
+        "lead": "ホールが受付、厨房が準備、お客様へ通知します。",
         "paragraphs": [
-          "青いAIマネージャーが、新しい注文や予約をお知らせします。店内の注文では確認済みのテーブル番号を大きく表示し、配達の注文では届け先と電話番号を表示します。予約には読み取ったQRのテーブル番号を表示し、オンライン予約は「テーブル未割り当て」として扱います。",
-          "オーナーが注文の受付・調理・提供完了を操作すると、お客様側の注文状況や通知も更新されます。入力中のメッセージはそのまま残ります。注文状況と支払い状況は別々に管理し、実際のAIモデルと決済はまだ接続していません。"
+          "お客様の確定した依頼をホールが受け付け、厨房が調理と準備完了を担当します。オーナーは全体を、お客様は自分の状況を確認できます。",
+          "変更は合意後に反映します。お客様は代替案を修正して再依頼できます。調理開始後の変更・キャンセルはオーナーが承認します。"
         ],
         "points": [
-          "注文状況と支払い状況を分けて管理",
-          "予約と特典も確認して保存",
-          "有料の賭け・換金・実際の特典提供はなし"
+          "依頼・確定・変更の履歴を残す",
+          "注文進行と決済状態を分ける",
+          "調理開始後の変更・キャンセルはオーナー承認"
         ]
       },
       {
@@ -1236,8 +1236,8 @@ export const BOOK={
         "title": "店舗単位のサブスクで継続的に支える",
         "lead": "オーナーへの価値と運営コストを、両方確認します。",
         "paragraphs": [
-          "店舗ごとの月額契約を基本に、機能と利用量を設計します。本書の料金や売上計算は検証用の仮定で、正式な商品や実績ではありません。",
-          "無制限に使える汎用チャットとしては提供しません。利用上限や費用の通知を設け、上限に達してもメニューの閲覧やスタッフへの相談を続けられるようにします。"
+          "店舗ごとの月額契約を基本案として検討します。対象機能、AI利用枠、超過条件は試験導入の実測後に決めます。",
+          "繰り返す説明や注文の引き継ぎを楽にする価値が必要です。運営側はAIだけでなく決済手数料、サポート、保守の費用も見込みます。"
         ],
         "points": [
           "店舗ごとにAIの利用コストを計測",
@@ -1293,7 +1293,7 @@ export const BOOK={
         "lead": "確認できない本人情報を作り出さず、お客様を理解します。",
         "paragraphs": [
           "one shop ai は、食堂・レストラン・カフェなどのお店向けサービスです。注文確定前に、店内で食事をする方はテーブル番号を、配達をご希望の方は届け先と電話番号を確認します。情報は注文と一緒に保存され、注文経路ごとに管理画面で確認できます。実際のAIモデル・決済・配達サービスはまだ接続していません。",
-          "ジュモのサンプルにある注文・予約・売上は架空の記録で、変更はこのブラウザーにのみ保存されます。接続済み店舗の情報と注文は保存されますが、オーナーアカウントで別の端末にログインする機能は、正式な認証機能の導入後に対応します。決済・ポイント・特典・レポートは引き続きデモで、実際の決済・POS・外部通知は未接続です。在庫やスタッフの業務は手入力で記録し、税務用の出力は確認用の下書きとして扱います。GitHub Pagesの店舗QRは公開でき、Sitesプレビューは所有者のみが閲覧できます。"
+          "お客様のリンクでは管理権限は得られません。スタッフは専用リンクを使い、許可された情報と操作だけを利用します。ログアウトでそのセッションを終了し、パスワード変更で他の管理セッションも終了します。 オーナーのパスワードはサーバーで確認します。スタッフはリンクによるアクセスで、本人確認とメールでのパスワード復旧は未対応です。実際のAIと決済は接続していません。"
         ],
         "points": [
           "アレルギーはスタッフに確認",
@@ -1306,13 +1306,13 @@ export const BOOK={
         "title": "デモ体験から、実際のお店へ",
         "lead": "各段階の完了条件を満たしてから、次の機能につなげます。",
         "paragraphs": [
-          "メニューや店舗資料をアップロードし、会話しながらお店を登録します。店舗情報とメニューはクラウドに保存され、お客様は別のスマートフォンからQRで注文・予約できます。オーナーはダッシュボードでリアルタイムに確認できます。AIの回答と決済はデモのままです。ボタンを押すだけで体験でき、実際の登録やアカウント認証は行いません。",
-          "次の段階では、オーナーが確認・承認できる写真読み取り機能、実際のAIエージェント、サーバー側の費用制限を検証します。実際の決済・POS・外部通知は個別に接続します。API仕様、Webhookの検証、重複処理の防止、再試行、記録の照合、権限を確認してから運用します。"
+          "まずデモでお客様とスタッフの流れを確認します。次は実際のメニュー、営業時間、品切れ、予約ルールを使う1店舗の試験導入です。",
+          "公開前に、メニュー認識のオーナー確認、言語別の正確性、AI費用上限、決済・POSの照合、アカウント復旧、障害対応を検証します。日程は基準を満たしてから決めます。"
         ],
         "points": [
-          "別端末で店舗・注文・予約を確認",
-          "リアルタイム画面と保存記録を照合",
-          "サービス開始時に正式な認証機能を導入"
+          "流れを確認",
+          "店舗で試験導入",
+          "公開基準を検証"
         ]
       },
       {
@@ -1320,13 +1320,13 @@ export const BOOK={
         "title": "一緒に決める次のこと",
         "lead": "最初の国と店舗の運営方法から具体化します。",
         "paragraphs": [
-          "最初の市場、通貨、承認済みメニューと価格、POS、決済方法を決めます。予約、ポイント・特典、ゲーム回数、同意文面、保存期間も合意します。",
-          "在庫やスタッフ業務の担当者、デモ売上の集計基準、税務資料の確認者を決めます。クラウドの記録から出力した下書きは、正式な会計処理や税務申告の代わりにはなりません。サービス開始時には正式な認証機能を導入します。"
+          "最初に試験導入の国、店舗、運営責任者を決めます。通貨・メニュー・価格・予約ルールを確定し、既存POSと決済事業者との接続を確認します。",
+          "次に利用枠、サポート範囲、記録保存期間、削除手順を決めます。参加日程と成功基準はオーナー・現場スタッフと合意します。"
         ],
         "points": [
-          "試験店舗と確認担当者",
-          "予約・特典・業務の運用ルール",
-          "POS 試験環境と料金・支援条件"
+          "国・店舗・責任者",
+          "メニュー・予約・接続ルール",
+          "契約・支援・データ方針"
         ]
       },
       {
@@ -1334,8 +1334,8 @@ export const BOOK={
         "title": "すぐに始められ、今できることもわかる",
         "lead": "今日の体験と、これからのサービスを区別します。",
         "paragraphs": [
-          "ジュモのサンプル店舗には、メニュー8品と注文・予約の例を用意しています。今日のお店の状況を聞いたり、ダッシュボードを確認したりできます。注文・予約・売上は架空の記録で、変更はこのブラウザーにのみ保存されます。実際の登録やアカウント認証なしで体験でき、リアルタイム連携のデモ店舗に接続すれば、別のスマートフォンからQRで注文や予約を送信できます。",
-          "決済・ポイント・特典・レポートは引き続きデモです。実際の決済・POS・外部通知は接続していません。在庫やスタッフ業務は手入力で記録し、税務用の出力は確認用の下書きとして扱います。GitHub Pagesの店舗QRは公開でき、Sitesプレビューは所有者のみが閲覧できます。"
+          "本書の統合デモと別の店舗アプリではデータの保存方法が異なります。下の表で範囲を確認し、必要な体験を選んでください。",
+          "Jumoの料理写真はコンセプト画像で、VND価格はデモ用の仮定です。ポイント・特典・グッズ・商品券は実際の販売や提供が確定した商品ではありません。"
         ],
         "points": [
           "クラウドへの注文送信とAIのデモ回答を区別",
@@ -1365,8 +1365,8 @@ export const BOOK={
         "title": "Lebih banyak peluang untuk setiap usaha",
         "lead": "Setiap pemilik berhak memiliki agen yang memahami kedainya.",
         "paragraphs": [
-          "원샵 · one shop ai memperkenalkan restoran, kafe, dan menunya dalam bahasa tamu. Pemilik mengelola usaha lewat percakapan dengan manajer, sementara tamu mengobrol langsung dengan asisten kedai.",
-          "Kedai dan menu yang diterbitkan, aset unggahan, kunjungan, pesanan dan reservasi disimpan di backend dan dibagikan antarperangkat. Jawaban agen AI mengikuti skenario; pembayaran, poin, bonus dan laporan tetap demo. OCR, pembayaran nyata, POS dan notifikasi eksternal belum terhubung."
+          "Tamu bertanya, kedai mengonfirmasi, lalu tim melanjutkan. One shop menghubungkan informasi menu, pesanan, dan reservasi dalam satu percakapan.",
+          "Jumo menjadi contoh pertama untuk restoran dan kafe. Lihat bagaimana tamu, staf pelayanan, dapur, dan pemilik menangani permintaan yang sama."
         ],
         "points": [
           "Cerita khas usaha Anda",
@@ -1407,7 +1407,7 @@ export const BOOK={
         "title": "Percakapan sederhana, konfirmasi jelas",
         "lead": "Mulai dengan satu layar percakapan yang lapang dan tenang.",
         "paragraphs": [
-          "Desainnya terinspirasi tata letak percakapan Grok yang sederhana. Percakapan dan kolom pesan menjadi pusat layar; kartu muncul saat pengguna perlu memeriksa hidangan, jumlah, atau tanggal reservasi.",
+          "Percakapan singkat, pilihan jelas. Kartu konfirmasi memperlihatkan menu, jumlah, dan waktu reservasi yang sama bagi tamu dan staf.",
           "Setiap kedai mempertahankan nama dan gaya bicara. Harga dan stok mengikuti data yang disetujui; foto tidak membuktikan bahan atau keamanan alergi, sehingga ketidakpastian perlu dikonfirmasi staf."
         ],
         "points": [
@@ -1433,15 +1433,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "Satu percakapan bersama Jumo",
-        "lead": "Pertahankan merek, sederhanakan pengalaman tamu.",
+        "lead": "Satu permintaan, empat layar terhubung.",
         "paragraphs": [
-          "Tampilan percakapan yang sederhana tetap membawa logo, simbol, dan nuansa menu Jumo. Foto makanan dan kartu menu muncul saat dibutuhkan. Pesanan, reservasi, dan pembayaran demo selalu melalui langkah konfirmasi.",
-          "Foto makanan adalah konsep buatan AI. Harga VND merupakan asumsi demo karena harga resmi belum dikonfirmasi. Poin dan bonus juga catatan simulasi, tanpa nilai tunai atau janji layanan nyata."
+          "Ikuti proses dari foto menu sampai notifikasi tamu. Pilih makan di tempat, reservasi, atau pengantaran, lalu ubah bahasa dan permintaan tamu.",
+          "Coba perubahan, alasan penolakan, pilihan alternatif, dan permintaan ulang. Hasil kesepakatan tampil di empat layar, disertai catatan Korea, bahasa asli, petugas, dan waktu."
         ],
         "points": [
-          "Percakapan khusus kedai dalam sembilan bahasa",
-          "Menu, reservasi dan pembayaran sesuai konteks",
-          "Jawaban skenario tanpa biaya API"
+          "Makan di tempat, reservasi, dan pengantaran",
+          "Dari usulan perubahan ke kesepakatan akhir",
+          "Catat bahasa Korea, teks asli, petugas, dan waktu"
         ]
       },
       {
@@ -1449,13 +1449,13 @@ export const BOOK={
         "title": "Bicara dengan manajer untuk menyiapkan kedai",
         "lead": "Pemilik menjawab pertanyaan manajer secara bertahap.",
         "paragraphs": [
-          "Coba Jumo dengan delapan hidangan serta contoh pesanan dan reservasi. Tanyakan kondisi kedai hari ini kepada manajer, atau buka dasbor untuk melihat catatannya.",
-          "Anda dapat langsung mencoba tanpa pendaftaran atau autentikasi akun sungguhan. Pesanan, reservasi, dan penjualan contoh bersifat fiktif; perubahan hanya disimpan di browser ini. Hubungkan kedai contoh Jumo untuk mencoba pesanan dan permintaan reservasi melalui QR dari ponsel lain."
+          "Mulai dari nama kedai, kontak, dan foto menu. Pemilik memeriksa menu serta harga yang disusun Rami sebelum membuat tautan kedai dan QR.",
+          "Analisis foto dalam buku ini memakai contoh yang sudah disiapkan. Di aplikasi pemilik terpisah, atur kata sandi dan simpan informasi kedai untuk melanjutkan di perangkat lain."
         ],
         "points": [
-          "Informasi kedai",
-          "Lihat 8 hidangan",
-          "Jelajahi dasbor"
+          "Foto menu",
+          "Periksa menu dan harga",
+          "Tautan kedai dan QR"
         ]
       },
       {
@@ -1463,8 +1463,8 @@ export const BOOK={
         "title": "Pintu masuk di meja dan media sosial",
         "lead": "Gunakan satu tautan kedai di banyak tempat.",
         "paragraphs": [
-          "Cetak QR meja atau bagikan tautan kedai. Informasi kedai dan menu dimuat dari backend sehingga tamu di ponsel lain melihat data yang sama dan dapat mengirim pesanan atau reservasi.",
-          "QR kedai di GitHub Pages publik dapat dibuka tanpa login pemilik. Pratinjau Sites yang ada tetap privat untuk pemilik. Hasil pengiriman diperiksa melalui catatan backend kedai terkait."
+          "Pasang QR bernomor di setiap meja dan bagikan tautan kedai di media sosial. Tamu masuk ke kedai yang sama, sementara asal akses membantu membedakan permintaan.",
+          "Tamu makan di tempat mengonfirmasi nomor meja. Tamu pengantaran mengisi alamat dan telepon; tamu reservasi memeriksa tanggal, waktu, dan jumlah orang."
         ],
         "points": [
           "QR mengenali kedai dan meja",
@@ -1474,30 +1474,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "Bicara dengan manajer, periksa satu dasbor",
-        "lead": "Satu dasbor pendukung mendampingi percakapan pemilik.",
+        "title": "Pelayan, dapur, dan pemilik: tampilan sesuai peran",
+        "lead": "Satu kedai, setiap orang menangani tugasnya.",
         "paragraphs": [
-          "Rami, manajer berwarna biru, memberi tahu saat ada pesanan atau permintaan reservasi baru. Pesanan makan di tempat menampilkan meja yang sudah dikonfirmasi; pesanan antar menampilkan alamat dan nomor telepon. Reservasi mencatat QR meja yang digunakan, sedangkan reservasi lewat tautan online belum memiliki meja.",
-          "QR tidak mengungkap identitas; hanya profil dengan persetujuan ditampilkan. Tugas stok dan staf merupakan catatan demo yang dimasukkan serta diperbarui manual, tanpa koneksi gudang atau sistem kepegawaian nyata."
+          "Satu permintaan ditangani empat peran. Staf pelayanan menerima dan menyajikan, dapur menyiapkan, pemilik mengelola status serta izin.",
+          "Pemilik mendaftarkan staf dan mengatur izin melihat serta bertindak. Dapur melihat menu dan jumlah; pelayan melihat informasi untuk melayani tamu. Perubahan izin dan penghapusan berlaku pada perangkat yang terhubung."
         ],
         "points": [
-          "Minta lewat chat, verifikasi lewat catatan",
-          "Bedakan pesanan dibayar dan belum dibayar",
-          "Contoh tugas stok dan staf manual"
+          "Tampilan dan tindakan sesuai peran",
+          "Dapur hanya melihat menu dan jumlah",
+          "Pemilik menambah, mengubah, dan menghapus staf"
         ]
       },
       {
         "id": "operations",
-        "title": "Tindakan dalam chat tetap perlu konfirmasi",
-        "lead": "Pisahkan catatan pesanan, reservasi, pembayaran, dan hadiah.",
+        "title": "Ikuti pesanan yang sama dari diterima hingga selesai",
+        "lead": "Pelayan menerima, dapur menyiapkan, tamu mendapat kabar.",
         "paragraphs": [
-          "Rami, manajer berwarna biru, memberi tahu saat ada pesanan atau permintaan reservasi baru. Pesanan makan di tempat menampilkan meja yang sudah dikonfirmasi; pesanan antar menampilkan alamat dan nomor telepon. Reservasi mencatat QR meja yang digunakan, sedangkan reservasi lewat tautan online belum memiliki meja.",
-          "Saat pemilik menerima, menyiapkan atau menyelesaikan pesanan, progres dan notifikasi tamu ikut diperbarui. Pesan yang sedang diketik tetap tersimpan. Status pesanan dan pembayaran terpisah; AI dan pembayaran nyata belum terhubung."
+          "Staf pelayanan menerima permintaan yang sudah dikonfirmasi tamu; dapur menyiapkan dan menandai pesanan siap. Pemilik melihat seluruh proses, tamu mengikuti statusnya sendiri.",
+          "Perubahan berlaku setelah disepakati. Tamu dapat mengubah usulan staf, dan pemilik menyetujui perubahan atau pembatalan setelah memasak dimulai."
         ],
         "points": [
-          "Pisahkan proses pesanan dari pembayaran",
-          "Konfirmasi reservasi dan hadiah sebelum disimpan",
-          "Tanpa taruhan berbayar, penukaran tunai atau layanan nyata"
+          "Simpan permintaan, konfirmasi, dan perubahan",
+          "Pisahkan pembayaran dari progres pesanan",
+          "Perubahan atau pembatalan setelah memasak perlu persetujuan pemilik"
         ]
       },
       {
@@ -1505,8 +1505,8 @@ export const BOOK={
         "title": "Langganan kedai untuk bantuan berkelanjutan",
         "lead": "Ukur manfaat bagi pemilik bersama biaya operasional.",
         "paragraphs": [
-          "Model dimulai dari langganan per kedai dengan fitur dan kuota yang jelas. Harga dan perhitungan pendapatan dalam buku ini merupakan hipotesis, bukan paket resmi atau penjualan nyata.",
-          "Kami tidak menjual chatbot umum tanpa batas. Batas pemakaian, peringatan biaya dan peralihan ke menu atau staf ketika kuota habis menjadi bagian produk."
+          "Usulan awalnya langganan bulanan per kedai. Fitur, kuota AI, dan ketentuan pemakaian tambahan ditetapkan setelah penggunaan pilot diukur.",
+          "Nilainya bagi pemilik harus terasa pada pertanyaan berulang dan penerusan pesanan. Biaya operasional mencakup AI, biaya pembayaran, dukungan, dan pemeliharaan."
         ],
         "points": [
           "Ukur biaya AI per kedai",
@@ -1562,7 +1562,7 @@ export const BOOK={
         "lead": "Pahami tamu tanpa mengarang identitasnya.",
         "paragraphs": [
           "one shop ai melayani restoran dan kafe. Sebelum mengonfirmasi pesanan, tamu yang makan di tempat diminta memastikan nomor meja; tamu yang memesan antar diminta mengisi alamat dan nomor telepon. Data disimpan bersama pesanan dan dikelompokkan menurut sumbernya di dasbor kedai. Layanan AI, pembayaran, dan pengantaran sungguhan belum terhubung.",
-          "Contoh Jumo berisi pesanan, reservasi, dan penjualan fiktif; perubahan hanya disimpan di browser ini. Kedai terhubung menyimpan informasi dan pesanan di cloud; akses akun pemilik lintas perangkat masih memerlukan login sungguhan. Pembayaran, poin, bonus, dan laporan tetap berupa demo, tanpa pembayaran nyata, POS, atau notifikasi eksternal. Persediaan dan tugas staf dicatat manual; ekspor data pajak hanya berupa draf untuk ditinjau. QR publik di GitHub Pages dapat digunakan, sedangkan pratinjau Sites tetap hanya untuk pemilik."
+          "Tautan tamu tidak memberi akses pemilik. Staf memakai tautan masing-masing dan hanya mendapat data serta tindakan yang diizinkan. Keluar mengakhiri sesi tersebut; mengganti kata sandi mengakhiri sesi pemilik lainnya. Kata sandi pemilik diperiksa di server. Akses staf berbasis tautan; verifikasi identitas staf dan pemulihan kata sandi melalui email belum terhubung. AI dan pembayaran sungguhan belum terhubung."
         ],
         "points": [
           "Konfirmasikan alergi kepada staf",
@@ -1575,13 +1575,13 @@ export const BOOK={
         "title": "Dari skenario menuju kedai nyata",
         "lead": "Hubungkan kemampuan baru setelah kriteria penerimaannya terpenuhi.",
         "paragraphs": [
-          "Pemilik menyiapkan kedai melalui percakapan dan mengunggah foto menu serta foto atau video kedai. Informasi dan menu disimpan di cloud. Tamu dapat memesan makanan atau mengajukan reservasi melalui QR dari ponsel lain, dan pemilik melihat pembaruan di dasbor. Jawaban AI dan pembayaran tetap demo. Contoh dapat dicoba tanpa pendaftaran atau autentikasi akun sungguhan.",
-          "Selanjutnya uji pengenalan foto yang dapat ditinjau, agen AI nyata dan batas biaya server. Pembayaran nyata, POS dan notifikasi eksternal memerlukan integrasi terpisah, kontrak API, webhook terverifikasi, idempotensi, percobaan ulang, rekonsiliasi dan izin."
+          "Saat ini, demo dipakai meninjau alur tamu dan staf. Berikutnya siapkan satu kedai pilot dengan menu, jam buka, ketersediaan, dan aturan reservasi nyata.",
+          "Sebelum peluncuran, periksa tinjauan pemilik atas hasil pembacaan menu, akurasi bahasa, batas biaya AI, rekonsiliasi pembayaran dan POS, pemulihan akun, serta penanganan gangguan. Tanggal rilis mengikuti hasil pemeriksaan."
         ],
         "points": [
-          "Periksa kedai, pesanan dan reservasi lintas perangkat",
-          "Cocokkan layar langsung dengan catatan",
-          "Hubungkan autentikasi akun saat peluncuran"
+          "Tinjau alur",
+          "Pilot di kedai",
+          "Verifikasi kriteria rilis"
         ]
       },
       {
@@ -1589,13 +1589,13 @@ export const BOOK={
         "title": "Keputusan berikutnya kita buat bersama",
         "lead": "Tentukan negara pertama dan cara kerja kedai pertama.",
         "paragraphs": [
-          "Pilih pasar awal, mata uang, menu dan harga yang disetujui, POS serta cara pembayaran. Sepakati reservasi, poin, bonus, batas permainan, teks persetujuan dan masa simpan.",
-          "Tentukan penanggung jawab persediaan dan tugas staf, cara menyusun laporan penjualan demo, serta peninjau draf pajak. Laporan dari data cloud tidak menggantikan pembukuan final atau pelaporan pajak. Autentikasi akun sungguhan harus dihubungkan sebelum peluncuran."
+          "Tentukan negara, kedai pilot, dan penanggung jawab operasional. Pastikan mata uang, menu, harga, aturan reservasi, serta kemungkinan integrasi POS dan penyedia pembayaran.",
+          "Lalu sepakati kuota pemakaian, dukungan, masa penyimpanan data, dan prosedur penghapusan. Susun jadwal serta ukuran keberhasilan bersama pemilik dan staf."
         ],
         "points": [
-          "Pilih kedai uji dan peninjau",
-          "Tentukan aturan reservasi, manfaat dan tugas",
-          "Siapkan uji POS, langganan dan dukungan"
+          "Negara, kedai, penanggung jawab",
+          "Menu, reservasi, integrasi",
+          "Langganan, dukungan, data"
         ]
       },
       {
@@ -1603,8 +1603,8 @@ export const BOOK={
         "title": "Mudah dimulai, jelas mana yang nyata",
         "lead": "Bedakan pengalaman hari ini dengan layanan masa depan.",
         "paragraphs": [
-          "Mulai dengan delapan hidangan serta contoh pesanan dan reservasi Jumo. Tanyakan sesuatu kepada manajer atau jelajahi dasbor. Tidak ada pendaftaran maupun autentikasi akun sungguhan; perubahan contoh hanya disimpan di browser ini. Hubungkan kedai contoh untuk mencoba pesanan makanan dan permintaan reservasi dari ponsel lain melalui QR.",
-          "Pembayaran, poin, bonus, dan laporan tetap berupa demo, tanpa pembayaran nyata, POS, atau notifikasi eksternal. Persediaan dan tugas staf dicatat manual; ekspor data pajak hanya berupa draf untuk ditinjau. QR publik di GitHub Pages dapat digunakan, sedangkan pratinjau Sites hanya untuk pemilik."
+          "Demo terpadu dalam buku dan aplikasi kedai terpisah menyimpan data dengan cara berbeda. Lihat tabel berikut untuk memilih pengalaman yang Anda butuhkan.",
+          "Foto makanan Jumo adalah gambar konsep; harga VND hanya asumsi demo. Poin, bonus, merchandise, dan voucher belum ditetapkan untuk dijual atau diberikan sungguhan."
         ],
         "points": [
           "Bedakan penerimaan cloud dan jawaban AI skenario",
@@ -1634,8 +1634,8 @@ export const BOOK={
         "title": "បើកឱកាសថ្មីសម្រាប់គ្រប់ហាង",
         "lead": "ម្ចាស់ហាងគ្រប់រូបគួរមានភ្នាក់ងារដែលស្គាល់ហាងខ្លួន។",
         "paragraphs": [
-          "one shop ai ណែនាំភោជនីយដ្ឋាន ហាងកាហ្វេ និងមុខម្ហូបជាភាសារបស់ភ្ញៀវ។ ម្ចាស់ហាងអាចគ្រប់គ្រងការងារតាមការជជែកជាមួយអ្នកគ្រប់គ្រង ហើយភ្ញៀវអាចជជែកជាមួយជំនួយការរបស់ហាងដើម្បីទទួលសេវា។",
-          "ព័ត៌មានហាង និងម៉ឺនុយដែលបានផ្សព្វផ្សាយ ឯកសារដែលបានបញ្ចូល ការចូលមើល ការកុម្ម៉ង់ និងការកក់ ត្រូវបានរក្សាទុកលើម៉ាស៊ីនមេ និងអាចចូលមើលបានពីឧបករណ៍ផ្សេង។ ភ្នាក់ងារ AI ប្រើចម្លើយដែលបានរៀបចំទុក។ ការទូទាត់ ពិន្ទុ អំណោយ និងរបាយការណ៍ជាគំរូសាកល្បង។ មិនទាន់ភ្ជាប់ការអានអក្សរពីរូបភាព (OCR) ការទូទាត់ពិត POS ឬការជូនដំណឹងខាងក្រៅទេ។"
+          "ភ្ញៀវសួរ ហាងបញ្ជាក់ ហើយបុគ្គលិកទទួលបន្ត។ One shop ភ្ជាប់ការណែនាំម៉ឺនុយ ការបញ្ជាទិញ និងការកក់ក្នុងការសន្ទនាតែមួយ។",
+          "Jumo ជាគំរូដំបូងសម្រាប់ភោជនីយដ្ឋាននិងហាងកាហ្វេ។ សូមមើលពីរបៀបដែលភ្ញៀវ បុគ្គលិកបម្រើ ផ្ទះបាយ និងម្ចាស់ហាងដោះស្រាយសំណើដូចគ្នា។"
         ],
         "points": [
           "រឿងរ៉ាវផ្ទាល់របស់ហាង",
@@ -1676,7 +1676,7 @@ export const BOOK={
         "title": "ការជជែកសាមញ្ញ ការបញ្ជាក់ច្បាស់",
         "lead": "ចាប់ផ្ដើមពីផ្ទាំងជជែកតែមួយដែលទូលាយនិងស្អាត។",
         "paragraphs": [
-          "រចនាយោងប្លង់ជជែកសាមញ្ញរបស់ Grok។ ការសន្ទនានិងប្រអប់សារជាចំណុចកណ្ដាល; កាតបង្ហាញពេលត្រូវពិនិត្យម្ហូប ចំនួន ឬថ្ងៃកក់តុ។",
+          "ការសន្ទនាខ្លី ជម្រើសច្បាស់។ កាតបញ្ជាក់បង្ហាញម្ហូប ចំនួន និងម៉ោងកក់ ដើម្បីភ្ញៀវនិងបុគ្គលិកពិនិត្យព័ត៌មានដូចគ្នា។",
           "ហាងនីមួយៗរក្សាឈ្មោះ និងរបៀបនិយាយផ្ទាល់ខ្លួន។ តម្លៃ និងស្ថានភាពមុខម្ហូបមានលក់ត្រូវផ្អែកលើព័ត៌មានដែលបានអនុម័ត។ រូបភាពមិនអាចបញ្ជាក់គ្រឿងផ្សំ ឬសុវត្ថិភាពចំពោះអាលែហ្សីបានទេ។ ត្រូវសួរបុគ្គលិកដើម្បីបញ្ជាក់។"
         ],
         "points": [
@@ -1702,15 +1702,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "ការជជែកមួយជាមួយ Jumo",
-        "lead": "រក្សាម៉ាក ហើយធ្វើផ្ទាំងភ្ញៀវឱ្យសាមញ្ញ។",
+        "lead": "សំណើមួយ អេក្រង់បួនភ្ជាប់គ្នា។",
         "paragraphs": [
-          "ផ្ទាំងជជែកសាមញ្ញរក្សារូបសញ្ញា និមិត្តសញ្ញា និងបរិយាកាស Jumo។ រូបម្ហូបនិងកាតបង្ហាញតាមបរិបទ; កុម្ម៉ង់ កក់តុ និងបង់ប្រាក់សាកល្បងសុទ្ធតែត្រូវបញ្ជាក់។",
-          "រូបម្ហូបបង្កើតដោយ AI។ តម្លៃ VND ជាការសន្មត ព្រោះតម្លៃពិតមិនទាន់បញ្ជាក់។ ពិន្ទុនិងអំណោយជាកំណត់ត្រាសាកល្បង គ្មានតម្លៃសាច់ប្រាក់ឬការសន្យាផ្ដល់សេវាពិត។"
+          "សាកល្បងពីការបញ្ចូលរូបម៉ឺនុយដល់ការជូនដំណឹងភ្ញៀវ។ ជ្រើសរើសញ៉ាំនៅហាង កក់តុ ឬដឹកជញ្ជូន ហើយប្ដូរភាសានិងសំណើ។",
+          "សាកល្បងការកែប្រែ មូលហេតុបដិសេធ ជម្រើសផ្សេង និងការស្នើម្ដងទៀត។ ព័ត៌មានដែលបានព្រមព្រៀងបង្ហាញលើអេក្រង់ទាំងបួន ជាមួយភាសាកូរ៉េ អត្ថបទដើម អ្នកដោះស្រាយ និងពេលវេលា។"
         ],
         "points": [
-          "ជជែកតែរឿងហាងជាប្រាំបួនភាសា",
-          "ម្ហូប ការកក់ និងបង់ប្រាក់តាមបរិបទ",
-          "ចម្លើយរៀបចំទុក គ្មានថ្លៃ API"
+          "ញ៉ាំនៅហាង កក់ និងដឹកជញ្ជូន",
+          "ពីសំណើកែប្រែដល់ការព្រមព្រៀងចុងក្រោយ",
+          "រក្សាភាសាកូរ៉េ អត្ថបទដើម អ្នកដោះស្រាយ និងពេលវេលា"
         ]
       },
       {
@@ -1718,13 +1718,13 @@ export const BOOK={
         "title": "ជជែកជាមួយអ្នកគ្រប់គ្រង ដើម្បីរៀបចំហាង",
         "lead": "ម្ចាស់ឆ្លើយសំណួរម្ដងមួយតាមការណែនាំ។",
         "paragraphs": [
-          "Jumo ត្រៀមរួចរាល់សម្រាប់សាកល្បងហើយ។ មានម្ហូប 8 មុខ ព្រមទាំងការកុម្ម៉ង់ និងការកក់ជាគំរូ។ សួរអំពីស្ថានភាពថ្ងៃនេះ ឬបើកផ្ទាំងគ្រប់គ្រង។",
-          "ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។ គំរូ Jumo · ការបញ្ជាទិញ ការកក់ និងចំណូលជាទិន្នន័យសន្មត់។ ការកែប្រែរក្សាទុកតែក្នុងកម្មវិធីរុករកនេះ។ ភ្ជាប់ហាងគំរូតាមអនឡាញ — ភ្ជាប់ហាងគំរូ Jumo ដើម្បីឱ្យទូរសព្ទផ្សេងបញ្ជាទិញ ឬកក់តាម QR។"
+          "ចាប់ផ្ដើមពីឈ្មោះហាង ព័ត៌មានទំនាក់ទំនង និងរូបម៉ឺនុយ។ ម្ចាស់ហាងពិនិត្យម្ហូបនិងតម្លៃដែល Rami រៀបចំ មុនបង្កើតតំណនិង QR។",
+          "ការវិភាគរូបក្នុងសៀវភៅជាគំរូដែលរៀបចំទុក។ កម្មវិធីម្ចាស់ហាងដាច់ដោយឡែកអាចកំណត់ពាក្យសម្ងាត់ រក្សាទុកព័ត៌មាន និងបន្តលើឧបករណ៍ផ្សេង។"
         ],
         "points": [
-          "ព័ត៌មានហាង",
-          "មើលម្ហូប 8 មុខ",
-          "មើលផ្ទាំងគ្រប់គ្រង"
+          "រូបម៉ឺនុយ",
+          "ពិនិត្យម្ហូបនិងតម្លៃ",
+          "តំណហាងនិង QR"
         ]
       },
       {
@@ -1732,8 +1732,8 @@ export const BOOK={
         "title": "តុនិងបណ្ដាញសង្គមជាច្រកចូលហាង",
         "lead": "ប្រើតំណហាងមួយនៅកន្លែងជាច្រើន។",
         "paragraphs": [
-          "បោះពុម្ព QR តុ ឬចែកតំណហាង។ ព័ត៌មានហាងនិងមុខម្ហូបដែលផ្សាយត្រូវអានពី backend ដូច្នេះភ្ញៀវលើទូរសព្ទផ្សេងឃើញព័ត៌មានដូចគ្នា និងអាចផ្ញើកុម្ម៉ង់ឬកក់តុ។",
-          "QR ហាងនៅ GitHub Pages សាធារណៈអាចបើកដោយមិនចូលគណនីម្ចាស់។ ការមើល Sites ដើមនៅតែឯកជនសម្រាប់ម្ចាស់។ លទ្ធផលកុម្ម៉ង់និងកក់ផ្ទៀងផ្ទាត់តាមកំណត់ត្រា backend របស់ហាងនោះ។"
+          "ដាក់ QR មានលេខនៅតាមតុ ហើយចែករំលែកតំណហាងលើបណ្ដាញសង្គម។ ភ្ញៀវចូលហាងដូចគ្នា ប៉ុន្តែច្រកចូលជួយសម្គាល់សំណើ។",
+          "ភ្ញៀវនៅហាងបញ្ជាក់លេខតុ។ ភ្ញៀវដឹកជញ្ជូនបញ្ចូលអាសយដ្ឋាននិងទូរស័ព្ទ។ ភ្ញៀវកក់បញ្ជាក់ថ្ងៃ ម៉ោង និងចំនួនមនុស្ស។"
         ],
         "points": [
           "QR សម្គាល់ហាងនិងតុ",
@@ -1743,30 +1743,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "ជជែកជាមួយអ្នកគ្រប់គ្រង ពិនិត្យផ្ទាំងតែមួយ",
-        "lead": "មានផ្ទាំងគ្រប់គ្រងជំនួយមួយនៅក្បែរការជជែកម្ចាស់។",
+        "title": "បុគ្គលិក បន្ទប់បាយ និងម្ចាស់៖ អេក្រង់តាមតួនាទី",
+        "lead": "ហាងតែមួយ ម្នាក់ៗធ្វើការតាមតួនាទី។",
         "paragraphs": [
-          "អ្នកគ្រប់គ្រងពណ៌ខៀវជូនដំណឹងអំពីការកុម្ម៉ង់ និងការកក់ថ្មី។ ការកុម្ម៉ង់សម្រាប់ញ៉ាំក្នុងហាងបង្ហាញលេខតុដែលបានបញ្ជាក់យ៉ាងច្បាស់។ ការកុម្ម៉ង់អនឡាញបង្ហាញអាសយដ្ឋាន និងលេខទូរសព្ទ។ ការកក់បង្ហាញតុដែលភ្ញៀវបានស្កេន QR ដើម្បីចូល។ ចំពោះការកក់អនឡាញ តុមិនទាន់ត្រូវបានកំណត់ទេ។",
-          "QR មិនសន្មតអត្តសញ្ញាណ ហើយបង្ហាញតែប្រវត្តិរូបបានយល់ព្រម។ ការងារស្តុកនិងបុគ្គលិកជាកំណត់ត្រាដែលម្ចាស់បញ្ចូលនិងកែដោយដៃ មិនភ្ជាប់ឃ្លាំងឬប្រព័ន្ធបុគ្គលិកពិត។"
+          "សំណើមួយចែកការងារតាមតួនាទីបួន។ បុគ្គលិកបម្រើទទួលនិងបម្រើ ផ្ទះបាយចម្អិន ម្ចាស់ហាងមើលស្ថានភាពនិងសិទ្ធិ។",
+          "ម្ចាស់ចុះបុគ្គលិកនិងកំណត់សិទ្ធិមើលនិងធ្វើការ។ ផ្ទះបាយឃើញមុខម្ហូបនិងចំនួន បុគ្គលិកបម្រើឃើញព័ត៌មានចាំបាច់សម្រាប់ភ្ញៀវ។ ការកែសិទ្ធិនិងលុបមានប្រសិទ្ធភាពលើឧបករណ៍ដែលភ្ជាប់។"
         ],
         "points": [
-          "ស្នើក្នុងការជជែក ពិនិត្យតាមកំណត់ត្រា",
-          "បែងចែកកុម្ម៉ង់បង់រួចនិងមិនទាន់បង់",
-          "ស្តុកនិងការងារបុគ្គលិកជាគំរូគ្រប់គ្រងដោយដៃ"
+          "អេក្រង់និងសិទ្ធិតាមតួនាទី",
+          "ផ្ទះបាយឃើញតែមុខម្ហូបនិងចំនួន",
+          "ម្ចាស់បន្ថែម កែប្រែ និងលុបបុគ្គលិក"
         ]
       },
       {
         "id": "operations",
-        "title": "សកម្មភាពក្នុងការជជែកក៏ត្រូវបញ្ជាក់",
-        "lead": "កុម្ម៉ង់ កក់ បង់ប្រាក់ និងអត្ថប្រយោជន៍មានកំណត់ត្រាដាច់គ្នា។",
+        "title": "តាមដានការបញ្ជាទិញតែមួយពីទទួលដល់ចប់",
+        "lead": "បុគ្គលិកទទួល ផ្ទះបាយរៀបចំ ភ្ញៀវទទួលដំណឹង។",
         "paragraphs": [
-          "អ្នកគ្រប់គ្រងពណ៌ខៀវជូនដំណឹងអំពីការកុម្ម៉ង់ និងការកក់ថ្មី។ ការកុម្ម៉ង់សម្រាប់ញ៉ាំក្នុងហាងបង្ហាញលេខតុដែលបានបញ្ជាក់យ៉ាងច្បាស់។ ការកុម្ម៉ង់អនឡាញបង្ហាញអាសយដ្ឋាន និងលេខទូរសព្ទ។ ការកក់បង្ហាញតុដែលភ្ញៀវបានស្កេន QR ដើម្បីចូល។ ចំពោះការកក់អនឡាញ តុមិនទាន់ត្រូវបានកំណត់ទេ។",
-          "ពេលម្ចាស់ទទួល រៀបចំ ឬបញ្ចប់ការបញ្ជាទិញ វឌ្ឍនភាព និងការជូនដំណឹងរបស់ភ្ញៀវក៏ផ្លាស់ប្តូរ។ សារកំពុងសរសេរនៅតែរក្សា។ ស្ថានភាពបញ្ជាទិញ និងការបង់ប្រាក់នៅដាច់ដោយឡែក ហើយមិនទាន់ភ្ជាប់ AI និងការបង់ប្រាក់ពិតទេ។"
+          "បុគ្គលិកបម្រើទទួលសំណើដែលភ្ញៀវបញ្ជាក់ ហើយផ្ទះបាយចម្អិននិងជូនដំណឹងរួចរាល់។ ម្ចាស់ហាងមើលដំណើរការទាំងមូល ភ្ញៀវមើលស្ថានភាពរបស់ខ្លួន។",
+          "ការកែប្រែអនុវត្តក្រោយព្រមព្រៀង។ ភ្ញៀវអាចកែសំណើជំនួស។ ក្រោយចាប់ផ្ដើមចម្អិន ការកែឬលុបត្រូវមានការអនុម័តពីម្ចាស់ហាង។"
         ],
         "points": [
-          "បំបែកដំណើរការកុម្ម៉ង់ពីការបង់",
-          "បញ្ជាក់ការកក់និងអំណោយមុនរក្សា",
-          "គ្មានភ្នាល់បង់ប្រាក់ ប្ដូរសាច់ប្រាក់ ឬសេវាពិត"
+          "រក្សាសំណើ ការបញ្ជាក់ និងការកែប្រែ",
+          "បំបែកស្ថានភាពទូទាត់ពីដំណើរការបញ្ជាទិញ",
+          "កែឬបោះបង់ក្រោយចាប់ផ្ដើមចម្អិន ត្រូវម្ចាស់អនុម័ត"
         ]
       },
       {
@@ -1774,8 +1774,8 @@ export const BOOK={
         "title": "ជាវតាមហាងសម្រាប់ជំនួយបន្ត",
         "lead": "វាស់តម្លៃសម្រាប់ម្ចាស់រួមជាមួយចំណាយប្រតិបត្តិការ។",
         "paragraphs": [
-          "គំរូអាជីវកម្មចាប់ផ្ដើមពីការជាវតាមហាង ជាមួយមុខងារនិងកម្រិតប្រើច្បាស់។ តម្លៃនិងការគណនាចំណូលក្នុងសៀវភៅជាសម្មតិកម្ម មិនមែនគម្រោងលក់ឬលទ្ធផលពិត។",
-          "យើងមិនលក់ chatbot ទូទៅគ្មានដែនកំណត់ទេ។ ត្រូវមានកម្រិតប្រើ ការជូនដំណឹងចំណាយ និងប្ដូរទៅមុខម្ហូបឬបុគ្គលិកពេលអស់កូតា។"
+          "គម្រោងដំបូងគឺការជាវប្រចាំខែតាមហាង។ មុខងារ បរិមាណ AI និងលក្ខខណ្ឌលើសកំណត់ នឹងសម្រេចក្រោយវាស់ការប្រើប្រាស់សាកល្បង។",
+          "តម្លៃសម្រាប់ម្ចាស់ហាងគឺបន្ថយការឆ្លើយសំណួរដដែលនិងការបញ្ជូនអូឌ័រ។ ត្រូវគិតចំណាយ AI ថ្លៃទូទាត់ ការគាំទ្រ និងការថែទាំ។"
         ],
         "points": [
           "វាស់ថ្លៃ AI តាមហាង",
@@ -1831,7 +1831,7 @@ export const BOOK={
         "lead": "យល់ភ្ញៀវដោយមិនសន្មតអត្តសញ្ញាណ។",
         "paragraphs": [
           "one shop របស់ one shop ai ត្រូវបានរៀបចំសម្រាប់ភោជនីយដ្ឋាន និងហាងកាហ្វេ។ មុនបញ្ជាក់ការកុម្ម៉ង់ ភ្ញៀវក្នុងហាងត្រូវបញ្ជាក់លេខតុ ចំណែកភ្ញៀវអនឡាញបញ្ចូលអាសយដ្ឋានដឹកជញ្ជូន និងលេខទូរសព្ទទំនាក់ទំនង។ ព័ត៌មានទាំងនេះរក្សាទុកជាមួយការកុម្ម៉ង់ ហើយបង្ហាញក្នុងផ្ទាំងគ្រប់គ្រងតាមប្រភពដែលបានកុម្ម៉ង់។ មិនទាន់ភ្ជាប់ AI ការទូទាត់ ឬសេវាដឹកជញ្ជូនពិតទេ។",
-          "គំរូ Jumo · ការបញ្ជាទិញ ការកក់ និងចំណូលជាទិន្នន័យសន្មត់។ ការកែប្រែរក្សាទុកតែក្នុងកម្មវិធីរុករកនេះ។ ព័ត៌មានហាង និងការបញ្ជាទិញត្រូវបានរក្សាទុក។ ការចូលគណនីម្ចាស់ហាងពីឧបករណ៍ផ្សេងនឹងមានពេលភ្ជាប់ការចូលពិត។ ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍នៅតែដេមូ; គ្មានបង់ពិត POS ឬជូនដំណឹងខាងក្រៅ។ ការងារស្តុកនិងបុគ្គលិកបញ្ចូលដោយដៃ ហើយនាំចេញពន្ធជាព្រាង។ អាចប្រើ QR GitHub Pages សាធារណៈ ខណៈ Sites នៅតែសម្រាប់ម្ចាស់។"
+          "តំណភ្ញៀវមិនផ្ដល់សិទ្ធិម្ចាស់ហាងទេ។ បុគ្គលិកប្រើតំណផ្ទាល់ខ្លួន ហើយមើលតែទិន្នន័យនិងមុខងារដែលអនុញ្ញាត។ ការចាកចេញបញ្ចប់វគ្គនោះ ហើយការប្ដូរពាក្យសម្ងាត់បញ្ចប់វគ្គម្ចាស់ហាងផ្សេងទៀត។ ពាក្យសម្ងាត់ម្ចាស់ហាងត្រូវបានពិនិត្យលើម៉ាស៊ីនមេ។ បុគ្គលិកចូលតាមតំណ។ មិនទាន់មានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ ឬស្ដារពាក្យសម្ងាត់តាមអ៊ីមែលទេ។ មិនភ្ជាប់ AI ឬការទូទាត់ពិតទេ។"
         ],
         "points": [
           "អាលែហ្សីសួរបុគ្គលិក",
@@ -1844,13 +1844,13 @@ export const BOOK={
         "title": "ពីការសាកល្បងទៅការប្រើប្រាស់ក្នុងហាងពិត",
         "lead": "ភ្ជាប់មុខងារថ្មីក្រោយឆ្លងលក្ខខណ្ឌទទួលយក។",
         "paragraphs": [
-          "រៀបចំហាងតាមការជជែក ដោយបញ្ចូលម៉ឺនុយ រូបភាព និងព័ត៌មានហាង។ ព័ត៌មាន និងម៉ឺនុយត្រូវបានរក្សាទុកលើក្លោដ។ ភ្ញៀវអាចស្កេន QR ពីទូរសព្ទផ្សេងដើម្បីកុម្ម៉ង់ និងកក់ ហើយម្ចាស់ហាងឃើញការធ្វើបច្ចុប្បន្នភាពភ្លាមៗលើផ្ទាំងគ្រប់គ្រង។ ចម្លើយ AI និងការទូទាត់នៅតែជាគំរូសាកល្បង។ ចុចប៊ូតុងដើម្បីចាប់ផ្ដើមភ្លាម ដោយមិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។",
-          "បន្ទាប់សាកល្បងអានរូបដែលអាចពិនិត្យ ភ្នាក់ងារ AI ពិត និងកំណត់ថ្លៃនៅម៉ាស៊ីនមេ។ ការបង់ពិត POS និងជូនដំណឹងខាងក្រៅត្រូវភ្ជាប់ដាច់ដោយឡែក ព្រមទាំងពិនិត្យ API, webhook, ទប់ស្ទួន, ព្យាយាមឡើងវិញ, ផ្ទៀងគណនី និងសិទ្ធិ។"
+          "ឥឡូវនេះពិនិត្យលំហូរភ្ញៀវនិងបុគ្គលិកតាមការបង្ហាញ។ បន្ទាប់រៀបចំហាងសាកល្បងមួយជាមួយម៉ឺនុយ ម៉ោងបើក ម្ហូបអស់ និងច្បាប់កក់ពិត។",
+          "មុនដាក់ប្រើ ត្រូវផ្ទៀងផ្ទាត់ការពិនិត្យម៉ឺនុយដោយម្ចាស់ហាង ភាពត្រឹមត្រូវភាសា កម្រិតចំណាយ AI ការផ្ទៀងផ្ទាត់ទូទាត់និង POS ការស្ដារគណនី និងការដោះស្រាយបញ្ហា។ សម្រេចកាលបរិច្ឆេទក្រោយឆ្លងកាត់លក្ខខណ្ឌទាំងនេះ។"
         ],
         "points": [
-          "ពិនិត្យហាង កុម្ម៉ង់ និងកក់លើឧបករណ៍ផ្សេង",
-          "ផ្ទៀងផ្ទាំងភ្លាមៗនឹងកំណត់ត្រា",
-          "ភ្ជាប់ការផ្ទៀងផ្ទាត់គណនីពិតនៅពេលចេញផ្សាយ"
+          "ពិនិត្យលំហូរ",
+          "សាកល្បងនៅហាង",
+          "ផ្ទៀងផ្ទាត់លក្ខខណ្ឌដាក់ប្រើ"
         ]
       },
       {
@@ -1858,13 +1858,13 @@ export const BOOK={
         "title": "ការសម្រេចចិត្តបន្ទាប់រួមគ្នា",
         "lead": "កំណត់ប្រទេសដំបូងនិងរបៀបដំណើរការហាងដំបូង។",
         "paragraphs": [
-          "ជ្រើសទីផ្សារ រូបិយប័ណ្ណ ម្ហូបនិងតម្លៃអនុម័ត POS និងវិធីបង់ប្រាក់។ ព្រមព្រៀងការកក់ ពិន្ទុ អំណោយ ចំនួនលេង ពាក្យយល់ព្រម និងរយៈពេលរក្សា។",
-          "កំណត់អ្នកធ្វើការងារស្តុកនិងបុគ្គលិក មូលដ្ឋានរបាយការណ៍លក់ដេមូ និងអ្នកពិនិត្យព្រាងពន្ធ។ ព្រាងរបាយការណ៍ពីក្លោដមិនជំនួសគណនេយ្យចុងក្រោយឬការប្រកាសពន្ធ។ ភ្ជាប់ការផ្ទៀងផ្ទាត់គណនីពិតនៅពេលចេញផ្សាយ។"
+          "ជ្រើសប្រទេស ហាងសាកល្បង និងអ្នកទទួលខុសត្រូវជាមុន។ កំណត់រូបិយប័ណ្ណ ម៉ឺនុយ តម្លៃ និងច្បាប់កក់ រួចពិនិត្យការភ្ជាប់ POS និងអ្នកផ្ដល់ការទូទាត់។",
+          "បន្ទាប់ព្រមព្រៀងបរិមាណប្រើប្រាស់ ការគាំទ្រ រយៈពេលរក្សាទិន្នន័យ និងរបៀបលុប។ កាលវិភាគនិងលក្ខខណ្ឌជោគជ័យត្រូវពិភាក្សាជាមួយម្ចាស់ហាងនិងបុគ្គលិក។"
         ],
         "points": [
-          "ជ្រើសហាងសាកល្បងនិងអ្នកពិនិត្យ",
-          "ច្បាប់ការកក់ អំណោយ និងការងារ",
-          "រៀបចំសាក POS ការជាវ និងជំនួយ"
+          "ប្រទេស ហាង អ្នកទទួលខុសត្រូវ",
+          "ម៉ឺនុយ កក់ និងការភ្ជាប់",
+          "ការជាវ គាំទ្រ និងទិន្នន័យ"
         ]
       },
       {
@@ -1872,8 +1872,8 @@ export const BOOK={
         "title": "ចាប់ផ្ដើមងាយ បញ្ជាក់អ្វីជាការពិត",
         "lead": "បែងចែកបទពិសោធន៍ថ្ងៃនេះពីសេវាអនាគត។",
         "paragraphs": [
-          "Jumo ត្រៀមរួចរាល់សម្រាប់សាកល្បងហើយ។ មានម្ហូប 8 មុខ ព្រមទាំងការកុម្ម៉ង់ និងការកក់ជាគំរូ។ សួរអំពីស្ថានភាពថ្ងៃនេះ ឬបើកផ្ទាំងគ្រប់គ្រង។ គំរូ Jumo · ការបញ្ជាទិញ ការកក់ និងចំណូលជាទិន្នន័យសន្មត់។ ការកែប្រែរក្សាទុកតែក្នុងកម្មវិធីរុករកនេះ។ ចុចប៊ូតុងដើម្បីសាកល្បងភ្លាម។ មិនមានការចុះឈ្មោះ ឬផ្ទៀងផ្ទាត់គណនីពិតទេ។ ភ្ជាប់ហាងគំរូ Jumo ដើម្បីឱ្យទូរសព្ទផ្សេងបញ្ជាទិញ ឬកក់តាម QR។",
-          "ការបង់ ពិន្ទុ អំណោយ និងរបាយការណ៍នៅតែដេមូ; គ្មានបង់ពិត POS ឬជូនដំណឹងខាងក្រៅ។ ការងារស្តុកនិងបុគ្គលិកបញ្ចូលដោយដៃ ហើយនាំចេញពន្ធជាព្រាង។ អាចប្រើ QR GitHub Pages សាធារណៈ ខណៈ Sites នៅតែសម្រាប់ម្ចាស់។"
+          "ការបង្ហាញរួមក្នុងសៀវភៅ និងកម្មវិធីហាងដាច់ដោយឡែករក្សាទិន្នន័យខុសគ្នា។ សូមមើលតារាងខាងក្រោមដើម្បីជ្រើសបទពិសោធន៍។",
+          "រូបម្ហូប Jumo ជារូបគំនិត ហើយតម្លៃ VND សម្រាប់សាកល្បង។ ពិន្ទុ រង្វាន់ វត្ថុអនុស្សាវរីយ៍ និងប័ណ្ណអំណោយមិនទាន់កំណត់លក់ឬផ្ដល់ពិតទេ។"
         ],
         "points": [
           "បែងចែកការកុម្ម៉ង់ដែលរក្សាទុកលើក្លោដពីចម្លើយ AI ដែលបានរៀបចំទុក",
@@ -1903,8 +1903,8 @@ export const BOOK={
         "title": "ເພີ່ມໂອກາດໃຫ້ທຸກຮ້ານ",
         "lead": "ເຈົ້າຂອງທຸກຄົນຄວນມີຜູ້ຊ່ວຍທີ່ຮູ້ຈັກຮ້ານຂອງຕົນ.",
         "paragraphs": [
-          "one shop ai ແນະນຳຮ້ານອາຫານ, ຮ້ານກາເຟ ແລະເມນູໃນພາສາຂອງແຂກ. ເຈົ້າຂອງຈັດການວຽກໂດຍລົມກັບຜູ້ຈັດການ ແລະແຂກຮັບບໍລິການໂດຍລົມກັບຜູ້ຊ່ວຍຂອງຮ້ານ.",
-          "ຂໍ້ມູນຮ້ານ ແລະເມນູທີ່ເຜີຍແຜ່, ໄຟລ໌ທີ່ອັບໂຫຼດ, ການເຂົ້າເບິ່ງ, ອໍເດີ ແລະການຈອງ ຖືກບັນທຶກໃນເຊີບເວີ ແລະເປີດເບິ່ງໄດ້ຈາກອຸປະກອນອື່ນ. ຜູ້ຊ່ວຍ AI ໃຊ້ຄຳຕອບທີ່ກຽມໄວ້. ການຈ່າຍເງິນ, ຄະແນນ, ໂບນັດ ແລະລາຍງານເປັນຕົວຢ່າງ. ຍັງບໍ່ເຊື່ອມການອ່ານຂໍ້ຄວາມຈາກຮູບ (OCR), ການຈ່າຍເງິນຈິງ, POS ຫຼືການແຈ້ງເຕືອນພາຍນອກ."
+          "ລູກຄ້າຖາມ ຮ້ານຢືນຢັນ ແລ້ວພະນັກງານຮັບຊ່ວງຕໍ່. One shop ເຊື່ອມການແນະນຳເມນູ ການສັ່ງ ແລະການຈອງໃນການສົນທະນາດຽວ.",
+          "Jumo ແມ່ນຮ້ານຕົວຢ່າງທຳອິດສຳລັບຮ້ານອາຫານແລະຄາເຟ. ເບິ່ງວ່າລູກຄ້າ ພະນັກງານບໍລິການ ຄົວ ແລະເຈົ້າຂອງຮ່ວມກັນຈັດການຄຳຂໍແນວໃດ."
         ],
         "points": [
           "ເລື່ອງລາວສະເພາະຂອງຮ້ານ",
@@ -1945,7 +1945,7 @@ export const BOOK={
         "title": "ສົນທະນາງ່າຍ ຢືນຢັນຊັດເຈນ",
         "lead": "ເລີ່ມຈາກໜ້າແຊັດດຽວທີ່ໂລ່ງແລະຮຽບງ່າຍ.",
         "paragraphs": [
-          "ອອກແບບອ້າງອີງແຊັດຮຽບງ່າຍຂອງ Grok. ບົດສົນທະນາແລະຊ່ອງພິມເປັນຫຼັກ; ບັດປາກົດເມື່ອກວດອາຫານ ຈຳນວນ ຫຼືວັນຈອງ.",
+          "ສົນທະນາສັ້ນ ເລືອກໃຫ້ຊັດເຈນ. ບັດຢືນຢັນສະແດງເມນູ ຈຳນວນ ແລະເວລາຈອງ ໃຫ້ລູກຄ້າແລະພະນັກງານຕັດສິນຈາກຂໍ້ມູນດຽວກັນ.",
           "ແຕ່ລະຮ້ານຮັກສາຊື່ ແລະຮູບແບບການເວົ້າຂອງຕົນ. ລາຄາ ແລະສະຖານະອາຫານທີ່ມີຂາຍອີງຕາມຂໍ້ມູນທີ່ອະນຸມັດແລ້ວ. ຮູບພາບບໍ່ສາມາດຢືນຢັນວັດຖຸດິບ ຫຼືຄວາມປອດໄພສຳລັບຜູ້ທີ່ແພ້ອາຫານໄດ້. ຕ້ອງສອບຖາມພະນັກງານເພື່ອຢືນຢັນ."
         ],
         "points": [
@@ -1971,15 +1971,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "ບົດສົນທະນາໜຶ່ງກັບ Jumo",
-        "lead": "ຮັກສາເອກະລັກຂອງແບຣນ ແລະໃຫ້ແຂກໃຊ້ງານໄດ້ງ່າຍ.",
+        "lead": "ຄຳຂໍດຽວ ເຊື່ອມສີ່ໜ້າຈໍ.",
         "paragraphs": [
-          "ໜ້າແຊັດຮຽບງ່າຍສືບຕໍ່ໂລໂກ້ ສັນຍາລັກ ແລະບັນຍາກາດ Jumo. ຮູບອາຫານແລະບັດເມນູປາກົດຕາມບໍລິບົດ; ສັ່ງ ຈອງ ແລະຈ່າຍສາທິດຜ່ານບັດຢືນຢັນ.",
-          "ຮູບອາຫານເປັນແນວຄິດຈາກ AI. ລາຄາ VND ເປັນສົມມຸດເພາະບໍ່ມີລາຄາຢືນຢັນ. ຄະແນນແລະໂບນັດກໍຈຳລອງ ບໍ່ມີມູນຄ່າເງິນສົດຫຼືສັນຍາບໍລິການຈິງ."
+          "ລອງຕັ້ງແຕ່ລົງຮູບເມນູຈົນເຖິງແຈ້ງລູກຄ້າ. ເລືອກກິນຢູ່ຮ້ານ ຈອງ ຫຼືຈັດສົ່ງ ແລ້ວປ່ຽນພາສາແລະຄຳຂໍ.",
+          "ລອງປ່ຽນຄຳຂໍ ເຫດຜົນປະຕິເສດ ທາງເລືອກ ແລະສົ່ງຄຳຂໍໃໝ່. ຂໍ້ຕົກລົງຈະສະແດງທັງສີ່ໜ້າຈໍ ພ້ອມພາສາເກົາຫຼີ ຕົ້ນສະບັບ ຜູ້ດຳເນີນການ ແລະເວລາ."
         ],
         "points": [
-          "ແຊັດສະເພາະຮ້ານໃນເກົ້າພາສາ",
-          "ເມນູ ຈອງ ຈ່າຍຕາມບໍລິບົດ",
-          "ຄຳຕອບກຽມໄວ້ ບໍ່ເສຍຄ່າ API"
+          "ກິນທີ່ຮ້ານ ຈອງ ແລະຈັດສົ່ງ",
+          "ຈາກຂໍປ່ຽນຈົນຕົກລົງສຸດທ້າຍ",
+          "ບັນທຶກເກົາຫຼີ ຕົ້ນສະບັບ ຜູ້ຈັດການ ແລະເວລາ"
         ]
       },
       {
@@ -1987,13 +1987,13 @@ export const BOOK={
         "title": "ລົມກັບຜູ້ຈັດການເພື່ອກຽມຮ້ານ",
         "lead": "ເຈົ້າຂອງຕອບຄຳຖາມທີລະຂັ້ນ.",
         "paragraphs": [
-          "Jumo ພ້ອມແລ້ວ. ຂ້ອຍກຽມເມນູ 8 ລາຍການ ພ້ອມອໍເດີ ແລະການຈອງຕົວຢ່າງ. ຖາມສະຖານະມື້ນີ້ ຫຼືເປີດແດຊບອດ.",
-          "ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ. ຕົວຢ່າງ Jumo · ອໍເດີ ການຈອງ ແລະຍອດຂາຍເປັນຂໍ້ມູນສົມມຸດ. ການແກ້ໄຂບັນທຶກໃນບຣາວເຊີນີ້ເທົ່ານັ້ນ. ເຊື່ອມຮ້ານຕົວຢ່າງອອນລາຍ — ເຊື່ອມຮ້ານຕົວຢ່າງ Jumo ເພື່ອໃຫ້ໂທລະສັບອື່ນສັ່ງອາຫານ ຫຼືຈອງຜ່ານ QR."
+          "ເລີ່ມຈາກຊື່ຮ້ານ ຂໍ້ມູນຕິດຕໍ່ ແລະຮູບເມນູ. ເຈົ້າຂອງກວດເມນູແລະລາຄາທີ່ Rami ຈັດໃຫ້ ກ່ອນສ້າງລິ້ງແລະ QR.",
+          "ການວິເຄາະຮູບໃນປຶ້ມໃຊ້ຕົວຢ່າງທີ່ກຽມໄວ້. ແອັບເຈົ້າຂອງແຍກຕ່າງຫາກໃຫ້ຕັ້ງລະຫັດ ແລະບັນທຶກຮ້ານເພື່ອໃຊ້ຕໍ່ໃນອຸປະກອນອື່ນ."
         ],
         "points": [
-          "ຂໍ້ມູນຮ້ານ",
-          "ເບິ່ງເມນູ 8 ລາຍການ",
-          "ເບິ່ງແດຊບອດ"
+          "ຮູບເມນູ",
+          "ກວດເມນູແລະລາຄາ",
+          "ລິ້ງຮ້ານແລະ QR"
         ]
       },
       {
@@ -2001,8 +2001,8 @@ export const BOOK={
         "title": "ໂຕະແລະສື່ສັງຄົມເປັນປະຕູຮ້ານ",
         "lead": "ໃຊ້ລິ້ງຮ້ານດຽວໃນຫຼາຍບ່ອນ.",
         "paragraphs": [
-          "ພິມ QR ໂຕະ ຫຼືແບ່ງປັນລິ້ງຮ້ານ. ຮ້ານແລະເມນູທີ່ເຜີຍແຜ່ອ່ານຈາກ backend ດັ່ງນັ້ນແຂກໃນໂທລະສັບອື່ນກໍເຫັນຂໍ້ມູນດຽວກັນ ແລະສົ່ງອໍເດີຫຼືຈອງໄດ້.",
-          "QR ຮ້ານໃນ GitHub Pages ສາທາລະນະເປີດໄດ້ໂດຍບໍ່ລັອກອິນເຈົ້າຂອງ. ໜ້າເບິ່ງ Sites ເດີມຍັງເປັນສ່ວນຕົວຂອງເຈົ້າຂອງ. ຜົນສົ່ງອໍເດີແລະຈອງກວດຈາກ backend ຂອງຮ້ານນັ້ນ."
+          "ວາງ QR ທີ່ມີເລກໂຕະ ແລະແບ່ງປັນລິ້ງຮ້ານໃນສື່ສັງຄົມ. ລູກຄ້າເຂົ້າຮ້ານດຽວກັນ ແຕ່ຊ່ອງທາງເຂົ້າຊ່ວຍແຍກຄຳຂໍ.",
+          "ລູກຄ້າໃນຮ້ານຢືນຢັນເລກໂຕະ. ການຈັດສົ່ງຕ້ອງໃສ່ທີ່ຢູ່ແລະເບີໂທ; ການຈອງຕ້ອງຢືນຢັນວັນ ເວລາ ແລະຈຳນວນຄົນ."
         ],
         "points": [
           "QR ລະບຸຮ້ານແລະໂຕະ",
@@ -2012,30 +2012,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "ລົມກັບຜູ້ຈັດການ ກວດໃນແດຊບອດດຽວ",
-        "lead": "ມີແດຊບອດຊ່ວຍໜຶ່ງໜ້າຂ້າງແຊັດເຈົ້າຂອງ.",
+        "title": "ພະນັກງານ ຄົວ ແລະເຈົ້າຂອງ: ໜ້າຈໍຕາມບົດບາດ",
+        "lead": "ຮ້ານດຽວ ແຕ່ລະຄົນເຮັດໜ້າທີ່ຂອງຕົນ.",
         "paragraphs": [
-          "ຜູ້ຈັດການສີຟ້າແຈ້ງເຕືອນເມື່ອມີອໍເດີ ແລະການຈອງໃໝ່. ອໍເດີສຳລັບກິນໃນຮ້ານສະແດງເບີໂຕະທີ່ຢືນຢັນແລ້ວຢ່າງຊັດເຈນ; ອໍເດີອອນລາຍສະແດງທີ່ຢູ່ ແລະເບີໂທ. ການຈອງສະແດງໂຕະທີ່ແຂກສະແກນ QR ເພື່ອເຂົ້າໃຊ້. ສ່ວນການຈອງອອນລາຍຍັງບໍ່ໄດ້ກຳນົດໂຕະ.",
-          "QR ບໍ່ຄາດເດົາຕົວຕົນ ແລະສະແດງແຕ່ໂປຣໄຟລ໌ທີ່ຍິນຍອມ. ວຽກສະຕັອກແລະພະນັກງານເຈົ້າຂອງປ້ອນແລະແກ້ເອງ ບໍ່ເຊື່ອມສາງຫຼືລະບົບບຸກຄະລາກອນຈິງ."
+          "ຄຳຂໍໜຶ່ງແບ່ງວຽກໃຫ້ສີ່ບົດບາດ. ບໍລິການຮັບແລະເສີບ ຄົວແຕ່ງອາຫານ ເຈົ້າຂອງເບິ່ງສະຖານະແລະສິດ.",
+          "ເຈົ້າຂອງລົງທະບຽນພະນັກງານ ແລະກຳນົດສິດເບິ່ງແລະຈັດການ. ຄົວເຫັນເມນູແລະຈຳນວນ ພະນັກງານເຫັນຂໍ້ມູນທີ່ຈຳເປັນຕໍ່ການບໍລິການ. ປ່ຽນສິດຫຼືລຶບຈະມີຜົນໃນອຸປະກອນທີ່ເຊື່ອມ."
         ],
         "points": [
-          "ຂໍໃນແຊັດ ກວດດ້ວຍບັນທຶກ",
-          "ແຍກອໍເດີຈ່າຍແລ້ວກັບຍັງບໍ່ຈ່າຍ",
-          "ຕົວຢ່າງວຽກສະຕັອກແລະພະນັກງານແບບປ້ອນເອງ"
+          "ໜ້າຈໍແລະສິດຕາມບົດບາດ",
+          "ຄົວເຫັນສະເພາະເມນູແລະຈຳນວນ",
+          "ເຈົ້າຂອງເພີ່ມ ແກ້ ແລະລຶບພະນັກງານ"
         ]
       },
       {
         "id": "operations",
-        "title": "ການເຮັດວຽກໃນແຊັດກໍຕ້ອງຢືນຢັນ",
-        "lead": "ອໍເດີ ຈອງ ຈ່າຍ ແລະສິດປະໂຫຍດເກັບແຍກກັນ.",
+        "title": "ຕິດຕາມອໍເດີດຽວຈາກຮັບຈົນສຳເລັດ",
+        "lead": "ພະນັກງານຮັບ ຄົວກຽມ ລູກຄ້າຮັບແຈ້ງເຕືອນ.",
         "paragraphs": [
-          "ຜູ້ຈັດການສີຟ້າແຈ້ງເຕືອນເມື່ອມີອໍເດີ ແລະການຈອງໃໝ່. ອໍເດີສຳລັບກິນໃນຮ້ານສະແດງເບີໂຕະທີ່ຢືນຢັນແລ້ວຢ່າງຊັດເຈນ; ອໍເດີອອນລາຍສະແດງທີ່ຢູ່ ແລະເບີໂທ. ການຈອງສະແດງໂຕະທີ່ແຂກສະແກນ QR ເພື່ອເຂົ້າໃຊ້. ສ່ວນການຈອງອອນລາຍຍັງບໍ່ໄດ້ກຳນົດໂຕະ.",
-          "ເມື່ອເຈົ້າຂອງຮັບ ກຽມ ຫຼືສຳເລັດອໍເດີ ສະຖານະ ແລະແຈ້ງເຕືອນຂອງແຂກກໍປ່ຽນ. ຂໍ້ຄວາມທີ່ກຳລັງພິມຍັງຢູ່. ສະຖານະອໍເດີ ແລະການຈ່າຍແຍກກັນ; ຍັງບໍ່ເຊື່ອມ AI ແລະການຈ່າຍຈິງ."
+          "ພະນັກງານບໍລິການຮັບຄຳຂໍທີ່ລູກຄ້າຢືນຢັນ ຄົວແຕ່ງອາຫານແລະແຈ້ງວ່າພ້ອມ. ເຈົ້າຂອງເບິ່ງທັງໝົດ ລູກຄ້າເບິ່ງສະຖານະຂອງຕົນ.",
+          "ປ່ຽນຫຼັງຈາກຕົກລົງ. ລູກຄ້າສາມາດແກ້ຂໍ້ສະເໜີໃໝ່ໄດ້. ຫຼັງເລີ່ມແຕ່ງອາຫານ ເຈົ້າຂອງຕ້ອງອະນຸມັດການປ່ຽນຫຼືຍົກເລີກ."
         ],
         "points": [
-          "ແຍກສະຖານະອໍເດີອອກຈາກສະຖານະການຈ່າຍເງິນ",
-          "ຢືນຢັນຈອງແລະລາງວັນກ່ອນບັນທຶກ",
-          "ບໍ່ມີພະນັນເສຍເງິນ ແລກເງິນ ຫຼືບໍລິການຈິງ"
+          "ເກັບຄຳຂໍ ການຢືນຢັນ ແລະການປ່ຽນ",
+          "ແຍກສະຖານະຊຳລະຈາກອໍເດີ",
+          "ປ່ຽນຫຼືຍົກເລີກຫຼັງເລີ່ມແຕ່ງ ເຈົ້າຂອງຕ້ອງອະນຸມັດ"
         ]
       },
       {
@@ -2043,8 +2043,8 @@ export const BOOK={
         "title": "ສະໝັກລາຍຮ້ານເພື່ອຊ່ວຍຢ່າງຕໍ່ເນື່ອງ",
         "lead": "ວັດປະໂຫຍດຂອງເຈົ້າຂອງຄຽງຄູ່ຕົ້ນທຶນ.",
         "paragraphs": [
-          "ຮູບແບບເລີ່ມຈາກຄ່າສະໝັກຕໍ່ຮ້ານ ພ້ອມຟັງຊັນແລະໂຄຕາຊັດເຈນ. ລາຄາແລະການຄິດລາຍຮັບໃນປຶ້ມເປັນສົມມຸດຖານ ບໍ່ແມ່ນແພັກເກດຫຼືຍອດຂາຍຈິງ.",
-          "ເຮົາບໍ່ຂາຍ chatbot ທົ່ວໄປບໍ່ຈຳກັດ. ມີຂີດຈຳກັດ ແຈ້ງເຕືອນຄ່າໃຊ້ຈ່າຍ ແລະປ່ຽນໄປເມນູຫຼືພະນັກງານເມື່ອໂຄຕາໝົດ."
+          "ແຜນເບື້ອງຕົ້ນແມ່ນສະໝັກລາຍເດືອນຕໍ່ຮ້ານ. ຟັງຊັນ ປະລິມານ AI ແລະເງື່ອນໄຂເກີນກຳນົດ ຈະກຳນົດຫຼັງວັດການໃຊ້ຈິງໃນໄລຍະທົດລອງ.",
+          "ຄຸນຄ່າຕໍ່ເຈົ້າຂອງຄືຫຼຸດການຕອບຊ້ຳແລະສົ່ງອໍເດີ. ຕົ້ນທຶນຕ້ອງລວມ AI ຄ່າຊຳລະ ການຊ່ວຍເຫຼືອ ແລະບຳລຸງຮັກສາ."
         ],
         "points": [
           "ວັດຄ່າ AI ຕໍ່ຮ້ານ",
@@ -2100,7 +2100,7 @@ export const BOOK={
         "lead": "ເຂົ້າໃຈແຂກໂດຍບໍ່ຄາດເດົາຕົວຕົນ.",
         "paragraphs": [
           "one shop ຂອງ one shop ai ສ້າງຂຶ້ນສຳລັບຮ້ານອາຫານ ແລະຮ້ານກາເຟ. ກ່ອນຢືນຢັນອໍເດີ ແຂກທີ່ນັ່ງໃນຮ້ານຕ້ອງຢືນຢັນເບີໂຕະ ສ່ວນແຂກທີ່ສັ່ງອອນລາຍປ້ອນທີ່ຢູ່ຈັດສົ່ງ ແລະເບີໂທຕິດຕໍ່. ຂໍ້ມູນນີ້ບັນທຶກກັບອໍເດີ ແລະສະແດງໃນໜ້າຈັດການວ່າອໍເດີມາຈາກໃສ. ຍັງບໍ່ເຊື່ອມ AI, ການຈ່າຍເງິນ ຫຼືບໍລິການຈັດສົ່ງຈິງ.",
-          "ຕົວຢ່າງ Jumo · ອໍເດີ ການຈອງ ແລະຍອດຂາຍເປັນຂໍ້ມູນສົມມຸດ. ການແກ້ໄຂບັນທຶກໃນບຣາວເຊີນີ້ເທົ່ານັ້ນ. ຂໍ້ມູນຮ້ານ ແລະອໍເດີຖືກບັນທຶກ. ການເຂົ້າບັນຊີເຈົ້າຂອງຈາກອຸປະກອນອື່ນຈະມີເມື່ອເຊື່ອມການເຂົ້າລະບົບຈິງ. ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານຍັງເປັນເດໂມ ບໍ່ມີຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ. ວຽກສະຕັອກແລະພະນັກງານປ້ອນເອງ ສົ່ງອອກພາສີເປັນຮ່າງ. ໃຊ້ QR GitHub Pages ສາທາລະນະໄດ້ ແລະ Sites ຍັງສຳລັບເຈົ້າຂອງເທົ່ານັ້ນ."
+          "ລິ້ງລູກຄ້າບໍ່ໃຫ້ສິດເຈົ້າຂອງ. ພະນັກງານໃຊ້ລິ້ງຂອງຕົນ ແລະເຫັນສະເພາະຂໍ້ມູນແລະຄຳສັ່ງທີ່ອະນຸຍາດ. ອອກລະບົບແລ້ວເຊດຊັນນັ້ນຈະສິ້ນສຸດ; ປ່ຽນລະຫັດແລ້ວເຊດຊັນເຈົ້າຂອງອື່ນກໍສິ້ນສຸດ. ລະຫັດເຈົ້າຂອງຖືກກວດສອບທີ່ເຊີບເວີ. ພະນັກງານເຂົ້າຜ່ານລິ້ງ; ຍັງບໍ່ມີການຢືນຢັນຕົວຕົນ ຫຼືກູ້ລະຫັດຜ່ານທາງອີເມວ. ບໍ່ໄດ້ເຊື່ອມ AI ຫຼືການຊຳລະຈິງ."
         ],
         "points": [
           "ອາການແພ້ຖາມພະນັກງານ",
@@ -2113,13 +2113,13 @@ export const BOOK={
         "title": "ຈາກການທົດລອງສູ່ການໃຊ້ງານໃນຮ້ານຈິງ",
         "lead": "ເຊື່ອມຄວາມສາມາດໃໝ່ຫຼັງຜ່ານເກນຮັບຮອງ.",
         "paragraphs": [
-          "ສ້າງຮ້ານຜ່ານການສົນທະນາໂດຍອັບໂຫຼດເມນູ ແລະຂໍ້ມູນຮ້ານ. ຂໍ້ມູນ ແລະເມນູຖືກບັນທຶກໃນຄລາວ. ແຂກໃຊ້ QR ໃນໂທລະສັບອື່ນເພື່ອສັ່ງ ແລະຈອງ ເຈົ້າຂອງເຫັນຜົນທັນທີໃນແດຊບອດ. ຄຳຕອບ AI ແລະການຈ່າຍເງິນຍັງເປັນສາທິດ. ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ.",
-          "ຕໍ່ໄປກວດອ່ານຮູບທີ່ອະນຸມັດໄດ້ ຜູ້ຊ່ວຍ AI ຈິງ ແລະຄຸມຄ່າໃນເຊີບເວີ. ຈ່າຍຈິງ POS ແລະແຈ້ງເຕືອນພາຍນອກເຊື່ອມແຍກ ໂດຍກວດ API, webhook, ປ້ອງກັນຊ້ຳ, ລອງໃໝ່, ກວດຍອດ ແລະສິດ."
+          "ຕອນນີ້ໃຊ້ການສາທິດກວດຂັ້ນຕອນຂອງລູກຄ້າແລະພະນັກງານ. ຕໍ່ໄປກຽມຮ້ານທົດລອງໜຶ່ງຮ້ານ ດ້ວຍເມນູ ເວລາເປີດ ລາຍການໝົດ ແລະກົດການຈອງຈິງ.",
+          "ກ່ອນເປີດໃຊ້ ຕ້ອງກວດການຮັບຮອງເມນູໂດຍເຈົ້າຂອງ ຄວາມຖືກຕ້ອງພາສາ ຂອບເຂດຄ່າ AI ການກະທົບຍອດຊຳລະແລະ POS ການກູ້ບັນຊີ ແລະແກ້ບັນຫາ. ກຳນົດວັນເປີດຫຼັງຜ່ານເກນ."
         ],
         "points": [
-          "ກວດຮ້ານ ອໍເດີ ແລະຈອງຂ້າມອຸປະກອນ",
-          "ທຽບໜ້າຈໍທັນທີກັບບັນທຶກ",
-          "ເຊື່ອມການຢືນຢັນບັນຊີຈິງເມື່ອເປີດບໍລິການ"
+          "ກວດຂັ້ນຕອນ",
+          "ທົດລອງໃນຮ້ານ",
+          "ກວດເກນເປີດໃຊ້"
         ]
       },
       {
@@ -2127,13 +2127,13 @@ export const BOOK={
         "title": "ການຕັດສິນໃຈຕໍ່ໄປຮ່ວມກັນ",
         "lead": "ກຳນົດປະເທດທຳອິດແລະວິທີເຮັດວຽກຂອງຮ້ານ.",
         "paragraphs": [
-          "ເລືອກຕະຫຼາດ ເງິນ ເມນູແລະລາຄາອະນຸມັດ POS ແລະວິທີຈ່າຍ. ຕົກລົງຈອງ ຄະແນນ ໂບນັດ ຄັ້ງຫຼິ້ນ ຂໍ້ຄວາມຍິນຍອມ ແລະໄລຍະເກັບ.",
-          "ກຳນົດຜູ້ຈັດການວຽກສະຕັອກແລະພະນັກງານ ຫຼັກລາຍງານຂາຍເດໂມ ແລະຜູ້ກວດຮ່າງພາສີ. ຮ່າງລາຍງານຈາກຄລາວບໍ່ແທນບັນຊີສຸດທ້າຍຫຼືການຍື່ນພາສີ. ເຊື່ອມການຢືນຢັນບັນຊີຈິງເມື່ອເປີດບໍລິການ."
+          "ເລືອກປະເທດ ຮ້ານທົດລອງ ແລະຜູ້ຮັບຜິດຊອບກ່ອນ. ກຳນົດສະກຸນເງິນ ເມນູ ລາຄາ ແລະກົດຈອງ ແລ້ວກວດການເຊື່ອມ POS ແລະຜູ້ໃຫ້ບໍລິການຊຳລະ.",
+          "ຕໍ່ໄປຕົກລົງປະລິມານໃຊ້ ການຊ່ວຍເຫຼືອ ໄລຍະເກັບຂໍ້ມູນ ແລະວິທີລຶບ. ວາງກຳນົດການແລະເກນສຳເລັດກັບເຈົ້າຂອງແລະພະນັກງານ."
         ],
         "points": [
-          "ເລືອກຮ້ານລອງແລະຜູ້ກວດ",
-          "ກົດຈອງ ສິດປະໂຫຍດ ແລະວຽກ",
-          "ກຽມທົດສອບ POS ຄ່າສະໝັກ ແລະຊ່ວຍເຫຼືອ"
+          "ປະເທດ ຮ້ານ ຜູ້ຮັບຜິດຊອບ",
+          "ເມນູ ຈອງ ການເຊື່ອມ",
+          "ສະໝັກ ຊ່ວຍເຫຼືອ ຂໍ້ມູນ"
         ]
       },
       {
@@ -2141,8 +2141,8 @@ export const BOOK={
         "title": "ເລີ່ມງ່າຍ ບອກສະຖານະຈິງຊັດເຈນ",
         "lead": "ແຍກປະສົບການມື້ນີ້ຈາກບໍລິການອະນາຄົດ.",
         "paragraphs": [
-          "Jumo ພ້ອມແລ້ວ. ຂ້ອຍກຽມເມນູ 8 ລາຍການ ພ້ອມອໍເດີ ແລະການຈອງຕົວຢ່າງ. ຖາມສະຖານະມື້ນີ້ ຫຼືເປີດແດຊບອດ. ຕົວຢ່າງ Jumo · ອໍເດີ ການຈອງ ແລະຍອດຂາຍເປັນຂໍ້ມູນສົມມຸດ. ການແກ້ໄຂບັນທຶກໃນບຣາວເຊີນີ້ເທົ່ານັ້ນ. ກົດປຸ່ມເພື່ອທົດລອງທັນທີ. ບໍ່ມີການສະໝັກ ຫຼືຢືນຢັນບັນຊີຈິງ. ເຊື່ອມຮ້ານຕົວຢ່າງ Jumo ເພື່ອໃຫ້ໂທລະສັບອື່ນສັ່ງອາຫານ ຫຼືຈອງຜ່ານ QR.",
-          "ຈ່າຍ ຄະແນນ ໂບນັດ ແລະລາຍງານຍັງເປັນເດໂມ ບໍ່ມີຈ່າຍຈິງ POS ຫຼືແຈ້ງເຕືອນພາຍນອກ. ວຽກສະຕັອກແລະພະນັກງານປ້ອນເອງ ສົ່ງອອກພາສີເປັນຮ່າງ. ໃຊ້ QR GitHub Pages ສາທາລະນະໄດ້ ແລະ Sites ຍັງສຳລັບເຈົ້າຂອງເທົ່ານັ້ນ."
+          "ການສາທິດໃນປຶ້ມແລະແອັບຮ້ານແຍກຕ່າງຫາກເກັບຂໍ້ມູນຕ່າງກັນ. ເບິ່ງຕາຕະລາງຂ້າງລຸ່ມເພື່ອເລືອກການທົດລອງ.",
+          "ຮູບອາຫານ Jumo ເປັນຮູບແນວຄິດ ລາຄາ VND ເປັນລາຄາສາທິດ. ຄະແນນ ໂບນັດ ສິນຄ້າລະນຶກ ແລະບັດຂອງຂວັນ ຍັງບໍ່ໄດ້ກຳນົດຂາຍຫຼືຈ່າຍຈິງ."
         ],
         "points": [
           "ແຍກອໍເດີທີ່ບັນທຶກໃນຄລາວອອກຈາກຄຳຕອບ AI ທີ່ກຽມໄວ້",
@@ -2172,8 +2172,8 @@ export const BOOK={
         "title": "हर दुकान के लिए नई संभावनाएँ",
         "lead": "हर मालिक का अपना एजेंट हो, जो उसकी दुकान को समझे।",
         "paragraphs": [
-          "one shop ai रेस्तराँ, कैफ़े और उनके मेन्यू की जानकारी मेहमानों को उनकी भाषा में देता है। मालिक मैनेजर से बात करके काम सँभालते हैं और मेहमान दुकान के सहायक से बात करके अपनी ज़रूरत पूरी करते हैं।",
-          "प्रकाशित दुकान की जानकारी, मेन्यू, अपलोड की गई फ़ाइलें, विज़िट, ऑर्डर और बुकिंग सर्वर पर सहेजे जाते हैं और अलग-अलग डिवाइस पर उपलब्ध होते हैं। AI एजेंट पहले से लिखे जवाब देता है। भुगतान, पॉइंट, बोनस और रिपोर्ट अभी डेमो हैं। तस्वीरों से टेक्स्ट पढ़ने की सुविधा (OCR), असली भुगतान, POS और बाहरी सूचनाएँ अभी नहीं जुड़े हैं।"
+          "मेहमान पूछता है, दुकान पुष्टि करती है और कर्मचारी काम आगे बढ़ाते हैं। One shop मेन्यू की जानकारी, ऑर्डर और आरक्षण को एक बातचीत में जोड़ता है।",
+          "रेस्तराँ और कैफ़े के लिए Jumo हमारा पहला उदाहरण है। देखें कि मेहमान, सर्विस कर्मचारी, रसोई और मालिक एक ही अनुरोध को कैसे सँभालते हैं।"
         ],
         "points": [
           "आपकी दुकान की अपनी कहानी",
@@ -2214,7 +2214,7 @@ export const BOOK={
         "title": "सरल बातचीत, स्पष्ट पुष्टि",
         "lead": "शुरुआत एक साफ़ और सरल चैट स्क्रीन से होती है।",
         "paragraphs": [
-          "डिज़ाइन Grok की सरल चैट शैली से प्रेरित है। बातचीत और संदेश लिखने की जगह मुख्य हैं। व्यंजन, मात्रा या बुकिंग की तारीख जाँचते समय ज़रूरत के अनुसार कार्ड दिखते हैं।",
+          "बात छोटी और विकल्प स्पष्ट रखें। पुष्टि कार्ड पर मेन्यू, मात्रा और आरक्षण का समय दिखे, ताकि मेहमान और कर्मचारी एक ही जानकारी पर निर्णय लें.",
           "हर दुकान का नाम और बोलने का ढंग अलग रहता है। कीमत और उपलब्धता स्वीकृत जानकारी से आती है। फोटो से सामग्री या एलर्जी की सुरक्षा तय नहीं होती; कर्मचारी से पुष्टि करनी होगी।"
         ],
         "points": [
@@ -2240,15 +2240,15 @@ export const BOOK={
       {
         "id": "experience",
         "title": "Jumo के साथ एक बातचीत",
-        "lead": "ब्रांड की पहचान रखें, मेहमान का अनुभव सरल बनाएँ।",
+        "lead": "एक अनुरोध, चार जुड़ी स्क्रीन।",
         "paragraphs": [
-          "सादा चैट स्क्रीन Jumo का लोगो, प्रतीक और मेन्यू का माहौल रखता है। भोजन की फोटो और कार्ड सही संदर्भ में आते हैं; ऑर्डर, आरक्षण और डेमो भुगतान पुष्टि कार्ड से गुज़रते हैं।",
-          "भोजन की तस्वीरें AI से बनाए गए नमूने हैं। असली कीमतों की पुष्टि बाकी है, इसलिए VND में दिखाई गई रकम डेमो के लिए तय की गई है। पॉइंट और बोनस भी नमूना रिकॉर्ड हैं; उनका कोई नकद मूल्य नहीं है और उनसे असली सेवा मिलने का वादा नहीं किया जाता।"
+          "मेन्यू फोटो जोड़ने से मेहमान को सूचना मिलने तक पूरा सफ़र आज़माएँ। दुकान में खाना, आरक्षण या डिलीवरी चुनें, फिर भाषा और अनुरोध बदलें।",
+          "बदलाव, अस्वीकार करने का कारण, विकल्प और दोबारा अनुरोध आज़माएँ। सहमत जानकारी चारों स्क्रीन पर दिखती है। कोरियाई और मूल भाषा, संबंधित कर्मचारी और समय भी दर्ज होते हैं।"
         ],
         "points": [
-          "नौ भाषाओं में दुकान तक सीमित बातचीत",
-          "मेन्यू, आरक्षण और भुगतान संदर्भ में",
-          "तैयार जवाब, बिना API खर्च"
+          "दुकान में ऑर्डर, आरक्षण और डिलीवरी",
+          "बदलाव के प्रस्ताव से अंतिम सहमति तक",
+          "कोरियाई, मूल पाठ, कर्मचारी और समय दर्ज करें"
         ]
       },
       {
@@ -2256,13 +2256,13 @@ export const BOOK={
         "title": "मैनेजर से बात करें, दुकान तैयार करें",
         "lead": "मालिक मैनेजर के सवालों का क्रम से जवाब दें।",
         "paragraphs": [
-          "जुमो का डेमो तैयार है। इसमें 8 व्यंजन, नमूना ऑर्डर और बुकिंग पहले से मौजूद हैं। आज की स्थिति पूछें या डैशबोर्ड देखें।",
-          "तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा। जुमो नमूना · ऑर्डर, बुकिंग और बिक्री काल्पनिक हैं। बदलाव केवल इस ब्राउज़र में रहते हैं। डेमो दुकान ऑनलाइन जोड़ें — जुमो नमूना दुकान जोड़ें ताकि दूसरे फ़ोन से QR द्वारा ऑर्डर या बुकिंग हो सके।"
+          "दुकान के नाम, संपर्क जानकारी और मेन्यू फोटो से शुरुआत करें। Rami के तैयार किए मेन्यू और दाम मालिक जाँचते हैं, फिर दुकान का लिंक और QR बनता है।",
+          "इस पुस्तक में फोटो विश्लेषण तैयार नमूने से चलता है। अलग मालिक ऐप में पासवर्ड बनाएँ और दुकान की जानकारी सहेजकर दूसरे डिवाइस पर भी काम जारी रखें।"
         ],
         "points": [
-          "दुकान की जानकारी",
-          "8 व्यंजन देखें",
-          "डैशबोर्ड देखें"
+          "मेन्यू फोटो",
+          "मेन्यू और दाम की जाँच",
+          "दुकान का लिंक और QR"
         ]
       },
       {
@@ -2270,8 +2270,8 @@ export const BOOK={
         "title": "टेबल और सोशल प्रोफ़ाइल, दोनों प्रवेश द्वार",
         "lead": "दुकान के एक लिंक को कई जगह इस्तेमाल करें।",
         "paragraphs": [
-          "टेबल QR प्रिंट करें या दुकान का लिंक साझा करें। प्रकाशित दुकान और मेन्यू बैकएंड से आते हैं, इसलिए दूसरे फोन पर मेहमान वही जानकारी देखकर ऑर्डर या आरक्षण भेज सकते हैं।",
-          "सार्वजनिक GitHub Pages दुकान QR बिना मालिक के लॉगिन खुलते हैं। मौजूदा Sites पूर्वावलोकन केवल मालिक के लिए रहता है। भेजे गए ऑर्डर और आरक्षण की पुष्टि संबंधित दुकान के बैकएंड रिकॉर्ड से होती है।"
+          "हर टेबल पर नंबर वाला QR लगाएँ और सोशल मीडिया पर दुकान का लिंक दें। मेहमान एक ही दुकान पर पहुँचते हैं; प्रवेश का रास्ता अनुरोध पहचानने में मदद करता है।",
+          "दुकान में बैठे मेहमान टेबल नंबर की पुष्टि करते हैं। डिलीवरी के लिए पता और फोन, आरक्षण के लिए तारीख, समय और लोगों की संख्या दर्ज होती है।"
         ],
         "points": [
           "QR दुकान और टेबल पहचानता है",
@@ -2281,30 +2281,30 @@ export const BOOK={
       },
       {
         "id": "team",
-        "title": "मैनेजर से बात करें, एक डैशबोर्ड पर जाँचें",
-        "lead": "मालिक की चैट के साथ केवल एक सहायक डैशबोर्ड रखें।",
+        "title": "हॉल, रसोई और मालिक: हर भूमिका की अपनी स्क्रीन",
+        "lead": "एक दुकान, हर व्यक्ति अपना काम संभालता है।",
         "paragraphs": [
-          "नीला मैनेजर नए ऑर्डर और बुकिंग की सूचना देता है। दुकान में खाने के ऑर्डर पर पुष्टि किया गया टेबल नंबर साफ़ दिखता है; ऑनलाइन ऑर्डर पर डिलीवरी का पता और फ़ोन नंबर दिखते हैं। बुकिंग में वह टेबल दिखती है जिसका QR स्कैन किया गया था। ऑनलाइन बुकिंग के लिए टेबल अभी तय नहीं होती।",
-          "QR से पहचान नहीं निकाली जाती; केवल सहमति वाली प्रोफ़ाइल दिखाई जाती हैं। स्टॉक और कर्मचारी कार्य मालिक द्वारा हाथ से दर्ज व बदले गए डेमो रिकॉर्ड हैं, असली गोदाम या कर्मचारी प्रणाली से जुड़े नहीं।"
+          "एक अनुरोध चार भूमिकाओं में बाँटा जाता है। सर्विस कर्मचारी ऑर्डर लेते और परोसते हैं, रसोई तैयारी करती है, मालिक पूरी स्थिति और अनुमतियाँ सँभालते हैं।",
+          "मालिक कर्मचारी जोड़कर देखने और काम करने की अनुमति देता है। रसोई को मेन्यू और मात्रा, हॉल को सेवा के लिए ज़रूरी जानकारी दिखती है। अनुमति बदलने या कर्मचारी हटाने का असर जुड़े उपकरणों पर भी पड़ता है।"
         ],
         "points": [
-          "चैट में कहें, रिकॉर्ड से जाँचें",
-          "भुगतान किए और बकाया ऑर्डर अलग",
-          "स्टॉक और कर्मचारी कार्य हाथ से प्रबंधित उदाहरण"
+          "भूमिका के अनुसार स्क्रीन और अनुमति",
+          "रसोई को केवल मेन्यू और मात्रा",
+          "मालिक कर्मचारी जोड़ता, बदलता और हटाता है"
         ]
       },
       {
         "id": "operations",
-        "title": "चैट की कार्रवाई में भी पुष्टि ज़रूरी",
-        "lead": "ऑर्डर, आरक्षण, भुगतान और लाभ के रिकॉर्ड अलग रखें।",
+        "title": "स्वीकार करने से पूरा होने तक वही ऑर्डर देखें",
+        "lead": "हॉल स्वीकार करता है, रसोई तैयार करती है, मेहमान को सूचना मिलती है।",
         "paragraphs": [
-          "नीला मैनेजर नए ऑर्डर और बुकिंग की सूचना देता है। दुकान में खाने के ऑर्डर पर पुष्टि किया गया टेबल नंबर साफ़ दिखता है; ऑनलाइन ऑर्डर पर डिलीवरी का पता और फ़ोन नंबर दिखते हैं। बुकिंग में वह टेबल दिखती है जिसका QR स्कैन किया गया था। ऑनलाइन बुकिंग के लिए टेबल अभी तय नहीं होती।",
-          "मालिक के ऑर्डर स्वीकार करने, तैयारी शुरू करने या पूरा करने पर मेहमान को दिखने वाली स्थिति और सूचनाएँ भी अपडेट होती हैं। लिखे जा रहे संदेश सुरक्षित रहते हैं। ऑर्डर और भुगतान की स्थिति अलग रहती है। असली AI और भुगतान अभी नहीं जुड़े हैं।"
+          "मेहमान की पुष्टि के बाद सर्विस कर्मचारी अनुरोध लेते हैं और रसोई तैयारी व तैयार होने की स्थिति सँभालती है। मालिक पूरी प्रक्रिया देखते हैं, मेहमान अपनी स्थिति देखते हैं।",
+          "बदलाव सहमति के बाद लागू होता है। मेहमान कर्मचारी का विकल्प बदलकर भेज सकता है। खाना बनना शुरू होने के बाद बदलाव या रद्द करने की मंज़ूरी मालिक देते हैं।"
         ],
         "points": [
-          "ऑर्डर की प्रगति और भुगतान अलग",
-          "आरक्षण और इनाम पुष्टि के बाद सहेजें",
-          "पैसे लगाकर खेलना, नकद में बदलना या असली सेवा पाना इस डेमो का हिस्सा नहीं है"
+          "अनुरोध, पुष्टि और बदलाव का इतिहास रखें",
+          "भुगतान को ऑर्डर की प्रगति से अलग रखें",
+          "खाना बनना शुरू होने पर बदलाव या रद्द करने के लिए मालिक की मंज़ूरी"
         ]
       },
       {
@@ -2312,8 +2312,8 @@ export const BOOK={
         "title": "दुकान की सदस्यता से लगातार मदद",
         "lead": "मालिक के लाभ के साथ संचालन लागत भी मापें।",
         "paragraphs": [
-          "व्यवसाय मॉडल प्रति दुकान सदस्यता और तय सुविधाओं व उपयोग सीमा से शुरू होगा। इस पुस्तक में कीमत और आय की गणना परीक्षण की मान्यताएँ हैं, अंतिम पैकेज या असली बिक्री नहीं।",
-          "हम असीमित सामान्य चैटबॉट नहीं बेचेंगे। उपयोग सीमा, खर्च की चेतावनी और सीमा पूरी होने पर मेन्यू या कर्मचारी का विकल्प उत्पाद में शामिल होंगे।"
+          "शुरुआती प्रस्ताव हर दुकान के लिए मासिक सदस्यता है। शामिल सुविधाएँ, AI उपयोग सीमा और अतिरिक्त उपयोग की शर्तें पायलट के वास्तविक इस्तेमाल के बाद तय होंगी।",
+          "मालिक को बार-बार सवालों के जवाब देने और ऑर्डर आगे भेजने में मदद मिलनी चाहिए। लागत में AI, भुगतान शुल्क, सहायता और रखरखाव सभी शामिल होंगे।"
         ],
         "points": [
           "दुकान के अनुसार AI लागत मापें",
@@ -2369,7 +2369,7 @@ export const BOOK={
         "lead": "मेहमान को समझें, उसकी पहचान की कल्पना न करें।",
         "paragraphs": [
           "one shop ai का one shop रेस्तराँ और कैफ़े के लिए है। ऑर्डर की पुष्टि से पहले, दुकान में बैठे मेहमान अपना टेबल नंबर जाँचते हैं और ऑनलाइन ऑर्डर देने वाले डिलीवरी का पता और फ़ोन नंबर बताते हैं। ये जानकारी ऑर्डर के साथ सहेजी जाती है और डैशबोर्ड पर दिखाती है कि ऑर्डर कहाँ से आया है। असली AI, भुगतान और डिलीवरी अभी जुड़े नहीं हैं।",
-          "जुमो नमूना · ऑर्डर, बुकिंग और बिक्री काल्पनिक हैं। बदलाव केवल इस ब्राउज़र में रहते हैं। दुकान की जानकारी और ऑर्डर सहेजे जाते हैं। दूसरे डिवाइस पर मालिक के खाते का उपयोग असली लॉगिन जोड़ने के बाद होगा। भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं; असली भुगतान, POS या बाहरी सूचना नहीं है। स्टॉक व कर्मचारी कार्य हाथ से दर्ज होते हैं, कर निर्यात समीक्षा मसौदा है। सार्वजनिक GitHub Pages QR समर्थित हैं, जबकि Sites पूर्वावलोकन केवल मालिक के लिए है।"
+          "मेहमान के लिंक से मालिक की अनुमति नहीं मिलती। कर्मचारी अपने अलग लिंक पर केवल अनुमति वाले डेटा और काम देख सकते हैं। लॉगआउट से वही सत्र खत्म होता है; पासवर्ड बदलने से बाकी मालिक सत्र भी खत्म होते हैं। मालिक का पासवर्ड सर्वर पर जाँचा जाता है। कर्मचारियों का प्रवेश लिंक आधारित है; पहचान की पुष्टि और ईमेल से पासवर्ड रिकवरी अभी नहीं जुड़े हैं। असली AI और भुगतान भी नहीं जुड़े हैं।"
         ],
         "points": [
           "एलर्जी की जानकारी कर्मचारी से लें",
@@ -2382,13 +2382,13 @@ export const BOOK={
         "title": "डेमो से असली दुकान तक",
         "lead": "हर चरण की स्वीकृति शर्त पूरी होने पर अगली सुविधा जोड़ें।",
         "paragraphs": [
-          "मेन्यू और दुकान की तस्वीरें व जानकारी अपलोड करके, मैनेजर से बातचीत के ज़रिए दुकान का सेटअप पूरा करें। जानकारी और मेन्यू क्लाउड पर सहेजे जाते हैं। मेहमान दूसरे फ़ोन से QR खोलकर ऑर्डर और बुकिंग भेज सकते हैं; मालिक को डैशबोर्ड पर तुरंत अपडेट मिलता है। AI के जवाब और भुगतान अभी डेमो हैं। शुरू करने के लिए बटन दबाएँ; असली पंजीकरण या खाता सत्यापन नहीं होता।",
-          "आगे समीक्षा योग्य फोटो पहचान, असली AI एजेंट और सर्वर खर्च नियंत्रण जाँचें। असली भुगतान, POS और बाहरी सूचनाएँ अलग जुड़ेंगी; API अनुबंध, सत्यापित webhook, दोहराव रोकना, पुनः प्रयास, मिलान और अनुमति जाँचना ज़रूरी होगा।"
+          "अभी डेमो में मेहमान और कर्मचारियों का सफ़र जाँचा जा रहा है। अगला कदम असली मेन्यू, समय, उपलब्धता और आरक्षण नियमों वाली एक पायलट दुकान है।",
+          "लॉन्च से पहले मालिक द्वारा मेन्यू पहचान की जाँच, भाषा की सटीकता, AI खर्च सीमा, भुगतान और POS का मिलान, खाता रिकवरी और खराबी सँभालना परखें। इन शर्तों के पूरा होने पर लॉन्च की तारीख तय होगी।"
         ],
         "points": [
-          "दूसरे उपकरण पर दुकान, ऑर्डर और आरक्षण जाँचें",
-          "लाइव स्क्रीन को सहेजे रिकॉर्ड से मिलाएँ",
-          "सेवा शुरू होने पर असली खाता सत्यापन जोड़ें"
+          "सफ़र की समीक्षा",
+          "दुकान में पायलट",
+          "लॉन्च शर्तों की जाँच"
         ]
       },
       {
@@ -2396,13 +2396,13 @@ export const BOOK={
         "title": "अगले फैसले हम साथ लें",
         "lead": "पहला देश और पहली दुकान का संचालन तय करें।",
         "paragraphs": [
-          "पहला बाज़ार, मुद्रा, मंज़ूर मेन्यू और कीमत, POS तथा भुगतान तरीका चुनें। आरक्षण, अंक, बोनस, खेल सीमा, सहमति के शब्द और रिकॉर्ड अवधि तय करें।",
-          "स्टॉक व कर्मचारी कार्य के ज़िम्मेदार, डेमो बिक्री रिपोर्ट का आधार और कर मसौदा समीक्षक तय करें। क्लाउड रिकॉर्ड से निर्यात मसौदा अंतिम लेखा या कर दाखिले की जगह नहीं लेता। सेवा शुरू होने पर असली खाता सत्यापन जोड़ें।"
+          "पहले पायलट देश, दुकान और संचालन के ज़िम्मेदार को चुनें। मुद्रा, मेन्यू, दाम और आरक्षण नियम तय करके मौजूदा POS और भुगतान सेवा का जुड़ाव जाँचें।",
+          "फिर शामिल उपयोग, सहायता, डेटा रखने की अवधि और उसे मिटाने की प्रक्रिया तय करें। मालिक और कर्मचारियों के साथ समय और सफलता की शर्तें तय करें।"
         ],
         "points": [
-          "पायलट दुकान और समीक्षक चुनें",
-          "आरक्षण, लाभ और कार्य के नियम बनाएँ",
-          "POS परीक्षण, सदस्यता और सहायता की शर्तें तय करें"
+          "देश, दुकान और ज़िम्मेदार",
+          "मेन्यू, आरक्षण, जुड़ाव नियम",
+          "सदस्यता, सहायता, डेटा नीति"
         ]
       },
       {
@@ -2410,8 +2410,8 @@ export const BOOK={
         "title": "शुरुआत आसान, वास्तविक स्थिति स्पष्ट",
         "lead": "आज के अनुभव और भविष्य की सेवा में अंतर रखें।",
         "paragraphs": [
-          "जुमो का डेमो तैयार है। इसमें 8 व्यंजन, नमूना ऑर्डर और बुकिंग पहले से मौजूद हैं। आज की स्थिति पूछें या डैशबोर्ड देखें। जुमो नमूना · ऑर्डर, बुकिंग और बिक्री काल्पनिक हैं। बदलाव केवल इस ब्राउज़र में रहते हैं। तुरंत आज़माने के लिए बटन दबाएँ। असली पंजीकरण या खाता सत्यापन नहीं होगा। जुमो नमूना दुकान जोड़ें ताकि दूसरे फ़ोन से QR द्वारा ऑर्डर या बुकिंग हो सके।",
-          "भुगतान, अंक, बोनस और रिपोर्ट अभी डेमो हैं; असली भुगतान, POS या बाहरी सूचना नहीं है। स्टॉक व कर्मचारी कार्य हाथ से दर्ज होते हैं, कर निर्यात समीक्षा मसौदा है। सार्वजनिक GitHub Pages QR समर्थित हैं, जबकि Sites पूर्वावलोकन केवल मालिक के लिए है।"
+          "इस पुस्तक का एकीकृत डेमो और अलग दुकान ऐप डेटा अलग तरह से सहेजते हैं। नीचे की तालिका देखकर अपना अनुभव चुनें।",
+          "Jumo की भोजन तस्वीरें कॉन्सेप्ट चित्र हैं और VND दाम डेमो के लिए हैं। पॉइंट, बोनस, सामान और वाउचर की असली बिक्री या वितरण तय नहीं है।"
         ],
         "points": [
           "क्लाउड पर अनुरोध और तय AI जवाब अलग रखें",
@@ -2422,5 +2422,3 @@ export const BOOK={
     ]
   }
 };
-
-applyOwnerBook(BOOK);
