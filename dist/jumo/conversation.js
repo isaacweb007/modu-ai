@@ -1,3 +1,4 @@
+import {createSetupGuestState} from '../shared/shop-setup-state.js?v=5.14.0';
 import {flowCopy} from '../shared/flow-copy.js?v=5.11.0';
 import {loungeMarkup,waitingOrder,waitingIntent,guestCardFor} from '../shared/guest-lounge.js?v=5.11.0';
 import {createOwnerAuth} from '../shared/owner-auth.js?v=5.12.0';
@@ -49,6 +50,8 @@ const entry={get current(){return ownerAuth?.ready;}};
 let ownerDenied=false;
 let initialized=false,resetConfirm=false,guestEntered=false,disposeTeam=()=>{},teamConnection=null;
 function renderGuestIntro(){document.documentElement.lang=lang;root.innerHTML=guestIntro({lang,table,shop:'주모'});}
+// This sample uses preview's in-memory state and never overwrites saved shops.
+if(!owner&&preview&&params.get('sample')==='onboarding')replaceState(createSetupGuestState(lang));
 if(sample||sampleGuest)configureState(SAMPLE_STORAGE);
 if(sampleGuest){if(readState().sampleVersion!==SAMPLE_VERSION)replaceState(createOwnerSample(lang));else if(!readState().sampleRoutingVersion)replaceState(upgradeOwnerSample(readState()));}
 const t=k=>(owner?ownerAuthCopy(lang)[k]:undefined)??flowCopy(lang)[k]??TEAM_LIVE_COPY[lang]?.[k]??expansionCopy(lang)[k]??INTERPRETER_COPY[lang]?.[k]??RAMI_COPY[lang]?.[k]??LIVE_COPY[lang]?.[k]??ORDER_COPY[lang]?.[k]??SAMPLE_COPY[lang]?.[k]??ENTRY_COPY[lang]?.[k]??CHAT_COPY[lang]?.[k]??UI[lang]?.[k]??k;
