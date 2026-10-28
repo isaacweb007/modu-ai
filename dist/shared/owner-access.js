@@ -1,0 +1,2 @@
+// This guard prevents misleading demo entry. The API still authorizes every shop request.
+export function ownerStoreAccess(search,storage){const p=new URLSearchParams(search);if(!p.has('store'))return {restricted:false,credential:null};const id=p.get('store');let credential;try{credential=JSON.parse(storage.getItem('modu-owner:'+id));}catch{}const valid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(id||'')&&credential?.storeId===id&&/^[a-f0-9]{64}$/i.test(credential?.token||'');return {restricted:!valid,credential:valid?credential:null};}

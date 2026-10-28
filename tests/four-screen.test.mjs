@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createShowcase,showcaseActor,advanceShowcaseBy,showcaseSnapshot,SHOWCASE_PANES} from '../dist/shared/showcase-state.js';
+import {waitingOrder,waitingIntent,TONTV_URL,loungeMarkup} from '../dist/shared/guest-lounge.js';
+import {FLOW_COPY} from '../dist/shared/flow-copy.js';
+import {ownerStoreAccess} from '../dist/shared/owner-access.js';
+import {ownerSampleMode} from '../dist/shared/experience-mode.js';
+import {LANGS} from '../dist/shared/locale.js';
+
+test('one order is accepted by floor, prepared by kitchen and notified to guest; wrong role and stale action cannot advance',()=>{
+ for(const scenario of ['dineIn','delivery']){let s=createShowcase('vi',undefined,undefined,scenario),id;
+ const actors=['guest','guest','guest','owner','guest','floor','kitchen','kitchen','guest'];
+ for(let p=0;p<=8;p++){assert.equal(showcaseActor(s),actors[p]);assert.equal(showcaseSnapshot(s).activePane,actors[p]);for(const other of SHOWCASE_PANES.filter(k=>k!==actors[p]))assert.equal(advanceShowcaseBy(s,other),s);assert.equal(advanceShowcaseBy(s,actors[p],p-1),s);if(p>=5){const r=showcaseSnapshot(s).order;id??=r.id;assert.equal(r.id,id);assert.equal(r.payment,'unpaid');assert.equal(r.status,['pending','accepted','preparing','ready'][p-5]);}s=advanceShowcaseBy(s,actors[p]);}
+ assert.equal(s.phase,8);
+ }
+});
+test('reservations go through the floor and never expose kitchen acceptance',()=>{let s=createShowcase('vi',undefined,undefined,'booking');while(s.phase<7){assert.notEqual(showcaseActor(s),'kitchen');assert.equal(advanceShowcaseBy(s,'kitchen'),s);s=advanceShowcaseBy(s,showcaseActor(s));}assert.equal(showcaseSnapshot(s).booking.status,'confirmed');assert.equal(showcaseSnapshot(s).order,null);});
+test('waiting room is scoped to current guest and keeps payment separate',()=>{const order={sessionId:'mine',status:'preparing',payment:'unpaid'};assert.equal(waitingOrder([order],null),null);assert.equal(waitingOrder([order],'other'),null);assert.equal(waitingOrder([order],'mine'),order);assert.equal(waitingOrder([{...order,payment:'paid'}],'mine').status,'preparing');assert.equal(waitingOrder([{...order,status:'completed'}],'mine'),null);});
+test('TonTV opens only the exact channel with no shop or guest tracking data',()=>{assert.equal(TONTV_URL,'https://t.me/TontvOfficialChannel');for(const lang of Object.keys(LANGS)){const html=loungeMarkup(lang);assert.match(html,/target="_blank" rel="noopener noreferrer"/);assert.match(html,/referrerpolicy="no-referrer"/);assert.match(html,/href="https:\/\/t.me\/TontvOfficialChannel"/);assert.doesNotMatch(html,/<iframe|autoplay|visitId|store=/);assert.ok(html.includes(FLOW_COPY[lang].tvNote));}});
+test('prepared waiting conversation is explicit and does not take over unrelated questions',()=>{for(const l of Object.keys(LANGS))assert.equal(waitingIntent(FLOW_COPY[l].waitingQuestion),'waiting');assert.equal(waitingIntent('tontv'),'waiting');assert.equal(waitingIntent('write code about TonTV'),null);assert.equal(waitingIntent('what is my order status'),null);});
+test('specific shop owner entry cannot fall through to public demo or unrelated credentials',()=>{const id='12345678-1234-1234-1234-123456789012',other='12345678-1234-1234-1234-123456789013',valid={storeId:id,token:'a'.repeat(64)},storage={getItem:()=>null};for(const query of ['?store='+id,'?store='+id+'&preview=1','?store=&preview=1','?store=invalid','?store='+id+'&live=1']){assert.equal(ownerStoreAccess(query,storage).restricted,true);assert.equal(ownerSampleMode('owner',query),false);}assert.equal(ownerStoreAccess('?store='+id,{getItem:()=>JSON.stringify({...valid,storeId:other})}).restricted,true);assert.equal(ownerStoreAccess('?store='+id,{getItem:()=>JSON.stringify({...valid,token:'short'})}).restricted,true);assert.equal(ownerStoreAccess('?store='+id,{getItem:()=>JSON.stringify(valid)}).restricted,false);assert.equal(ownerStoreAccess('?lang=ko',storage).restricted,false);assert.equal(ownerSampleMode('owner','?lang=ko'),true);});
+test('four-role, waiting and access copy covers all nine locales without fallback',()=>{assert.deepEqual(Object.keys(FLOW_COPY).sort(),Object.keys(LANGS).sort());for(const c of Object.values(FLOW_COPY)){assert.deepEqual(Object.keys(c).sort(),Object.keys(FLOW_COPY.ko).sort());assert.ok(Object.values(c).every(v=>typeof v==='string'&&v.trim()));}});

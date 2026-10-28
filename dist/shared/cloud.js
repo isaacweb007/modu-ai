@@ -1,9 +1,10 @@
-import {ownerSampleMode} from './experience-mode.js?v=5.6.0';
+import {ownerStoreAccess} from './owner-access.js?v=5.10.0';
+import {ownerSampleMode} from './experience-mode.js?v=5.10.0';
 import {CLOUD} from './cloud-config.js?v=5.6.0';
 import {createClient} from '../assets/supabase.js?v=5.6.0';
 import {MENU} from './menu.js?v=5.6.0';
 import {configureState,readState,replaceState,menuFor,cartQuote} from './state.js?v=5.6.0';
-const params=new URLSearchParams(location.search),preview=params.get('preview')==='1'||ownerSampleMode(document.body.dataset.role,location.search);
+const params=new URLSearchParams(location.search),preview=document.body.dataset.role==='owner'?ownerSampleMode('owner',location.search):params.get('preview')==='1';
 const json=(key)=>{try{return JSON.parse(localStorage.getItem(key))}catch{return null}};
 const save=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
 const uuid=v=>/^[a-f0-9-]{36}$/.test(v||'');
@@ -28,7 +29,7 @@ export const cloud={enabled:!preview,credential:null,role:'guest',storeId:'',vis
  get active(){return this.enabled&&!this.suspended&&!!this.credential},
  setStatus(value){this.status=value;this.onchange(false)},
  async init(role,table,lang){if(!this.enabled){this.loaded=true;return;}this.role=role;this.table=table;this.lang=lang;
- if(role==='owner'){const wanted=params.get('store')||json('modu-current-owner');this.credential=wanted?json('modu-owner:'+wanted):null;this.storeId=this.credential?.storeId||'';configureState('modu-cloud-owner:'+(this.storeId||'new'));if(this.active)await this.refresh(true);else this.setStatus('registerOwner');}
+ if(role==='owner'){const access=ownerStoreAccess(location.search,localStorage);if(access.restricted)throw Error('ownerAccess');const wanted=params.get('store')||json('modu-current-owner');this.credential=wanted?json('modu-owner:'+wanted):null;this.storeId=this.credential?.storeId||'';configureState('modu-cloud-owner:'+(this.storeId||'new'));if(this.active)await this.refresh(true);else this.setStatus('registerOwner');}
  else{this.storeId=params.get('store')||CLOUD.sampleStore;if(!uuid(this.storeId))throw Error('storeMissing');await publicStore(this.storeId);const key='modu-visit:'+this.storeId+':'+table;this.credential=json(key);if(!this.credential){this.credential=await request(this.storeId+'/visits','POST',{table,lang});save(key,this.credential);}this.visitId=this.credential.visitId;configureState('modu-cloud-guest:'+this.storeId+':'+this.visitId);await this.refresh(true);}
  this.loaded=true;window.addEventListener('modu-state',()=>this.changed());if(this.active)this.connect();return this.visitId;
  },

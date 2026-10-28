@@ -4,6 +4,9 @@ import {normalizeFulfillment} from './order-details.js?v=5.6.0';
 import {expansionCopy} from './expansion-copy.js?v=5.8.0';
 export const SHOWCASE_KEY='one-shop-book-showcase-v2';
 export const SHOWCASE_LAST=8;
+export const SHOWCASE_PANES=['guest','floor','kitchen','owner'];
+export function showcaseActor(s){if(s.phase===3)return 'owner';if(s.phase===5)return 'floor';if(s.phase===6)return s.scenario==='booking'?'owner':'kitchen';if(s.phase===7&&s.scenario!=='booking')return 'kitchen';return 'guest';}
+export function advanceShowcaseBy(s,actor,expectedPhase=s.phase){return actor===showcaseActor(s)?advanceShowcase(s,expectedPhase):s;}
 export const SHOWCASE_SCENARIOS=['dineIn','booking','delivery'];
 export const showcaseLast=s=>s.scenario==='booking'?7:8;
 export function createShowcase(guestLang='vi',runId=crypto.randomUUID(),at=new Date().toISOString(),scenario='dineIn') {
@@ -23,7 +26,7 @@ export function showcaseSnapshot(s) {
  const fulfillment=kind==='delivery'?normalizeFulfillment({channel:'online',address:'DEMO · 12 Đường Mẫu, Quận 1, TP. Hồ Chí Minh',phone:'+84 000 000 000',name:'Minh (DEMO)'}):{channel:'dine-in',table:7};
  const booking={id:'showcase-booking-'+s.runId,number:'R001',name:'Minh (DEMO)',date:bookingDate(s.at),time:'19:00',partySize:2,status:s.phase>=6?'confirmed':'pending'};
  const order=s.phase>=5&&kind!=='booking'?{id:'showcase-order-'+s.runId,number:1,table:kind==='delivery'?null:7,fulfillment,lang:s.guestLang,lines:[{itemId:item.id,name:item.name,quantity:1,unitPrice:item.price}],total:item.price,currency:'VND',payment:'unpaid',status:['pending','accepted','preparing','ready'][s.phase-5]}:null;
- return {item,request,reply,phrases,fulfillment,bookingInfo:booking,booking:kind==='booking'&&s.phase>=5?booking:null,order,translated:s.phase>=3,activePane:['guest','guest','guest','owner','guest','owner','guest','owner','guest'][s.phase],ready:s.phase===showcaseLast(s)};
+ return {item,request,reply,phrases,fulfillment,bookingInfo:booking,booking:kind==='booking'&&s.phase>=5?booking:null,order,translated:s.phase>=3,activePane:showcaseActor(s),ready:s.phase===showcaseLast(s)};
 }
 // A cancelled generation cannot advance even if an old callback has already queued.
 export function createShowcasePlayer({advance,onChange,schedule=setTimeout,cancel=clearTimeout,delay=3600}) {
