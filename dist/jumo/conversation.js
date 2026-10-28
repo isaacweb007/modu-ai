@@ -1,6 +1,6 @@
 import {flowCopy} from '../shared/flow-copy.js?v=5.11.0';
 import {loungeMarkup,waitingOrder,waitingIntent,guestCardFor} from '../shared/guest-lounge.js?v=5.11.0';
-import {createOwnerAuth} from '../shared/owner-auth.js?v=5.11.0';
+import {createOwnerAuth} from '../shared/owner-auth.js?v=5.12.0';
 import {ownerAuthCopy} from '../shared/owner-auth-copy.js?v=5.11.0';
 import {guestIntro} from '../guest-intro.js?v=5.8.0';
 import {teamMarkup,bindTeam,importSampleTeam} from '../team.js?v=5.11.0';
