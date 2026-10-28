@@ -1,13 +1,13 @@
 import {esc} from './core.js?v=5.6.0';
 export const BOOK_PARTS=[
  {key:'understand',ids:['glance','why','people']},
- {key:'experience',ids:['experience','onboarding','journey','qr']},
+ {key:'experience',ids:['experience','apps','onboarding','journey','qr']},
  {key:'operate',ids:['team','operations','principles','trust','architecture']},
  {key:'build',ids:['business','growth','roadmap','workshop','partnership']},
  {key:'brand',ids:['rami','rami-expressions','rami-careers','rami-goods','rami-identity']},
  {key:'scope',ids:['faq']}
 ];
-export function orderedChapters(book,rami){const all=[...book.sections,...rami];return BOOK_PARTS.flatMap(part=>part.ids.map(id=>all.find(s=>s.id===id))).filter(Boolean);}
+export function orderedChapters(book,rami,additional=[]){const all=[...book.sections,...rami,...additional];return BOOK_PARTS.flatMap(part=>part.ids.map(id=>all.find(s=>s.id===id))).filter(Boolean);}
 const keys=['headline','intro','start','read','badge','scope','groups','details','mapTitle','mapHead','mapRows'];
 const rows={
 ko:['손님은 편한 언어로.\n샵은 한눈에.','메뉴 안내부터 주문·예약, 홀과 주방의 진행 상황까지. 라미가 손님과 샵을 하나의 흐름으로 잇습니다.','통합 시연 보기','원샵 핵심 보기','실제 AI·결제 없이 체험하는 프로덕션북','현재 기능 범위',['원샵을 이해하다','직접 체험하다','함께 운영하다','사업과 출시를 준비하다','라미와 브랜드','현재 범위와 참고 자료'],['주문·통역 과정만 살펴보기','메뉴 등록과 QR 발급만 살펴보기','사장님 로그인·복구 과정 살펴보기'],'지금 체험할 수 있는 것',['구분','체험할 수 있는 일','데이터와 연결 범위'],[
