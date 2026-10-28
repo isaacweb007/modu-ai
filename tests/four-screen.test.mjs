@@ -1,7 +1,8 @@
+import {messageData} from '../supabase/functions/modu-api/validation.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createShowcase,showcaseActor,advanceShowcaseBy,showcaseSnapshot,SHOWCASE_PANES} from '../dist/shared/showcase-state.js';
-import {waitingOrder,waitingIntent,TONTV_URL,loungeMarkup} from '../dist/shared/guest-lounge.js';
+import {waitingOrder,waitingIntent,TONTV_URL,loungeMarkup,guestCardFor} from '../dist/shared/guest-lounge.js';
 import {FLOW_COPY} from '../dist/shared/flow-copy.js';
 import {ownerStoreAccess} from '../dist/shared/owner-access.js';
 import {ownerSampleMode} from '../dist/shared/experience-mode.js';
@@ -20,3 +21,5 @@ test('TonTV opens only the exact channel with no shop or guest tracking data',()
 test('prepared waiting conversation is explicit and does not take over unrelated questions',()=>{for(const l of Object.keys(LANGS))assert.equal(waitingIntent(FLOW_COPY[l].waitingQuestion),'waiting');assert.equal(waitingIntent('tontv'),'waiting');assert.equal(waitingIntent('write code about TonTV'),null);assert.equal(waitingIntent('what is my order status'),null);});
 test('specific shop owner entry cannot fall through to public demo or unrelated credentials',()=>{const id='12345678-1234-1234-1234-123456789012',other='12345678-1234-1234-1234-123456789013',valid={storeId:id,token:'a'.repeat(64)},storage={getItem:()=>null};for(const query of ['?store='+id,'?store='+id+'&preview=1','?store=&preview=1','?store=invalid','?store='+id+'&live=1']){assert.equal(ownerStoreAccess(query,storage).restricted,true);assert.equal(ownerSampleMode('owner',query),false);}assert.equal(ownerStoreAccess('?store='+id,{getItem:()=>JSON.stringify({...valid,storeId:other})}).restricted,true);assert.equal(ownerStoreAccess('?store='+id,{getItem:()=>JSON.stringify({...valid,token:'short'})}).restricted,true);assert.equal(ownerStoreAccess('?store='+id,{getItem:()=>JSON.stringify(valid)}).restricted,false);assert.equal(ownerStoreAccess('?lang=ko',storage).restricted,false);assert.equal(ownerSampleMode('owner','?lang=ko'),true);});
 test('four-role, waiting and access copy covers all nine locales without fallback',()=>{assert.deepEqual(Object.keys(FLOW_COPY).sort(),Object.keys(LANGS).sort());for(const c of Object.values(FLOW_COPY)){assert.deepEqual(Object.keys(c).sort(),Object.keys(FLOW_COPY.ko).sort());assert.ok(Object.values(c).every(v=>typeof v==='string'&&v.trim()));}});
+
+test('waiting and access cards survive the existing cloud message sanitizer without new backend fields',()=>{for(const [key,card] of [['waitingAnswer','waiting'],['waitingInvite','waiting'],['ownerLocked','owner-locked']]){const stored=messageData({id:'message1',role:'assistant',key,card});assert.equal(stored.card,null);assert.equal(guestCardFor(stored),card);}assert.equal(guestCardFor({card:'menu'}),'menu');});
