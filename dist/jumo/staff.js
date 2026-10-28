@@ -1,6 +1,6 @@
 import {appUxCopy} from '../shared/app-ux-copy.js?v=5.23.0';
 import {queueOrders,queueCounts,orderAction,orderHint} from '../shared/app-ux.js?v=5.23.0';
-import {connectTeam,consumeStaffLink} from '../shared/team-live.js?v=5.25.0';
+import {connectTeam,consumeStaffLink} from '../shared/team-live.js?v=5.25.1';
 import {TEAM_LIVE_COPY} from '../shared/team-live-copy.js?v=5.11.0';
 import {staffProjection,staffAction,can} from '../shared/team-state.js?v=5.8.0';
 import {teamRead,teamChange,SAMPLE_STORAGE} from '../shared/team-storage.js?v=5.8.0';

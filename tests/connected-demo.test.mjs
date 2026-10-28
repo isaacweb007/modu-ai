@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validDemo,connectedAppLinks,consumeDemoOwnerLink,verifiedDemoCredential,readDemo} from '../dist/shared/connected-demo.js';
+import {validDemo,connectedAppBase,connectedAppLinks,consumeDemoOwnerLink,verifiedDemoCredential,readDemo} from '../dist/shared/connected-demo.js';
 const id='11111111-1111-4111-8111-111111111111',member='22222222-2222-4222-8222-222222222222',token='a'.repeat(64);
 const fixture=()=>({storeId:id,expiresAt:new Date(Date.now()+86400000).toISOString(),owner:{storeId:id,token},floor:{member:{id:member},token:'b'.repeat(64)},kitchen:{member:{id:'33333333-3333-4333-8333-333333333333'},token:'c'.repeat(64)}});
 test('four independent app links share a shop and retain only their own capability',()=>{
@@ -20,4 +20,10 @@ test('owner entry clears fragments, requires a server-confirmed demo, and never 
 });
 test('expired, malformed and mismatched rooms fail closed',()=>{
  const r=fixture();assert(validDemo(r));assert(!validDemo(r,Date.parse(r.expiresAt)+1));assert(!validDemo({...r,owner:{...r.owner,storeId:member}}));assert.equal(readDemo({getItem:()=>'{bad'}),null);assert.equal(readDemo({getItem:()=>JSON.stringify({...r,expiresAt:new Date(0).toISOString()})}),null);
+});
+
+test('private book invitations open the public app host; localhost stays local',()=>{
+ assert.equal(connectedAppBase('https://modu-ai-project-book.isaacweb007.chatgpt.site/?lang=ko#apps').href,'https://isaacweb007.github.io/modu-ai/');
+ assert.equal(connectedAppBase('http://127.0.0.1:4318/?lang=ko#apps').href,'http://127.0.0.1:4318/');
+ assert.equal(connectedAppBase('https://isaacweb007.github.io/modu-ai/?lang=ko#apps').href,'https://isaacweb007.github.io/modu-ai/');
 });

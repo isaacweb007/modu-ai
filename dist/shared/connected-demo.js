@@ -6,9 +6,11 @@ export function validDemo(room,now=Date.now()){
  return !!room&&uuid(room.storeId)&&Date.parse(room.expiresAt)>now&&room.owner?.storeId===room.storeId&&token(room.owner?.token)&&['floor','kitchen'].every(role=>uuid(room[role]?.member?.id)&&token(room[role]?.token));
 }
 export function readDemo(storage,now){try{const room=JSON.parse(storage.getItem(CONNECTED_DEMO_KEY));return validDemo(room,now)?room:null;}catch{return null;}}
+// The book can be owner-private on Sites; phone invitations use the public app host.
+export function connectedAppBase(href){const u=new URL('./',href);return u.hostname==='modu-ai-project-book.isaacweb007.chatgpt.site'?new URL('../',CLOUD.guestBase):u;}
 export function connectedAppLinks(room,lang='ko',base){
  if(!validDemo(room))throw Error('demoExpired');
- const url=path=>{const u=new URL(path,base);u.search=new URLSearchParams({lang,v:'5.25.0',store:room.storeId,demo:'shared'});return u;};
+ const url=path=>{const u=new URL(path,base);u.search=new URLSearchParams({lang,v:'5.25.1',store:room.storeId,demo:'shared'});return u;};
  const guest=url('jumo/');guest.searchParams.set('table','7');
  const owner=url('jumo/owner.html');owner.hash='access='+room.owner.token;
  const result={guest:guest.href,owner:owner.href};
