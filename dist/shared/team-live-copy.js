@@ -1,3 +1,4 @@
+import {OWNER_BOOK} from './owner-book.js?v=5.11.0';
 export const TEAM_LIVE_COPY = {
   ko: {
     connectTitle: '직원과 함께 실시간 샵 운영',
@@ -333,3 +334,5 @@ export const TEAM_LIVE_COPY = {
     staffLimit: 'इस डेमो में अधिकतम 30 सक्रिय कर्मचारी जोड़े जा सकते हैं।'
   }
 };
+
+for(const [lang,c] of Object.entries(TEAM_LIVE_COPY))c.bookBoundary=OWNER_BOOK[lang].boundary;

@@ -1,3 +1,4 @@
+import {applyOwnerBook} from './shared/owner-book.js?v=5.11.0';
 export const BOOK={
   "ko": {
     "title": "원샵 · one shop ai",
@@ -2421,3 +2422,5 @@ export const BOOK={
     ]
   }
 };
+
+applyOwnerBook(BOOK);

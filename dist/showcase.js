@@ -1,13 +1,13 @@
 import {SHOWCASE_COPY as BASE_COPY} from './shared/showcase-copy.js?v=5.8.0';
-import {SHOWCASE_KEY,SHOWCASE_SCENARIOS,showcaseLast,SHOWCASE_PANES,showcaseActor,createShowcase,restoreShowcase,advanceShowcase,showcaseSnapshot,createShowcasePlayer} from './shared/showcase-state.js?v=5.10.1';
+import {SHOWCASE_KEY,SHOWCASE_SCENARIOS,showcaseLast,SHOWCASE_PANES,showcaseActor,createShowcase,restoreShowcase,advanceShowcase,showcaseSnapshot,createShowcasePlayer} from './shared/showcase-state.js?v=5.11.0';
 import {INTERPRETER_COPY} from './shared/interpreter-copy.js?v=5.6.0';
 import {expansionCopy} from './shared/expansion-copy.js?v=5.8.0';
 import {guestIntro} from './guest-intro.js?v=5.8.0';
 import {UI} from './shared/copy.js?v=5.6.0';
 import {LANGS,formatMoney,tableLabel,formatBooking,partyLabel} from './shared/locale.js?v=5.6.0';
 import {brandMark} from './shared/brand.js?v=5.6.0';
-import {flowCopy} from './shared/flow-copy.js?v=5.10.1';
-import {loungeMarkup} from './shared/guest-lounge.js?v=5.10.1';
+import {flowCopy} from './shared/flow-copy.js?v=5.11.0';
+import {loungeMarkup} from './shared/guest-lounge.js?v=5.11.0';
 export const SHOWCASE_COPY=Object.fromEntries(Object.entries(BASE_COPY).map(([l,c])=>{const f=flowCopy(l);return [l,{...c,title:f.fourTitle,lead:f.fourLead,floor:f.floor,kitchen:f.kitchen,finished:f.fourDone,languageNote:f.staffLocale}];}));
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const glyph=name=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${({play:'<path d="m9 5 11 7-11 7Z"/>',pause:'<path d="M8 5v14M16 5v14"/>',next:'<path d="m7 5 8 7-8 7M19 5v14"/>',restart:'<path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/>',arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',check:'<path d="m5 12 4 4L19 6"/>'})[name]}</svg>`;

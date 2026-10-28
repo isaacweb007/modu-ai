@@ -1,3 +1,4 @@
+import {OWNER_BOOK} from './owner-book.js?v=5.11.0';
 export const FLOW_COPY = {
   "ko": {
     "fourTitle": "하나의 주문, 함께 움직이는 네 화면.",
@@ -289,3 +290,5 @@ export const FLOW_COPY = {
   }
 };
 export const flowCopy = lang => FLOW_COPY[lang] || FLOW_COPY.ko;
+
+for(const [lang,c] of Object.entries(FLOW_COPY)){c.ownerLockedNote=OWNER_BOOK[lang].access;c.demoOwnerNote=OWNER_BOOK[lang].demo;}

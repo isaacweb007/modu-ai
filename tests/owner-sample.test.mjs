@@ -20,7 +20,7 @@ test('demo actions persist in the sample storage and cannot overwrite a register
  assert.equal(localStorage.getItem(liveKey),'existing store record');
  S.replaceState(createOwnerSample());assert.equal(C.metrics().bookings,2);assert.equal(S.readState().orders[3].status,'pending');assert.equal(localStorage.getItem(liveKey),'existing store record');
 });
-test('default owner entry uses the sample while explicit registered-store links retain cloud mode',()=>{
- assert(ownerSampleMode('owner','?lang=ko'));assert(!ownerSampleMode('owner','?preview=1&store=123'));
+test('all owner entries require server authentication, including preview URLs',()=>{
+ assert(!ownerSampleMode('owner','?lang=ko'));assert(!ownerSampleMode('owner','?preview=1&store=123'));
  assert(!ownerSampleMode('owner','?live=1'));assert(!ownerSampleMode('owner','?store=123'));assert(!ownerSampleMode('guest','?lang=ko'));assert(!ownerSampleMode('guest','?preview=1'));
 });

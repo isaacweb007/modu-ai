@@ -37,7 +37,7 @@ export function connectTeam({storeId,token,memberId,onchange}){
  const stop=sync.stop.bind(sync);sync.stop=()=>{stop();clearTimeout(debounce);clearInterval(poll);client.removeChannel(channel);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('online',online);window.removeEventListener('offline',offline);};
  sync.refresh();return sync;
 }
-export function staffLink(storeId,memberId,token,lang='ko'){const url=new URL('staff.html',CLOUD.guestBase);url.search=new URLSearchParams({store:storeId,member:memberId,lang,v:'5.9.0'});url.hash='access='+token;return url.href;}
+export function staffLink(storeId,memberId,token,lang='ko'){const url=new URL('staff.html',CLOUD.guestBase);url.search=new URLSearchParams({store:storeId,member:memberId,lang,v:'5.11.0'});url.hash='access='+token;return url.href;}
 // Fragment never reaches the HTTP server or referrer; erase it before any API call.
 export function consumeStaffLink(url,storage,replace){const u=new URL(url),storeId=u.searchParams.get('store'),memberId=u.searchParams.get('member'),fragment=new URLSearchParams(u.hash.slice(1)),raw=fragment.get('access');
  if(raw!==null){u.hash='';replace(u.href);}

@@ -1,4 +1,3 @@
-export function ownerSampleMode(role,search=''){
- const p=new URLSearchParams(search);
- return role==='owner'&&!p.has('store')&&(p.get('preview')==='1'||p.get('live')!=='1');
-}
+// Owner screens always use server authorization, even with preview=1.
+// The production-book showcase remains an isolated, public scripted presentation.
+export function ownerSampleMode(){return false;}

@@ -3,7 +3,15 @@ const url='https://zaorqadwuqvfpwjefomh.supabase.co',key='sb_publishable_VA0y3Bm
 async function api(path,method='GET',data,token,expected=200){const res=await fetch(base+'/'+path,{method,headers:{apikey:key,'content-type':'application/json',...(token?{'x-modu-token':token}:{})},body:data?JSON.stringify(data):undefined});const b=await res.json();assert.equal(res.status,expected,JSON.stringify(b));return b;}
 const path='artifacts/cloud-fixtures.json';await fs.mkdir('artifacts',{recursive:true});let creds;try{creds=JSON.parse(await fs.readFile(path,'utf8'));}catch{creds={};}
 const setup={store:{name:'주모 · 연결 테스트',address:'호찌민 · 개발 확인용 매장',country:'VN'},menu:MENU,workspace:{manager:{profileName:'QA',stage:'name',completed:false,messages:[]}}};
-for(const name of ['ownerA','ownerB']){if(!creds[name]){creds[name]=await api('create','POST',setup,null,201);await fs.writeFile(path,JSON.stringify(creds),{mode:0o600});}}
+// Test passwords stay in the ignored local fixture file, never in published assets.
+const authPath='artifacts/owner-auth-fixtures.json';let authFixtures;try{authFixtures=JSON.parse(await fs.readFile(authPath,'utf8'));}catch{authFixtures={};}
+for(const name of ['ownerA','ownerB']){
+ const existing=creds[name];authFixtures[name]??={password:crypto.randomUUID()+'!Rami',...(existing?{legacy:existing}:{})};const fixture=authFixtures[name];
+ await fs.writeFile(authPath,JSON.stringify(authFixtures),{mode:0o600});
+ if(!existing)creds[name]=await api('create','POST',{...setup,password:fixture.password},null,201);
+ else {const info=await api(existing.storeId+'/owner-auth','GET',null,existing.token);if(info.mode!=='session')creds[name]=await api(existing.storeId+'/owner-auth/'+(info.mode==='setup'?'setup':'login'),'POST',{password:fixture.password},info.mode==='setup'?existing.token:undefined);}
+ fixture.session=creds[name];await fs.writeFile(authPath,JSON.stringify(authFixtures),{mode:0o600});await fs.writeFile(path,JSON.stringify(creds),{mode:0o600});
+}
 const a=creds.ownerA,b=creds.ownerB;
 let snapshot=await api(a.storeId+'/snapshot','GET',null,a.token);await api(a.storeId+'/store','PUT',{store:setup.store,menu:MENU,workspace:{manager:{profileName:'QA',stage:'ready',completed:true,messages:[]}},published:true,revision:snapshot.revision,workspaceRevision:snapshot.workspaceRevision},a.token);
 snapshot=await api(a.storeId+'/snapshot','GET',null,a.token);
