@@ -1,4 +1,4 @@
-import {PROPOSAL_COPY} from './proposal-copy.js?v=5.20.0';
+import {PROPOSAL_COPY} from './proposal-copy.js?v=5.20.1';
 import {rejectionReasons,reasonMessage,DEMO_REVIEWERS} from './rejection-copy.js?v=5.19.0';
 import {AMENDMENT_COPY} from './amendment-copy.js?v=5.19.0';
 import {createShopSetup,setupGuestUrl} from './shop-setup-state.js?v=5.14.0';

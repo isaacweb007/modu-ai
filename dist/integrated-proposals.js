@@ -1,4 +1,4 @@
-import {PROPOSAL_COPY,proposalResult} from './shared/proposal-copy.js?v=5.20.0';
+import {PROPOSAL_COPY,proposalResult} from './shared/proposal-copy.js?v=5.20.1';
 import {REQUEST_COPY} from './shared/integrated-request-copy.js?v=5.17.0';
 import {requestDateLimits} from './shared/integrated-request.js?v=5.17.0';
 import {auditTime} from './shared/rejection-copy.js?v=5.19.0';
@@ -22,7 +22,7 @@ export function proposalPanel(demo,role){
  const kitchen=role==='kitchen',booking=demo.scenario==='booking';
  const details=which=>kitchen?which.lines.map(({item,quantity})=>`${item.name.ko} × ${quantity}`).join(', '):which.summaries[lang];
  const attrs=`data-proposal-id="${p.id}" data-run="${demo.runId}" data-revision="${demo.revision}" data-actor="guest"`;
- return `<section class="proposal-card ${p.status}" data-proposal-status="${p.status}" lang="${lang}"><div class="amendment-title">${brandMark(p.status==='pending'?'thinking':'greeting',true)}<strong>${esc(c.title)}</strong></div><p class="proposal-result" role="status">${esc(proposalResult(p,lang))}</p>${kitchen&&booking?`<p>${esc(c.kitchenBooking)}</p>`:`<details class="proposal-current"><summary>${esc(c.current)}</summary><p>${esc(details(before))}</p></details><small>${esc(c.proposed)}</small><p class="proposal-details">${esc(details(view))}</p>`}${p.status==='pending'?`<p class="proposal-hold">${esc(c.hold)}</p>${role==='guest'?`<div class="proposal-actions"><button type="button" data-proposal="accept" ${attrs}>${esc(c.accept)}</button><button type="button" data-proposal="decline" ${attrs}>${esc(c.decline)}</button></div>`:''}`:''}</section>`;
+ return `<section class="proposal-card ${p.status}" data-proposal-status="${p.status}" lang="${lang}"><div class="amendment-title">${brandMark(p.status==='pending'?'thinking':'greeting',true)}<strong>${esc(c.title)}</strong></div><p class="proposal-result" role="status">${esc(proposalResult(p,lang))}</p>${kitchen&&booking?`<p>${esc(c.kitchenBooking)}</p>`:`<details class="proposal-current"><summary>${esc(p.status==='accepted'?c.before:c.current)}</summary><p>${esc(details(before))}</p></details><small>${esc(p.status==='accepted'?c.applied:c.proposed)}</small><p class="proposal-details">${esc(details(view))}</p>`}${p.status==='pending'?`<p class="proposal-hold">${esc(c.hold)}</p>${role==='guest'?`<div class="proposal-actions"><button type="button" data-proposal="accept" ${attrs}>${esc(c.accept)}</button><button type="button" data-proposal="decline" ${attrs}>${esc(c.decline)}</button></div>`:''}`:''}</section>`;
 }
 export function proposalAudit(entry){
  const p=entry.proposal;if(!p)return '';

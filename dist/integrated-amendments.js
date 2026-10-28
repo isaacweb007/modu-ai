@@ -1,4 +1,4 @@
-import {proposalEditor,proposalPanel,proposalAudit} from './integrated-proposals.js?v=5.20.0';
+import {proposalEditor,proposalPanel,proposalAudit} from './integrated-proposals.js?v=5.20.1';
 import {AMENDMENT_COPY,amendmentResult} from './shared/amendment-copy.js?v=5.19.0';
 import {REJECTION_COPY,rejectionReasons,reasonLabel,reasonMessage,DEMO_REVIEWERS,auditTime} from './shared/rejection-copy.js?v=5.19.0';
 import {SHOWCASE_COPY} from './shared/showcase-copy.js?v=5.8.0';

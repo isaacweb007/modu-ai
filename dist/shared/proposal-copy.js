@@ -12,3 +12,5 @@ const rows={
 };
 export const PROPOSAL_COPY=Object.fromEntries(Object.entries(rows).map(([l,row])=>[l,Object.fromEntries(keys.map((k,i)=>[k,row[i]]))]));
 export const proposalResult=(proposal,lang='ko')=>PROPOSAL_COPY[lang][proposal.status];
+const resolvedLabels={ko:['변경 전 내용','반영된 내용'],en:['Previous details','Applied details'],vi:['Thông tin trước khi đổi','Thông tin đã cập nhật'],zh:['更改前的内容','已生效的内容'],ja:['変更前の内容','反映された内容'],km:['ព័ត៌មានមុនពេលកែប្រែ','ព័ត៌មានដែលបានអនុវត្ត'],id:['Detail sebelum perubahan','Detail yang sudah diterapkan'],lo:['ຂໍ້ມູນກ່ອນປ່ຽນ','ຂໍ້ມູນທີ່ນຳໃຊ້ແລ້ວ'],hi:['बदलाव से पहले की जानकारी','लागू की गई जानकारी']};
+for(const [lang,[before,applied]] of Object.entries(resolvedLabels))Object.assign(PROPOSAL_COPY[lang],{before,applied});
