@@ -1,3 +1,4 @@
+import {NEGOTIATION_COPY} from './negotiation-copy.js?v=5.21.0';
 const keys=['title','pending','accept','decline','accepted','declined','hold','current','proposed','expired','kitchenBooking','policy','response','confirmed'];
 const rows={
  ko:['샵의 대안 제안','손님 수락 대기','제안 확인 · 수락하기','수락하지 않고 기존 내용 유지','손님이 제안을 수락해 변경이 반영되었습니다.','손님이 제안을 수락하지 않아 기존 내용을 유지합니다.','응답 전까지 기존 내용을 유지하고 다음 진행 단계는 기다립니다.','현재 확정 내용','수락하면 반영될 내용','제안한 예약 시간이 지나 수락할 수 없습니다. 새 요청을 보내 주세요.','예약 제안 처리 결과입니다. 주방 조리 작업은 없습니다.','변경을 거절할 때 다른 메뉴·수량 또는 예약 시간을 제안할 수 있습니다. 손님이 자기 언어로 확인하고 수락해야 반영됩니다. 제안·수락과 담당자·시각도 기록됩니다.','손님 응답','이 내용으로 변경해 주세요.'],
@@ -14,3 +15,5 @@ export const PROPOSAL_COPY=Object.fromEntries(Object.entries(rows).map(([l,row])
 export const proposalResult=(proposal,lang='ko')=>PROPOSAL_COPY[lang][proposal.status];
 const resolvedLabels={ko:['변경 전 내용','반영된 내용'],en:['Previous details','Applied details'],vi:['Thông tin trước khi đổi','Thông tin đã cập nhật'],zh:['更改前的内容','已生效的内容'],ja:['変更前の内容','反映された内容'],km:['ព័ត៌មានមុនពេលកែប្រែ','ព័ត៌មានដែលបានអនុវត្ត'],id:['Detail sebelum perubahan','Detail yang sudah diterapkan'],lo:['ຂໍ້ມູນກ່ອນປ່ຽນ','ຂໍ້ມູນທີ່ນຳໃຊ້ແລ້ວ'],hi:['बदलाव से पहले की जानकारी','लागू की गई जानकारी']};
 for(const [lang,[before,applied]] of Object.entries(resolvedLabels))Object.assign(PROPOSAL_COPY[lang],{before,applied});
+
+for(const lang of Object.keys(PROPOSAL_COPY))PROPOSAL_COPY[lang].countered=NEGOTIATION_COPY[lang].countered;
