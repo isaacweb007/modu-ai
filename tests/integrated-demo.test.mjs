@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createIntegratedDemo,INTEGRATED_STEPS} from '../dist/shared/integrated-demo-state.js';
+import vm from 'node:vm';
+import {createIntegratedDemo,INTEGRATED_STEPS,INTEGRATED_SCENARIOS,integratedGuestUrl,integratedQr} from '../dist/shared/integrated-demo-state.js';
 import {INTEGRATED_COPY} from '../dist/shared/integrated-demo-copy.js';
 import {createShowcase,createShowcasePlayer,SHOWCASE_PANES,showcaseSnapshot} from '../dist/shared/showcase-state.js';
 import {showcaseViews} from '../dist/showcase.js';
@@ -72,4 +73,53 @@ test('integrated presentation has no account, storage, AI, mail, upload or payme
   const src=fs.readFileSync(new URL('../'+file,import.meta.url),'utf8');assert.doesNotMatch(src,/fetch\s*\(|XMLHttpRequest|WebSocket|localStorage|sessionStorage|supabase|cloud\.js|owner-auth\.js|type="file"/);
  }
  const book=fs.readFileSync(new URL('../dist/book.js',import.meta.url),'utf8');assert(book.includes('integratedDemoShell()'));assert(book.includes('disposeIntegratedDemo()'));assert(book.includes('href="#integrated-demo"'));
+});
+test('booking carries one reservation through floor confirmation and owner notification, without cooking or payment',()=>{
+ const d=createIntegratedDemo('booking'),menu=d.menu();let bookingId;
+ assert.equal(d.steps.length,14);
+ while(!d.complete){
+  assert.deepEqual(d.menu(),menu);
+  const s=d.snapshot();if(s){assert.equal(s.order,null);if(d.phase<11)assert.equal(s.booking,null);else{bookingId??=s.booking.id;assert.equal(s.booking.id,bookingId);assert.equal(s.booking.partySize,2);assert.equal(s.booking.time,'19:00');assert.equal(s.booking.status,d.phase===11?'pending':'confirmed');assert(!('payment' in s.booking));}}
+  if(d.phase===11){assert.equal(d.actor,'floor');assert.equal(d.advance(11,'kitchen'),false);}
+  if(d.phase===12){assert.equal(d.actor,'owner');assert.equal(d.advance(12,'kitchen'),false);}
+  assert(step(d));
+ }
+ assert.equal(d.phase,13);assert.equal(d.actor,'guest');assert(d.snapshot().ready);assert.equal(d.snapshot().booking.id,bookingId);
+ const views=showcaseViews(d.serviceState(),'ko',{lounge:false});
+ for(const role of ['guest','floor','owner'])assert(views.appPane(role,d.snapshot()).includes(bookingId));
+ assert(!views.appPane('kitchen',d.snapshot()).includes('show-order'));
+ d.back();assert.equal(d.phase,12);assert(!d.snapshot().ready);assert.equal(d.snapshot().booking.status,'confirmed');
+});
+test('delivery review and records retain the same address and contact while kitchen only sees preparation details',()=>{
+ const d=createIntegratedDemo('delivery');let id;
+ while(!d.complete){step(d);if(d.phase<6)continue;const s=d.snapshot(),views=showcaseViews(d.serviceState(),'ko',{lounge:false});
+  assert.equal(s.fulfillment.channel,'online');assert.equal(s.fulfillment.phone,'+84 000 000 000');assert(s.fulfillment.address.startsWith('DEMO'));
+  if(d.phase===10){assert.equal(s.order,null);const guest=views.appPane('guest',s);assert(guest.includes(s.fulfillment.phone));assert(guest.includes(s.fulfillment.address));}
+  if(d.phase>=11){id??=s.order.id;assert.equal(s.order.id,id);assert.equal(s.order.table,null);assert.equal(s.order.payment,'unpaid');assert.equal(s.order.total,d.menu()[0].price);
+   for(const role of ['guest','floor','owner']){const html=views.appPane(role,s);assert(html.includes(s.fulfillment.phone));assert(html.includes(s.fulfillment.address));}
+   assert(!views.appPane('kitchen',s).includes(s.fulfillment.phone));
+  }
+ }
+ assert.equal(d.phase,14);assert.equal(d.snapshot().order.status,'ready');assert(d.snapshot().ready);
+});
+test('scenario switches invalidate old approvals, records and timers; replay keeps the selected scenario',()=>{
+ const d=createIntegratedDemo();assert.equal(createIntegratedDemo('invalid').scenario,'dineIn');
+ const jobs=new Map();let seq=0;
+ const p=createShowcasePlayer({advance:()=>{step(d);return !d.complete;},onChange:()=>{},schedule:fn=>{jobs.set(++seq,fn);return seq;},cancel:id=>jobs.delete(id)});
+ for(const scenario of ['delivery','booking','dineIn']){
+  while(!d.complete)step(d);const oldRun=d.runId;p.play();const stale=[...jobs.values()][0];p.dispose();assert(d.selectScenario(scenario));stale();
+  assert.equal(d.phase,0);assert.equal(d.scenario,scenario);assert.notEqual(d.runId,oldRun);assert.equal(d.approved,false);assert.equal(d.snapshot(),null);assert.equal(d.link(),null);
+  assert.equal(d.advance(0,'owner',oldRun),false);assert.equal(d.selectScenario('invalid'),false);assert.equal(d.selectScenario(scenario),false);
+  const run=d.runId;d.restart();assert.equal(d.scenario,scenario);assert.notEqual(d.runId,run);assert.equal(d.phase,0);
+  p.play();while(jobs.size){const [key,fn]=jobs.entries().next().value;jobs.delete(key);fn();}assert(d.complete);assert(!p.running);
+ }
+});
+test('all scenario QR assets encode the displayed guest link and only dine-in includes table 7',()=>{
+ const context={};vm.createContext(context);vm.runInContext(fs.readFileSync(new URL('../dist/assets/qrcode.min.js',import.meta.url),'utf8'),context);
+ for(const scenario of INTEGRATED_SCENARIOS)for(const lang of Object.keys(LANGS)){
+  const d=createIntegratedDemo(scenario);while(d.phase<5)step(d);const link=d.link(lang),url=new URL(link);assert.equal(link,integratedGuestUrl(lang,scenario));assert.equal(d.setupView().link(lang),link);
+  assert.equal(url.searchParams.get('table'),scenario==='dineIn'?'7':null);assert.equal(url.searchParams.get('preview'),'1');assert.equal(url.searchParams.get('sample'),'onboarding');assert.equal(url.searchParams.get('lang'),lang);
+  const qr=context.qrcode(0,'M');qr.addData(link);qr.make();assert.equal(fs.readFileSync(new URL('../dist/'+integratedQr(lang,scenario),import.meta.url),'utf8'),qr.createSvgTag({cellSize:6,margin:24,scalable:true}));
+  const html=shopSetupScreen(d.setupView(),lang,{qr:integratedQr(lang,scenario)});assert(html.includes(integratedQr(lang,scenario)));assert(!html.includes('undefined'));
+ }
 });

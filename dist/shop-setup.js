@@ -10,7 +10,7 @@ let setup;
 export const shopSetupShell=()=>'<section id="setup-demo" class="owner-journey shop-setup" aria-labelledby="shop-setup-title"></section>';
 const playerIcon=paused=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">${paused?'<path d="m8 5 11 7-11 7Z"/>':'<path d="M8 5v14M16 5v14"/>'}</svg>`;
 
-export function shopSetupScreen(demo,lang='ko') {
+export function shopSetupScreen(demo,lang='ko',options={}) {
  const c=SHOP_SETUP_COPY[lang],moods=['greeting','greeting','thinking','thinking','order','greeting'];
  const button=(action,label,graphic='',attrs='')=>`<button type="button" data-setup="${action}" ${attrs}>${graphic}<span>${esc(label)}</span></button>`;
  const action=label=>button(demo.phase===3?'confirm':'advance',label,icon(demo.phase===3?'check':'arrow'),`class="setup-action" data-expected="${demo.phase}"`);
@@ -21,7 +21,7 @@ export function shopSetupScreen(demo,lang='ko') {
   if(demo.phase===1)return `${bubble(c.ownerMessage,true)}<div class="setup-attachment"><img src="${SETUP_PHOTO}" alt="${esc(c.photo)}" width="70" height="92"><div><b>${esc(c.photo)}</b><small>JUMO · MENU · VND</small>${icon('check')}</div></div>${bubble(c.attached)}${action(c.steps[2])}`;
   if(demo.phase===2)return `${bubble(c.ownerMessage,true)}<div class="setup-reading">${brandMark('thinking',true)}<h3 tabindex="-1">${esc(c.reading)}</h3><span class="setup-dots" aria-hidden="true"><i></i><i></i><i></i></span><small>${esc(c.badge)}</small></div>${action(c.review)}`;
   if(demo.phase===3||demo.phase===4)return `${bubble(demo.phase===3?c.review:c.approved,demo.phase===4)}<h3 class="setup-result-heading" tabindex="-1">${esc(demo.phase===3?c.result:c.steps[4])}</h3>${menu()}${action(demo.phase===3?c.confirm:c.publish)}`;
-  const url=demo.link(lang),qr=`assets/one-shop/onboarding/qr-${lang}.svg`;
+  const url=demo.link(lang),qr=options.qr||`assets/one-shop/onboarding/qr-${lang}.svg`;
   return `${bubble(c.ready)}<div class="setup-share"><h3 tabindex="-1">주모 · JUMO</h3><span class="setup-approved">${icon('check')}${esc(c.count)} · ${esc(c.steps[4])}</span><img class="setup-qr" src="${qr}" width="248" height="248" alt="${esc(c.qr)}"><p>${esc(c.scanNote)}</p><a class="setup-shop-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(url)}</a><a class="setup-action" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(c.open)}${icon('arrow')}</a><div class="setup-share-buttons">${button('copy',c.copy,icon('qr'))}<a href="${qr}" download="one-shop-jumo-qr-${lang}.svg">${esc(c.download)}</a></div><p class="setup-copy-status" role="status" aria-live="polite"></p></div>`;
  }
  return screen();
