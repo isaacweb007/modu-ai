@@ -7,7 +7,7 @@ export function ownerAuthRoutes({admin,checked,fail,hash,token,limit,json,reply}
  return async(req:Request,id:string,item:string,ipKey:string,st:any)=>{
   const h=await secretHash(req);
   if(req.method==='GET'&&!item){
-   if(await sessionValid(id,h))return reply({mode:'session',storeId:id,name:st.public_data.name});
+   if(await sessionValid(id,h))return reply({mode:'session',storeId:id,name:st.public_data.name,...(st.demo_expires_at?{demo:true,expiresAt:st.demo_expires_at}:{})});
    const configured=!!(await passwordRecord(id));let setup=false;
    if(!configured&&h)setup=!!checked(await admin.from('modu_owners').select('store_id').eq('store_id',id).eq('token_hash',h).maybeSingle());
    return reply({mode:setup?'setup':'login',storeId:id,name:st.public_data.name});

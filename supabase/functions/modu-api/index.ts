@@ -1,5 +1,6 @@
 import {hashPassword} from './passwords.js';
 import {ownerAuthRoutes} from './owner-auth.ts';
+import {connectedDemoRoute} from './connected-demo.ts';
 import {createClient} from 'npm:@supabase/supabase-js@2.118.0';
 import {fail,text,uuid,requestId,storeData,menuData,workspaceData,messageData,reservationData,fileType,langs,fulfillmentData} from './validation.js';
 import {staffData} from './staff-validation.js';
@@ -20,6 +21,7 @@ async function access(req:Request,id:string,ownerOnly=false){const raw=req.heade
  if(ownerOnly)fail('ownerAccess',403);
  const guest=checked(await admin.from('modu_visits').select('id,store_id,table_no,lang,created_at').eq('store_id',id).eq('token_hash',h).maybeSingle());if(!guest)fail('ownerAccess',403);return {owner:false,...guest};}
 const ownerRoute=ownerAuthRoutes({admin,checked,fail,hash,token,limit,json,reply});
+const createConnectedDemo=connectedDemoRoute({admin,checked,hash,token,limit,json,reply});
 
 async function media(id:string){const files=checked(await admin.from('modu_media').select('id,name,type,size,kind,path').eq('store_id',id).order('created_at').limit(30));if(!files.length)return [];const urls=checked(await admin.storage.from('modu-store-media').createSignedUrls(files.map((x:any)=>x.path),3600));return files.map((x:any,i:number)=>{const {path,...m}=x;return {...m,url:urls[i]?.signedUrl||''};});}
 async function snapshot(st:any,auth:any){let oq=admin.from('modu_orders').select('*,modu_visits(table_no,lang)').eq('store_id',st.id).order('created_at',{ascending:false}).limit(500);let rq=admin.from('modu_reservations').select('*,modu_visits(table_no,lang)').eq('store_id',st.id).order('created_at',{ascending:false}).limit(500);let vq=admin.from('modu_visits').select('id,table_no,lang,created_at').eq('store_id',st.id).order('created_at',{ascending:false}).limit(500);let mq=admin.from('modu_messages').select('id,visit_id,request_id,kind,payload,reviewed,created_at').eq('store_id',st.id).order('created_at',{ascending:false}).limit(2000);if(!auth.owner){oq=oq.eq('visit_id',auth.id);rq=rq.eq('visit_id',auth.id);vq=vq.eq('id',auth.id);mq=mq.eq('visit_id',auth.id);}
@@ -40,9 +42,11 @@ async function receipt(storeId:string,auth:any,row:any,kind:string,language:stri
 Deno.serve(async(req:Request)=>{if(req.method==='OPTIONS')return new Response(null,{headers});try{
  const path=new URL(req.url).pathname.split('/').filter(Boolean);const root=path.indexOf('modu-api');const parts=path.slice(root+1);const [id,action,item]=parts;
  const ip=req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()||'unknown';const ipKey=await hash(ip);await limit('request:'+ipKey,300);
- if(id==='health'&&req.method==='GET')return reply({ok:true,version:8});
+ if(id==='health'&&req.method==='GET')return reply({ok:true,version:9});
+ if(id==='demo'&&parts.length===1&&req.method==='POST')return await createConnectedDemo(req,ipKey);
  if(id==='create'&&req.method==='POST'){await limit('create:'+ipKey,5,3600);const b=await json(req),secret=token(),password=await hashPassword(b.password);const result=checked(await admin.rpc('modu_create_password_store',{p_legacy_hash:await hash(token()),p_store:storeData(b.store),p_menu:menuData(b.menu),p_workspace:workspaceData(b.workspace),p_password:password,p_session_hash:await hash(secret),p_seed:b.seedDemo===true}));return reply({...result,token:secret},201);}
  if(!uuid(id))fail('storeMissing',404);const st=await store(id);
+ if(st.demo_expires_at&&Date.parse(st.demo_expires_at)<=Date.now())fail('demoExpired',410);
  if(action==='owner-auth')return await ownerRoute(req,id,item,ipKey,st);
  if(action==='public'&&req.method==='GET'){if(!st.published)fail('storeNotReady',404);return reply({id,store:{...st.public_data,media:await media(id)},menu:st.menu,revision:st.revision,published:true});}
  if(action==='visits'&&req.method==='POST'){if(!st.published)fail('storeNotReady',404);await limit('visit:'+ipKey,40,3600);const b=await json(req),secret=token();if(b.table!=null&&(!Number.isInteger(b.table)||b.table<1||b.table>999))fail('invalid');const visit=checked(await admin.from('modu_visits').insert({store_id:id,token_hash:await hash(secret),table_no:b.table??null,lang:langs.includes(b.lang)?b.lang:'ko'}).select('id').single());return reply({storeId:id,visitId:visit.id,token:secret},201);}

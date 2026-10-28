@@ -14,7 +14,7 @@ export function createTeamSync({read,write,onchange=()=>{},staff=false}){
   suspend(){this.generation++;this.pending=false;this.data=null;this.status='offline';this.notify();},
   async refresh(){if(this.stopped)return;if(this.reading){this.pending=true;return this.reading;}const generation=this.generation;this.pending=false;
    this.reading=(async()=>{try{const data=await read();if(this.stopped||generation!==this.generation)return;const changed=JSON.stringify(data)!==JSON.stringify(this.data)||this.status!=='live';this.data=data;this.status='live';if(changed)this.notify();}
-   catch(e){if(this.stopped||generation!==this.generation)return;this.data=null;this.status=['revoked','noAccess','ownerAccess'].includes(e.message)?'revoked':e.message==='limitReached'?'limitReached':'offline';this.notify();}})();
+   catch(e){if(this.stopped||generation!==this.generation)return;this.data=null;this.status=['revoked','noAccess','ownerAccess','demoExpired'].includes(e.message)?'revoked':e.message==='limitReached'?'limitReached':'offline';this.notify();}})();
    await this.reading;this.reading=null;if(this.pending&&!this.stopped)return this.refresh();
   },
   async mutate(path,method,data){if(this.stopped||this.busy||this.status!=='live')throw Error(this.status==='revoked'?'revoked':'offline');this.busy=true;this.generation++;let result,error;
