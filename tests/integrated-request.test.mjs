@@ -50,9 +50,9 @@ test('validation rejects fractions, excess quantities, impossible dates, stale l
  for(const [date,time] of [['2026-10-28','23:59'],['2026-10-29','00:10'],['2027-10-30','18:00'],['2027-02-29','18:00']])assert(!validateRequest({...base,date,time},'booking',menu,at).valid);
  assert(validateRequest({...base,date:'2026-10-29',time:'00:21'},'booking',menu,at).valid);
 });
-test('editing a completed request removes downstream state, invalidates stale actions and keeps approved menu',()=>{
- const d=start(),old=finish(d),run=d.runId,menu=d.menu();assert(d.edit());assert.equal(d.phase,7);assert(d.approved);assert.deepEqual(d.menu(),menu);assert.notEqual(d.runId,run);assert.equal(d.snapshot().order,null);assert.equal(d.snapshot().reply,null);assert(!d.snapshot().ready);
- assert.equal(d.advance(7,'guest',run),false);d.setField('quantity-m01','4');const s=finish(d);assert.notEqual(s.order.id,old.order.id);assert.equal(s.order.lines[0].quantity,4);
+test('editing before confirmation removes future outcomes, invalidates stale actions and keeps approved menu',()=>{
+ const d=start();while(d.phase<10)step(d);const run=d.runId,menu=d.menu();assert(d.edit());assert.equal(d.phase,7);assert(d.approved);assert.deepEqual(d.menu(),menu);assert.notEqual(d.runId,run);assert.equal(d.snapshot().order,null);assert.equal(d.snapshot().reply,null);assert(!d.snapshot().ready);
+ assert.equal(d.advance(7,'guest',run),false);d.setField('quantity-m01','4');const s=finish(d);assert.notEqual(d.runId,run);assert.equal(s.order.lines[0].quantity,4);
  assert.equal(d.setField('quantity-m01','9'),false);while(d.phase>7)d.back();const backRun=d.runId;d.setField('quantity-m01','5');assert(d.advance());assert.notEqual(d.runId,backRun);assert.equal(d.advance(8,'guest',backRun),false);
  d.selectScenario('booking');assert.equal(d.phase,0);assert.equal(d.draft().quantities.m01,'1');assert.equal(d.snapshot(),null);
 });
