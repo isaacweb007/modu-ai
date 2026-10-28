@@ -12,4 +12,4 @@ const rows={
 };
 export const AMENDMENT_COPY=Object.fromEntries(Object.entries(rows).map(([l,row])=>[l,Object.fromEntries(keys.map((key,i)=>[key,row[i]]))]));
 Object.entries({ko:'취소 완료',en:'Cancelled',vi:'Đã hủy',zh:'已取消',ja:'キャンセル済み',km:'បានបោះបង់',id:'Dibatalkan',lo:'ຍົກເລີກແລ້ວ',hi:'रद्द हो गया'}).forEach(([l,label])=>AMENDMENT_COPY[l].cancelledLabel=label);
-export const amendmentResult=(entry,lang)=>AMENDMENT_COPY[lang][entry.status==='pending'?'pending':entry.status==='rejected'?'rejected':entry.kind==='cancel'?'cancelled':'changed'];
+export const amendmentResult=(entry,lang)=>entry.messages?.[lang]||AMENDMENT_COPY[lang][entry.status==='pending'?'pending':entry.status==='rejected'?'rejected':entry.kind==='cancel'?'cancelled':'changed'];

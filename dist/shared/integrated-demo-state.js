@@ -1,3 +1,5 @@
+import {rejectionReasons,reasonMessage,DEMO_REVIEWERS} from './rejection-copy.js?v=5.19.0';
+import {AMENDMENT_COPY} from './amendment-copy.js?v=5.19.0';
 import {createShopSetup,setupGuestUrl} from './shop-setup-state.js?v=5.14.0';
 import {createShowcase,showcaseSnapshot,showcaseActor,showcaseLast,SHOWCASE_SCENARIOS} from './showcase-state.js?v=5.11.0';
 import {initialRequest,validateRequest,requestSnapshot} from './integrated-request.js?v=5.17.0';
@@ -16,12 +18,16 @@ export const integratedQr=(lang='ko',scenario='dineIn')=>`assets/one-shop/onboar
 // One fictional shop and approved menu per run. No account or remote writes.
 export function createIntegratedDemo(scenario='dineIn') {
  let phase=0,setup=createShopSetup(),service=createShowcase('vi',undefined,undefined,scenarioFor(scenario));
- let editing=false,cancelled=false,revision=0,amendments=[];
+ let editing=false,cancelled=false,revision=0,amendments=[],reviewDrafts={};
  const pending=()=>amendments.at(-1)?.status==='pending';
  const requiredRole=()=>service.scenario!=='booking'&&phase>=13?'owner':'floor';
  const same=(a,b)=>JSON.stringify(service.scenario==='booking'?[a.date,a.time,Number(a.partySize)]:[setup.menu().map(m=>Number(a.quantities[m.id])),...(service.scenario==='delivery'?[a.address,a.phone]:[])])===JSON.stringify(service.scenario==='booking'?[b.date,b.time,Number(b.partySize)]:[setup.menu().map(m=>Number(b.quantities[m.id])),...(service.scenario==='delivery'?[b.address,b.phone]:[])]);
  let values=initialRequest(setup.menu(),showcaseSnapshot(service)),draft=structuredClone(values),errors={};
- const resetRequest=()=>{values=initialRequest(setup.menu(),showcaseSnapshot(service));draft=structuredClone(values);errors={};editing=false;cancelled=false;revision=0;amendments=[];};
+ const resetRequest=()=>{values=initialRequest(setup.menu(),showcaseSnapshot(service));draft=structuredClone(values);errors={};editing=false;cancelled=false;revision=0;amendments=[];reviewDrafts={};};
+ const newEntry=(kind,after=null)=>{
+  const state={...service,phase:phase-6},snapshot=requestSnapshot(showcaseSnapshot(state),state,after||values,setup.menu());
+  reviewDrafts={};return {id:crypto.randomUUID(),kind,status:'pending',requiredRole:requiredRole(),before:structuredClone(values),after,by:null,scenario:service.scenario,phase,guestLang:service.guestLang,requestedAt:new Date().toISOString(),requests:Object.fromEntries(Object.keys(LANGS).map(lang=>[lang,AMENDMENT_COPY[lang][kind]+' · '+snapshot.summaries[lang]]))};
+ };
  const rebuildSetup=()=>{setup=createShopSetup();while(setup.phase<Math.min(phase,5)){if(setup.phase===3)setup.confirm();else setup.advance();}};
  const actor=()=>editing||cancelled?'guest':pending()?amendments.at(-1).requiredRole:phase<6?'owner':showcaseActor({...service,phase:phase-6});
  const link=(lang='ko')=>phase>=5?integratedGuestUrl(lang,service.scenario):null;
@@ -40,11 +46,19 @@ export function createIntegratedDemo(scenario='dineIn') {
   canReview(role){const entry=amendments.at(-1);return pending()&&(role==='owner'||role==='floor'&&entry.requiredRole==='floor');},
   beginChange(){if(!this.canManage)return false;editing=true;draft=structuredClone(values);errors={};revision++;return true;},
   discardChange(){if(!editing)return false;editing=false;draft=structuredClone(values);errors={};revision++;return true;},
-  submitChange(){if(!editing)return false;const result=validateRequest(draft,service.scenario,setup.menu());errors=result.errors;if(!result.valid)return false;if(same(values,result.values)){errors={request:'noChanges'};return false;}amendments.push({id:crypto.randomUUID(),kind:'change',status:'pending',requiredRole:requiredRole(),before:structuredClone(values),after:result.values,by:null});editing=false;revision++;return true;},
-  requestCancel(){if(!this.canManage)return false;amendments.push({id:crypto.randomUUID(),kind:'cancel',status:'pending',requiredRole:requiredRole(),before:structuredClone(values),after:null,by:null});revision++;return true;},
-  resolveAmendment(id,decision,role,runId=service.runId,expectedRevision=revision){
+  submitChange(){if(!editing)return false;const result=validateRequest(draft,service.scenario,setup.menu());errors=result.errors;if(!result.valid)return false;if(same(values,result.values)){errors={request:'noChanges'};return false;}amendments.push(newEntry('change',result.values));editing=false;revision++;return true;},
+  requestCancel(){if(!this.canManage)return false;amendments.push(newEntry('cancel'));revision++;return true;},
+  reviewDraft(role){return {...(reviewDrafts[role]||{reason:'',error:false})};},
+  selectReason(role,reason,id,runId=service.runId,expectedRevision=revision){
+   const entry=amendments.at(-1);if(runId!==service.runId||expectedRevision!==revision||!this.canReview(role)||entry.id!==id||reason!==''&&!rejectionReasons(entry).includes(reason))return false;
+   reviewDrafts[role]={reason,error:false};return true;
+  },
+  resolveAmendment(id,decision,role,runId=service.runId,expectedRevision=revision,reason=this.reviewDraft(role).reason){
    const entry=amendments.at(-1);if(runId!==service.runId||expectedRevision!==revision||!this.canReview(role)||entry.id!==id||!['approved','rejected'].includes(decision))return false;
-   entry.status=decision;entry.by=role;
+   if(decision==='rejected'&&!rejectionReasons(entry).includes(reason)){reviewDrafts[role]={reason:'',error:true};return false;}
+   entry.status=decision;entry.by=role;entry.processedBy={...DEMO_REVIEWERS[role]};entry.processedAt=new Date().toISOString();entry.reason=decision==='rejected'?reason:null;
+   entry.messages=Object.fromEntries(Object.keys(LANGS).map(lang=>[lang,decision==='rejected'?AMENDMENT_COPY[lang].rejected+' '+reasonMessage(reason,lang):AMENDMENT_COPY[lang][entry.kind==='cancel'?'cancelled':'changed']]));
+   reviewDrafts={};
    if(decision==='approved'){if(entry.kind==='cancel')cancelled=true;else{const menuChanged=setup.menu().some(m=>Number(values.quantities[m.id])!==Number(entry.after.quantities[m.id]));values=structuredClone(entry.after);draft=structuredClone(values);if(service.scenario!=='booking'&&phase>=13&&menuChanged)phase=12;}}
    revision++;return true;
   },

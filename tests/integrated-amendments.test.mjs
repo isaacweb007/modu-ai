@@ -9,7 +9,7 @@ import {LANGS} from '../dist/shared/locale.js';
 const step=d=>d.phase===3?d.confirm():d.advance();
 const at=(scenario,phase,lang='vi')=>{const d=createIntegratedDemo(scenario);while(d.phase<6)assert(step(d));d.selectLanguage(lang);while(d.phase<phase)assert(step(d));return d;};
 const record=d=>d.snapshot().order||d.snapshot().booking;
-const resolve=(d,by='floor',decision='approved')=>d.resolveAmendment(d.amendment.id,decision,by);
+const resolve=(d,by='floor',decision='approved')=>d.resolveAmendment(d.amendment.id,decision,by,d.runId,d.revision,decision==='rejected'?'verificationRequired':undefined);
 const render=(d,role)=>showcaseViews(d.serviceState(),'ko',{lounge:false,blockActions:d.blocked,afterContent:kind=>amendmentPanel(d,kind)}).appPane(role,d.snapshot());
 
 test('cancellation requires review at every order stage, with owner-only approval once cooking starts',()=>{
