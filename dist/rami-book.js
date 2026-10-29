@@ -1,4 +1,4 @@
-import {RAMI_COPY,EXPRESSION_IDS,ROLE_IDS,RAMI_CHAPTER_IDS} from './shared/rami-copy.js?v=5.6.0';
+import {RAMI_COPY,EXPRESSION_IDS,ROLE_IDS,RAMI_CHAPTER_IDS} from './shared/rami-copy.js?v=5.41.0';
 import {esc,icon} from './shared/core.js?v=5.6.0';
 const base='assets/one-shop/rami/';
 const c=lang=>RAMI_COPY[lang]||RAMI_COPY.ko;

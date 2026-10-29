@@ -10,10 +10,10 @@ export const BOOK_PARTS=[
 export function orderedChapters(book,rami,additional=[]){const all=[...book.sections,...rami,...additional];return BOOK_PARTS.flatMap(part=>part.ids.map(id=>all.find(s=>s.id===id))).filter(Boolean);}
 const keys=['headline','intro','start','read','badge','scope','groups','details','mapTitle','mapHead','mapRows'];
 const rows={
-ko:["사장님의 사업 파트너,\nAI 에이전트 라미.","손님 응대부터 주문·예약, 샵 운영까지. 원샵에서 똑똑한 라미를 만나 보세요. 사장님의 사업에 꼭 맞는 AI 에이전트를 쉽고 간편하게 만들 수 있습니다.",'통합 시연 보기','원샵 핵심 보기','실제 AI·결제 없이 체험하는 프로덕션북','현재 기능 범위',['원샵을 이해하다','직접 체험하다','함께 운영하다','사업과 출시를 준비하다','라미와 브랜드','현재 범위와 참고 자료'],['주문·통역 과정만 살펴보기','메뉴 등록과 QR 발급만 살펴보기','사장님 로그인·복구 과정 살펴보기'],'지금 체험할 수 있는 것',['구분','체험할 수 있는 일','데이터와 연결 범위'],[
-['프로덕션북 통합 시연','메뉴 등록, 다국어 주문·예약·배달, 변경 협의와 네 역할의 처리','가입 없이 준비된 시나리오로 작동합니다. 새로고침하면 시연 기록이 초기화됩니다.'],
-['별도 손님·사장님·직원 앱','샵·메뉴 저장, 다른 휴대폰의 주문·예약, 역할별 처리와 동기화','연결된 샵의 기록은 서버에 저장됩니다. 사장님은 비밀번호, 직원은 발급된 링크로 접근합니다.'],
-['출시 전에 연결·검증할 것','실제 AI, 메뉴 사진 인식, 결제·POS, 메일 복구·외부 알림','현재 미연결입니다. 직원 본인 인증과 언어별 현지 검수도 출시 전 과제입니다.']]],
+ko:["사장님의 사업 파트너,\nAI 에이전트 라미.","사장님이 샵을 소개하면, 라미가 손님을 맞고 주문과 예약을 돕습니다. 말이 다른 손님에게도 우리 샵을 편하게 소개할 수 있는 방법을 함께 만들어갑니다.",'통합 시연 보기','원샵 알아보기','지금은 준비된 데모예요 · 실제 AI와 결제는 미연결','현재 기능 범위',['원샵 이야기','직접 체험해요','함께 샵을 운영해요','앞으로의 계획','라미와 브랜드','지금 가능한 것'],['주문·통역 과정만 살펴보기','메뉴 등록과 QR 발급만 살펴보기','사장님 로그인·복구 과정 살펴보기'],'지금 체험할 수 있는 것',['구분','체험할 수 있는 일','데이터와 연결 범위'],[
+['프로덕션북 통합 시연','메뉴 등록부터 주문·예약·배달, 직원의 처리와 손님 알림까지','가입 없이 바로 볼 수 있는 준비된 이야기입니다. 새로고침하면 체험 기록이 지워집니다.'],
+['별도 손님·사장님·직원 앱','샵과 메뉴를 저장하고, 다른 휴대폰에서 주문·예약과 직원 처리를 체험합니다.','연결된 샵의 기록이 저장됩니다. 사장님은 비밀번호로, 직원은 발급받은 링크로 들어갑니다.'],
+['출시 전에 연결·검증할 것','실제 AI, 메뉴 사진 인식, 결제·POS, 메일 복구·외부 알림','아직 연결되지 않았습니다. 직원 본인 인증과 현지 언어 검수도 출시 전에 준비해야 합니다.']]],
 en:["Meet Rami, your AI agent\nand business partner.","From guest conversations to orders, reservations and shop operations, Rami is ready to help. With one shop, creating an AI agent tailored to your business is simple.",'Try the full demo','Explore the essentials','A project book demo with no live AI or payments','Current capabilities',['Understand one shop','Try the experience','Run the shop together','Prepare the business and launch','Rami and the brand','Scope and references'],['Explore ordering and interpretation only','Explore menu registration and QR creation','Explore owner login and recovery'],'What you can try today',['Experience','What you can do','Data and connections'],[
 ['Integrated book demo','Menu setup, multilingual orders, bookings, delivery and change agreements across four roles','A prepared scenario with no sign-up. Reloading resets the demonstration records.'],
 ['Separate guest, owner and staff apps','Save shop menus, take orders and bookings from another phone, and sync role-based handling','Connected shop records are stored on the server. Owners use a password; staff use issued links.'],

@@ -1,4 +1,4 @@
-import {READ_SYNC_COPY,READ_SYNC_ROLES,createReadSyncDemo} from './shared/read-sync-demo.js?v=5.35.0';
+import {READ_SYNC_COPY,READ_SYNC_ROLES,createReadSyncDemo} from './shared/read-sync-demo.js?v=5.41.0';
 import {brandMark} from './shared/brand.js?v=5.35.0';
 import {esc} from './shared/core.js?v=5.35.0';
 export function readSyncShell(lang){const c=READ_SYNC_COPY[lang]||READ_SYNC_COPY.en;return `<section id="read-sync-demo" class="read-sync-demo" aria-labelledby="read-sync-title"><div data-read-sync><h3 id="read-sync-title">${esc(c.title)}</h3><p>${esc(c.intro)}</p></div></section>`;}
