@@ -1,6 +1,6 @@
-import {createLegacyReadImporter} from './legacy-read-import.js?v=5.33.0';
-import {counterSummary} from './counter-notifications.js?v=5.33.0';
-import {COUNTER_NOTIFICATION_COPY} from './counter-notification-copy.js?v=5.33.0';
+import {createLegacyReadImporter} from './legacy-read-import.js?v=5.34.0';
+import {counterSummary} from './counter-notifications.js?v=5.34.0';
+import {COUNTER_NOTIFICATION_COPY} from './counter-notification-copy.js?v=5.34.0';
 
 // Event details come only from the latest authorized snapshot; storage contains IDs, never shop data.
 export function notificationHistory(snapshot,role,visitId){
