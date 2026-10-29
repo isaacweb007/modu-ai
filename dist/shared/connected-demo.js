@@ -10,7 +10,7 @@ export function readDemo(storage,now){try{const room=JSON.parse(storage.getItem(
 export function connectedAppBase(href){const u=new URL('./',href);return u.hostname==='modu-ai-project-book.isaacweb007.chatgpt.site'?new URL('../',CLOUD.guestBase):u;}
 export function connectedAppLinks(room,lang='ko',base){
  if(!validDemo(room))throw Error('demoExpired');
- const url=path=>{const u=new URL(path,base);u.search=new URLSearchParams({lang,v:'5.29.1',store:room.storeId,demo:'shared'});return u;};
+ const url=path=>{const u=new URL(path,base);u.search=new URLSearchParams({lang,v:'5.30.1',store:room.storeId,demo:'shared'});return u;};
  const guest=url('jumo/');guest.searchParams.set('table','7');
  const owner=url('jumo/owner.html');owner.hash='access='+room.owner.token;
  const result={guest:guest.href,owner:owner.href};
