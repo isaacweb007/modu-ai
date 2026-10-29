@@ -1,0 +1,23 @@
+import {esc} from './core.js?v=5.36.0';
+const copy={
+ko:['영상으로 만나는 원샵','유저용 앱 소개영상','라미와 함께 QR 접속부터 주문과 식사까지 경험해 보세요.','영어 내레이션 · 한국어, 베트남어, 중국어, 일본어 자막','영상은 준비된 데모이며, 리뷰 검색과 결제는 가상 시연입니다.','오너용 앱 소개영상','준비 중','샵을 등록하고 라미와 함께 운영하는 과정을 다음 영상에서 소개합니다.'],
+en:['Discover one shop on video','Guest app introduction','Follow Rami from scanning a QR code to ordering and enjoying a meal.','English narration · subtitles in Korean, Vietnamese, Chinese and Japanese','The video uses a scripted demo. Reviews and payment are illustrated concepts.','Owner app introduction','Coming soon','The next video will show how to set up and run a shop with Rami.'],
+vi:['Khám phá one shop qua video','Giới thiệu ứng dụng khách','Cùng Rami khám phá hành trình từ quét mã QR đến gọi món và thưởng thức bữa ăn.','Thuyết minh tiếng Anh · phụ đề Hàn, Việt, Trung và Nhật','Video dùng kịch bản mẫu; đánh giá và thanh toán chỉ là minh họa.','Giới thiệu ứng dụng chủ quán','Sắp ra mắt','Video tiếp theo sẽ hướng dẫn tạo và vận hành quán cùng Rami.'],
+zh:['通过视频了解 one shop','顾客应用介绍视频','跟随拉米，从扫码、点餐到享用美食。','英语旁白 · 韩语、越南语、中文和日语字幕','视频采用预设演示；评价与支付仅为概念示意。','店主应用介绍视频','敬请期待','下一部视频将介绍如何与拉米一起创建和经营店铺。'],
+ja:['動画で見る one shop','お客様アプリ紹介動画','ラミと一緒に、QR読み取りから注文・食事までを体験。','英語ナレーション · 韓国語・ベトナム語・中国語・日本語字幕','動画は用意されたデモです。レビュー検索と決済はイメージです。','オーナーアプリ紹介動画','準備中','次の動画では、ラミと一緒にお店を登録・運営する流れをご紹介します。'],
+km:['ស្វែងយល់អំពី one shop តាមវីដេអូ','វីដេអូណែនាំកម្មវិធីភ្ញៀវ','តាមដាន Rami ចាប់ពីស្កេន QR ដល់បញ្ជាទិញនិងទទួលទានអាហារ។','សំឡេងអង់គ្លេស · អក្សររត់កូរ៉េ វៀតណាម ចិន និងជប៉ុន','វីដេអូនេះជាគំរូ។ ការស្វែងរកមតិ និងការទូទាត់គ្រាន់តែជាការបង្ហាញ។','វីដេអូណែនាំកម្មវិធីម្ចាស់ហាង','កំពុងរៀបចំ','វីដេអូបន្ទាប់នឹងបង្ហាញពីការបង្កើត និងគ្រប់គ្រងហាងជាមួយ Rami។'],
+id:['Kenali one shop lewat video','Video pengenalan aplikasi tamu','Ikuti Rami dari memindai QR hingga memesan dan menikmati makanan.','Narasi bahasa Inggris · takarir Korea, Vietnam, Mandarin dan Jepang','Video memakai demo berskenario; ulasan dan pembayaran hanya ilustrasi.','Video pengenalan aplikasi pemilik','Segera hadir','Video berikutnya akan menunjukkan cara menyiapkan dan menjalankan kedai bersama Rami.'],
+lo:['ຮູ້ຈັກ one shop ຜ່ານວິດີໂອ','ວິດີໂອແນະນຳແອັບລູກຄ້າ','ຕິດຕາມ Rami ຕັ້ງແຕ່ສະແກນ QR ຈົນເຖິງການສັ່ງແລະຮັບປະທານອາຫານ.','ບັນຍາຍພາສາອັງກິດ · ຄຳບັນຍາຍເກົາຫຼີ ຫວຽດນາມ ຈີນ ແລະ ຍີ່ປຸ່ນ','ວິດີໂອເປັນການສາທິດ; ຄຳວິຈານແລະການຊຳລະເປັນພາບປະກອບ.','ວິດີໂອແນະນຳແອັບເຈົ້າຂອງ','ກຳລັງກະກຽມ','ວິດີໂອຕໍ່ໄປຈະແນະນຳການສ້າງແລະຈັດການຮ້ານກັບ Rami.'],
+hi:['वीडियो में देखें one shop','मेहमान ऐप का परिचय','Rami के साथ QR स्कैन करने से लेकर ऑर्डर और खाने तक का अनुभव देखें।','अंग्रेज़ी नैरेशन · कोरियाई, वियतनामी, चीनी और जापानी उपशीर्षक','यह तैयार डेमो है; समीक्षाएँ और भुगतान केवल उदाहरण हैं।','मालिक ऐप का परिचय','जल्द आ रहा है','अगले वीडियो में Rami के साथ दुकान बनाना और चलाना दिखाया जाएगा।']
+};
+const tracks=[['ko','한국어'],['vi','Tiếng Việt'],['zh','中文'],['ja','日本語']];
+export function guideHeading(lang){return (copy[lang]||copy.ko)[0];}
+export function guideVideos(lang){
+ const c=copy[lang]||copy.ko;
+ // The video is served from the user's public GitHub Pages site so both books
+ // use one copy; subtitles remain local to each book.
+ const origin=['localhost','127.0.0.1'].includes(globalThis.location?.hostname)?'':'https://isaacweb007.github.io/modu-ai/';
+ const media=origin+'assets/guide-videos/guest-guide-v6.mp4';
+ const selected=tracks.some(([code])=>code===lang)?lang:'ko';
+ return `<section class="guide-videos" id="guide-videos" aria-labelledby="guide-videos-heading"><div class="guide-videos-header"><p>one shop · Rami</p><h3 id="guide-videos-heading">${esc(c[0])}</h3></div><div class="guide-videos-grid"><article class="guide-video-card"><div class="guide-video-copy"><h4>${esc(c[1])}</h4><p>${esc(c[2])}</p></div><video controls playsinline preload="none" crossorigin="anonymous" poster="assets/guide-videos/guest-poster.jpg" aria-label="${esc(c[1])}"><source src="${media}" type="video/mp4">${tracks.map(([code,label])=>`<track kind="subtitles" src="assets/guide-videos/${code}.vtt" srclang="${code}" label="${label}" ${code===selected?'default':''}>`).join('')}</video><p class="guide-video-meta">${esc(c[3])}</p><p class="guide-video-note">${esc(c[4])}</p></article><article class="guide-video-card guide-video-owner"><div class="guide-video-copy"><h4>${esc(c[5])}</h4><p>${esc(c[7])}</p></div><div class="guide-video-placeholder"><img src="assets/one-shop/rami/roles/manager.webp" width="128" height="128" alt=""><span>${esc(c[6])}</span></div></article></div></section>`;
+}
