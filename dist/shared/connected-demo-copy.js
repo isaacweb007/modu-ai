@@ -12,3 +12,6 @@ hi:['एक ही Jumo दुकान से जुड़ें','पहले
 };
 export const CONNECTED_COPY=Object.fromEntries(Object.entries(rows).map(([lang,row])=>[lang,Object.fromEntries(keys.map((key,i)=>[key,row[i]]))]));
 export const connectedCopy=lang=>CONNECTED_COPY[lang]||CONNECTED_COPY.ko;
+
+// New shared-app workflow, localized in the same nine languages.
+for(const [lang,line] of Object.entries({ko:'주문과 예약을 변경하거나 취소 요청할 수도 있습니다.',en:'Guests can also request changes or cancellations for orders and reservations.',vi:'Khách cũng có thể yêu cầu thay đổi hoặc hủy đơn hàng và đặt bàn.',zh:'顾客也可以申请修改或取消订单和预约。',ja:'注文や予約の変更・キャンセルも依頼できます。',km:'ភ្ញៀវក៏អាចស្នើកែប្រែ ឬបោះបង់ការបញ្ជាទិញ និងការកក់បានដែរ។',id:'Tamu juga dapat meminta perubahan atau pembatalan pesanan dan reservasi.',lo:'ລູກຄ້າສາມາດຂໍແກ້ໄຂ ຫຼືຍົກເລີກອໍເດີ ແລະການຈອງໄດ້.',hi:'मेहमान ऑर्डर और बुकिंग में बदलाव या उन्हें रद्द करने का अनुरोध भी कर सकते हैं।'})) CONNECTED_COPY[lang].intro+=' '+line;

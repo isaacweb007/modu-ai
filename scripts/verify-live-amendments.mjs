@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import {CLOUD} from '../dist/shared/cloud-config.js';
+import {createOwnerSample} from '../dist/shared/owner-sample.js';
+let checks=0;
+async function api(path,method='GET',body,token,status=200){const res=await fetch(CLOUD.url+'/functions/v1/modu-api/'+path,{method,headers:{apikey:CLOUD.key,'content-type':'application/json',...(token?{'x-modu-token':token}:{})},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(20000)});const data=await res.json();assert.equal(res.status,status,`${method} ${path.split('/').slice(-1)}: ${JSON.stringify(data)}`);checks++;return data;}
+const sample=createOwnerSample('ko'),room=await api('demo','POST',{store:sample.store,menu:sample.items,workspace:{manager:{...sample.manager,messages:[]}}},null,201);
+const sid=room.storeId,owner=room.owner.token,floor=room.floor,kitchen=room.kitchen;
+const guest=await api(sid+'/visits','POST',{table:7,lang:'vi'},null,201),other=await api(sid+'/visits','POST',{table:8,lang:'ko'},null,201);
+const menu=await api(sid+'/public');
+const order=()=>api(sid+'/orders','POST',{cart:{m01:1},revision:menu.revision,fulfillment:{channel:'dine-in',table:7},requestId:crypto.randomUUID(),lang:'vi'},guest.token,201);
+const staff=(m,method='GET',data,status=200)=>api(sid+'/staff/'+m.member.id,method,data,m.token,status);
+const request=(id,type,kind,data={},who=guest,status=201)=>api(sid+'/amendments','POST',{targetId:id,targetType:type,kind,data,requestId:crypto.randomUUID()},who.token,status);
+const staffReview=(m,a,approve,status=200)=>staff(m,'PATCH',{action:'amend',data:{id:a.id,approve}},status);
+const ownerReview=(a,approve,status=200)=>api(sid+'/amendments/'+a.id,'PATCH',{approve},owner,status);
+const snap=(who)=>api(sid+'/snapshot','GET',null,who.token||who);
+const statusOrder=async(id,state)=>{for(const v of await Promise.all([snap(owner),snap(guest),staff(floor),staff(kitchen)]))assert.equal(v.orders.find(o=>o.id===id).status,state);};
+try{
+ const a=await order();
+ await request(a.id,'order','cancel',{},other,403);
+ const q=await request(a.id,'order','change',{cart:{m01:2,m04:1}});
+ await request(a.id,'order','cancel',{},guest,409);
+ const [g,own,k]=await Promise.all([snap(guest),snap(owner),staff(kitchen)]);
+ assert.equal(g.orders.find(x=>x.id===a.id).lines[0].quantity,1);
+ assert(own.amendments.some(x=>x.id===q.id&&x.status==='pending'));
+ assert(!('after_data' in k.amendments.find(x=>x.id===q.id)));
+ await api(sid+'/orders/'+a.id,'PATCH',{status:'accepted'},owner,409);
+ await staff(floor,'PATCH',{action:'order',data:{id:a.id,next:'accepted'}},409);
+ await api(sid+'/amendments/'+q.id,'PATCH',{approve:true},guest.token,403);
+ await staffReview(kitchen,q,true,403);
+ await staffReview(floor,q,true);
+ const after=await snap(guest);assert.equal(after.orders.find(o=>o.id===a.id).lines.find(l=>l.itemId==='m01').quantity,2);assert.equal(after.orders.find(o=>o.id===a.id).lines.find(l=>l.itemId==='m04').quantity,1);
+ assert.equal(after.amendments.find(x=>x.id===q.id).status,'approved');
+ const cancel=await request(a.id,'order','cancel');await staffReview(floor,cancel,false);assert.equal((await snap(guest)).amendments.find(x=>x.id===cancel.id).status,'rejected');await statusOrder(a.id,'pending');
+ const second=await order();await staff(floor,'PATCH',{action:'order',data:{id:second.id,next:'accepted'}});await staff(kitchen,'PATCH',{action:'order',data:{id:second.id,next:'preparing'}});
+ const late=await request(second.id,'order','cancel');await staffReview(floor,late,true,403);await staff(kitchen,'PATCH',{action:'order',data:{id:second.id,next:'ready'}},409);await statusOrder(second.id,'preparing');await ownerReview(late,true);await statusOrder(second.id,'cancelled');
+ const date=new Date(Date.now()+3*86400000).toISOString().slice(0,10),later=new Date(Date.now()+4*86400000).toISOString().slice(0,10);
+ const booking=await api(sid+'/reservations','POST',{date,time:'18:00',partySize:2,name:'Demo',lang:'vi',requestId:crypto.randomUUID()},guest.token,201);
+ await api(sid+'/reservations/'+booking.id,'PATCH',{status:'cancelled'},guest.token,403);
+ const edit=await request(booking.id,'booking','change',{date:later,time:'19:00',partySize:4});
+ await staff(floor,'PATCH',{action:'booking',data:{id:booking.id}},409);await staffReview(floor,edit,true);
+ const changed=await snap(guest);assert.equal(changed.reservations.find(x=>x.id===booking.id).date,later);assert.equal(changed.reservations.find(x=>x.id===booking.id).party_size,4);
+ const bc=await request(booking.id,'booking','cancel');await ownerReview(bc,true);assert.equal((await snap(guest)).reservations.find(x=>x.id===booking.id).status,'cancelled');assert.equal((await staff(floor)).bookings.find(x=>x.id===booking.id).status,'cancelled');
+ assert(!(await snap(other)).amendments.some(x=>x.visit_id===guest.visitId));
+ const direct=await fetch(CLOUD.url+'/rest/v1/modu_amendments?select=*',{headers:{apikey:CLOUD.key}});assert([401,403].includes(direct.status));
+ console.log(`PASS ${checks} API checks: guest ownership, holds, floor review, owner-only after cooking, booking change/cancellation, all projections, role privacy, and audit history`);
+}finally{await api(sid+'/owner-auth/logout','POST',{},owner);}
