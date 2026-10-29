@@ -158,7 +158,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "매장 구독으로 지속 가능한 도움",
-        "lead": "사장님이 얻는 가치와 우리가 쓰는 원가를 함께 봅니다.",
+        "lead": "사장님은 부담 없이 이용하고, 원샵은 꾸준히 운영할 수 있는 구독료를 설계합니다.",
         "paragraphs": [
           "샵 단위 월 구독을 기본안으로 검토합니다. 포함 기능과 AI 이용량, 초과 이용 조건은 파일럿에서 실제 사용량을 측정한 뒤 정합니다.",
           "사장님에게는 반복 응대와 주문 전달의 부담을 줄이는 가치가 있어야 합니다. 운영 측에서는 AI 비용뿐 아니라 결제 수수료, 고객 지원과 유지보수 비용까지 계산합니다."
@@ -427,7 +427,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "Useful help through store subscriptions",
-        "lead": "Measure owner value alongside operating costs.",
+        "lead": "We are designing subscriptions that owners can afford and that support a sustainable service.",
         "paragraphs": [
           "A monthly subscription per shop is the starting proposal. Included features, AI allowance and overage terms will be set after measuring pilot usage.",
           "Owners need value in handling repeated questions and passing orders to staff. Operating costs must include AI, payment fees, support and maintenance."
@@ -696,7 +696,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "Thuê bao cửa hàng để hỗ trợ bền vững",
-        "lead": "Đo giá trị cho chủ quán cùng chi phí vận hành.",
+        "lead": "Chúng tôi thiết kế gói thuê bao phù hợp túi tiền của chủ quán và giúp dịch vụ hoạt động bền vững.",
         "paragraphs": [
           "Phương án ban đầu là thuê bao tháng theo quán. Tính năng, lượng AI đi kèm và điều kiện vượt mức sẽ được quyết định sau khi đo thực tế trong đợt thử nghiệm.",
           "Giá trị cho chủ quán là giảm việc trả lời lặp lại và chuyển đơn. Chi phí vận hành cần tính cả AI, phí thanh toán, hỗ trợ và bảo trì."
@@ -965,7 +965,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "以门店订阅提供持续帮助",
-        "lead": "同时衡量店主获得的价值与我们的运营成本。",
+        "lead": "我们正在设计店主负担得起、同时支持服务持续运营的订阅方案。",
         "paragraphs": [
           "以每家店按月订阅作为初步方案。包含功能、AI用量及超额条件，将在试点测量实际使用后确定。",
           "对店主的价值应体现在减少重复答疑和传单负担。运营成本需同时考虑AI、支付手续费、客户支持及维护。"
@@ -1234,7 +1234,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "店舗単位のサブスクで継続的に支える",
-        "lead": "オーナーへの価値と運営コストを、両方確認します。",
+        "lead": "オーナーが無理なく利用でき、サービスを続けられる料金プランを設計します。",
         "paragraphs": [
           "店舗ごとの月額契約を基本案として検討します。対象機能、AI利用枠、超過条件は試験導入の実測後に決めます。",
           "繰り返す説明や注文の引き継ぎを楽にする価値が必要です。運営側はAIだけでなく決済手数料、サポート、保守の費用も見込みます。"
@@ -1503,7 +1503,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "Langganan kedai untuk bantuan berkelanjutan",
-        "lead": "Ukur manfaat bagi pemilik bersama biaya operasional.",
+        "lead": "Kami merancang langganan yang terjangkau bagi pemilik dan mendukung layanan yang berkelanjutan.",
         "paragraphs": [
           "Usulan awalnya langganan bulanan per kedai. Fitur, kuota AI, dan ketentuan pemakaian tambahan ditetapkan setelah penggunaan pilot diukur.",
           "Nilainya bagi pemilik harus terasa pada pertanyaan berulang dan penerusan pesanan. Biaya operasional mencakup AI, biaya pembayaran, dukungan, dan pemeliharaan."
@@ -1772,7 +1772,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "ជាវតាមហាងសម្រាប់ជំនួយបន្ត",
-        "lead": "វាស់តម្លៃសម្រាប់ម្ចាស់រួមជាមួយចំណាយប្រតិបត្តិការ។",
+        "lead": "យើងរៀបចំតម្លៃជាវដែលម្ចាស់ហាងអាចប្រើបានដោយមិនបន្ទុក និងអាចទ្រទ្រង់សេវាបានយូរអង្វែង។",
         "paragraphs": [
           "គម្រោងដំបូងគឺការជាវប្រចាំខែតាមហាង។ មុខងារ បរិមាណ AI និងលក្ខខណ្ឌលើសកំណត់ នឹងសម្រេចក្រោយវាស់ការប្រើប្រាស់សាកល្បង។",
           "តម្លៃសម្រាប់ម្ចាស់ហាងគឺបន្ថយការឆ្លើយសំណួរដដែលនិងការបញ្ជូនអូឌ័រ។ ត្រូវគិតចំណាយ AI ថ្លៃទូទាត់ ការគាំទ្រ និងការថែទាំ។"
@@ -2041,7 +2041,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "ສະໝັກລາຍຮ້ານເພື່ອຊ່ວຍຢ່າງຕໍ່ເນື່ອງ",
-        "lead": "ວັດປະໂຫຍດຂອງເຈົ້າຂອງຄຽງຄູ່ຕົ້ນທຶນ.",
+        "lead": "ພວກເຮົາກຳລັງອອກແບບຄ່າສະມາຊິກທີ່ເຈົ້າຂອງຮ້ານຈ່າຍໄຫວ ແລະຊ່ວຍໃຫ້ບໍລິການດຳເນີນຕໍ່ໄດ້.",
         "paragraphs": [
           "ແຜນເບື້ອງຕົ້ນແມ່ນສະໝັກລາຍເດືອນຕໍ່ຮ້ານ. ຟັງຊັນ ປະລິມານ AI ແລະເງື່ອນໄຂເກີນກຳນົດ ຈະກຳນົດຫຼັງວັດການໃຊ້ຈິງໃນໄລຍະທົດລອງ.",
           "ຄຸນຄ່າຕໍ່ເຈົ້າຂອງຄືຫຼຸດການຕອບຊ້ຳແລະສົ່ງອໍເດີ. ຕົ້ນທຶນຕ້ອງລວມ AI ຄ່າຊຳລະ ການຊ່ວຍເຫຼືອ ແລະບຳລຸງຮັກສາ."
@@ -2310,7 +2310,7 @@ export const BOOK={
       {
         "id": "business",
         "title": "दुकान की सदस्यता से लगातार मदद",
-        "lead": "मालिक के लाभ के साथ संचालन लागत भी मापें।",
+        "lead": "हम ऐसी सदस्यता योजना बना रहे हैं जो मालिकों के लिए किफ़ायती हो और सेवा को लगातार चलाने में मदद करे।",
         "paragraphs": [
           "शुरुआती प्रस्ताव हर दुकान के लिए मासिक सदस्यता है। शामिल सुविधाएँ, AI उपयोग सीमा और अतिरिक्त उपयोग की शर्तें पायलट के वास्तविक इस्तेमाल के बाद तय होंगी।",
           "मालिक को बार-बार सवालों के जवाब देने और ऑर्डर आगे भेजने में मदद मिलनी चाहिए। लागत में AI, भुगतान शुल्क, सहायता और रखरखाव सभी शामिल होंगे।"
