@@ -1,4 +1,4 @@
-import {guideVideos} from './guide-videos.js?v=5.37.0';
+import {guideVideos} from './guide-videos.js?v=5.38.0';
 import {esc,icon} from './core.js?v=5.23.0';
 
 import {connectedCopy} from './connected-demo-copy.js?v=5.35.0';
