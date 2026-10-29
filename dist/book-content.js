@@ -157,11 +157,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "부담 없이 시작할 수 있도록",
-        "lead": "사장님에게는 합리적인 구독료, 원샵에는 오래 이어갈 수 있는 운영을 고민합니다.",
+        "title": "구독료 안내",
+        "lead": "우리 샵에 맞는 라미를 골라보세요.",
         "paragraphs": [
-          "샵별 월 구독을 기본으로 생각하고 있습니다. 어떤 기능과 AI 사용량을 포함할지는 실제 샵에서 충분히 사용해 본 뒤 정할 예정입니다.",
-          "사장님에게는 시간을 아끼고 주문을 놓치지 않는 데 도움이 되어야 합니다. 원샵도 AI 이용료와 고객 지원, 유지보수 등 운영 비용을 꼼꼼히 살펴보겠습니다."
+          "작은 카페도, 외국 손님이 많은 식당도. 필요한 도움만 골라 부담 없이 시작하는 월 구독을 제안합니다.",
+          "출시 전 요금 제안 · 지금은 무료 데모이며 실제 AI·결제는 미연결"
         ],
         "points": [
           "샵별 월 구독을 기본으로 검토",
@@ -426,11 +426,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "Useful help through store subscriptions",
-        "lead": "We are designing subscriptions that owners can afford and that support a sustainable service.",
+        "title": "Subscription plans",
+        "lead": "Choose the Rami that fits your shop.",
         "paragraphs": [
-          "A monthly subscription per shop is the starting proposal. Included features, AI allowance and overage terms will be set after measuring pilot usage.",
-          "Owners need value in handling repeated questions and passing orders to staff. Operating costs must include AI, payment fees, support and maintenance."
+          "A monthly subscription proposal for small cafés and busy tourist restaurants. Choose the help you need.",
+          "Pre-launch pricing proposal · free demo today, no live AI or payments"
         ],
         "points": [
           "Measure AI cost by store",
@@ -695,11 +695,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "Thuê bao cửa hàng để hỗ trợ bền vững",
-        "lead": "Chúng tôi thiết kế gói thuê bao phù hợp túi tiền của chủ quán và giúp dịch vụ hoạt động bền vững.",
+        "title": "Gói thuê bao",
+        "lead": "Chọn Rami phù hợp với quán của bạn.",
         "paragraphs": [
-          "Phương án ban đầu là thuê bao tháng theo quán. Tính năng, lượng AI đi kèm và điều kiện vượt mức sẽ được quyết định sau khi đo thực tế trong đợt thử nghiệm.",
-          "Giá trị cho chủ quán là giảm việc trả lời lặp lại và chuyển đơn. Chi phí vận hành cần tính cả AI, phí thanh toán, hỗ trợ và bảo trì."
+          "Đề xuất thuê bao tháng cho quán cà phê nhỏ và nhà hàng đông khách du lịch. Chọn sự hỗ trợ bạn cần.",
+          "Giá đề xuất trước ra mắt · hiện là demo miễn phí, chưa kết nối AI và thanh toán thật"
         ],
         "points": [
           "Đo chi phí AI theo cửa hàng",
@@ -964,11 +964,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "以门店订阅提供持续帮助",
-        "lead": "我们正在设计店主负担得起、同时支持服务持续运营的订阅方案。",
+        "title": "订阅方案",
+        "lead": "选择适合您店铺的拉米。",
         "paragraphs": [
-          "以每家店按月订阅作为初步方案。包含功能、AI用量及超额条件，将在试点测量实际使用后确定。",
-          "对店主的价值应体现在减少重复答疑和传单负担。运营成本需同时考虑AI、支付手续费、客户支持及维护。"
+          "为小咖啡馆和游客众多的餐厅提出月度订阅方案，按需要选择帮助。",
+          "上线前价格建议 · 目前为免费演示，未接入真实 AI 或支付"
         ],
         "points": [
           "按店衡量 AI 成本",
@@ -1233,11 +1233,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "店舗単位のサブスクで継続的に支える",
-        "lead": "オーナーが無理なく利用でき、サービスを続けられる料金プランを設計します。",
+        "title": "料金プラン",
+        "lead": "お店に合ったラミを選びましょう。",
         "paragraphs": [
-          "店舗ごとの月額契約を基本案として検討します。対象機能、AI利用枠、超過条件は試験導入の実測後に決めます。",
-          "繰り返す説明や注文の引き継ぎを楽にする価値が必要です。運営側はAIだけでなく決済手数料、サポート、保守の費用も見込みます。"
+          "小さなカフェも観光客の多いレストランも。必要な支援を選べる月額制をご提案します。",
+          "公開前の料金案 · 現在は無料デモ、実際の AI・決済は未接続"
         ],
         "points": [
           "店舗ごとにAIの利用コストを計測",
@@ -1502,11 +1502,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "Langganan kedai untuk bantuan berkelanjutan",
-        "lead": "Kami merancang langganan yang terjangkau bagi pemilik dan mendukung layanan yang berkelanjutan.",
+        "title": "Paket berlangganan",
+        "lead": "Pilih Rami yang sesuai dengan kedai Anda.",
         "paragraphs": [
-          "Usulan awalnya langganan bulanan per kedai. Fitur, kuota AI, dan ketentuan pemakaian tambahan ditetapkan setelah penggunaan pilot diukur.",
-          "Nilainya bagi pemilik harus terasa pada pertanyaan berulang dan penerusan pesanan. Biaya operasional mencakup AI, biaya pembayaran, dukungan, dan pemeliharaan."
+          "Usulan langganan bulanan untuk kafe kecil hingga restoran ramai wisatawan. Pilih bantuan yang dibutuhkan.",
+          "Usulan sebelum peluncuran · demo gratis, AI dan pembayaran nyata belum terhubung"
         ],
         "points": [
           "Ukur biaya AI per kedai",
@@ -1771,11 +1771,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "ជាវតាមហាងសម្រាប់ជំនួយបន្ត",
-        "lead": "យើងរៀបចំតម្លៃជាវដែលម្ចាស់ហាងអាចប្រើបានដោយមិនបន្ទុក និងអាចទ្រទ្រង់សេវាបានយូរអង្វែង។",
+        "title": "គម្រោងជាវ",
+        "lead": "ជ្រើស Rami ដែលសមនឹងហាងរបស់អ្នក។",
         "paragraphs": [
-          "គម្រោងដំបូងគឺការជាវប្រចាំខែតាមហាង។ មុខងារ បរិមាណ AI និងលក្ខខណ្ឌលើសកំណត់ នឹងសម្រេចក្រោយវាស់ការប្រើប្រាស់សាកល្បង។",
-          "តម្លៃសម្រាប់ម្ចាស់ហាងគឺបន្ថយការឆ្លើយសំណួរដដែលនិងការបញ្ជូនអូឌ័រ។ ត្រូវគិតចំណាយ AI ថ្លៃទូទាត់ ការគាំទ្រ និងការថែទាំ។"
+          "សំណើជាវប្រចាំខែសម្រាប់កាហ្វេតូច និងភោជនីយដ្ឋានមានភ្ញៀវទេសចរច្រើន។",
+          "សំណើមុនដាក់ឱ្យប្រើ · ឥឡូវជាដេម៉ូឥតគិតថ្លៃ មិនទាន់មាន AI ឬការទូទាត់ពិត"
         ],
         "points": [
           "វាស់ថ្លៃ AI តាមហាង",
@@ -2040,11 +2040,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "ສະໝັກລາຍຮ້ານເພື່ອຊ່ວຍຢ່າງຕໍ່ເນື່ອງ",
-        "lead": "ພວກເຮົາກຳລັງອອກແບບຄ່າສະມາຊິກທີ່ເຈົ້າຂອງຮ້ານຈ່າຍໄຫວ ແລະຊ່ວຍໃຫ້ບໍລິການດຳເນີນຕໍ່ໄດ້.",
+        "title": "ຄ່າສະມາຊິກ",
+        "lead": "ເລືອກ Rami ທີ່ເໝາະກັບຮ້ານ.",
         "paragraphs": [
-          "ແຜນເບື້ອງຕົ້ນແມ່ນສະໝັກລາຍເດືອນຕໍ່ຮ້ານ. ຟັງຊັນ ປະລິມານ AI ແລະເງື່ອນໄຂເກີນກຳນົດ ຈະກຳນົດຫຼັງວັດການໃຊ້ຈິງໃນໄລຍະທົດລອງ.",
-          "ຄຸນຄ່າຕໍ່ເຈົ້າຂອງຄືຫຼຸດການຕອບຊ້ຳແລະສົ່ງອໍເດີ. ຕົ້ນທຶນຕ້ອງລວມ AI ຄ່າຊຳລະ ການຊ່ວຍເຫຼືອ ແລະບຳລຸງຮັກສາ."
+          "ຂໍ້ສະເໜີລາຍເດືອນສຳລັບຄາເຟນ້ອຍ ແລະຮ້ານທີ່ມີນັກທ່ອງທ່ຽວຫຼາຍ.",
+          "ລາຄາສະເໜີກ່ອນເປີດ · ຕອນນີ້ເປັນເດໂມຟຣີ ບໍ່ມີ AI ແລະຊຳລະຈິງ"
         ],
         "points": [
           "ວັດຄ່າ AI ຕໍ່ຮ້ານ",
@@ -2309,11 +2309,11 @@ export const BOOK={
       },
       {
         "id": "business",
-        "title": "दुकान की सदस्यता से लगातार मदद",
-        "lead": "हम ऐसी सदस्यता योजना बना रहे हैं जो मालिकों के लिए किफ़ायती हो और सेवा को लगातार चलाने में मदद करे।",
+        "title": "सदस्यता योजनाएँ",
+        "lead": "अपनी दुकान के लिए सही Rami चुनें।",
         "paragraphs": [
-          "शुरुआती प्रस्ताव हर दुकान के लिए मासिक सदस्यता है। शामिल सुविधाएँ, AI उपयोग सीमा और अतिरिक्त उपयोग की शर्तें पायलट के वास्तविक इस्तेमाल के बाद तय होंगी।",
-          "मालिक को बार-बार सवालों के जवाब देने और ऑर्डर आगे भेजने में मदद मिलनी चाहिए। लागत में AI, भुगतान शुल्क, सहायता और रखरखाव सभी शामिल होंगे।"
+          "छोटे कैफे और पर्यटकों वाले रेस्तराँ के लिए मासिक सदस्यता का प्रस्ताव। ज़रूरत की मदद चुनें।",
+          "लॉन्च से पहले मूल्य प्रस्ताव · अभी मुफ़्त डेमो, वास्तविक AI और भुगतान जुड़े नहीं"
         ],
         "points": [
           "दुकान के अनुसार AI लागत मापें",

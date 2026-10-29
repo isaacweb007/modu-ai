@@ -1,0 +1,150 @@
+{
+  "status": "pre-launch proposal; no live billing or AI enabled",
+  "review_date": "2026-10-30",
+  "pricing_unit": "one shop per month, before local tax",
+  "plans": [
+    "start",
+    "partner",
+    "pro"
+  ],
+  "regions": {
+    "KR": {
+      "currency": "KRW",
+      "monthly": [
+        19000,
+        49000,
+        99000
+      ],
+      "extra_1000": 9900
+    },
+    "VN": {
+      "currency": "VND",
+      "monthly": [
+        199000,
+        499000,
+        999000
+      ],
+      "extra_1000": 99000
+    },
+    "OTHER_TEST": {
+      "currency": "USD",
+      "monthly": [
+        9,
+        19,
+        39
+      ],
+      "extra_1000": 5,
+      "note": "reference for testing only; each country must validate willingness to pay and local currency"
+    }
+  },
+  "text_allowances": [
+    500,
+    2000,
+    5000
+  ],
+  "trial": {
+    "days": 14,
+    "text_allowance": 200,
+    "card_required": false,
+    "auto_charge": false
+  },
+  "billing": {
+    "auto_top_up_default": false,
+    "threshold_alerts": [
+      0.7,
+      0.9
+    ],
+    "at_limit": "pause only new AI generation; saved menu, ordinary ordering and booking remain available",
+    "counted": "one successful short newly generated text response, shared across owner and guest",
+    "not_counted": [
+      "button ordering",
+      "menu views",
+      "stored guidance",
+      "errors",
+      "out-of-scope refusals"
+    ],
+    "rollover": false,
+    "checkout": "none in current demo"
+  },
+  "cost_scenario": {
+    "reference_model": "gpt-4.1-mini; reference only, not a final implementation choice",
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "input_usd_per_million": 0.4,
+    "output_usd_per_million": 1.6,
+    "assumed_input_tokens": 2000,
+    "assumed_output_tokens": 300,
+    "formula": "replies * (input_tokens * input_rate + output_tokens * output_rate) / 1000000",
+    "base_cost_usd": [
+      0.64,
+      2.56,
+      6.4
+    ],
+    "double_context_and_output_usd": [
+      1.28,
+      5.12,
+      12.8
+    ],
+    "excluded": [
+      "menu image recognition",
+      "speech",
+      "image and video generation",
+      "external search",
+      "retries",
+      "summarization calls",
+      "infrastructure",
+      "support",
+      "tax",
+      "currency movements",
+      "payment processing",
+      "refunds"
+    ]
+  },
+  "operating_targets_not_observed": {
+    "ai_share_of_net_subscription_revenue_max": 0.2,
+    "total_variable_cost_share_max": 0.35,
+    "note": "targets to test, not achieved margin or profit; acquisition and fixed development costs must be budgeted separately"
+  },
+  "rollout_proposal": {
+    "first_step": "14-day trial followed by monthly billing; no annual commitment at launch",
+    "pilot_sample": "5 to 10 shops each in Korea and Vietnam, subject to recruitment",
+    "pilot_window_days": 30,
+    "measure": [
+      "actual AI cost at the 95th percentile shop",
+      "setup completion and help needed",
+      "time spent answering repeat questions",
+      "order and translation mistakes",
+      "paid continuation at the shown local price",
+      "support time and cost",
+      "refunds and churn reasons"
+    ],
+    "decision": "Revise regional prices, quotas or model routing if cost targets or paid retention are not met; validate languages with local operators."
+  },
+  "guardrails_to_build_before_live_ai": [
+    "server-side per-shop spend and quota checks",
+    "maximum input/context and output lengths",
+    "rate limiting and per-session abuse controls",
+    "FAQ and validated cached guidance first",
+    "AI never invents prices or allergens",
+    "orders remain deterministic and owner/staff-approved",
+    "deny off-topic prompts before a model call when possible",
+    "higher-cost tasks require an explicit separate allowance"
+  ],
+  "sources": [
+    {
+      "url": "https://tossplace.com/product/toss-order/table",
+      "finding": "free QR table ordering offer and four-language support; subject to provider terms; not proof all restaurant tools should be free"
+    },
+    {
+      "url": "https://fnb.sapo.vn/phan-mem-quan-ly-nha-hang-cafe",
+      "finding": "monthly list Start Up VND249000 and Pro VND399000; separate multi-year promotions; wider POS/operations scope than a QR-only app"
+    },
+    {
+      "url": "https://storekit.com/pricing",
+      "finding": "monthly Basic GBP0, Grow GBP99, Pro GBP199; additional flat-order fees and tax conditions; not directly comparable to Asian AI assistant plans"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "finding": "standard gpt-4.1-mini input USD0.40 and output USD1.60 per million tokens; reference only"
+    }
+  ]
+}
