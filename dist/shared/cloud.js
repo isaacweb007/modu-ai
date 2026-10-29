@@ -1,4 +1,4 @@
-import {captureGuestContinuation} from './guest-continuation.js?v=5.32.2';
+import {captureGuestContinuation} from './guest-continuation.js?v=5.33.0';
 import {ownerCredential} from './owner-access.js?v=5.11.0';
 import {ownerSampleMode} from './experience-mode.js?v=5.11.0';
 import {CLOUD} from './cloud-config.js?v=5.6.0';
