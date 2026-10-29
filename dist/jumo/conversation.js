@@ -1,17 +1,17 @@
 import {NEGOTIATION_COPY} from '../shared/negotiation-copy.js?v=5.21.0';
-import {liveReasonMessage} from '../shared/live-rejection.js?v=5.29.0';
-import {amendmentMarkup,pendingAmendment,amendmentCopy,syncOfferRequirements} from '../shared/live-amendment.js?v=5.29.0';
-import {connectedCopy} from '../shared/connected-demo-copy.js?v=5.29.0';
+import {liveReasonMessage} from '../shared/live-rejection.js?v=5.29.1';
+import {amendmentMarkup,pendingAmendment,amendmentCopy,syncOfferRequirements} from '../shared/live-amendment.js?v=5.29.1';
+import {connectedCopy} from '../shared/connected-demo-copy.js?v=5.29.1';
 import {appUxCopy} from '../shared/app-ux-copy.js?v=5.23.0';
 import {orderAction,orderHint,queueOrders,queueCounts,guestOrderQueue,guestCheckoutStart,routeView,GUEST_VIEWS} from '../shared/app-ux.js?v=5.23.0';
 import {createSetupGuestState} from '../shared/shop-setup-state.js?v=5.14.0';
 import {flowCopy} from '../shared/flow-copy.js?v=5.11.0';
 import {loungeMarkup,waitingOrder,waitingIntent,guestCardFor} from '../shared/guest-lounge.js?v=5.11.0';
-import {createOwnerAuth} from '../shared/owner-auth.js?v=5.29.0';
+import {createOwnerAuth} from '../shared/owner-auth.js?v=5.29.1';
 import {ownerAuthCopy} from '../shared/owner-auth-copy.js?v=5.11.0';
 import {guestIntro} from '../guest-intro.js?v=5.8.0';
 import {teamMarkup,bindTeam,importSampleTeam} from '../team.js?v=5.11.0';
-import {connectTeam} from '../shared/team-live.js?v=5.29.0';
+import {connectTeam} from '../shared/team-live.js?v=5.29.1';
 import {TEAM_LIVE_COPY} from '../shared/team-live-copy.js?v=5.11.0';
 import {expansionCopy} from '../shared/expansion-copy.js?v=5.8.0';
 import {PHRASES,SCENARIOS,matchRequest,createInterpretation,createInterpretedReply,interpretationRows,appendInterpretation,addInterpreterSample} from '../shared/interpreter.js?v=5.6.0';
@@ -30,7 +30,7 @@ import {ownerSampleMode} from '../shared/experience-mode.js?v=5.11.0';
 import {createOwnerSample,upgradeOwnerSample,SAMPLE_COPY,SAMPLE_STORAGE,SAMPLE_VERSION} from '../shared/owner-sample.js?v=5.6.0';
 import {ENTRY_COPY,createDemoEntry} from '../shared/demo-entry.js?v=5.6.0';
 import {CLOUD} from '../shared/cloud-config.js?v=5.6.0';
-import {cloud,connectDemoShop} from '../shared/cloud.js?v=5.29.0';
+import {cloud,connectDemoShop} from '../shared/cloud.js?v=5.29.1';
 import {UI} from '../shared/copy.js?v=5.6.0';
 import {CHAT_COPY} from '../shared/conversation-copy.js?v=5.6.0';
 import {MENU} from '../shared/menu.js?v=5.6.0';
@@ -215,11 +215,12 @@ function liveRefresh(){
  const controls=[...root.querySelectorAll('input:not([type=file]),textarea,select')];
  const identify=el=>[el.id,el.name,el.form?.id,el.form?.dataset.form,el.form?.dataset.request,el.form?.dataset.step].join('|');
  const drafts=controls.map(el=>({key:identify(el),value:el.value,checked:el.checked,active:el===document.activeElement,start:el.selectionStart,end:el.selectionEnd,height:el.style.height}));
- const opened=[...root.querySelectorAll('details')].map(el=>el.open),y=scrollY;
+ const detailKey=el=>[el.closest('[data-record-id]')?.dataset.recordId||'',el.className,el.querySelector('form')?.dataset.request||el.querySelector('form')?.dataset.target||'',el.querySelector('summary')?.textContent||''].join('|');
+ const opened=[...root.querySelectorAll('details')].map(el=>({key:detailKey(el),open:el.open})),y=scrollY;
  render(false);
  const updated=[...root.querySelectorAll('input:not([type=file]),textarea,select')];
  for(const draft of drafts){const el=updated.find(node=>identify(node)===draft.key);if(!el)continue;el.value=draft.value;if('checked' in el)el.checked=draft.checked;el.style.height=draft.height;if(draft.active){el.focus({preventScroll:true});if(typeof draft.start==='number'&&el.setSelectionRange)try{el.setSelectionRange(draft.start,draft.end);}catch{}}}
- root.querySelectorAll('form[data-form=amend-reject]').forEach(syncOfferRequirements);root.querySelectorAll('details').forEach((el,i)=>el.open=opened[i]||false);window.scrollTo({top:y,behavior:'instant'});
+ root.querySelectorAll('form[data-form=amend-reject]').forEach(syncOfferRequirements);root.querySelectorAll('details').forEach(el=>{const prior=opened.find(d=>d.key===detailKey(el));if(prior)el.open=prior.open;});window.scrollTo({top:y,behavior:'instant'});
 }
 
 async function startApp(){

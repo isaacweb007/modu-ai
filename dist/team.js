@@ -1,6 +1,6 @@
 import {PERMISSIONS,ROLE_PERMISSIONS,DEPENDS} from './shared/team-state.js?v=5.8.0';
 import {teamRead} from './shared/team-storage.js?v=5.8.0';
-import {teamRequest,staffLink} from './shared/team-live.js?v=5.29.0';
+import {teamRequest,staffLink} from './shared/team-live.js?v=5.29.1';
 import {TEAM_LIVE_COPY} from './shared/team-live-copy.js?v=5.11.0';
 import {expansionCopy} from './shared/expansion-copy.js?v=5.8.0';
 import {brandMark} from './shared/brand.js?v=5.6.0';
