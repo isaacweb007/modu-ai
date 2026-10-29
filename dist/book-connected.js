@@ -1,5 +1,5 @@
-import {CONNECTED_DEMO_KEY,readDemo,validDemo,connectedAppBase,connectedAppLinks,demoRequest} from './shared/connected-demo.js?v=5.26.0';
-import {connectedCopy} from './shared/connected-demo-copy.js?v=5.26.0';
+import {CONNECTED_DEMO_KEY,readDemo,validDemo,connectedAppBase,connectedAppLinks,demoRequest} from './shared/connected-demo.js?v=5.27.0';
+import {connectedCopy} from './shared/connected-demo-copy.js?v=5.27.0';
 import {createOwnerSample} from './shared/owner-sample.js?v=5.6.0';
 let pending=null;
 export function bindConnectedApps(root,lang){

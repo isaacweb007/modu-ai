@@ -1,3 +1,4 @@
+import {rejectionMessages} from './rejection-messages.js';
 import {hashPassword} from './passwords.js';
 import {ownerAuthRoutes} from './owner-auth.ts';
 import {connectedDemoRoute} from './connected-demo.ts';
@@ -10,7 +11,7 @@ const headers={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':
 const reply=(data:unknown,status=200)=>new Response(JSON.stringify(data),{status,headers});
 const hash=async(s:string)=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s))),n=>n.toString(16).padStart(2,'0')).join('');
 const token=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),n=>n.toString(16).padStart(2,'0')).join('');
-function checked({data,error}:any){if(error){if(['revoked','noAccess','ownerAccess','ownerOnly'].includes(error.message))fail(error.message,403);if(['permissionConflict','staffLimit','amendPending'].includes(error.message))fail(error.message,409);if(error.message==='invalid')fail('invalid');if(['menuConflict','ownerConflict','emptyCart','soldOut','maxQty','storeNotReady'].includes(error.message))fail(error.message,409);throw new Error('cloudError');}return data;}
+function checked({data,error}:any){if(error){if(['revoked','noAccess','ownerAccess','ownerOnly'].includes(error.message))fail(error.message,403);if(['permissionConflict','staffLimit','amendPending'].includes(error.message))fail(error.message,409);if(['invalid','reasonRequired','invalidReason'].includes(error.message))fail(error.message);if(['menuConflict','ownerConflict','emptyCart','soldOut','maxQty','storeNotReady'].includes(error.message))fail(error.message,409);throw new Error('cloudError');}return data;}
 async function body(req:Request,max=256000){const reader=req.body?.getReader();if(!reader)fail('invalid');let size=0;const parts:Uint8Array[]=[];while(true){const {done,value}=await reader!.read();if(done)break;size+=value.length;if(size>max){await reader!.cancel();fail('uploadLimit',413);}parts.push(value);}const buf=new Uint8Array(size);let offset=0;for(const p of parts){buf.set(p,offset);offset+=p.length;}return buf;}
 async function json(req:Request){try{return JSON.parse(new TextDecoder().decode(await body(req)));}catch(e){if(e.status)throw e;fail('invalid');}}
 async function limit(key:string,count:number,seconds=60){if(!checked(await admin.rpc('modu_rate_limit',{p_key:key,p_limit:count,p_seconds:seconds})))fail('limitReached',429);}
@@ -20,12 +21,19 @@ async function access(req:Request,id:string,ownerOnly=false){const raw=req.heade
  if(valid){const own=checked(await admin.from('modu_owners').select('store_id,workspace,workspace_revision').eq('store_id',id).single());return {owner:true,...own};}
  if(ownerOnly)fail('ownerAccess',403);
  const guest=checked(await admin.from('modu_visits').select('id,store_id,table_no,lang,created_at').eq('store_id',id).eq('token_hash',h).maybeSingle());if(!guest)fail('ownerAccess',403);return {owner:false,...guest};}
+function reviewReason(data:any){
+ if(typeof data.approve!=='boolean')fail('invalid');
+ if(data.approve){if(data.reason!=null&&data.reason!=='')fail('invalid');return {p_reason:null,p_messages:null};}
+ if(typeof data.reason!=='string'||!data.reason)fail('reasonRequired');
+ const messages=Object.hasOwn(rejectionMessages,data.reason)?rejectionMessages[data.reason]:null;
+ if(!messages)fail('invalidReason');return {p_reason:data.reason,p_messages:messages};
+}
 const ownerRoute=ownerAuthRoutes({admin,checked,fail,hash,token,limit,json,reply});
 const createConnectedDemo=connectedDemoRoute({admin,checked,hash,token,limit,json,reply});
 
 async function media(id:string){const files=checked(await admin.from('modu_media').select('id,name,type,size,kind,path').eq('store_id',id).order('created_at').limit(30));if(!files.length)return [];const urls=checked(await admin.storage.from('modu-store-media').createSignedUrls(files.map((x:any)=>x.path),3600));return files.map((x:any,i:number)=>{const {path,...m}=x;return {...m,url:urls[i]?.signedUrl||''};});}
 async function snapshot(st:any,auth:any){let oq=admin.from('modu_orders').select('*,modu_visits(table_no,lang)').eq('store_id',st.id).order('created_at',{ascending:false}).limit(500);let rq=admin.from('modu_reservations').select('*,modu_visits(table_no,lang)').eq('store_id',st.id).order('created_at',{ascending:false}).limit(500);let vq=admin.from('modu_visits').select('id,table_no,lang,created_at').eq('store_id',st.id).order('created_at',{ascending:false}).limit(500);let mq=admin.from('modu_messages').select('id,visit_id,request_id,kind,payload,reviewed,created_at').eq('store_id',st.id).order('created_at',{ascending:false}).limit(2000);if(!auth.owner){oq=oq.eq('visit_id',auth.id);rq=rq.eq('visit_id',auth.id);vq=vq.eq('id',auth.id);mq=mq.eq('visit_id',auth.id);}
- let aq=admin.from('modu_amendments').select('id,visit_id,target_id,target_type,kind,status,before_data,after_data,original_status,guest_lang,created_at,reviewed_at,reviewed_by,reviewed_member').eq('store_id',st.id).order('created_at',{ascending:false}).limit(500);if(!auth.owner)aq=aq.eq('visit_id',auth.id);const [orders,reservations,visits,messages,files,amendments]=await Promise.all([oq,rq,vq,mq,media(st.id),aq]);return {amendments:checked(amendments),id:st.id,store:{...st.public_data,media:files},menu:st.menu,revision:st.revision,published:st.published,orders:checked(orders),reservations:checked(reservations),visits:checked(visits),messages:checked(messages),workspace:auth.owner?auth.workspace:undefined,workspaceRevision:auth.owner?auth.workspace_revision:undefined,visitId:auth.owner?undefined:auth.id};}
+ let aq=admin.from('modu_amendments').select('id,visit_id,target_id,target_type,kind,status,before_data,after_data,original_status,guest_lang,created_at,reviewed_at,reviewed_by,reviewed_member,reason_code,reason_messages').eq('store_id',st.id).order('created_at',{ascending:false}).limit(500);if(!auth.owner)aq=aq.eq('visit_id',auth.id);const [orders,reservations,visits,messages,files,amendments]=await Promise.all([oq,rq,vq,mq,media(st.id),aq]);return {amendments:auth.owner?checked(amendments):checked(amendments).map(({reviewed_by,reviewed_member,...row}:any)=>row),id:st.id,store:{...st.public_data,media:files},menu:st.menu,revision:st.revision,published:st.published,orders:checked(orders),reservations:checked(reservations),visits:checked(visits),messages:checked(messages),workspace:auth.owner?auth.workspace:undefined,workspaceRevision:auth.owner?auth.workspace_revision:undefined,visitId:auth.owner?undefined:auth.id};}
 // The server supplies both languages; clients cannot invent an owner translation.
 async function saveThread(storeId:string,visitId:string,payload:any){
  checked(await admin.from('modu_messages').upsert({store_id:storeId,visit_id:visitId,request_id:payload.id,kind:'thread',payload},{onConflict:'visit_id,request_id',ignoreDuplicates:true}));
@@ -55,7 +63,7 @@ Deno.serve(async(req:Request)=>{if(req.method==='OPTIONS')return new Response(nu
   const raw=req.headers.get('x-modu-token')||'';if(!/^[a-f0-9]{64}$/.test(raw))fail('revoked',403);
   const h=await hash(raw);await limit('staff:'+h,120);
   if(req.method==='GET')return reply(checked(await admin.rpc('modu_staff_snapshot',{p_store:id,p_member:item,p_hash:h})));
-  const b=await json(req);if(b.action==='amend'){if(!uuid(b.data?.id)||typeof b.data?.approve!=='boolean')fail('invalid');return reply(checked(await admin.rpc('modu_amend_review',{p_store:id,p_hash:h,p_member:item,p_request:b.data.id,p_approve:b.data.approve})));}const data=staffData(b,'action');
+  const b=await json(req);if(b.action==='amend'){if(!uuid(b.data?.id)||typeof b.data?.approve!=='boolean')fail('invalid');return reply(checked(await admin.rpc('modu_amend_review',{p_store:id,p_hash:h,p_member:item,p_request:b.data.id,p_approve:b.data.approve,...reviewReason(b.data)})));}const data=staffData(b,'action');
   return reply(checked(await admin.rpc('modu_staff_action',{p_store:id,p_member:item,p_hash:h,p_action:data.action,p_data:data.data})));
  }
  const ownActions=['store','workspace','media','review','interpreter-reply','team'];const auth=await access(req,id,ownActions.includes(action));await limit('access:'+await hash(req.headers.get('x-modu-token')!),180);
@@ -75,12 +83,12 @@ Deno.serve(async(req:Request)=>{if(req.method==='OPTIONS')return new Response(nu
  if(action==='amendments'&&req.method==='POST'){
   if(auth.owner)fail('noAccess',403);await limit('amend:'+auth.id,20);const b=await json(req);
   if(!uuid(b.targetId)||!['order','booking'].includes(b.targetType)||!['change','cancel'].includes(b.kind))fail('invalid');
-  let data=b.data||{};if(b.kind==='change'&&b.targetType==='booking')data=reservationData({...data,name:'guest'},st.public_data.country);
+  let data=b.data||{};if(b.kind==='change'&&b.targetType==='booking')data=reservationData({...data,name:'guest'},st.public_data.country);data={...data,guestLang:langs.includes(b.lang)?b.lang:auth.lang};
   return reply(checked(await admin.rpc('modu_amend_submit',{p_store:id,p_visit:auth.id,p_target:b.targetId,p_type:b.targetType,p_kind:b.kind,p_request:requestId(b.requestId),p_data:data})),201);
  }
  if(action==='amendments'&&req.method==='PATCH'&&uuid(item)){
   if(!auth.owner)fail('ownerAccess',403);const b=await json(req);if(typeof b.approve!=='boolean')fail('invalid');
-  return reply(checked(await admin.rpc('modu_amend_review',{p_store:id,p_hash:await hash(req.headers.get('x-modu-token')!),p_member:null,p_request:item,p_approve:b.approve})));
+  return reply(checked(await admin.rpc('modu_amend_review',{p_store:id,p_hash:await hash(req.headers.get('x-modu-token')!),p_member:null,p_request:item,p_approve:b.approve,...reviewReason(b)})));
  }
  if(action==='snapshot'&&req.method==='GET'){if(!auth.owner&&!st.published)fail('storeNotReady',404);return reply(await snapshot(st,auth));}
  if(action==='store'&&req.method==='PUT'){const b=await json(req),data=storeData(b.store),menu=menuData(b.menu),workspace=workspaceData(b.workspace);if(b.published&&(!data.address||!workspace.manager.completed))fail('required');const rev=checked(await admin.rpc('modu_save_store',{p_id:id,p_revision:b.revision,p_store:data,p_menu:menu,p_workspace:{...workspace,expectedRevision:b.workspaceRevision},p_published:b.published===true}));return reply({revision:rev,workspaceRevision:auth.workspace_revision+1});}
