@@ -1,5 +1,5 @@
 import {REJECTION_COPY} from './rejection-copy.js?v=5.19.0';
-import {liveReasons,liveReasonLabel} from './live-rejection.js?v=5.31.0';
+import {liveReasons,liveReasonLabel} from './live-rejection.js?v=5.32.2';
 import {LANGS,formatMoney} from './locale.js?v=5.6.0';
 import {PROPOSAL_COPY} from './proposal-copy.js?v=5.21.0';
 import {NEGOTIATION_COPY} from './negotiation-copy.js?v=5.21.0';
