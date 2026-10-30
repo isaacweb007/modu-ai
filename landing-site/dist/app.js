@@ -1,14 +1,90 @@
-const concepts={
- a:{title:'사장님 곁에,<br>라미 한 명.',description:'우리 샵을 알려주세요.<br>라미가 손님을 맞고, 주문을 함께 챙겨요.',scene:'shop-neighborhood',alt:'따뜻한 동네 식당과 카페, 사장님들과 손님이 함께하는 수채화 풍경',greeting:'안녕하세요, 라미예요!<br><strong>우리 샵 이야기를 들려주세요.</strong>'},
- b:{title:'샵의 일도,<br>라미와 대화하듯.',description:'메뉴판 한 장을 보여주세요.<br>샵을 준비하고 손님을 맞는 일을 함께해요.',scene:'owner-studio',alt:'메뉴판을 촬영하며 샵을 준비하는 사장님의 수채화 모습',greeting:'사장님, 제가 도와드릴게요.<br><strong>메뉴판부터 보여주시겠어요?</strong>'},
- c:{title:'말이 달라도,<br>우리 샵답게 반갑게.',description:'손님은 자기 언어로, 샵은 한국어로.<br>낯선 곳에서도 편안한 한 끼를 이어줘요.',scene:'multilingual-table',alt:'여러 나라 손님들과 사장님이 반갑게 이야기하는 수채화 식탁',greeting:'Xin chào! Hello!<br><strong>편한 언어로 이야기해요.</strong>'}
-};
-const conceptButtons=[...document.querySelectorAll('button[data-concept]')];
-function setConcept(key,updateUrl=true){const selected=concepts[key]?key:'a',data=concepts[selected];document.body.dataset.concept=selected;document.getElementById('hero-title').innerHTML=data.title;document.getElementById('hero-description').innerHTML=data.description;document.getElementById('hero-scene').src=`./assets/${data.scene}.webp`;document.getElementById('hero-scene').alt=data.alt;document.getElementById('rami-greeting').innerHTML=data.greeting;conceptButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.concept===selected)));if(updateUrl){const url=new URL(location.href);selected==='a'?url.searchParams.delete('concept'):url.searchParams.set('concept',selected);history.replaceState(null,'',url);}}
-conceptButtons.forEach(button=>button.addEventListener('click',()=>setConcept(button.dataset.concept)));
-setConcept(new URLSearchParams(location.search).get('concept'),false);
-const languageCopy={ko:{greeting:'안녕하세요! 반가워요.',question:'맵지 않은 메뉴를 추천해 주세요.',reply:'바삭 감자전 한 개 주세요.',ready:'주문하신 음식이 준비됐어요.'},vi:{greeting:'Xin chào! Rất vui được gặp bạn.',question:'Bạn gợi ý món nào không cay?',reply:'Cho tôi một phần bánh khoai tây chiên nhé.',ready:'Món ăn của bạn đã sẵn sàng!'},en:{greeting:'Hello! It’s lovely to meet you.',question:'Could you recommend something mild?',reply:'One crispy potato pancake, please.',ready:'Your food is ready!'},ja:{greeting:'こんにちは！お会いできてうれしいです。',question:'辛くない料理をおすすめしてください。',reply:'カリカリじゃがいもチヂミを一つください。',ready:'お料理の準備ができました！'}};
-let selectedLanguage='vi',selectedStep=0;
-const stepButtons=[...document.querySelectorAll('button[data-step]')],panel=document.getElementById('step-panel'),content=document.getElementById('step-content');
-function showStep(step){selectedStep=step;const copy=languageCopy[selectedLanguage];stepButtons.forEach((button,index)=>{button.setAttribute('aria-selected',String(index===step));button.tabIndex=index===step?0:-1;});panel.setAttribute('aria-labelledby',`step-${step}`);document.getElementById('step-rami').src=`./assets/rami-${['hello','ordering','celebrate'][step]}.webp`;document.getElementById('step-label').textContent=['QR을 찍고, 라미와 인사해요','손님의 언어로 골라요','홀·주방·손님에게 이어져요'][step];document.getElementById('step-title').textContent=['어떤 언어가 편하세요?','맵지 않은 메뉴, 있을까요?','3번 테이블, 준비 끝났어요.'][step];if(step===0){content.innerHTML=`<div class="languages" role="group" aria-label="손님 언어 선택">${[['ko','한국어'],['vi','Tiếng Việt'],['en','English'],['ja','日本語']].map(([code,label])=>`<button lang="${code}" data-language="${code}" aria-pressed="${code===selectedLanguage}">${label}</button>`).join('')}</div><p class="guest-message" lang="${selectedLanguage}">${copy.greeting}</p><p class="translation">안녕하세요! 반가워요.</p>`;content.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{selectedLanguage=button.dataset.language;showStep(0);}));}else if(step===1){content.innerHTML=`<p class="guest-message" lang="${selectedLanguage}">${copy.question}</p><p class="translation">맵지 않은 메뉴를 추천해 주세요.</p><div class="order"><div><strong>바삭 감자전 × 1</strong><small lang="${selectedLanguage}">${copy.reply}</small></div><strong>15,000원</strong></div>`;}else{content.innerHTML=`<div class="order"><div><strong>테이블 03 · 바삭 감자전 × 1</strong><small>홀과 사장님은 한국어로 내용을 확인해요.</small></div></div><div class="state-line"><span class="done">홀 접수</span><span class="done">주방 준비 완료</span></div><p class="guest-message" lang="${selectedLanguage}">${copy.ready}</p><p class="translation">손님에게는 선택한 언어로 알려드려요.</p>`;}}
-stepButtons.forEach((button,index)=>{button.addEventListener('click',()=>showStep(index));button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%3;else if(event.key==='ArrowLeft')next=(index+2)%3;else if(event.key==='Home')next=0;else if(event.key==='End')next=2;else return;event.preventDefault();showStep(next);stepButtons[next].focus();});});showStep(0);
+import {LANGUAGES, COPY, DIALOGUE} from './i18n.js?v=3.1';
+
+const supported = new Set(LANGUAGES.map(language => language.code));
+const koreanNames = {ko:'한국어',en:'영어',vi:'베트남어',zh:'중국어',ja:'일본어',km:'크메르어',id:'인도네시아어',lo:'라오어',hi:'힌디어'};
+const welcomeNames = {ko:'안녕하세요, 라미예요.',en:'Hi, I’m Rami.',vi:'Chào bạn, mình là Rami.',zh:'你好，我是 Rami。',ja:'こんにちは、Ramiです。',km:'សួស្តី ខ្ញុំគឺ Rami។',id:'Halo, aku Rami.',lo:'ສະບາຍດີ ຂ້ອຍແມ່ນ Rami.',hi:'नमस्ते, मैं Rami हूँ।'};
+const friendsAlts = {ko:'파란 라미와 알록달록한 동그라미 친구들',en:'Blue Rami and a group of colorful round friends',vi:'Rami màu xanh cùng những người bạn tròn nhiều màu sắc',zh:'蓝色 Rami 和一群色彩缤纷的圆形朋友',ja:'青いRamiと、カラフルで丸い仲間たち',km:'Rami ពណ៌ខៀវ និងមិត្តភក្តិរាងមូលចម្រុះពណ៌',id:'Rami biru bersama teman-teman bulat berwarna-warni',lo:'Rami ສີຟ້າ ແລະໝູ່ວົງມົນຫຼາກສີ',hi:'नीला Rami और उसके रंग-बिरंगे गोल दोस्त'};
+const $ = selector => document.querySelector(selector);
+const esc = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
+let savedLanguage;try { savedLanguage = localStorage.getItem('rami.landing.language'); } catch {}
+const requestedLanguage = new URLSearchParams(location.search).get('lang');
+let pageLanguage = supported.has(requestedLanguage) ? requestedLanguage : supported.has(savedLanguage) ? savedLanguage : 'ko';
+let guestLanguage = pageLanguage === 'ko' ? 'vi' : pageLanguage;
+let guestLanguageChosen = false;
+let selectedStep = 0;
+const stepButtons = [...document.querySelectorAll('[data-step]')];
+const pageSelector = $('#page-language');
+const guestSelector = $('#guest-language');
+
+function valueAt(object,path) {
+  const value = path.split('.').reduce((current,key) => current?.[key],object);
+  if (typeof value !== 'string') throw new Error(`Missing landing translation: ${pageLanguage}.${path}`);
+  return value;
+}
+function money() {
+  return new Intl.NumberFormat(LANGUAGES.find(language=>language.code===pageLanguage).locale,{style:'currency',currency:'KRW',maximumFractionDigits:0}).format(15000);
+}
+function link(base,hash='') {
+  const url = new URL(base);url.searchParams.set('lang',pageLanguage);url.hash=hash;return url.href;
+}
+function syncLinks() {
+  document.querySelectorAll('[data-book]').forEach(anchor=>anchor.href=link('https://book.ramiai.dev/'));
+  document.querySelectorAll('[data-onboarding]').forEach(anchor=>anchor.href=link('https://book.ramiai.dev/','onboarding'));
+  document.querySelectorAll('[data-demo]').forEach(anchor=>anchor.href=link('https://isaacweb007.github.io/modu-ai/','integrated-demo'));
+  document.querySelectorAll('[data-apps]').forEach(anchor=>anchor.href=link('https://isaacweb007.github.io/modu-ai/','apps'));
+}
+function applyLanguage(code,{announce=false,updateUrl=true}={}) {
+  pageLanguage = supported.has(code) ? code : 'ko';
+  const copy = COPY[pageLanguage];
+  document.documentElement.lang = pageLanguage;
+  document.title = copy.pageTitle;
+  $('meta[name="description"]').content = copy.meta;
+  $('meta[property="og:title"]').content = copy.pageTitle;
+  document.querySelectorAll('[data-copy]').forEach(node=>node.textContent=valueAt(copy,node.dataset.copy));
+  document.querySelectorAll('[data-line]').forEach(node=>node.textContent=valueAt(copy,node.dataset.line));
+  document.querySelectorAll('[data-alt]').forEach(node=>node.alt=valueAt(copy,node.dataset.alt));
+  $('.rami-welcome strong').textContent=welcomeNames[pageLanguage];
+  $('.closing-art img').alt=friendsAlts[pageLanguage];
+  $('.step-tabs').setAttribute('aria-label',copy.experienceEyebrow);
+  $('.benefits').setAttribute('aria-label',copy.navHow);
+  pageSelector.value=pageLanguage;
+  if (!guestLanguageChosen) guestLanguage=pageLanguage==='ko'?'vi':pageLanguage;
+  guestSelector.value=guestLanguage;
+  syncLinks();renderStep();
+  try { localStorage.setItem('rami.landing.language',pageLanguage); } catch {}
+  const url=new URL(location.href);url.searchParams.delete('concept');
+  if(pageLanguage==='ko')url.searchParams.delete('lang');else url.searchParams.set('lang',pageLanguage);
+  $('link[rel="canonical"]').href=url.origin+url.pathname+(pageLanguage==='ko'?'':`?lang=${pageLanguage}`);
+  if(updateUrl)history.replaceState(null,'',url);
+  if(announce)$('#language-status').textContent=copy.switchAnnounce;
+}
+function renderStep() {
+  const copy=COPY[pageLanguage],dialogue=DIALOGUE[guestLanguage];
+  stepButtons.forEach((button,index)=>{const active=index===selectedStep;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
+  const panel=$('#step-panel');panel.setAttribute('aria-labelledby',`step-${selectedStep}`);
+  $('#step-rami').src=`./assets/rami-${['hello','ordering','celebrate'][selectedStep]}.webp`;
+  $('#step-label').textContent=copy.stageLabels[selectedStep];
+  $('#step-title').textContent=copy.stageTitles[selectedStep];
+  const check='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>';
+  const down='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-5-5 5 5 5-5"/></svg>';
+  let messages,ticket;
+  const message=(text,type,agent=false)=>`<p class="message ${type}" lang="${guestLanguage}">${agent?'<strong>Rami</strong>':''}${esc(text)}</p>`;
+  if(selectedStep===0){
+    messages=message(dialogue.hello,'guest')+message(welcomeNames[guestLanguage]+' '+COPY[guestLanguage].ramiWelcome,'agent',true);
+    ticket=`<p class="ticket-body" lang="ko">3번 테이블에 손님이 오셨어요.<br>${koreanNames[guestLanguage]}로 안내를 시작해요.</p>`;
+  }else if(selectedStep===1){
+    messages=message(dialogue.question,'guest')+message(dialogue.answer,'agent',true)+message(dialogue.order,'guest');
+    ticket=`<p class="ticket-body" lang="ko">바삭 감자전 × 1<br>요청: 맵지 않게 해주세요.</p><div class="ticket-total"><span>${esc(copy.item)} × 1</span><strong>${esc(money())}</strong></div>`;
+  }else{
+    messages=message(dialogue.ready,'agent',true);
+    ticket=`<p class="ticket-body" lang="ko">바삭 감자전 × 1 · 준비 완료</p><div class="states"><span>${check}${esc(copy.accepted)}</span><span>${check}${esc(copy.ready)}</span></div>`;
+  }
+  $('#step-content').innerHTML=`<div class="conversation"><div class="conversation-label"><span>${esc(copy.guestLabel)}</span><span class="language-tag" lang="${guestLanguage}">${esc(LANGUAGES.find(language=>language.code===guestLanguage).name)}</span></div><div class="message-stack">${messages}</div></div><div class="handoff">${down}</div><div class="shop-ticket"><div class="ticket-top"><span>${esc(copy.ownerLabel)}</span><span class="ticket-table">${esc(copy.table)}</span></div>${ticket}</div><p class="shop-note">${esc(copy.shopNote)}</p>`;
+}
+pageSelector.addEventListener('change',event=>applyLanguage(event.target.value,{announce:true}));
+guestSelector.addEventListener('change',event=>{if(!supported.has(event.target.value))return;guestLanguage=event.target.value;guestLanguageChosen=true;renderStep();});
+stepButtons.forEach((button,index)=>{
+  button.addEventListener('click',()=>{selectedStep=index;renderStep();});
+  button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%3;else if(event.key==='ArrowLeft')next=(index+2)%3;else if(event.key==='Home')next=0;else if(event.key==='End')next=2;else return;event.preventDefault();selectedStep=next;renderStep();stepButtons[next].focus();});
+});
+applyLanguage(pageLanguage);
