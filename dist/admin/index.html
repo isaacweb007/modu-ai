@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#f3f6fb">
+  <title>one shop ai · 플랫폼 운영 어드민 상세 데모</title>
+  <link rel="icon" href="assets/rami.webp"><link rel="stylesheet" href="style.css?v=0.3.3">
+  <link rel="stylesheet" href="advanced.css?v=0.3.3"><script type="module" src="app.js?v=0.3.3"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <div id="nav-shade" hidden></div>
+  <aside id="sidebar">
+    <a class="brand" href="#overview"><img src="assets/rami.webp" width="48" height="48" alt="라미"><span>one shop ai<small>platform console</small></span></a>
+    <div class="workspace"><span class="env-dot"></span><div><strong>원샵 글로벌 운영</strong><small>상세 운영 데모 · v0.3</small></div></div>
+    <nav id="navigation" aria-label="관리자 메뉴"></nav>
+    <div class="sidebar-foot"><a href="help.html" target="_blank" rel="noopener">데모 사용 안내 ↗</a><small>아이작스튜디오 × 원컴퍼니 재단</small></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button mobile-only" id="menu-toggle" aria-label="관리 메뉴 열기" aria-expanded="false" aria-controls="sidebar"></button>
+      <div class="crumb"><span>플랫폼 운영</span><strong id="breadcrumb">운영 현황</strong></div>
+      <button class="search-trigger" id="global-search"><span id="search-icon"></span><span>샵 · 주문 · 사건 검색</span><kbd>⌘ K</kbd></button>
+      <label class="language-control" for="language"><span class="sr-only">표시 언어</span><select id="language" aria-label="표시 언어" data-i18n-skip><option value="ko">한국어</option><option value="en">English</option><option value="vi">Tiếng Việt</option></select></label><label class="role-control" for="role"><span>데모 역할</span><select id="role" aria-label="데모 역할"></select></label>
+      <span class="avatar" id="actor-avatar" aria-hidden="true">민</span>
+    </header>
+    <div class="demo-strip"><span class="env-dot"></span><strong>가상 데이터로 직접 운영해 보세요.</strong><span>이 브라우저에 저장됩니다. 실제 AI·결제·메일은 연결하지 않았습니다.</span><span id="save-state">로컬 저장 준비</span></div>
+    <main id="main" tabindex="-1">
+      <div class="page-head"><div><p id="section-tag" class="eyebrow"></p><h1 id="page-title">운영 현황</h1><p id="page-description"></p></div><div class="head-actions"><label for="country">국가 범위<select id="country"><option value="all">허용된 전체 국가</option><option value="VN">베트남</option><option value="KR">한국</option><option value="ID">인도네시아</option></select></label><button class="button secondary" id="refresh-button">화면 새로고침</button></div></div>
+      <div id="content"><p class="loading">상세 운영 화면을 불러오는 중입니다.</p></div>
+    </main>
+    <footer class="page-foot"><span id="footer-info">가상 운영 데이터 · 2026.10.31</span><button id="reset" class="text-button">데모 데이터 초기화</button></footer>
+  </div>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><header class="dialog-head"><div><span id="dialog-kicker" class="eyebrow"></span><h2 id="dialog-title"></h2></div><button id="dialog-close" class="icon-button" aria-label="상세 닫기"></button></header><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
