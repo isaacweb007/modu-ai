@@ -1,0 +1,68 @@
+[
+  {
+    "id": "guest-language",
+    "width": 415,
+    "height": 932,
+    "bytes": 20456
+  },
+  {
+    "id": "guest-menu",
+    "width": 415,
+    "height": 932,
+    "bytes": 41548
+  },
+  {
+    "id": "guest-chat",
+    "width": 415,
+    "height": 932,
+    "bytes": 33084
+  },
+  {
+    "id": "guest-order",
+    "width": 415,
+    "height": 899,
+    "bytes": 26120
+  },
+  {
+    "id": "owner-manager",
+    "width": 415,
+    "height": 899,
+    "bytes": 24424
+  },
+  {
+    "id": "owner-dashboard",
+    "width": 415,
+    "height": 899,
+    "bytes": 24484
+  },
+  {
+    "id": "owner-operations",
+    "width": 415,
+    "height": 899,
+    "bytes": 22276
+  },
+  {
+    "id": "owner-team",
+    "width": 415,
+    "height": 3653,
+    "bytes": 112106
+  },
+  {
+    "id": "staff-floor",
+    "width": 430,
+    "height": 932,
+    "bytes": 22138
+  },
+  {
+    "id": "staff-kitchen",
+    "width": 430,
+    "height": 932,
+    "bytes": 21456
+  },
+  {
+    "id": "staff-menu",
+    "width": 415,
+    "height": 899,
+    "bytes": 19896
+  }
+]

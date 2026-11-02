@@ -1,7 +1,7 @@
 import {esc} from './core.js?v=5.6.0';
 export const BOOK_PARTS=[
  {key:'understand',ids:['glance','why','people']},
- {key:'experience',ids:['experience','apps','onboarding','journey','qr']},
+ {key:'experience',ids:['experience','apps','ui-gallery','onboarding','journey','qr']},
  {key:'operate',ids:['team','operations','admin-demo','principles','trust','architecture']},
  {key:'build',ids:['business','growth','roadmap','workshop','partnership']},
  {key:'brand',ids:['rami','rami-expressions','rami-careers','rami-goods','rami-identity']},
